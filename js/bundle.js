@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 62);
+/******/ 	return __webpack_require__(__webpack_require__.s = 61);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,9 +261,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(63);
+  module.exports = __webpack_require__(62);
 } else {
-  module.exports = __webpack_require__(64);
+  module.exports = __webpack_require__(63);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -276,7 +276,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 var bind = __webpack_require__(52);
-var isBuffer = __webpack_require__(147);
+var isBuffer = __webpack_require__(146);
 
 /*global toString:true*/
 
@@ -674,11 +674,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(86)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(85)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(88)();
+  module.exports = __webpack_require__(87)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -813,9 +813,9 @@ module.exports = g;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(122);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
@@ -831,33 +831,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(76);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(88);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(34);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(90);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(92);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(94);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(96);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(35);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(20);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(98);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(100);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(102);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "generatePath", function() { return __WEBPACK_IMPORTED_MODULE_11__generatePath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(103);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_12__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(104);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_13__withRouter__["a"]; });
 
 
@@ -893,11 +893,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(80);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(83);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__createHashHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(84);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(16);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
@@ -1182,7 +1182,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(110);
+var	fixUrls = __webpack_require__(109);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1523,11 +1523,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(78)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(77)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(80)();
+  module.exports = __webpack_require__(79)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1607,8 +1607,8 @@ module.exports = warning;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(11);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -2158,9 +2158,9 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(47);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
@@ -2196,7 +2196,7 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(2);
-var normalizeHeaderName = __webpack_require__(149);
+var normalizeHeaderName = __webpack_require__(148);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -2431,9 +2431,9 @@ function createStructuredSelector(selectors) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(69);
+  module.exports = __webpack_require__(68);
 } else {
-  module.exports = __webpack_require__(70);
+  module.exports = __webpack_require__(69);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -2572,7 +2572,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(9);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -2849,7 +2849,7 @@ Route.childContextTypes = {
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(94)
+var isarray = __webpack_require__(93)
 
 /**
  * Expose `pathToRegexp`.
@@ -3360,11 +3360,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(114)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(113)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(116)();
+  module.exports = __webpack_require__(115)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -3398,18 +3398,18 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_assertThisInitialized__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_assertThisInitialized__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_extends__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_invariant__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_invariant__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_is__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_is___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_is__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_Subscription__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_Subscription__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_PropTypes__ = __webpack_require__(41);
 
 
@@ -3714,9 +3714,9 @@ _ref) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(119);
+  module.exports = __webpack_require__(118);
 } else {
-  module.exports = __webpack_require__(120);
+  module.exports = __webpack_require__(119);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -3729,7 +3729,7 @@ if (process.env.NODE_ENV === 'production') {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(133);
 
 
 
@@ -3984,9 +3984,9 @@ var ActionTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(132);
 
 
 
@@ -4056,7 +4056,7 @@ function isPlainObject(value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(126);
 
 
 /** Built-in value references. */
@@ -4213,7 +4213,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isPlainObject__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(25);
 
 
@@ -4227,7 +4227,7 @@ function verifyPlainObject(value, displayName, methodName) {
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(146);
+module.exports = __webpack_require__(145);
 
 /***/ }),
 /* 52 */
@@ -4255,12 +4255,12 @@ module.exports = function bind(fn, thisArg) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(2);
-var settle = __webpack_require__(150);
-var buildURL = __webpack_require__(152);
-var parseHeaders = __webpack_require__(153);
-var isURLSameOrigin = __webpack_require__(154);
+var settle = __webpack_require__(149);
+var buildURL = __webpack_require__(151);
+var parseHeaders = __webpack_require__(152);
+var isURLSameOrigin = __webpack_require__(153);
 var createError = __webpack_require__(54);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(155);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(154);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -4357,7 +4357,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(156);
+      var cookies = __webpack_require__(155);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -4442,7 +4442,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(151);
+var enhanceError = __webpack_require__(150);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -4533,119 +4533,6 @@ exports.getConnectedUser = reselect_1.createSelector([getConnectedUserState], fu
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Hats = [
-    {
-        name: 'Coiffe du Compte Harebourg',
-        vitality: { min: 451, max: 500 },
-        strength: { min: 71, max: 100 },
-        wisdom: { min: 41, max: 60 },
-        range: 1,
-        prospecting: { min: 21, max: 30 },
-        neutralDamage: { min: 16, max: 20 },
-        earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
-        apReduction: { min: 6, max: 8 },
-        lock: { min: 16, max: 20 },
-        level: 200,
-        set: 'Harebourg'
-    },
-    {
-        name: 'Coiffe Séculaire',
-        vitality: { min: 251, max: 300 },
-        intelligence: { min: 71, max: 100 },
-        agility: { min: 31, max: 40 },
-        wisdom: { min: 31, max: 40 },
-        heals: { min: 8, max: 12 },
-        summons: 1,
-        prospecting: { min: 11, max: 15 },
-        fireDamage: { min: 7, max: 10 },
-        airDamage: { min: 7, max: 10 },
-        airResistance: { min: 11, max: 15 },
-        earthResistance: { min: 5, max: 7 },
-        waterResistance: { min: 5, max: 7 },
-        level: 200,
-        set: 'Séculaire'
-    },
-    {
-        name: 'Coiffe du Compte Harebourg',
-        vitality: { min: 451, max: 500 },
-        strength: { min: 71, max: 100 },
-        wisdom: { min: 41, max: 60 },
-        range: 1,
-        prospecting: { min: 21, max: 30 },
-        neutralDamage: { min: 16, max: 20 },
-        earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
-        apReduction: { min: 6, max: 8 },
-        lock: { min: 16, max: 20 },
-        level: 200,
-        set: 'Harebourg'
-    },
-    {
-        name: 'Coiffe Séculaire',
-        vitality: { min: 251, max: 300 },
-        intelligence: { min: 71, max: 100 },
-        agility: { min: 31, max: 40 },
-        wisdom: { min: 31, max: 40 },
-        heals: { min: 8, max: 12 },
-        summons: 1,
-        prospecting: { min: 11, max: 15 },
-        fireDamage: { min: 7, max: 10 },
-        airDamage: { min: 7, max: 10 },
-        airResistance: { min: 11, max: 15 },
-        earthResistance: { min: 5, max: 7 },
-        waterResistance: { min: 5, max: 7 },
-        level: 200,
-        set: 'Séculaire'
-    },
-];
-exports.Amulets = [{
-        name: 'Nervosité',
-        poMin: 1,
-        poMax: 4,
-        pa: 3,
-    }];
-exports.Belts = [{
-        name: 'Nervosité',
-        poMin: 1,
-        poMax: 4,
-        pa: 3,
-    }];
-exports.Rings = [{
-        name: 'Nervosité',
-        poMin: 1,
-        poMax: 4,
-        pa: 3,
-    }];
-exports.Boots = [{
-        name: 'Nervosité',
-        poMin: 1,
-        poMax: 4,
-        pa: 3,
-    }];
-exports.Cloaks = [{
-        name: 'Nervosité',
-        poMin: 1,
-        poMax: 4,
-        pa: 3,
-    }];
-
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
 var Enums_1 = __webpack_require__(17);
 var ActionTypes;
 (function (ActionTypes) {
@@ -4726,7 +4613,7 @@ exports.addItem = function (type, itemId) {
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4796,31 +4683,31 @@ exports.logout = function () {
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-var ReactDOM = __webpack_require__(67);
+var ReactDOM = __webpack_require__(66);
 var react_router_dom_1 = __webpack_require__(8);
-__webpack_require__(108);
-var App_1 = __webpack_require__(111);
+__webpack_require__(107);
+var App_1 = __webpack_require__(110);
 var react_redux_1 = __webpack_require__(7);
-var index_1 = __webpack_require__(190);
+var index_1 = __webpack_require__(200);
 /*fontAwesome Icons*/
-var fontawesome_svg_core_1 = __webpack_require__(197);
-var free_solid_svg_icons_1 = __webpack_require__(200);
+var fontawesome_svg_core_1 = __webpack_require__(207);
+var free_solid_svg_icons_1 = __webpack_require__(210);
 fontawesome_svg_core_1.library.add(free_solid_svg_icons_1.faArrowLeft, free_solid_svg_icons_1.faBell, free_solid_svg_icons_1.faSearch, free_solid_svg_icons_1.faUser, free_solid_svg_icons_1.faHome, free_solid_svg_icons_1.faUserEdit, free_solid_svg_icons_1.faSignInAlt, free_solid_svg_icons_1.faStar, free_solid_svg_icons_1.faPoo, free_solid_svg_icons_1.faThumbsUp, free_solid_svg_icons_1.faGrinSquint);
-__webpack_require__(201);
+__webpack_require__(211);
 ReactDOM.render(React.createElement(react_redux_1.Provider, { store: index_1.default },
     React.createElement(react_router_dom_1.BrowserRouter, null,
         React.createElement(App_1.App, null))), document.getElementById('app'));
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4852,7 +4739,7 @@ unstable_ConcurrentMode:x,unstable_Profiler:u,__SECRET_INTERNALS_DO_NOT_USE_OR_Y
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4874,7 +4761,7 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var _assign = __webpack_require__(5);
-var checkPropTypes = __webpack_require__(65);
+var checkPropTypes = __webpack_require__(64);
 
 // TODO: this is special because it gets imported during build.
 
@@ -6761,7 +6648,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6777,7 +6664,7 @@ module.exports = react;
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(66);
+  var ReactPropTypesSecret = __webpack_require__(65);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -6860,7 +6747,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6879,7 +6766,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6917,15 +6804,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(68);
+  module.exports = __webpack_require__(67);
 } else {
-  module.exports = __webpack_require__(71);
+  module.exports = __webpack_require__(70);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7200,7 +7087,7 @@ Z;Z=!0;try{ri(a)}finally{(Z=b)||W||Li(1073741823,!1)}},__SECRET_INTERNALS_DO_NOT
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7229,7 +7116,7 @@ exports.unstable_shouldYield=function(){return!f&&(null!==c&&c.expirationTime<l|
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7904,7 +7791,7 @@ exports.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(6)))
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7927,9 +7814,9 @@ if (process.env.NODE_ENV !== "production") {
 
 var React = __webpack_require__(1);
 var _assign = __webpack_require__(5);
-var checkPropTypes = __webpack_require__(72);
+var checkPropTypes = __webpack_require__(71);
 var scheduler = __webpack_require__(31);
-var tracing = __webpack_require__(74);
+var tracing = __webpack_require__(73);
 
 /**
  * Use invariant() to assert state which your program assumes to be true.
@@ -28659,7 +28546,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28675,7 +28562,7 @@ module.exports = reactDom;
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(73);
+  var ReactPropTypesSecret = __webpack_require__(72);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -28758,7 +28645,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28777,22 +28664,22 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(75);
+  module.exports = __webpack_require__(74);
 } else {
-  module.exports = __webpack_require__(76);
+  module.exports = __webpack_require__(75);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28809,7 +28696,7 @@ Object.defineProperty(exports,"__esModule",{value:!0});var b=0;exports.__interac
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29240,7 +29127,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29306,7 +29193,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29322,7 +29209,7 @@ BrowserRouter.propTypes = {
 var assign = __webpack_require__(5);
 
 var ReactPropTypesSecret = __webpack_require__(18);
-var checkPropTypes = __webpack_require__(79);
+var checkPropTypes = __webpack_require__(78);
 
 var printWarning = function() {};
 
@@ -29869,7 +29756,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29968,7 +29855,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30034,7 +29921,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30338,7 +30225,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createBrowserHistory);
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30414,7 +30301,7 @@ function resolvePathname(to) {
 /* harmony default export */ __webpack_exports__["a"] = (resolvePathname);
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30458,7 +30345,7 @@ function valueEqual(a, b) {
 /* harmony default export */ __webpack_exports__["a"] = (valueEqual);
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30779,7 +30666,7 @@ var createHashHistory = function createHashHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createHashHistory);
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30947,7 +30834,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createMemoryHistory);
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30963,7 +30850,7 @@ var createMemoryHistory = function createMemoryHistory() {
 var assign = __webpack_require__(5);
 
 var ReactPropTypesSecret = __webpack_require__(22);
-var checkPropTypes = __webpack_require__(87);
+var checkPropTypes = __webpack_require__(86);
 
 var printWarning = function() {};
 
@@ -31510,7 +31397,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31609,7 +31496,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31675,7 +31562,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31740,7 +31627,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31797,18 +31684,18 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(91);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31874,7 +31761,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31960,7 +31847,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -31969,18 +31856,18 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(95);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32071,18 +31958,18 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(97);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32211,18 +32098,18 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(99);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32388,18 +32275,18 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(101);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32491,7 +32378,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32502,7 +32389,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__["a" /* default */]);
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32513,18 +32400,18 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(105);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32532,7 +32419,7 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(36);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -32573,7 +32460,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32648,13 +32535,13 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(109);
+var content = __webpack_require__(108);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -32679,7 +32566,7 @@ if(false) {
 }
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(true);
@@ -32693,7 +32580,7 @@ exports.push([module.i, "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com/)\n 
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports) {
 
 
@@ -32788,7 +32675,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32805,9 +32692,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-var NavigationContainer_1 = __webpack_require__(112);
-var MessagesContainer_1 = __webpack_require__(167);
-var Router_1 = __webpack_require__(170);
+var NavigationContainer_1 = __webpack_require__(111);
+var MessagesContainer_1 = __webpack_require__(166);
+var Router_1 = __webpack_require__(169);
 var App = /** @class */ (function (_super) {
     __extends(App, _super);
     function App(props) {
@@ -32825,16 +32712,16 @@ exports.App = App;
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var userConnectionActions_1 = __webpack_require__(145);
+var userConnectionActions_1 = __webpack_require__(144);
 var ConnectedUserSelector_1 = __webpack_require__(58);
-var NavigationComponent_1 = __webpack_require__(164);
+var NavigationComponent_1 = __webpack_require__(163);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state)
 }); };
@@ -32847,7 +32734,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Nav
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32931,7 +32818,7 @@ function createProvider(storeKey) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32947,7 +32834,7 @@ function createProvider(storeKey) {
 var assign = __webpack_require__(5);
 
 var ReactPropTypesSecret = __webpack_require__(24);
-var checkPropTypes = __webpack_require__(115);
+var checkPropTypes = __webpack_require__(114);
 
 var printWarning = function() {};
 
@@ -33494,7 +33381,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33593,7 +33480,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33659,7 +33546,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33673,7 +33560,7 @@ function _assertThisInitialized(self) {
 }
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33783,7 +33670,7 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33805,7 +33692,7 @@ exports.isSuspense=function(a){return t(a)===p};
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34040,7 +33927,7 @@ exports.isSuspense = isSuspense;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34097,7 +33984,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34192,7 +34079,7 @@ function () {
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34200,11 +34087,11 @@ function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_connectAdvanced__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_shallowEqual__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mapDispatchToProps__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mapStateToProps__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mergeProps__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__selectorFactory__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_shallowEqual__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mapDispatchToProps__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mapStateToProps__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mergeProps__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__selectorFactory__ = __webpack_require__(142);
 
 
 
@@ -34305,7 +34192,7 @@ function createConnect(_temp) {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34341,7 +34228,7 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34370,13 +34257,13 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(129);
 
 
 
@@ -34408,11 +34295,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(127);
 
 
 /** Detect free variable `self`. */
@@ -34425,7 +34312,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34437,7 +34324,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34491,7 +34378,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34520,11 +34407,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(131);
 
 
 /** Built-in value references. */
@@ -34534,7 +34421,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34556,7 +34443,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34592,11 +34479,11 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(136);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(135);
 /* global window */
 
 
@@ -34617,10 +34504,10 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6), __webpack_require__(135)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6), __webpack_require__(134)(module)))
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -34650,7 +34537,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34675,7 +34562,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34816,7 +34703,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34870,7 +34757,7 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34926,7 +34813,7 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34949,7 +34836,7 @@ function isPlainObject(obj) {
 }
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34968,7 +34855,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35017,7 +34904,7 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35025,7 +34912,7 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__verifySubselectors__ = __webpack_require__(143);
 
 
 function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
@@ -35116,7 +35003,7 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35141,7 +35028,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35211,7 +35098,7 @@ exports.logout = function () {
 
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35219,7 +35106,7 @@ exports.logout = function () {
 
 var utils = __webpack_require__(2);
 var bind = __webpack_require__(52);
-var Axios = __webpack_require__(148);
+var Axios = __webpack_require__(147);
 var defaults = __webpack_require__(29);
 
 /**
@@ -35254,14 +35141,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(56);
-axios.CancelToken = __webpack_require__(162);
+axios.CancelToken = __webpack_require__(161);
 axios.isCancel = __webpack_require__(55);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(163);
+axios.spread = __webpack_require__(162);
 
 module.exports = axios;
 
@@ -35270,7 +35157,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports) {
 
 /*!
@@ -35297,7 +35184,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35305,8 +35192,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(29);
 var utils = __webpack_require__(2);
-var InterceptorManager = __webpack_require__(157);
-var dispatchRequest = __webpack_require__(158);
+var InterceptorManager = __webpack_require__(156);
+var dispatchRequest = __webpack_require__(157);
 
 /**
  * Create a new instance of Axios
@@ -35383,7 +35270,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35402,7 +35289,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35435,7 +35322,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35463,7 +35350,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35536,7 +35423,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35596,7 +35483,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35671,7 +35558,7 @@ module.exports = (
 
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35714,7 +35601,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35774,7 +35661,7 @@ module.exports = (
 
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35833,18 +35720,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(2);
-var transformData = __webpack_require__(159);
+var transformData = __webpack_require__(158);
 var isCancel = __webpack_require__(55);
 var defaults = __webpack_require__(29);
-var isAbsoluteURL = __webpack_require__(160);
-var combineURLs = __webpack_require__(161);
+var isAbsoluteURL = __webpack_require__(159);
+var combineURLs = __webpack_require__(160);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -35926,7 +35813,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35953,7 +35840,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35974,7 +35861,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35995,7 +35882,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36059,7 +35946,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36093,7 +35980,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36111,7 +35998,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
 var react_router_dom_1 = __webpack_require__(8);
-__webpack_require__(165);
+__webpack_require__(164);
 var NavigationComponent = /** @class */ (function (_super) {
     __extends(NavigationComponent, _super);
     function NavigationComponent(props) {
@@ -36202,8 +36089,17 @@ var NavigationComponent = /** @class */ (function (_super) {
             };
         });
     };
-    NavigationComponent.prototype.render = function () {
+    NavigationComponent.prototype.handleClickOutside = function (event) {
+        console.log(event.target);
+        if (this.renderModals() == event.target) {
+            alert('hey');
+        }
+    };
+    NavigationComponent.prototype.componentDidMount = function () {
         var _this = this;
+        document.addEventListener('mousedown', function (event) { return _this.handleClickOutside(event); });
+    };
+    NavigationComponent.prototype.render = function () {
         return (React.createElement("nav", { className: "navigation" },
             React.createElement("div", { className: "container-fluid px-0" },
                 React.createElement(react_router_dom_1.Link, { className: "link-title", to: "/" },
@@ -36212,41 +36108,36 @@ var NavigationComponent = /** @class */ (function (_super) {
                     React.createElement("li", { className: "nav-item" },
                         React.createElement("input", { className: "shadow-lg search-input-global rounded", placeholder: "Rechercher..." })),
                     this.renderNavItems()),
-                React.createElement("div", { className: 'modal fade ' + this.state.openSignupModal, id: "loginSignupModal", role: "dialog", "aria-labelledby": "exampleModalCenterTitle", "aria-hidden": "true" },
-                    React.createElement("div", { className: "modal-dialog modal-dialog-centered", role: "document" },
-                        React.createElement("div", { className: "modal-content bg-dark text-white" },
-                            React.createElement("div", { className: "modal-header" },
-                                React.createElement("h5", { className: "modal-title", id: "exampleModalCenterTitle" }, "Cr\u00E9er un compte"),
-                                React.createElement("button", { type: "button", className: "close", onClick: function () { return _this.showSignup(false); }, "aria-label": "Close" },
-                                    React.createElement("span", { "aria-hidden": "true" }, "\u00D7"))),
-                            React.createElement("div", { className: "modal-body" },
-                                React.createElement("form", null,
-                                    React.createElement("div", { className: "form-group" },
-                                        React.createElement("div", null,
-                                            React.createElement("label", { htmlFor: "inlineFormInputGroupUsername" }, "Nom d'identification"),
-                                            React.createElement("div", { className: "input-group" },
-                                                React.createElement("div", { className: "input-group-prepend" },
-                                                    React.createElement("div", { className: "input-group-text" }, "@")),
-                                                React.createElement("input", { onChange: this.updateUserSignUpState, name: "idName", type: "text", className: "form-control", id: "idName", placeholder: "Nom d'identification" })),
-                                            React.createElement("small", { id: "unique", className: "form-text text-muted" }, "Unique pour chaque compte."),
-                                            !this.state.userSignUp.idName && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide")),
-                                            this.state.userSignUp.idName && this.state.userSignUp.idName.length > 20 && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas avoir plus de 20 characteres")))),
-                                    React.createElement("div", { className: "form-group" },
-                                        React.createElement("label", { htmlFor: "pwd" }, "Mot de passe"),
-                                        React.createElement("input", { onChange: this.updateUserSignUpState, name: "password", type: "password", className: "form-control", id: "pwdSignUp", placeholder: "Mot de passe" }),
-                                        !this.state.userSignUp.password && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide"))),
-                                    React.createElement("div", { className: "form-group" },
-                                        React.createElement("label", { htmlFor: "userName" }, "Nom d'utilisateur"),
-                                        React.createElement("input", { onChange: this.updateUserSignUpState, name: "username", type: "email", className: "form-control", id: "userName", "aria-describedby": "Nom d'utilisateur", placeholder: "Nom d'utilisateur" }),
-                                        this.state.userSignUp.username && this.state.userSignUp.username.length > 20 && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas avoir plus de 20 characteres"))),
-                                    React.createElement("div", { className: "form-group" },
-                                        React.createElement("label", { htmlFor: "email" }, "Email"),
-                                        React.createElement("input", { onChange: this.updateUserSignUpState, name: "email", type: "email", className: "form-control", id: "emailSignUp", "aria-describedby": "Email", placeholder: "Email" }),
-                                        !this.state.userSignUp.email && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide")),
-                                        this.state.userSignUp.email && this.state.userSignUp.email.length > 20 && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas avoir plus de 20 characteres"))))),
-                            React.createElement("div", { className: "modal-footer" },
-                                React.createElement("button", { type: "button", className: "btn btn-secondary", onClick: function () { return _this.signUp(); } }, "S'inscrire"),
-                                React.createElement("button", { type: "button", className: "btn btn-secondary", onClick: function () { return _this.showSignup(false); } }, "Annuler"))))))));
+                this.renderModals())));
+    };
+    NavigationComponent.prototype.renderModals = function () {
+        var _this = this;
+        return (React.createElement(React.Fragment, null,
+            React.createElement("div", { className: 'modal fade ' + this.state.openSignupModal, id: "loginSignupModal", role: "dialog", "aria-labelledby": "exampleModalCenterTitle", "aria-hidden": "true" },
+                React.createElement("div", { className: "modal-dialog modal-dialog-centered", role: "document" },
+                    React.createElement("div", { className: "modal-content modal-color text-white" },
+                        React.createElement("div", { className: "modal-body" },
+                            React.createElement("button", { type: "button", className: "close", onClick: function () { return _this.showSignup(false); }, "aria-label": "Close" },
+                                React.createElement("span", { "aria-hidden": "true" }, "\u00D7")),
+                            React.createElement("div", { className: "form-group" },
+                                React.createElement("div", null,
+                                    React.createElement("h5", { className: "modal-title text-center" }, "S'inscrire"),
+                                    React.createElement("br", null),
+                                    React.createElement("label", { htmlFor: "inlineFormInputGroupUsername" }, "Nom d'identification"),
+                                    React.createElement("input", { onChange: function (event) { return _this.updateUserSignUpState(event); }, className: "bg-dark shadow-lg search-input", name: "idName", id: "idName" }),
+                                    !this.state.userSignUp.idName && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide")),
+                                    this.state.userSignUp.idName && this.state.userSignUp.idName.length > 20 && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas avoir plus de 20 characteres")))),
+                            React.createElement("div", { className: "form-group" },
+                                React.createElement("label", { htmlFor: "pwd" }, "Mot de passe"),
+                                React.createElement("input", { onChange: function (event) { return _this.updateUserSignUpState(event); }, className: "bg-dark shadow-lg search-input", name: "password", id: "password" }),
+                                !this.state.userSignUp.password && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide"))),
+                            React.createElement("div", { className: "form-group" },
+                                React.createElement("label", { htmlFor: "email" }, "Email"),
+                                React.createElement("input", { onChange: function (event) { return _this.updateUserSignUpState(event); }, className: "bg-dark shadow-lg search-input", name: "email", type: "email", id: "email" }),
+                                !this.state.userSignUp.email && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide")),
+                                this.state.userSignUp.email && this.state.userSignUp.email.length > 20 && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas avoir plus de 20 characteres"))),
+                            React.createElement("button", { type: "button", className: "btn btn-secondary mr-2", onClick: function () { return _this.signUp(); } }, "S'inscrire"),
+                            React.createElement("button", { type: "button", className: "btn btn-secondary", onClick: function () { return _this.showSignup(false); } }, "Annuler")))))));
     };
     NavigationComponent.prototype.renderNavItems = function () {
         var _this = this;
@@ -36288,8 +36179,8 @@ var NavigationComponent = /** @class */ (function (_super) {
                                 !this.state.passwordLogin && this.state.loginSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide"))),
                             React.createElement("button", { type: "submit", className: "btn btn-secondary", onClick: function () { return _this.login(); } }, "Se connecter")),
                         React.createElement("div", { className: "dropdown-divider" }),
-                        React.createElement("a", { className: "dropdown-item", onClick: function () { return _this.showSignup(true); }, href: "javascript:void(0)" }, "Pas de compte? S'inscrire"),
-                        React.createElement("a", { className: "dropdown-item", href: "#" }, "Mot de passe oublie?")))));
+                        React.createElement("a", { className: "dropdown-item", onClick: function () { return _this.showSignup(true); }, href: "javascript:void(0)" }, "Pas de compte ? S'inscrire"),
+                        React.createElement("a", { className: "dropdown-item", onClick: function () { return _this.showSignup(true); }, href: "javascript:void(0)" }, "Mot de passe oubli\u00E9 ?")))));
         }
         navItems.push(React.createElement("li", { className: "nav-item" },
             React.createElement("div", { className: "dropdown" },
@@ -36328,13 +36219,13 @@ exports.default = NavigationComponent;
 
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(166);
+var content = __webpack_require__(165);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -36359,7 +36250,7 @@ if(false) {
 }
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(true);
@@ -36367,21 +36258,21 @@ exports = module.exports = __webpack_require__(12)(true);
 
 
 // module
-exports.push([module.i, "nav.navigation {\n  background-color: #343a40;\n  margin-bottom: 30px; }\n  nav.navigation .container-fluid {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    height: 3.5rem;\n    /* Dropdown Button */\n    /* The container <div> - needed to position the dropdown content */\n    /* Dropdown Content (Hidden by Default) */\n    /* Links inside the dropdown */\n    /* Change color of dropdown links on hover */\n    /* Show the dropdown menu on hover */\n    /* Change the background color of the dropdown button when the dropdown content is shown */ }\n    nav.navigation .container-fluid :-moz-placeholder {\n      /* Firefox 18- */\n      color: pink; }\n    nav.navigation .container-fluid .dropbtn {\n      background-color: #343a40;\n      color: #ffd800;\n      padding: 16px;\n      font-size: 16px;\n      border: none; }\n    nav.navigation .container-fluid .dropdown {\n      position: relative;\n      display: inline-block; }\n    nav.navigation .container-fluid .dropdown-content {\n      right: 0;\n      display: none;\n      position: absolute;\n      background-color: black;\n      min-width: 160px;\n      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n      z-index: 1;\n      color: white; }\n    nav.navigation .container-fluid .dropdown-content a {\n      color: white;\n      padding: 12px 16px;\n      text-decoration: none;\n      display: block; }\n    nav.navigation .container-fluid .dropdown-content a:hover {\n      background-color: #ffd800; }\n    nav.navigation .container-fluid .dropdown:hover .dropdown-content {\n      display: block; }\n    nav.navigation .container-fluid .dropdown:hover .dropbtn {\n      background-color: black; }\n    nav.navigation .container-fluid .close:hover,\n    nav.navigation .container-fluid .close:focus {\n      color: black;\n      text-decoration: none;\n      cursor: pointer; }\n    nav.navigation .container-fluid h1 {\n      padding: 16px;\n      margin-top: 8px;\n      color: #ffd800;\n      font-family: Arial, Helvetica, sans-serif;\n      font-weight: 900;\n      font-size: 22pt; }\n    nav.navigation .container-fluid .show {\n      padding-right: 17px;\n      display: block; }\n    nav.navigation .container-fluid h1:before {\n      color: white;\n      content: \"dofus\"; }\n    nav.navigation .container-fluid .search-input-global {\n      position: relative;\n      color: white;\n      background-color: black;\n      padding: 6px 20px;\n      margin: 8px 10px;\n      border-color: Transparent;\n      outline-color: #ffd800; }\n    nav.navigation .container-fluid .img-size-countrys {\n      width: 32px;\n      height: 32px; }\n    nav.navigation .container-fluid ::placeholder {\n      /* Chrome, Firefox, Opera, Safari 10.1+ */\n      color: white;\n      opacity: 1;\n      /* Firefox */ }\n    nav.navigation .container-fluid :-ms-input-placeholder {\n      /* Internet Explorer 10-11 */\n      color: white; }\n    nav.navigation .container-fluid ::-ms-input-placeholder {\n      /* Microsoft Edge */\n      color: white; }\n    nav.navigation .container-fluid span {\n      color: #ffd800; }\n    nav.navigation .container-fluid .link-title {\n      text-decoration: none; }\n    nav.navigation .container-fluid ul {\n      list-style: none;\n      display: flex;\n      margin: 0; }\n      nav.navigation .container-fluid ul li a {\n        padding: 10px 20px;\n        min-height: 30px;\n        display: block;\n        color: rgba(255, 255, 255, 0.5); }\n        nav.navigation .container-fluid ul li a.active {\n          color: #fff; }\n          nav.navigation .container-fluid ul li a.active:hover {\n            color: #fff; }\n        nav.navigation .container-fluid ul li a:hover {\n          color: rgba(255, 255, 255, 0.75);\n          text-decoration: none; }\n        nav.navigation .container-fluid ul li a svg {\n          margin-left: 5px; }\n    nav.navigation .container-fluid .img-size {\n      height: 20px;\n      width: 20px; }\n\n@media (max-width: 575.98px) {\n  .nav-text {\n    display: none; }\n  .link-title {\n    margin-left: 1rem; } }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/Navigation.scss","E:/Dropbox/dofusbuilds/Front/src/style/node_modules/bootstrap/scss/mixins/_breakpoints.scss"],"names":[],"mappings":"AAYA;EACI,0BATgB;EAUhB,oBAAmB,EA0JtB;EA5JD;IAKQ,cAAa;IACb,oBAAmB;IACnB,+BAA8B;IAC9B,eAAc;IAKd,qBAAqB;IAQrB,mEAAmE;IAKnE,0CAA0C;IAW1C,+BAA+B;IAO/B,6CAA6C;IAI7C,qCAAqC;IAIrC,2FAA2F,EAuG9F;IA3JL;MAU4B,iBAAiB;MACjC,YAAW,EACd;IAZT;MAeY,0BAvBQ;MAwBR,eApBG;MAqBH,cAAa;MACb,gBAAe;MACf,aAAY,EACf;IApBT;MAuBY,mBAAkB;MAClB,sBAAqB,EACxB;IAzBT;MA4BY,SAAQ;MACR,cAAa;MACb,mBAAkB;MAClB,wBAAuB;MACvB,iBAAgB;MAChB,gDAA4C;MAC5C,WAAU;MACV,aAtCA,EAuCH;IApCT;MAuCY,aA1CA;MA2CA,mBAAkB;MAClB,sBAAqB;MACrB,eAAc,EACjB;IA3CT;MA8CY,0BAlDG,EAmDN;IA/CT;MAkDY,eAAc,EACjB;IAnDT;MAsDY,wBAxDC,EAyDJ;IAvDT;;MA2DY,aAAY;MACZ,sBAAqB;MACrB,gBAAe,EAClB;IA9DT;MAiEY,cAAa;MACb,gBAAe;MACf,eAvEG;MAwEH,0CAAyC;MACzC,iBAAgB;MAChB,gBAAe,EAClB;IAvET;MA0EY,oBAAmB;MACnB,eAAc,EACjB;IA5ET;MA+EY,aAAY;MACZ,iBAAgB,EACnB;IAjFT;MAoFY,mBAAkB;MAClB,aAAY;MACZ,wBAAuB;MACvB,kBAAiB;MACjB,iBAAgB;MAChB,0BAAyB;MACzB,uBAAsB,EACzB;IA3FT;MA8FY,YAAW;MACX,aAAY,EACf;IAhGT;MAkGwB,0CAA0C;MACtD,aAAY;MACZ,WAAU;MAAE,aAAa,EAC1B;IArGX;MAuGmC,6BAA6B;MACpD,aAAY,EACb;IAzGX;MA2GoC,oBAAoB;MAC5C,aAAY,EACb;IA7GX;MAgHY,eApHG,EAqHN;IAjHT;MAoHY,sBAAqB,EACxB;IArHT;MAwHY,iBAAgB;MAChB,cAAa;MACb,UAAS,EA2BZ;MArJT;QA8HoB,mBAAkB;QAClB,iBAAgB;QAChB,eAAc;QACd,gCAxIW,EA0Jd;QAnJjB;UAoIwB,YA1IN,EA+IG;UAzIrB;YAuI4B,YA7IV,EA8IO;QAxIzB;UA4IwB,iCAjJc;UAkJd,sBAAqB,EACxB;QA9IrB;UAiJwB,iBAAgB,EACnB;IAlJrB;MAwJY,aAAY;MACZ,YAAW,EACd;;AC7FL;EDkGA;IACI,cAAa,EAChB;EACD;IACI,kBAAiB,EACpB,EAAA","file":"Navigation.scss","sourcesContent":["@import '~bootstrap/scss/_functions.scss';\n@import '~bootstrap/scss/_variables.scss';\n@import '~bootstrap/scss/mixins/_breakpoints.scss';\n\n$bg-nav-bar: #343a40;\n$link: rgba(255, 255, 255, 0.5);\n$link-active: #fff;\n$link-hover: rgba(255, 255, 255, 0.75);\n$title: #ffd800;\n$text: white;\n$hover: black;\n\nnav.navigation {\n    background-color: $bg-nav-bar;\n    margin-bottom: 30px;\n\n    .container-fluid {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        height: 3.5rem;\n\n        :-moz-placeholder { /* Firefox 18- */\n            color: pink;\n        }\n        /* Dropdown Button */\n        .dropbtn {\n            background-color: $bg-nav-bar;\n            color: $title;\n            padding: 16px;\n            font-size: 16px;\n            border: none;\n        }\n        /* The container <div> - needed to position the dropdown content */\n        .dropdown {\n            position: relative;\n            display: inline-block;\n        }\n        /* Dropdown Content (Hidden by Default) */\n        .dropdown-content {\n            right: 0;\n            display: none;\n            position: absolute;\n            background-color: black;\n            min-width: 160px;\n            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n            z-index: 1;\n            color: $text;\n        }\n        /* Links inside the dropdown */\n        .dropdown-content a {\n            color: $text;\n            padding: 12px 16px;\n            text-decoration: none;\n            display: block;\n        }\n        /* Change color of dropdown links on hover */\n        .dropdown-content a:hover {\n            background-color: $title;\n        }\n        /* Show the dropdown menu on hover */\n        .dropdown:hover .dropdown-content {\n            display: block;\n        }\n        /* Change the background color of the dropdown button when the dropdown content is shown */\n        .dropdown:hover .dropbtn {\n            background-color: $hover;\n        }\n\n        .close:hover,\n        .close:focus {\n            color: black;\n            text-decoration: none;\n            cursor: pointer;\n        }       \n\n        h1 {\n            padding: 16px;\n            margin-top: 8px;\n            color: $title;\n            font-family: Arial, Helvetica, sans-serif;\n            font-weight: 900;\n            font-size: 22pt;\n        }\n\n        .show {\n            padding-right: 17px;\n            display: block;\n        }\n\n        h1:before {\n            color: white;\n            content: \"dofus\";\n        }\n\n        .search-input-global {\n            position: relative;\n            color: white;\n            background-color: black;\n            padding: 6px 20px;\n            margin: 8px 10px;\n            border-color: Transparent;\n            outline-color: #ffd800;\n        }\n\n        .img-size-countrys {\n            width: 32px;\n            height: 32px;\n        }\n\n        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n            color: white;\n            opacity: 1; /* Firefox */\n          }\n          \n          :-ms-input-placeholder { /* Internet Explorer 10-11 */\n            color: white;\n          }\n          \n          ::-ms-input-placeholder { /* Microsoft Edge */\n            color: white;\n          }\n\n        span {\n            color: $title;\n        }\n\n        .link-title {\n            text-decoration: none;\n        }\n\n        ul {\n            list-style: none;\n            display: flex;\n            margin: 0;\n\n            li {\n                a {\n                    padding: 10px 20px;\n                    min-height: 30px;\n                    display: block;\n                    color: $link;\n\n                    &.active {\n                        color: $link-active;\n\n                        &:hover {\n                            color: $link-active;\n                        }\n                    }\n\n                    &:hover {\n                        color: $link-hover;\n                        text-decoration: none;\n                    }\n\n                    svg {\n                        margin-left: 5px;\n                    }\n                }\n            }\n        }\n\n        .img-size {\n            height: 20px;\n            width: 20px;\n        }\n    }\n}\n\n@include media-breakpoint-only(xs) {\n    .nav-text {\n        display: none;\n    }\n    .link-title {\n        margin-left: 1rem;\n    }\n}\n","// Breakpoint viewport sizes and media queries.\n//\n// Breakpoints are defined as a map of (name: minimum width), order from small to large:\n//\n//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)\n//\n// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.\n\n// Name of the next breakpoint, or null for the last breakpoint.\n//\n//    >> breakpoint-next(sm)\n//    md\n//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    md\n//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))\n//    md\n@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {\n  $n: index($breakpoint-names, $name);\n  @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);\n}\n\n// Minimum breakpoint width. Null for the smallest (first) breakpoint.\n//\n//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    576px\n@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {\n  $min: map-get($breakpoints, $name);\n  @return if($min != 0, $min, null);\n}\n\n// Maximum breakpoint width. Null for the largest (last) breakpoint.\n// The maximum value is calculated as the minimum of the next one less 0.02px\n// to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.\n// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max\n// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.\n// See https://bugs.webkit.org/show_bug.cgi?id=178261\n//\n//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    767.98px\n@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {\n  $next: breakpoint-next($name, $breakpoints);\n  @return if($next, breakpoint-min($next, $breakpoints) - .02, null);\n}\n\n// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.\n// Useful for making responsive utilities.\n//\n//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    \"\"  (Returns a blank string)\n//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    \"-sm\"\n@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {\n  @return if(breakpoint-min($name, $breakpoints) == null, \"\", \"-#{$name}\");\n}\n\n// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.\n// Makes the @content apply to the given breakpoint and wider.\n@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {\n  $min: breakpoint-min($name, $breakpoints);\n  @if $min {\n    @media (min-width: $min) {\n      @content;\n    }\n  } @else {\n    @content;\n  }\n}\n\n// Media of at most the maximum breakpoint width. No query for the largest breakpoint.\n// Makes the @content apply to the given breakpoint and narrower.\n@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {\n  $max: breakpoint-max($name, $breakpoints);\n  @if $max {\n    @media (max-width: $max) {\n      @content;\n    }\n  } @else {\n    @content;\n  }\n}\n\n// Media that spans multiple breakpoint widths.\n// Makes the @content apply between the min and max breakpoints\n@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {\n  $min: breakpoint-min($lower, $breakpoints);\n  $max: breakpoint-max($upper, $breakpoints);\n\n  @if $min != null and $max != null {\n    @media (min-width: $min) and (max-width: $max) {\n      @content;\n    }\n  } @else if $max == null {\n    @include media-breakpoint-up($lower, $breakpoints) {\n      @content;\n    }\n  } @else if $min == null {\n    @include media-breakpoint-down($upper, $breakpoints) {\n      @content;\n    }\n  }\n}\n\n// Media between the breakpoint's minimum and maximum widths.\n// No minimum for the smallest breakpoint, and no maximum for the largest one.\n// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.\n@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {\n  $min: breakpoint-min($name, $breakpoints);\n  $max: breakpoint-max($name, $breakpoints);\n\n  @if $min != null and $max != null {\n    @media (min-width: $min) and (max-width: $max) {\n      @content;\n    }\n  } @else if $max == null {\n    @include media-breakpoint-up($name, $breakpoints) {\n      @content;\n    }\n  } @else if $min == null {\n    @include media-breakpoint-down($name, $breakpoints) {\n      @content;\n    }\n  }\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "nav.navigation {\n  background-color: #343a40;\n  margin-bottom: 30px; }\n  nav.navigation .container-fluid {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    height: 3.5rem;\n    /* Dropdown Button */\n    /* The container <div> - needed to position the dropdown content */\n    /* Dropdown Content (Hidden by Default) */\n    /* Links inside the dropdown */\n    /* Change color of dropdown links on hover */\n    /* Show the dropdown menu on hover */\n    /* Change the background color of the dropdown button when the dropdown content is shown */\n    /* The Modal (background) */\n    /* Modal Content/Box */ }\n    nav.navigation .container-fluid :-moz-placeholder {\n      /* Firefox 18- */\n      color: pink; }\n    nav.navigation .container-fluid .dropbtn {\n      background-color: #343a40;\n      color: #ffd800;\n      padding: 16px;\n      font-size: 16px;\n      border: none; }\n    nav.navigation .container-fluid .dropdown {\n      position: relative;\n      display: inline-block; }\n    nav.navigation .container-fluid .dropdown-content {\n      right: 0;\n      display: none;\n      position: absolute;\n      background-color: black;\n      min-width: 160px;\n      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n      z-index: 1;\n      color: white; }\n    nav.navigation .container-fluid .dropdown-content a {\n      color: white;\n      padding: 12px 16px;\n      text-decoration: none;\n      display: block; }\n    nav.navigation .container-fluid .dropdown-content a:hover {\n      background-color: #ffd800; }\n    nav.navigation .container-fluid .dropdown:hover .dropdown-content {\n      display: block; }\n    nav.navigation .container-fluid .dropdown:hover .dropbtn {\n      background-color: black; }\n    nav.navigation .container-fluid .modal {\n      overflow: auto;\n      /* Enable scroll if needed */\n      background-color: black;\n      /* Fallback color */\n      background-color: rgba(0, 0, 0, 0.4);\n      /* Black w/ opacity */ }\n    nav.navigation .container-fluid .modal-content {\n      background-color: black;\n      margin: 15% auto;\n      /* 15% from the top and centered */\n      padding: 20px;\n      border: 1px solid #888;\n      width: 80%;\n      /* Could be more or less, depending on screen size */ }\n    nav.navigation .container-fluid .close:hover,\n    nav.navigation .container-fluid .close:focus {\n      color: black;\n      text-decoration: none;\n      cursor: pointer; }\n    nav.navigation .container-fluid h1 {\n      padding: 16px;\n      margin-top: 8px;\n      color: #ffd800;\n      font-family: Arial, Helvetica, sans-serif;\n      font-weight: 900;\n      font-size: 22pt; }\n    nav.navigation .container-fluid .show {\n      padding-right: 17px;\n      display: block; }\n    nav.navigation .container-fluid h1:before {\n      color: white;\n      content: \"dofus\"; }\n    nav.navigation .container-fluid .search-input-global {\n      position: relative;\n      color: white;\n      background-color: black;\n      padding: 6px 20px;\n      margin: 8px 10px;\n      border-color: Transparent;\n      outline-color: #ffd800; }\n    nav.navigation .container-fluid .img-size-countrys {\n      width: 32px;\n      height: 32px; }\n    nav.navigation .container-fluid ::placeholder {\n      /* Chrome, Firefox, Opera, Safari 10.1+ */\n      color: white;\n      opacity: 1;\n      /* Firefox */ }\n    nav.navigation .container-fluid ::-ms-input-placeholder {\n      /* Internet Explorer 10-11 */\n      color: white; }\n    nav.navigation .container-fluid ::-ms-input-placeholder {\n      /* Microsoft Edge */\n      color: white; }\n    nav.navigation .container-fluid span {\n      color: #ffd800; }\n    nav.navigation .container-fluid .link-title {\n      text-decoration: none; }\n    nav.navigation .container-fluid ul {\n      list-style: none;\n      display: flex;\n      margin: 0; }\n      nav.navigation .container-fluid ul li a {\n        padding: 10px 20px;\n        min-height: 30px;\n        display: block;\n        color: rgba(255, 255, 255, 0.5); }\n        nav.navigation .container-fluid ul li a.active {\n          color: #fff; }\n          nav.navigation .container-fluid ul li a.active:hover {\n            color: #fff; }\n        nav.navigation .container-fluid ul li a:hover {\n          color: rgba(255, 255, 255, 0.75);\n          text-decoration: none; }\n        nav.navigation .container-fluid ul li a svg {\n          margin-left: 5px; }\n    nav.navigation .container-fluid .img-size {\n      height: 20px;\n      width: 20px; }\n\n@media (max-width: 575.98px) {\n  .nav-text {\n    display: none; }\n  .link-title {\n    margin-left: 1rem; } }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/Navigation.scss","E:/Dropbox/dofusbuilds/Front/src/style/node_modules/bootstrap/scss/mixins/_breakpoints.scss"],"names":[],"mappings":"AAYA;EACI,0BATgB;EAUhB,oBAAmB,EA2KtB;EA7KD;IAKQ,cAAa;IACb,oBAAmB;IACnB,+BAA8B;IAC9B,eAAc;IAMd,qBAAqB;IAQrB,mEAAmE;IAKnE,0CAA0C;IAW1C,+BAA+B;IAO/B,6CAA6C;IAI7C,qCAAqC;IAIrC,2FAA2F;IAK1F,4BAA4B;IAO7B,uBAAuB,EA2G1B;IA5KL;MAU4B,iBAAiB;MACjC,YAAW,EACd;IAZT;MAgBY,0BAxBQ;MAyBR,eArBG;MAsBH,cAAa;MACb,gBAAe;MACf,aAAY,EACf;IArBT;MAwBY,mBAAkB;MAClB,sBAAqB,EACxB;IA1BT;MA6BY,SAAQ;MACR,cAAa;MACb,mBAAkB;MAClB,wBAAuB;MACvB,iBAAgB;MAChB,gDAA4C;MAC5C,WAAU;MACV,aAvCA,EAwCH;IArCT;MAwCY,aA3CA;MA4CA,mBAAkB;MAClB,sBAAqB;MACrB,eAAc,EACjB;IA5CT;MA+CY,0BAnDG,EAoDN;IAhDT;MAmDY,eAAc,EACjB;IApDT;MAuDY,wBAzDC,EA0DJ;IAxDT;MA4DY,eAAc;MAAE,6BAA6B;MAC7C,wBAA4B;MAAE,oBAAoB;MAClD,qCAAiC;MAAE,sBAAsB,EAC5D;IA/DT;MAmEY,wBAAuB;MACvB,iBAAgB;MAAE,mCAAmC;MACrD,cAAa;MACb,uBAAsB;MACtB,WAAU;MAAE,qDAAqD,EACpE;IAxET;;MA4EY,aAAY;MACZ,sBAAqB;MACrB,gBAAe,EAClB;IA/ET;MAkFY,cAAa;MACb,gBAAe;MACf,eAxFG;MAyFH,0CAAyC;MACzC,iBAAgB;MAChB,gBAAe,EAClB;IAxFT;MA2FY,oBAAmB;MACnB,eAAc,EACjB;IA7FT;MAgGY,aAAY;MACZ,iBAAgB,EACnB;IAlGT;MAqGY,mBAAkB;MAClB,aAAY;MACZ,wBAAuB;MACvB,kBAAiB;MACjB,iBAAgB;MAChB,0BAAyB;MACzB,uBAAsB,EACzB;IA5GT;MA+GY,YAAW;MACX,aAAY,EACf;IAjHT;MAmHwB,0CAA0C;MACtD,aAAY;MACZ,WAAU;MAAE,aAAa,EAC1B;IAtHX;MAwHkC,6BAA6B;MACvD,aAAY,EACX;IA1HT;MA4HkC,oBAAoB;MAC9C,aAAY,EACT;IA9HX;MAiIY,eArIG,EAsIN;IAlIT;MAqIY,sBAAqB,EACxB;IAtIT;MAyIY,iBAAgB;MAChB,cAAa;MACb,UAAS,EA2BZ;MAtKT;QA+IoB,mBAAkB;QAClB,iBAAgB;QAChB,eAAc;QACd,gCAzJW,EA2Kd;QApKjB;UAqJwB,YA3JN,EAgKG;UA1JrB;YAwJ4B,YA9JV,EA+JO;QAzJzB;UA6JwB,iCAlKc;UAmKd,sBAAqB,EACxB;QA/JrB;UAkKwB,iBAAgB,EACnB;IAnKrB;MAyKY,aAAY;MACZ,YAAW,EACd;;AC9GL;EDmHA;IACI,cAAa,EAChB;EACD;IACI,kBAAiB,EACpB,EAAA","file":"Navigation.scss","sourcesContent":["@import '~bootstrap/scss/_functions.scss';\n@import '~bootstrap/scss/_variables.scss';\n@import '~bootstrap/scss/mixins/_breakpoints.scss';\n\n$bg-nav-bar: #343a40;\n$link: rgba(255, 255, 255, 0.5);\n$link-active: #fff;\n$link-hover: rgba(255, 255, 255, 0.75);\n$title: #ffd800;\n$text: white;\n$hover: black;\n\nnav.navigation {\n    background-color: $bg-nav-bar;\n    margin-bottom: 30px;\n\n    .container-fluid {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        height: 3.5rem;\n\n        :-moz-placeholder { /* Firefox 18- */\n            color: pink;\n        }\n        \n        /* Dropdown Button */\n        .dropbtn {\n            background-color: $bg-nav-bar;\n            color: $title;\n            padding: 16px;\n            font-size: 16px;\n            border: none;\n        }\n        /* The container <div> - needed to position the dropdown content */\n        .dropdown {\n            position: relative;\n            display: inline-block;\n        }\n        /* Dropdown Content (Hidden by Default) */\n        .dropdown-content {\n            right: 0;\n            display: none;\n            position: absolute;\n            background-color: black;\n            min-width: 160px;\n            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n            z-index: 1;\n            color: $text;\n        }\n        /* Links inside the dropdown */\n        .dropdown-content a {\n            color: $text;\n            padding: 12px 16px;\n            text-decoration: none;\n            display: block;\n        }\n        /* Change color of dropdown links on hover */\n        .dropdown-content a:hover {\n            background-color: $title;\n        }\n        /* Show the dropdown menu on hover */\n        .dropdown:hover .dropdown-content {\n            display: block;\n        }\n        /* Change the background color of the dropdown button when the dropdown content is shown */\n        .dropdown:hover .dropbtn {\n            background-color: $hover;\n        }\n\n         /* The Modal (background) */\n        .modal {\n            overflow: auto; /* Enable scroll if needed */\n            background-color: rgb(0,0,0); /* Fallback color */\n            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */\n        }\n        \n        /* Modal Content/Box */\n        .modal-content {\n            background-color: black;\n            margin: 15% auto; /* 15% from the top and centered */\n            padding: 20px;\n            border: 1px solid #888;\n            width: 80%; /* Could be more or less, depending on screen size */\n        }\n\n        .close:hover,\n        .close:focus {\n            color: black;\n            text-decoration: none;\n            cursor: pointer;\n        }       \n\n        h1 {\n            padding: 16px;\n            margin-top: 8px;\n            color: $title;\n            font-family: Arial, Helvetica, sans-serif;\n            font-weight: 900;\n            font-size: 22pt;\n        }\n\n        .show {\n            padding-right: 17px;\n            display: block;\n        }\n\n        h1:before {\n            color: white;\n            content: \"dofus\";\n        }\n\n        .search-input-global {\n            position: relative;\n            color: white;\n            background-color: black;\n            padding: 6px 20px;\n            margin: 8px 10px;\n            border-color: Transparent;\n            outline-color: #ffd800;\n        }\n\n        .img-size-countrys {\n            width: 32px;\n            height: 32px;\n        }\n\n        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n            color: white;\n            opacity: 1; /* Firefox */\n          }\n          \n        ::-ms-input-placeholder { /* Internet Explorer 10-11 */\n        color: white;\n        }\n        \n        ::-ms-input-placeholder { /* Microsoft Edge */\n        color: white;\n          }\n\n        span {\n            color: $title;\n        }\n\n        .link-title {\n            text-decoration: none;\n        }\n\n        ul {\n            list-style: none;\n            display: flex;\n            margin: 0;\n\n            li {\n                a {\n                    padding: 10px 20px;\n                    min-height: 30px;\n                    display: block;\n                    color: $link;\n\n                    &.active {\n                        color: $link-active;\n\n                        &:hover {\n                            color: $link-active;\n                        }\n                    }\n\n                    &:hover {\n                        color: $link-hover;\n                        text-decoration: none;\n                    }\n\n                    svg {\n                        margin-left: 5px;\n                    }\n                }\n            }\n        }\n\n        .img-size {\n            height: 20px;\n            width: 20px;\n        }\n    }\n}\n\n@include media-breakpoint-only(xs) {\n    .nav-text {\n        display: none;\n    }\n    .link-title {\n        margin-left: 1rem;\n    }\n}\n","// Breakpoint viewport sizes and media queries.\n//\n// Breakpoints are defined as a map of (name: minimum width), order from small to large:\n//\n//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)\n//\n// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.\n\n// Name of the next breakpoint, or null for the last breakpoint.\n//\n//    >> breakpoint-next(sm)\n//    md\n//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    md\n//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))\n//    md\n@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {\n  $n: index($breakpoint-names, $name);\n  @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);\n}\n\n// Minimum breakpoint width. Null for the smallest (first) breakpoint.\n//\n//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    576px\n@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {\n  $min: map-get($breakpoints, $name);\n  @return if($min != 0, $min, null);\n}\n\n// Maximum breakpoint width. Null for the largest (last) breakpoint.\n// The maximum value is calculated as the minimum of the next one less 0.02px\n// to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.\n// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max\n// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.\n// See https://bugs.webkit.org/show_bug.cgi?id=178261\n//\n//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    767.98px\n@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {\n  $next: breakpoint-next($name, $breakpoints);\n  @return if($next, breakpoint-min($next, $breakpoints) - .02, null);\n}\n\n// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.\n// Useful for making responsive utilities.\n//\n//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    \"\"  (Returns a blank string)\n//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))\n//    \"-sm\"\n@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {\n  @return if(breakpoint-min($name, $breakpoints) == null, \"\", \"-#{$name}\");\n}\n\n// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.\n// Makes the @content apply to the given breakpoint and wider.\n@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {\n  $min: breakpoint-min($name, $breakpoints);\n  @if $min {\n    @media (min-width: $min) {\n      @content;\n    }\n  } @else {\n    @content;\n  }\n}\n\n// Media of at most the maximum breakpoint width. No query for the largest breakpoint.\n// Makes the @content apply to the given breakpoint and narrower.\n@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {\n  $max: breakpoint-max($name, $breakpoints);\n  @if $max {\n    @media (max-width: $max) {\n      @content;\n    }\n  } @else {\n    @content;\n  }\n}\n\n// Media that spans multiple breakpoint widths.\n// Makes the @content apply between the min and max breakpoints\n@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {\n  $min: breakpoint-min($lower, $breakpoints);\n  $max: breakpoint-max($upper, $breakpoints);\n\n  @if $min != null and $max != null {\n    @media (min-width: $min) and (max-width: $max) {\n      @content;\n    }\n  } @else if $max == null {\n    @include media-breakpoint-up($lower, $breakpoints) {\n      @content;\n    }\n  } @else if $min == null {\n    @include media-breakpoint-down($upper, $breakpoints) {\n      @content;\n    }\n  }\n}\n\n// Media between the breakpoint's minimum and maximum widths.\n// No minimum for the smallest breakpoint, and no maximum for the largest one.\n// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.\n@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {\n  $min: breakpoint-min($name, $breakpoints);\n  $max: breakpoint-max($name, $breakpoints);\n\n  @if $min != null and $max != null {\n    @media (min-width: $min) and (max-width: $max) {\n      @content;\n    }\n  } @else if $max == null {\n    @include media-breakpoint-up($name, $breakpoints) {\n      @content;\n    }\n  } @else if $min == null {\n    @include media-breakpoint-down($name, $breakpoints) {\n      @content;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var MessagesComponent_1 = __webpack_require__(168);
-var MessagesSelector_1 = __webpack_require__(169);
+var MessagesComponent_1 = __webpack_require__(167);
+var MessagesSelector_1 = __webpack_require__(168);
 var mapStateToProps = function (state) { return ({
     error: MessagesSelector_1.getErrorMessages(state)
 }); };
@@ -36390,7 +36281,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Mes
 
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36414,7 +36305,17 @@ var MessagesComponent = /** @class */ (function (_super) {
     }
     MessagesComponent.prototype.render = function () {
         if (this.props.error != '') {
-            return (React.createElement("div", { className: "alert bg-danger text-white font-weight-bold text-center container", role: "alert" }, this.props.error));
+            var message = void 0;
+            if (this.props.error === '503') {
+                message = "Le serveur n'a pas répondu à temps. Il est possible qu'il soit hors ligne. Veuillez réessayer plus tard.";
+            }
+            else if (this.props.error === '503') {
+                message = "La ressource demandée n'a pas été trouvée.";
+            }
+            else {
+                message = this.props.error;
+            }
+            return (React.createElement("div", { className: "alert bg-danger text-white font-weight-bold text-center ml-2 mr-2 mb-4", role: "alert" }, message));
         }
         else {
             return null;
@@ -36426,7 +36327,7 @@ exports.default = MessagesComponent;
 
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36438,7 +36339,7 @@ exports.getErrorMessages = reselect_1.createSelector([getMessagesState], functio
 
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36456,10 +36357,10 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
 var react_router_dom_1 = __webpack_require__(8);
-var HomePage_1 = __webpack_require__(171);
-var ProfilePage_1 = __webpack_require__(172);
-var SettingsPage_1 = __webpack_require__(175);
-var EquipementsPage_1 = __webpack_require__(178);
+var HomePage_1 = __webpack_require__(170);
+var ProfilePage_1 = __webpack_require__(171);
+var SettingsPage_1 = __webpack_require__(174);
+var EquipementsPage_1 = __webpack_require__(177);
 var BuildCreationPage_1 = __webpack_require__(183);
 var Enums_1 = __webpack_require__(17);
 var Router = /** @class */ (function (_super) {
@@ -36496,7 +36397,7 @@ exports.Router = Router;
 
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36529,7 +36430,7 @@ exports.HomePage = HomePage;
 
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36546,7 +36447,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-var ProfileContainer_1 = __webpack_require__(173);
+var ProfileContainer_1 = __webpack_require__(172);
 var ProfilePage = /** @class */ (function (_super) {
     __extends(ProfilePage, _super);
     function ProfilePage() {
@@ -36562,21 +36463,21 @@ exports.ProfilePage = ProfilePage;
 
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var ProfileComponent_1 = __webpack_require__(174);
+var ProfileComponent_1 = __webpack_require__(173);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {};
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(ProfileComponent_1.default);
 
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36608,7 +36509,7 @@ exports.default = ProfileComponent;
 
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36625,7 +36526,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-var SettingsContainer_1 = __webpack_require__(176);
+var SettingsContainer_1 = __webpack_require__(175);
 var SettingsPage = /** @class */ (function (_super) {
     __extends(SettingsPage, _super);
     function SettingsPage() {
@@ -36641,21 +36542,21 @@ exports.SettingsPage = SettingsPage;
 
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var SettingsComponent_1 = __webpack_require__(177);
+var SettingsComponent_1 = __webpack_require__(176);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {};
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(SettingsComponent_1.default);
 
 
 /***/ }),
-/* 177 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36687,7 +36588,7 @@ exports.default = SettingsComponent;
 
 
 /***/ }),
-/* 178 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36704,7 +36605,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-var EquipementsContainer_1 = __webpack_require__(179);
+var EquipementsContainer_1 = __webpack_require__(178);
 var EquipementsPage = /** @class */ (function (_super) {
     __extends(EquipementsPage, _super);
     function EquipementsPage() {
@@ -36720,15 +36621,15 @@ exports.EquipementsPage = EquipementsPage;
 
 
 /***/ }),
-/* 179 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var EquipementsComponent_1 = __webpack_require__(180);
-var BuildCreationAction_1 = __webpack_require__(60);
+var EquipementsComponent_1 = __webpack_require__(179);
+var BuildCreationAction_1 = __webpack_require__(59);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {
     addItem: BuildCreationAction_1.addItem
@@ -36737,7 +36638,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Equ
 
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36754,9 +36655,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-__webpack_require__(181);
+__webpack_require__(180);
 var react_router_dom_1 = __webpack_require__(8);
-var Equipements_1 = __webpack_require__(59);
+var Hats_1 = __webpack_require__(182);
 var Enums_1 = __webpack_require__(17);
 var EquipementsComponent = /** @class */ (function (_super) {
     __extends(EquipementsComponent, _super);
@@ -36866,11 +36767,11 @@ var EquipementsComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: '../../assets/items/hats/' + i + '.webp', className: "card-img" })),
                                 React.createElement("div", { className: "col-md-8" },
                                     React.createElement("div", { className: "card-body" },
-                                        React.createElement("h6", { className: "card-title text-white font-weight-bold" }, Equipements_1.Hats[i].name),
+                                        React.createElement("h6", { className: "card-title text-white font-weight-bold" }, Hats_1.Hats[i].name),
                                         React.createElement("p", { className: "card-text" },
                                             React.createElement("small", { className: "text-white" },
                                                 "Niveau ",
-                                                Equipements_1.Hats[i].level)))))))),
+                                                Hats_1.Hats[i].level)))))))),
                 React.createElement("div", { className: "col-sm" },
                     React.createElement(react_router_dom_1.Link, { to: "/create", onClick: function () { return _this.props.addItem(_this.state.type, i + 1); } },
                         React.createElement("div", { className: "card bg-dark mb-3" },
@@ -36879,11 +36780,11 @@ var EquipementsComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: '../../assets/items/hats/' + (i + 1) + '.webp', className: "card-img" })),
                                 React.createElement("div", { className: "col-md-8" },
                                     React.createElement("div", { className: "card-body" },
-                                        React.createElement("h6", { className: "card-title text-white font-weight-bold" }, Equipements_1.Hats[i + 1].name),
+                                        React.createElement("h6", { className: "card-title text-white font-weight-bold" }, Hats_1.Hats[i + 1].name),
                                         React.createElement("p", { className: "card-text" },
                                             React.createElement("small", { className: "text-white" },
                                                 "Niveau ",
-                                                Equipements_1.Hats[i].level)))))))),
+                                                Hats_1.Hats[i].level)))))))),
                 React.createElement("div", { className: "col-sm" },
                     React.createElement(react_router_dom_1.Link, { to: "/create", onClick: function () { return _this.props.addItem(_this.state.type, i + 2); } },
                         React.createElement("div", { className: "card bg-dark mb-3" },
@@ -36892,11 +36793,11 @@ var EquipementsComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: '../../assets/items/hats/' + (i + 2) + '.webp', className: "card-img" })),
                                 React.createElement("div", { className: "col-md-8" },
                                     React.createElement("div", { className: "card-body" },
-                                        React.createElement("h6", { className: "card-title text-white font-weight-bold" }, Equipements_1.Hats[i + 2].name),
+                                        React.createElement("h6", { className: "card-title text-white font-weight-bold" }, Hats_1.Hats[i + 2].name),
                                         React.createElement("p", { className: "card-text" },
                                             React.createElement("small", { className: "text-white" }, "Niveau 200"))))))))));
         };
-        for (var i = 0; i < Equipements_1.Hats.length - 2; i += 3) {
+        for (var i = 0; i < Hats_1.Hats.length - 2; i += 3) {
             _loop_1(i);
         }
         //this.props.addItem(EquipementTypes.hat);
@@ -36908,13 +36809,13 @@ exports.default = EquipementsComponent;
 
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(182);
+var content = __webpack_require__(181);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -36939,7 +36840,7 @@ if(false) {
 }
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(true);
@@ -36947,9 +36848,92 @@ exports = module.exports = __webpack_require__(12)(true);
 
 
 // module
-exports.push([module.i, ".search-input {\n  color: white;\n  width: 100%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  border-color: Transparent;\n  outline-color: #ffd800; }\n\n.btn-return-next {\n  background-color: #343a40;\n  color: #ffd800;\n  padding: 16px;\n  font-size: 16px;\n  border: none;\n  height: 84%; }\n\n.overflow-return-btn {\n  width: 100%; }\n\n.overflow-title {\n  width: 100%; }\n\n.overflow-next-btn {\n  width: 100%; }\n\n.btn-return-next:hover {\n  background-color: black; }\n\n.font-size {\n  font-size: small; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/Equipements.scss"],"names":[],"mappings":"AAAA;EACI,aAAY;EACZ,YAAW;EACX,mBAAkB;EAClB,cAAa;EACb,0BAAyB;EACzB,uBAAsB,EACzB;;AAED;EACI,0BAAyB;EACzB,eAAc;EACd,cAAa;EACb,gBAAe;EACf,aAAY;EACZ,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,iBAAgB,EACnB","file":"Equipements.scss","sourcesContent":[".search-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 20px;\r\n    margin: 8px 0;\r\n    border-color: Transparent;\r\n    outline-color: #ffd800;\r\n}\r\n\r\n.btn-return-next {\r\n    background-color: #343a40;\r\n    color: #ffd800;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: none;\r\n    height: 84%;\r\n}\r\n\r\n.overflow-return-btn {\r\n    width: 100%;\r\n}\r\n\r\n.overflow-title {\r\n    width: 100%;\r\n}\r\n\r\n.overflow-next-btn {\r\n    width: 100%;\r\n}\r\n\r\n.btn-return-next:hover {\r\n    background-color: black;\r\n}\r\n\r\n.font-size {\r\n    font-size: small;\r\n}\r\n"],"sourceRoot":""}]);
+exports.push([module.i, ".search-input {\n  color: white;\n  width: 100%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  border-color: Transparent;\n  outline-color: #ffd800; }\n\n.btn-return-next {\n  background-color: #343a40;\n  color: #ffd800;\n  padding: 16px;\n  font-size: 16px;\n  border: none;\n  height: 84%; }\n\n.overflow-return-btn {\n  width: 100%; }\n\n.overflow-title {\n  width: 100%; }\n\n.overflow-next-btn {\n  width: 100%; }\n\n.btn-return-next:hover {\n  background-color: black; }\n\n.font-size {\n  font-size: small; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/Equipements.scss"],"names":[],"mappings":"AAAA;EACI,aAAY;EACZ,YAAW;EACX,mBAAkB;EAClB,cAAa;EACb,0BAAyB;EACzB,uBAAsB,EACzB;;AAED;EACI,0BAAyB;EACzB,eAAc;EACd,cAAa;EACb,gBAAe;EACf,aAAY;EACZ,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,iBAAgB,EACnB","file":"Equipements.scss","sourcesContent":[".search-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 20px;\r\n    margin: 8px 0;\r\n    border-color: Transparent;\r\n    outline-color: #ffd800;\r\n}\r\n\r\n.btn-return-next {\r\n    background-color: #343a40;\r\n    color: #ffd800;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: none;\r\n    height: 84%;\r\n}\r\n\r\n.overflow-return-btn {\r\n    width: 100%;\r\n}\r\n\r\n.overflow-title {\r\n    width: 100%;\r\n}\r\n\r\n.overflow-next-btn {\r\n    width: 100%;\r\n}\r\n\r\n.btn-return-next:hover {\r\n    background-color: black;\r\n}\r\n\r\n.font-size {\r\n    font-size: small;\r\n}\r\n\r\n"],"sourceRoot":""}]);
 
 // exports
+
+
+/***/ }),
+/* 182 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Hats = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: { min: 0, max: 1 },
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
 
 
 /***/ }),
@@ -36995,7 +36979,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
 var BuildCreationComponent_1 = __webpack_require__(185);
 var ConnectedUserSelector_1 = __webpack_require__(58);
-var BuildSelector_1 = __webpack_require__(189);
+var BuildSelector_1 = __webpack_require__(199);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state),
     build: BuildSelector_1.getBuild(state)
@@ -37026,7 +37010,7 @@ var react_router_dom_1 = __webpack_require__(8);
 __webpack_require__(186);
 var Spells_1 = __webpack_require__(188);
 var Enums_1 = __webpack_require__(17);
-var Equipements_1 = __webpack_require__(59);
+var Equipements_1 = __webpack_require__(189);
 var BuildCreationComponent = /** @class */ (function (_super) {
     __extends(BuildCreationComponent, _super);
     function BuildCreationComponent(props) {
@@ -37039,18 +37023,37 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                 ap: 7,
                 mp: 3,
                 range: 0,
+                initiative: 0,
                 summoning: 1,
                 critical: 0,
                 heal: 0,
                 lock: 0,
                 dodge: 0,
-                pushbackDamage: 0,
                 prospecting: 100,
+                wisdom: 0,
+                strength: 0,
+                intelligence: 0,
+                chance: 0,
+                agility: 0,
+                apParry: 0,
+                mpParry: 0,
+                apReduction: 0,
+                mpReduction: 0,
+                power: 0,
+                finalDamage: 0,
+                variableTrapDamage: 0,
+                spellDamage: 0,
+                weaponDamage: 0,
+                rangedDamage: 0,
+                meleeDamage: 0,
+                criticalDamage: 0,
                 neutralDamage: 0,
                 earthDamage: 0,
-                FireDamage: 0,
+                fireDamage: 0,
                 waterDamage: 0,
                 airDamage: 0,
+                fixedTrapDamage: 0,
+                pushbackDamage: 0,
                 variableNeutralResistance: 0,
                 variableEarthResistance: 0,
                 variableFireResistance: 0,
@@ -37061,8 +37064,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                 fixedFireResistance: 0,
                 fixedWaterResistance: 0,
                 fixedAirResistance: 0,
-                apParry: 0,
-                mpParry: 0
+                reflectDamage: 0
             },
             openClassesModal: ''
             /*swordList: false,
@@ -37081,31 +37083,38 @@ var BuildCreationComponent = /** @class */ (function (_super) {
         this.computeStats();
     };
     BuildCreationComponent.prototype.computeStats = function () {
+        // Iterate through the build items
         for (var buildItemsProperty in this.props.build) {
             // Check if there's an equiped item
             if (this.props.build[buildItemsProperty] > -1) {
-                // Iterate through the 'buildItems.[field]' Array properties
-                for (var hatsProperty in Equipements_1.Hats[this.props.build[buildItemsProperty]]) {
-                    var _loop_1 = function (statsProperty) {
-                        // Compare 'Hats' and 'stats' current property are the same
-                        if (hatsProperty === statsProperty) {
-                            var newStats_1 = this_1.state.stats;
-                            // Add the current stat
-                            newStats_1[statsProperty] += (Equipements_1.Hats[this_1.props.build[buildItemsProperty]])[hatsProperty].max;
-                            this_1.setState(function () {
-                                return {
-                                    stats: newStats_1
-                                };
-                            });
-                            return { value: void 0 };
+                // Iterate through the equipement types
+                for (var equipementsProperty in Equipements_1.Equipements) {
+                    // Check if the build item is the same as the current item type
+                    if (buildItemsProperty === equipementsProperty) {
+                        // Iterate through the equiped item stats
+                        for (var currentItemStatsProperty in Equipements_1.Equipements[equipementsProperty][this.props.build[buildItemsProperty]]) {
+                            var _loop_1 = function (stateStatsProperty) {
+                                // Check if the stat field is the same in both objects
+                                if (currentItemStatsProperty === stateStatsProperty) {
+                                    var newStats_1 = this_1.state.stats;
+                                    // Add the current stat
+                                    newStats_1[stateStatsProperty] += Equipements_1.Equipements[equipementsProperty][this_1.props.build[buildItemsProperty]][currentItemStatsProperty].max;
+                                    this_1.setState(function () {
+                                        return {
+                                            stats: newStats_1
+                                        };
+                                    });
+                                    return { value: void 0 };
+                                }
+                            };
+                            var this_1 = this;
+                            // Iterate through the component state stats
+                            for (var stateStatsProperty in this.state.stats) {
+                                var state_1 = _loop_1(stateStatsProperty);
+                                if (typeof state_1 === "object")
+                                    return state_1.value;
+                            }
                         }
-                    };
-                    var this_1 = this;
-                    // Iterate through the 'stats' component state properties
-                    for (var statsProperty in this.state.stats) {
-                        var state_1 = _loop_1(statsProperty);
-                        if (typeof state_1 === "object")
-                            return state_1.value;
                     }
                 }
             }
@@ -37236,8 +37245,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                         React.createElement(react_router_dom_1.Link, { to: "/dofus6" },
                             React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusSix))),
                         React.createElement(react_router_dom_1.Link, { to: "/pets" },
-                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.pet)))),
-                    React.createElement("h5", { className: "card-title text-center" }, "https://dofusbuilds.com/MHcR"))),
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.pet)))))),
             React.createElement("div", { className: 'modal fade ' + this.state.openClassesModal, role: "dialog", "aria-hidden": "true" },
                 React.createElement("div", { className: "modal-dialog modal-dialog-centered", role: "document" },
                     React.createElement("div", { className: "modal-content text-white modal-color" },
@@ -37345,7 +37353,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: "../assets/Elements/po.png" }),
                                     " Initiative")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.range))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.initiative))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
@@ -37397,28 +37405,35 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: "../assets/Elements/esquivepa.png" }),
                                     " Sagesse")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.apParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.wisdom))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null,
+                                React.createElement("p", { className: "card-text" },
+                                    React.createElement("img", { src: "../assets/Elements/esquivepa.png" }),
+                                    " Force")),
+                            React.createElement("td", null,
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.strength))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Intelligence")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.intelligence))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Chance")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.chance))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Agilit\u00E9")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.agility))))),
                 React.createElement("h5", { className: "card-title mt-2 mb-1" }, "Esquives"),
                 React.createElement("table", null,
                     React.createElement("tbody", null,
@@ -37442,14 +37457,14 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Retrait PA")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.apReduction))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Retrait PM")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpReduction))))),
                 React.createElement("h5", { className: "card-title mt-2 mb-1" }, "Dommages variables"),
                 React.createElement("table", null,
                     React.createElement("tbody", null,
@@ -37459,7 +37474,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: "../assets/Elements/esquivepa.png" }),
                                     " Puissance")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.apParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.power))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
@@ -37467,7 +37482,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     " Dommages finaux")),
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text float-right" },
-                                    this.state.stats.apParry,
+                                    this.state.stats.finalDamage,
                                     "%"))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
@@ -37476,7 +37491,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     " Dommages pi\u00E8ges")),
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text float-right" },
-                                    this.state.stats.mpParry,
+                                    this.state.stats.variableTrapDamage,
                                     "%"))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
@@ -37485,7 +37500,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     " Dommages sorts")),
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text float-right" },
-                                    this.state.stats.pushbackDamage,
+                                    this.state.stats.spellDamage,
                                     "%"))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
@@ -37494,7 +37509,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     " Dommages arme")),
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text float-right" },
-                                    this.state.stats.pushbackDamage,
+                                    this.state.stats.weaponDamage,
                                     "%"))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
@@ -37503,7 +37518,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     " Dommages distance")),
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text float-right" },
-                                    this.state.stats.pushbackDamage,
+                                    this.state.stats.rangedDamage,
                                     "%"))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
@@ -37512,7 +37527,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     " Dommages m\u00EAl\u00E9e")),
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text float-right" },
-                                    this.state.stats.pushbackDamage,
+                                    this.state.stats.meleeDamage,
                                     "%"))))),
                 React.createElement("h5", { className: "card-title mt-2 mb-1" }, "Dommages fixes"),
                 React.createElement("table", null,
@@ -37523,49 +37538,49 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: "../assets/Elements/esquivepa.png" }),
                                     " Dommages critique")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.apParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.criticalDamage))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepa.png" }),
                                     " Dommages neutre")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.apParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.neutralDamage))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Dommages terre")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.earthDamage))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Dommages feu")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.fireDamage))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Dommages eau")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.waterDamage))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Dommages air")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.airDamage))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Dommages pi\u00E8ges")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))),
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.fixedTrapDamage))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement("p", { className: "card-text" },
@@ -37672,7 +37687,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                     React.createElement("img", { src: "../assets/Elements/esquivepm.png" }),
                                     " Renvoi")),
                             React.createElement("td", null,
-                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.mpParry))))))));
+                                React.createElement("p", { className: "card-text float-right" }, this.state.stats.reflectDamage))))))));
     };
     BuildCreationComponent.prototype.renderSpells = function () {
         var Spells = [];
@@ -39493,9 +39508,26 @@ exports.sacrieurSpellsInformation = [{
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var reselect_1 = __webpack_require__(30);
-var getBuildState = function (state) { return state.build; };
-exports.getBuild = reselect_1.createSelector([getBuildState], function (s) { return s.build; });
+var Hats_1 = __webpack_require__(190);
+var Amulets_1 = __webpack_require__(191);
+var Belts_1 = __webpack_require__(192);
+var Rings_1 = __webpack_require__(193);
+var Boots_1 = __webpack_require__(194);
+var Cloaks_1 = __webpack_require__(195);
+var Dofus_1 = __webpack_require__(196);
+var Weapons_1 = __webpack_require__(197);
+var Shields_1 = __webpack_require__(198);
+exports.Equipements = {
+    hat: Hats_1.Hats,
+    amulet: Amulets_1.Amulets,
+    belt: Belts_1.Belts,
+    ring: Rings_1.Rings,
+    boots: Boots_1.Boots,
+    cloak: Cloaks_1.Cloaks,
+    dofus: Dofus_1.Dofus,
+    weapon: Weapons_1.Weapons,
+    shield: Shields_1.Shields
+};
 
 
 /***/ }),
@@ -39505,16 +39537,775 @@ exports.getBuild = reselect_1.createSelector([getBuildState], function (s) { ret
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Hats = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: { min: 0, max: 1 },
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Amulets = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Belts = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rings = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Boots = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 195 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cloaks = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dofus = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Weapons = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Shields = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: 1,
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 199 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var reselect_1 = __webpack_require__(30);
+var getBuildState = function (state) { return state.build; };
+exports.getBuild = reselect_1.createSelector([getBuildState], function (s) { return s.build; });
+
+
+/***/ }),
+/* 200 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(28);
-var redux_logger_1 = __webpack_require__(191);
-var redux_thunk_1 = __webpack_require__(192);
-var reducers_1 = __webpack_require__(193);
+var redux_logger_1 = __webpack_require__(201);
+var redux_thunk_1 = __webpack_require__(202);
+var reducers_1 = __webpack_require__(203);
 var store = redux_1.createStore(reducers_1.reducer, reducers_1.initialState, redux_1.applyMiddleware(redux_logger_1.default, redux_thunk_1.default));
 exports.default = store;
 
 
 /***/ }),
-/* 191 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.reduxLogger=e.reduxLogger||{})}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
@@ -39522,7 +40313,7 @@ exports.default = store;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 192 */
+/* 202 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39549,16 +40340,16 @@ thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ __webpack_exports__["default"] = (thunk);
 
 /***/ }),
-/* 193 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(28);
-var ConnectedUserReducer = __webpack_require__(194);
-var BuildCreationReducer = __webpack_require__(195);
-var MessagesReducer = __webpack_require__(196);
+var ConnectedUserReducer = __webpack_require__(204);
+var BuildCreationReducer = __webpack_require__(205);
+var MessagesReducer = __webpack_require__(206);
 /*
  * initialState of the app
  */
@@ -39579,7 +40370,7 @@ exports.reducer = redux_1.combineReducers({
 
 
 /***/ }),
-/* 194 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39593,7 +40384,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var UserConnectionActions_1 = __webpack_require__(61);
+var UserConnectionActions_1 = __webpack_require__(60);
 exports.initialState = {
     connectedUser: {
         user: {
@@ -39626,7 +40417,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 195 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39640,7 +40431,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var BuildCreationAction_1 = __webpack_require__(60);
+var BuildCreationAction_1 = __webpack_require__(59);
 exports.initialState = {
     build: {
         weapon: -1,
@@ -39737,7 +40528,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 196 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39751,7 +40542,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var UserConnectionActions_1 = __webpack_require__(61);
+var UserConnectionActions_1 = __webpack_require__(60);
 exports.initialState = {
     error: ''
 };
@@ -39769,7 +40560,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 197 */
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42122,10 +42913,10 @@ var autoReplace = function autoReplace() {
 
 
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(6), __webpack_require__(198).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(6), __webpack_require__(208).setImmediate))
 
 /***/ }),
-/* 198 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -42178,13 +42969,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(199);
+__webpack_require__(209);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 199 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -42377,7 +43168,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(0)))
 
 /***/ }),
-/* 200 */
+/* 210 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48944,13 +49735,13 @@ var _iconsCache = {
 
 
 /***/ }),
-/* 201 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(202);
+var content = __webpack_require__(212);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -48975,7 +49766,7 @@ if(false) {
 }
 
 /***/ }),
-/* 202 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(true);

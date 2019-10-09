@@ -37155,13 +37155,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                         " 5000"),
                                     React.createElement("p", { className: "card-text" }, "Aucun bonus de panoplie"))),
                             React.createElement("div", { className: "card text-white bg-dark mb-3 shadow-lg" },
-                                React.createElement("div", { className: "card-body" },
-                                    React.createElement("div", { className: "row" },
-                                        React.createElement("div", { className: "col" },
-                                            React.createElement("h5", { className: "card-title text-center" }, "Sort")),
-                                        React.createElement("div", { className: "col" },
-                                            React.createElement("h5", { className: "card-title text-center" }, "Variante"))),
-                                    React.createElement("div", { className: "container" }, this.renderSpells())))))))));
+                                React.createElement("div", { className: "card-body" }, this.renderSpells()))))))));
     };
     BuildCreationComponent.prototype.renderInformations = function () {
         return (React.createElement("div", { className: "card text-white bg-dark mb-3 shadow-lg fill-width" },
@@ -37691,80 +37685,54 @@ var BuildCreationComponent = /** @class */ (function (_super) {
     };
     BuildCreationComponent.prototype.renderSpells = function () {
         var Spells = [];
-        for (var i = 1; i <= Spells_1.NumberOfSpells; i += 2) {
-            var levelTwoFirstRow = null;
-            var levelTwoSecondRow = null;
-            var levelThreeFirstRow = null;
-            var levelThreeSecondRow = null;
-            var elementFirstRow = null;
-            var elementSecondRow = null;
-            // When an upgrade is undefined, show nothing
-            if (typeof (Spells_1.sacrieurSpellsInformation[i - 1].upgradeTwo) !== 'undefined' || Spells_1.sacrieurSpellsInformation[i - 1].upgradeTwo != null) {
-                levelTwoFirstRow = ' | ' + Spells_1.sacrieurSpellsInformation[i - 1].upgradeTwo.level;
-            }
-            if (typeof (Spells_1.sacrieurSpellsInformation[i].upgradeTwo) !== 'undefined' || Spells_1.sacrieurSpellsInformation[i].upgradeTwo != null) {
-                levelTwoSecondRow = ' | ' + Spells_1.sacrieurSpellsInformation[i - 1].upgradeTwo.level;
-            }
-            if (typeof (Spells_1.sacrieurSpellsInformation[i - 1].upgradeThree) !== 'undefined' || Spells_1.sacrieurSpellsInformation[i - 1].upgradeThree != null) {
-                levelThreeFirstRow = ' | ' + Spells_1.sacrieurSpellsInformation[i - 1].upgradeThree.level;
-            }
-            if (typeof (Spells_1.sacrieurSpellsInformation[i].upgradeThree) !== 'undefined' || Spells_1.sacrieurSpellsInformation[i].upgradeThree != null) {
-                levelThreeSecondRow = ' | ' + Spells_1.sacrieurSpellsInformation[i - 1].upgradeThree.level;
-            }
-            if (typeof (Spells_1.sacrieurSpellsInformation[i - 1].element) === 'undefined' || Spells_1.sacrieurSpellsInformation[i - 1].element == null) {
-                elementFirstRow = 'bg-neutral';
-            }
-            else {
-                elementFirstRow = Spells_1.sacrieurSpellsInformation[i - 1].element;
-            }
-            if (typeof (Spells_1.sacrieurSpellsInformation[i].element) === 'undefined' || Spells_1.sacrieurSpellsInformation[i].element == null) {
-                elementSecondRow = 'bg-neutral';
-            }
-            else {
-                elementSecondRow = Spells_1.sacrieurSpellsInformation[i].element;
-            }
-            // TODO remove jquery and use react component state instead
+        for (var i = 1; i <= Spells_1.NumberOfSpells; i += 4) {
             Spells.push(React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col" },
-                    React.createElement("a", { "data-toggle": "collapse", href: '#spellCollapse' + i },
-                        React.createElement("div", { className: 'card text-white ' + elementFirstRow + ' mb-3' },
-                            React.createElement("div", { className: "card-header" },
-                                React.createElement("img", { src: '../assets/characters/sacrier/spell' + i + '.png', className: "mr-2" }),
-                                Spells_1.sacrieurSpellsInformation[i - 1].name),
-                            React.createElement("div", { className: "card-body collapse", id: 'spellCollapse' + i },
-                                React.createElement("h5", { className: "card-title" },
-                                    Spells_1.sacrieurSpellsInformation[i - 1].pa,
-                                    " PA / ",
-                                    Spells_1.sacrieurSpellsInformation[i - 1].poMin,
-                                    " - ",
-                                    Spells_1.sacrieurSpellsInformation[i - 1].poMax,
-                                    " PO /",
-                                    ' ' + Spells_1.sacrieurSpellsInformation[i - 1].upgradeOne.level,
-                                    " ",
-                                    levelTwoFirstRow,
-                                    " ",
-                                    levelThreeFirstRow),
-                                React.createElement("p", { className: "card-text" }, Spells_1.sacrieurSpellsInformation[i - 1].description))))),
+                    React.createElement("table", null,
+                        React.createElement("tbody", null,
+                            React.createElement("tr", null,
+                                React.createElement("td", null,
+                                    React.createElement("div", { className: "row" },
+                                        React.createElement("div", { className: "col-md-2" },
+                                            React.createElement("img", { src: '../assets/characters/sacrier/spell' + (i + 1) + '.png' })),
+                                        React.createElement("div", { className: "col-md-2" },
+                                            React.createElement("img", { src: '../assets/characters/sacrier/spell' + (i) + '.png' })),
+                                        React.createElement("div", { className: "col" },
+                                            React.createElement("table", null,
+                                                React.createElement("tbody", null,
+                                                    React.createElement("tr", null,
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "spell-text" }, Spells_1.sacrieurSpellsInformation[i].name)),
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "spell-text float-right font-weight-bold" }, "4 pa, 50% cc"))),
+                                                    React.createElement("tr", null,
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "text-danger" }, "2670 \u00E0 3829")),
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "text-danger float-right" }, "4105 \u00E0 4677")))))))))))),
                 React.createElement("div", { className: "col" },
-                    React.createElement("a", { "data-toggle": "collapse", href: '#spellCollapse' + i },
-                        React.createElement("div", { className: 'card text-white ' + elementSecondRow + ' mb-3' },
-                            React.createElement("div", { className: "card-header" },
-                                React.createElement("img", { src: '../assets/characters/sacrier/spell' + (i + 1) + '.png', className: "mr-2" }),
-                                Spells_1.sacrieurSpellsInformation[i].name),
-                            React.createElement("div", { className: "card-body collapse", id: 'spellCollapse' + i },
-                                React.createElement("h5", { className: "card-title" },
-                                    Spells_1.sacrieurSpellsInformation[i].pa,
-                                    " PA / ",
-                                    Spells_1.sacrieurSpellsInformation[i].poMin,
-                                    " - ",
-                                    Spells_1.sacrieurSpellsInformation[i].poMax,
-                                    " PO /",
-                                    ' ' + Spells_1.sacrieurSpellsInformation[i].upgradeOne.level,
-                                    " ",
-                                    levelTwoSecondRow,
-                                    " ",
-                                    levelThreeSecondRow),
-                                React.createElement("p", { className: "card-text" }, Spells_1.sacrieurSpellsInformation[i].description)))))));
+                    React.createElement("table", null,
+                        React.createElement("tbody", null,
+                            React.createElement("tr", null,
+                                React.createElement("td", null,
+                                    React.createElement("div", { className: "row" },
+                                        React.createElement("div", { className: "col-md-2" },
+                                            React.createElement("img", { src: '../assets/characters/sacrier/spell' + (i + 1) + '.png' })),
+                                        React.createElement("div", { className: "col-md-2" },
+                                            React.createElement("img", { src: '../assets/characters/sacrier/spell' + (i) + '.png' })),
+                                        React.createElement("div", { className: "col" },
+                                            React.createElement("table", null,
+                                                React.createElement("tbody", null,
+                                                    React.createElement("tr", null,
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "spell-text" }, Spells_1.sacrieurSpellsInformation[i].name)),
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "spell-text float-right font-weight-bold" }, "4 pa, 50% cc"))),
+                                                    React.createElement("tr", null,
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "text-danger" }, "2670 \u00E0 3829")),
+                                                        React.createElement("td", null,
+                                                            React.createElement("p", { className: "text-danger float-right" }, "4105 \u00E0 4677"))))))))))))));
         }
         return Spells;
     };
@@ -37813,7 +37781,7 @@ exports = module.exports = __webpack_require__(12)(true);
 
 
 // module
-exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.bg-earth {\n  background-color: sienna; }\n\n.bg-invocation {\n  background-color: grey; }\n\n.bg-neutral {\n  background-color: mediumpurple; }\n\n.bg-heal {\n  background-color: pink; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.show {\n  padding-right: 17px;\n  display: block; }\n\n.modal-color {\n  background-color: black; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EACpB;;AAED;EACI,yBAAwB,EAC3B;;AAED;EACI,uBAAsB,EACzB;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,uBAAsB,EACzB;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAChB;;AAEH;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,oBAAmB;EACnB,eAAc,EACjB;;AAED;EACI,wBAAuB,EAC1B","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n}\r\n\r\n.bg-earth {\r\n    background-color: sienna;\r\n}\r\n\r\n.bg-invocation {\r\n    background-color: grey;\r\n}\r\n\r\n.bg-neutral {\r\n    background-color: mediumpurple;\r\n}\r\n\r\n.bg-heal {\r\n    background-color: pink;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n  }\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.show {\r\n    padding-right: 17px;\r\n    display: block;\r\n}\r\n\r\n.modal-color {\r\n    background-color: black;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.bg-earth {\n  background-color: sienna; }\n\n.bg-invocation {\n  background-color: grey; }\n\n.bg-neutral {\n  background-color: mediumpurple; }\n\n.bg-heal {\n  background-color: pink; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.show {\n  padding-right: 17px;\n  display: block; }\n\n.modal-color {\n  background-color: black; }\n\n.spell-text {\n  margin-bottom: 5px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EACpB;;AAED;EACI,yBAAwB,EAC3B;;AAED;EACI,uBAAsB,EACzB;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,uBAAsB,EACzB;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAChB;;AAEH;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,oBAAmB;EACnB,eAAc,EACjB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,mBAAkB,EACrB","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n}\r\n\r\n.bg-earth {\r\n    background-color: sienna;\r\n}\r\n\r\n.bg-invocation {\r\n    background-color: grey;\r\n}\r\n\r\n.bg-neutral {\r\n    background-color: mediumpurple;\r\n}\r\n\r\n.bg-heal {\r\n    background-color: pink;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n  }\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.show {\r\n    padding-right: 17px;\r\n    display: block;\r\n}\r\n\r\n.modal-color {\r\n    background-color: black;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}"],"sourceRoot":""}]);
 
 // exports
 

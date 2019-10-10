@@ -899,7 +899,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__createHashHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(84);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(17);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(11);
@@ -1501,6 +1501,64 @@ function updateLink (link, options, obj) {
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EquipementTypes = {
+    hat: 0,
+    belt: 1,
+    ringOne: 2,
+    ringTwo: 3,
+    boots: 4,
+    amulet: 5,
+    weapon: 6,
+    shield: 7,
+    cloak: 8,
+    pet: 9,
+    dofusOne: 10,
+    dofusTwo: 11,
+    dofusThree: 12,
+    dofusFour: 13,
+    dofusFive: 14,
+    dofusSix: 15
+};
+exports.Classes = {
+    ecaflip: 0,
+    eniripsa: 1,
+    iop: 2,
+    cra: 3,
+    feca: 4,
+    sacrier: 5,
+    sadida: 6,
+    osamoda: 7,
+    enutrof: 8,
+    sram: 9,
+    xelor: 10,
+    pandawa: 11,
+    rogue: 12,
+    masqueraider: 13,
+    foggernauts: 14,
+    eliotrope: 15,
+    huppermage: 16,
+    ouginak: 17
+};
+exports.SpellTypes = {
+    water: 'bg-primary',
+    fire: 'bg-danger',
+    agility: 'bg-success',
+    earth: 'bg-earth',
+    neutral: 'bg-neutral',
+    none: 'bg-invocation',
+    bonus: 'bg-warning',
+    heal: 'bg-heal',
+    invocation: 'bg-invocation'
+};
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1533,7 +1591,7 @@ if (process.env.NODE_ENV !== 'production') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1601,7 +1659,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1677,53 +1735,6 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 };
 
 /***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EquipementTypes = {
-    hat: 0,
-    belt: 1,
-    ringOne: 2,
-    ringTwo: 3,
-    boots: 4,
-    amulet: 5,
-    weapon: 6,
-    shield: 7,
-    cloak: 8,
-    pet: 9,
-    dofusOne: 10,
-    dofusTwo: 11,
-    dofusThree: 12,
-    dofusFour: 13,
-    dofusFive: 14,
-    dofusSix: 15
-};
-exports.Classes = {
-    ecaflip: 0,
-    eniripsa: 1,
-    iop: 2,
-    cra: 3,
-    feca: 4,
-    sacrier: 5,
-    sadida: 6,
-    osamoda: 7,
-    enutrof: 8,
-    sram: 9,
-    xelor: 10,
-    pandawa: 11,
-    rogue: 12,
-    masqueraider: 13,
-    foggernauts: 14,
-    eliotrope: 15,
-    huppermage: 16,
-    ouginak: 17
-};
-
-
-/***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1747,7 +1758,7 @@ module.exports = ReactPropTypesSecret;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 
 
@@ -2570,7 +2581,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
@@ -4533,7 +4544,7 @@ exports.getConnectedUser = reselect_1.createSelector([getConnectedUserState], fu
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Enums_1 = __webpack_require__(17);
+var Enums_1 = __webpack_require__(14);
 var ActionTypes;
 (function (ActionTypes) {
     ActionTypes["ADD_WEAPON"] = "ADD_WEAPON";
@@ -4695,12 +4706,12 @@ var react_router_dom_1 = __webpack_require__(8);
 __webpack_require__(107);
 var App_1 = __webpack_require__(110);
 var react_redux_1 = __webpack_require__(7);
-var index_1 = __webpack_require__(200);
+var index_1 = __webpack_require__(201);
 /*fontAwesome Icons*/
-var fontawesome_svg_core_1 = __webpack_require__(207);
-var free_solid_svg_icons_1 = __webpack_require__(210);
+var fontawesome_svg_core_1 = __webpack_require__(208);
+var free_solid_svg_icons_1 = __webpack_require__(211);
 fontawesome_svg_core_1.library.add(free_solid_svg_icons_1.faArrowLeft, free_solid_svg_icons_1.faBell, free_solid_svg_icons_1.faSearch, free_solid_svg_icons_1.faUser, free_solid_svg_icons_1.faHome, free_solid_svg_icons_1.faUserEdit, free_solid_svg_icons_1.faSignInAlt, free_solid_svg_icons_1.faStar, free_solid_svg_icons_1.faPoo, free_solid_svg_icons_1.faThumbsUp, free_solid_svg_icons_1.faGrinSquint);
-__webpack_require__(211);
+__webpack_require__(212);
 ReactDOM.render(React.createElement(react_redux_1.Provider, { store: index_1.default },
     React.createElement(react_router_dom_1.BrowserRouter, null,
         React.createElement(App_1.App, null))), document.getElementById('app'));
@@ -29135,7 +29146,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(20);
@@ -29925,11 +29936,11 @@ module.exports = function() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(33);
@@ -30349,11 +30360,11 @@ function valueEqual(a, b) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(33);
@@ -30670,10 +30681,10 @@ var createHashHistory = function createHashHistory() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(19);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -31570,7 +31581,7 @@ module.exports = function() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(20);
@@ -31767,7 +31778,7 @@ MemoryRouter.propTypes = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(34);
@@ -36090,7 +36101,6 @@ var NavigationComponent = /** @class */ (function (_super) {
         });
     };
     NavigationComponent.prototype.handleClickOutside = function (event) {
-        console.log(event.target);
         if (this.renderModals() == event.target) {
             alert('hey');
         }
@@ -36362,7 +36372,7 @@ var ProfilePage_1 = __webpack_require__(171);
 var SettingsPage_1 = __webpack_require__(174);
 var EquipementsPage_1 = __webpack_require__(177);
 var BuildCreationPage_1 = __webpack_require__(183);
-var Enums_1 = __webpack_require__(17);
+var Enums_1 = __webpack_require__(14);
 var Router = /** @class */ (function (_super) {
     __extends(Router, _super);
     function Router() {
@@ -36658,7 +36668,7 @@ var React = __webpack_require__(1);
 __webpack_require__(180);
 var react_router_dom_1 = __webpack_require__(8);
 var Hats_1 = __webpack_require__(182);
-var Enums_1 = __webpack_require__(17);
+var Enums_1 = __webpack_require__(14);
 var EquipementsComponent = /** @class */ (function (_super) {
     __extends(EquipementsComponent, _super);
     function EquipementsComponent(props) {
@@ -36979,7 +36989,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
 var BuildCreationComponent_1 = __webpack_require__(185);
 var ConnectedUserSelector_1 = __webpack_require__(58);
-var BuildSelector_1 = __webpack_require__(199);
+var BuildSelector_1 = __webpack_require__(200);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state),
     build: BuildSelector_1.getBuild(state)
@@ -37009,15 +37019,15 @@ var React = __webpack_require__(1);
 var react_router_dom_1 = __webpack_require__(8);
 __webpack_require__(186);
 var Spells_1 = __webpack_require__(188);
-var Enums_1 = __webpack_require__(17);
-var Equipements_1 = __webpack_require__(189);
+var Enums_1 = __webpack_require__(14);
+var Equipements_1 = __webpack_require__(190);
 var BuildCreationComponent = /** @class */ (function (_super) {
     __extends(BuildCreationComponent, _super);
     function BuildCreationComponent(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
             class: Enums_1.Classes.sacrier,
-            buildItems: [],
+            //buildItems: [],
             stats: {
                 vitality: 1500,
                 ap: 7,
@@ -37081,6 +37091,29 @@ var BuildCreationComponent = /** @class */ (function (_super) {
     }
     BuildCreationComponent.prototype.componentWillMount = function () {
         this.computeStats();
+        //this.computeSpellDamage(14);
+    };
+    BuildCreationComponent.prototype.formatItemsType = function (type) {
+        switch (type) {
+            case 'dofusOne':
+                return 'dofus';
+            case 'dofusTwo':
+                return 'dofus';
+            case 'dofusThree':
+                return 'dofus';
+            case 'dofusFour':
+                return 'dofus';
+            case 'dofusFive':
+                return 'dofus';
+            case 'dofusSix':
+                return 'dofus';
+            case 'ringOne':
+                return 'ring';
+            case 'ringTwo':
+                return 'ring';
+            default:
+                return type;
+        }
     };
     BuildCreationComponent.prototype.computeStats = function () {
         // Iterate through the build items
@@ -37090,7 +37123,7 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                 // Iterate through the equipement types
                 for (var equipementsProperty in Equipements_1.Equipements) {
                     // Check if the build item is the same as the current item type
-                    if (buildItemsProperty === equipementsProperty) {
+                    if (this.formatItemsType(buildItemsProperty) === equipementsProperty) {
                         // Iterate through the equiped item stats
                         for (var currentItemStatsProperty in Equipements_1.Equipements[equipementsProperty][this.props.build[buildItemsProperty]]) {
                             var _loop_1 = function (stateStatsProperty) {
@@ -37104,21 +37137,34 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                             stats: newStats_1
                                         };
                                     });
-                                    return { value: void 0 };
                                 }
                             };
                             var this_1 = this;
                             // Iterate through the component state stats
                             for (var stateStatsProperty in this.state.stats) {
-                                var state_1 = _loop_1(stateStatsProperty);
-                                if (typeof state_1 === "object")
-                                    return state_1.value;
+                                _loop_1(stateStatsProperty);
                             }
                         }
                     }
                 }
             }
         }
+    };
+    BuildCreationComponent.prototype.computeNormalDamages = function (jet) {
+        var power = 0;
+        var caracteristic = 0;
+        var multiplier = (power + caracteristic + 100) / 100;
+        var fix = (0 + 0);
+        var totalDamage = multiplier * jet + fix;
+        return totalDamage;
+    };
+    BuildCreationComponent.prototype.computeCriticalDamages = function (jet) {
+        var power = 0;
+        var caracteristic = 0;
+        var multiplier = (power + caracteristic + 100) / 100;
+        var fix = (0 + 0);
+        var totalDamage = multiplier * jet + fix;
+        return totalDamage;
     };
     BuildCreationComponent.prototype.showClassesModal = function (show) {
         var showModalCss = '';
@@ -37684,9 +37730,23 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                 React.createElement("p", { className: "card-text float-right" }, this.state.stats.reflectDamage))))))));
     };
     BuildCreationComponent.prototype.renderSpells = function () {
-        var Spells = [];
-        for (var i = 1; i <= Spells_1.NumberOfSpells; i += 4) {
-            Spells.push(React.createElement("div", { className: "row" },
+        var SpellsHTML = [];
+        var criticalFirstRow;
+        var criticalSecondRow;
+        for (var i = 1; i <= Spells_1.Spells.sacrier.length; i += 4) {
+            if (Spells_1.Spells.sacrier[i].cc == null) {
+                criticalFirstRow = '';
+            }
+            else {
+                criticalFirstRow = Spells_1.Spells.sacrier[i].cc + this.state.stats.critical + '% cc';
+            }
+            if (Spells_1.Spells.sacrier[i + 1].cc == null) {
+                criticalSecondRow = '';
+            }
+            else {
+                criticalSecondRow = Spells_1.Spells.sacrier[i + 1].cc + this.state.stats.critical + '% cc';
+            }
+            SpellsHTML.push(React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col" },
                     React.createElement("table", null,
                         React.createElement("tbody", null,
@@ -37703,18 +37763,23 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                                 React.createElement("tbody", null,
                                                     React.createElement("tr", null,
                                                         React.createElement("td", { className: "bg-secondary rounded-left" },
-                                                            React.createElement("p", { className: "spell-text" }, Spells_1.sacrieurSpellsInformation[i].name)),
+                                                            React.createElement("p", { className: "spell-text" }, Spells_1.Spells.sacrier[i].name)),
                                                         React.createElement("td", { className: "bg-secondary rounded-right" },
                                                             React.createElement("p", { className: "spell-text float-right font-weight-bold" },
-                                                                Spells_1.sacrieurSpellsInformation[i].pa,
-                                                                " pa  ",
-                                                                Spells_1.sacrieurSpellsInformation[i].cc + this.state.stats.critical,
-                                                                "% cc"))),
+                                                                Spells_1.Spells.sacrier[i].pa,
+                                                                " pa ",
+                                                                criticalFirstRow))),
                                                     React.createElement("tr", null,
                                                         React.createElement("td", null,
-                                                            React.createElement("p", { className: "text-danger" }, "2670 \u00E0 3829")),
+                                                            React.createElement("p", { className: "text-danger" },
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.normal.damageMin),
+                                                                " \u00E0 ",
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.normal.damageMax))),
                                                         React.createElement("td", null,
-                                                            React.createElement("p", { className: "text-danger float-right" }, "4105 \u00E0 4677")))))))))))),
+                                                            React.createElement("p", { className: "text-danger float-right" },
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.critical.damageMin),
+                                                                " \u00E0 ",
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.critical.damageMax))))))))))))),
                 React.createElement("div", { className: "col" },
                     React.createElement("table", null,
                         React.createElement("tbody", null,
@@ -37730,20 +37795,25 @@ var BuildCreationComponent = /** @class */ (function (_super) {
                                                 React.createElement("tbody", null,
                                                     React.createElement("tr", null,
                                                         React.createElement("td", { className: "bg-secondary rounded-left" },
-                                                            React.createElement("p", { className: "spell-text" }, Spells_1.sacrieurSpellsInformation[i + 1].name)),
+                                                            React.createElement("p", { className: "spell-text" }, Spells_1.Spells.sacrier[i + 1].name)),
                                                         React.createElement("td", { className: "bg-secondary rounded-right" },
                                                             React.createElement("p", { className: "spell-text float-right font-weight-bold" },
-                                                                Spells_1.sacrieurSpellsInformation[i].pa,
-                                                                " pa  ",
-                                                                Spells_1.sacrieurSpellsInformation[i].cc + this.state.stats.critical,
-                                                                "% cc"))),
+                                                                Spells_1.Spells.sacrier[i + 1].pa,
+                                                                " pa ",
+                                                                criticalSecondRow))),
                                                     React.createElement("tr", null,
                                                         React.createElement("td", null,
-                                                            React.createElement("p", { className: "text-danger" }, "2670 \u00E0 3829")),
+                                                            React.createElement("p", { className: "text-danger" },
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.normal.damageMin),
+                                                                " \u00E0 ",
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.normal.damageMax))),
                                                         React.createElement("td", null,
-                                                            React.createElement("p", { className: "text-danger float-right" }, "4105 \u00E0 4677"))))))))))))));
+                                                            React.createElement("p", { className: "text-danger float-right" },
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.critical.damageMin),
+                                                                " \u00E0 ",
+                                                                this.computeNormalDamages(Spells_1.Spells.sacrier[i].upgradeOne.critical.damageMax)))))))))))))));
         }
-        return Spells;
+        return SpellsHTML;
     };
     return BuildCreationComponent;
 }(React.Component));
@@ -37802,24 +37872,26 @@ exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width:
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NumberOfSpells = 44;
-var SpellType = {
-    water: 'bg-primary',
-    fire: 'bg-danger',
-    agility: 'bg-success',
-    earth: 'bg-earth',
-    neutral: 'bg-neutral',
-    none: 'bg-invocation',
-    bonus: 'bg-warning',
-    heal: 'bg-heal',
-    invocation: 'bg-invocation'
+var Sacrier_1 = __webpack_require__(189);
+exports.Spells = {
+    sacrier: Sacrier_1.SacrierSpells
 };
-exports.sacrieurSpellsInformation = [{
+
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Enums_1 = __webpack_require__(14);
+exports.SacrierSpells = [{
         name: 'Nervosité',
         poMin: 1,
         poMax: 4,
         pa: 3,
-        element: SpellType.water,
+        element: Enums_1.SpellTypes.water,
         upgradeOne: {
             level: 1,
             normal: {
@@ -37867,7 +37939,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 5,
         pa: 4,
-        element: SpellType.water,
+        element: Enums_1.SpellTypes.water,
         upgradeOne: {
             level: 100,
             normal: {
@@ -37989,7 +38061,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 1,
         pa: 3,
-        element: SpellType.agility,
+        element: Enums_1.SpellTypes.agility,
         upgradeOne: {
             level: 1,
             normal: {
@@ -38037,7 +38109,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 3,
         pa: 4,
-        element: SpellType.agility,
+        element: Enums_1.SpellTypes.agility,
         upgradeOne: {
             level: 95,
             normal: {
@@ -38074,7 +38146,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 0,
         poMax: 0,
         pa: 4,
-        element: SpellType.earth,
+        element: Enums_1.SpellTypes.earth,
         upgradeOne: {
             level: 3,
             normal: {
@@ -38122,7 +38194,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 1,
         pa: 3,
-        element: SpellType.earth,
+        element: Enums_1.SpellTypes.earth,
         upgradeOne: {
             level: 110,
             normal: {
@@ -38159,7 +38231,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 5,
         pa: 3,
-        element: SpellType.fire,
+        element: Enums_1.SpellTypes.fire,
         upgradeOne: {
             level: 6,
             normal: {
@@ -38207,7 +38279,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 3,
         pa: 4,
-        element: SpellType.fire,
+        element: Enums_1.SpellTypes.fire,
         upgradeOne: {
             level: 115,
             normal: {
@@ -38414,7 +38486,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 6,
         pa: 3,
-        element: SpellType.earth,
+        element: Enums_1.SpellTypes.earth,
         upgradeOne: {
             level: 20,
             normal: {
@@ -38462,7 +38534,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 5,
         pa: 3,
-        element: SpellType.agility,
+        element: Enums_1.SpellTypes.agility,
         upgradeOne: {
             level: 130,
             normal: {
@@ -38499,7 +38571,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 2,
         pa: 2,
-        element: SpellType.agility,
+        element: Enums_1.SpellTypes.agility,
         upgradeOne: {
             level: 25,
             normal: {
@@ -38547,7 +38619,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 2,
         poMax: 5,
         pa: 2,
-        element: SpellType.fire,
+        element: Enums_1.SpellTypes.fire,
         upgradeOne: {
             level: 135,
             normal: {
@@ -38647,7 +38719,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 5,
         pa: 3,
-        element: SpellType.water,
+        element: Enums_1.SpellTypes.water,
         upgradeOne: {
             level: 35,
             normal: {
@@ -38695,7 +38767,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 0,
         poMax: 0,
         pa: 2,
-        element: SpellType.earth,
+        element: Enums_1.SpellTypes.earth,
         upgradeOne: {
             level: 145,
             normal: {
@@ -38721,7 +38793,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 1,
         pa: 2,
-        element: SpellType.fire,
+        element: Enums_1.SpellTypes.fire,
         upgradeOne: {
             level: 40,
             normal: {
@@ -38943,7 +39015,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 5,
         pa: 3,
-        element: SpellType.fire,
+        element: Enums_1.SpellTypes.fire,
         upgradeOne: {
             level: 55,
             normal: {
@@ -38991,7 +39063,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 3,
         pa: 4,
-        element: SpellType.fire,
+        element: Enums_1.SpellTypes.fire,
         upgradeOne: {
             level: 165,
             normal: {
@@ -39017,7 +39089,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 1,
         pa: 3,
-        element: SpellType.earth,
+        element: Enums_1.SpellTypes.earth,
         upgradeOne: {
             level: 60,
             normal: {
@@ -39065,7 +39137,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 1,
         pa: 4,
-        element: SpellType.earth,
+        element: Enums_1.SpellTypes.earth,
         upgradeOne: {
             level: 170,
             normal: {
@@ -39165,7 +39237,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 1,
         pa: 3,
-        element: SpellType.agility,
+        element: Enums_1.SpellTypes.agility,
         upgradeOne: {
             level: 70,
             normal: {
@@ -39202,7 +39274,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 1,
         pa: 4,
-        element: SpellType.agility,
+        element: Enums_1.SpellTypes.agility,
         upgradeOne: {
             level: 180,
             normal: {
@@ -39228,7 +39300,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 5,
         pa: 3,
-        element: SpellType.water,
+        element: Enums_1.SpellTypes.water,
         upgradeOne: {
             level: 75,
             normal: {
@@ -39265,7 +39337,7 @@ exports.sacrieurSpellsInformation = [{
         poMin: 1,
         poMax: 5,
         pa: 4,
-        element: SpellType.water,
+        element: Enums_1.SpellTypes.water,
         upgradeOne: {
             level: 185,
             normal: {
@@ -39479,21 +39551,21 @@ exports.sacrieurSpellsInformation = [{
 
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Hats_1 = __webpack_require__(190);
-var Amulets_1 = __webpack_require__(191);
-var Belts_1 = __webpack_require__(192);
-var Rings_1 = __webpack_require__(193);
-var Boots_1 = __webpack_require__(194);
-var Cloaks_1 = __webpack_require__(195);
-var Dofus_1 = __webpack_require__(196);
-var Weapons_1 = __webpack_require__(197);
-var Shields_1 = __webpack_require__(198);
+var Hats_1 = __webpack_require__(191);
+var Amulets_1 = __webpack_require__(192);
+var Belts_1 = __webpack_require__(193);
+var Rings_1 = __webpack_require__(194);
+var Boots_1 = __webpack_require__(195);
+var Cloaks_1 = __webpack_require__(196);
+var Dofus_1 = __webpack_require__(197);
+var Weapons_1 = __webpack_require__(198);
+var Shields_1 = __webpack_require__(199);
 exports.Equipements = {
     hat: Hats_1.Hats,
     amulet: Amulets_1.Amulets,
@@ -39508,7 +39580,7 @@ exports.Equipements = {
 
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39591,7 +39663,7 @@ exports.Hats = [
 
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39603,15 +39675,15 @@ exports.Amulets = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
         apReduction: { min: 6, max: 8 },
         lock: { min: 16, max: 20 },
         level: 200,
@@ -39624,7 +39696,7 @@ exports.Amulets = [
         agility: { min: 31, max: 40 },
         wisdom: { min: 31, max: 40 },
         heals: { min: 8, max: 12 },
-        summons: 1,
+        summons: { min: 0, max: 1 },
         prospecting: { min: 11, max: 15 },
         fireDamage: { min: 7, max: 10 },
         airDamage: { min: 7, max: 10 },
@@ -39639,90 +39711,7 @@ exports.Amulets = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
-        prospecting: { min: 21, max: 30 },
-        neutralDamage: { min: 16, max: 20 },
-        earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
-        apReduction: { min: 6, max: 8 },
-        lock: { min: 16, max: 20 },
-        level: 200,
-        set: 'Harebourg'
-    },
-    {
-        name: 'Coiffe Séculaire',
-        vitality: { min: 251, max: 300 },
-        intelligence: { min: 71, max: 100 },
-        agility: { min: 31, max: 40 },
-        wisdom: { min: 31, max: 40 },
-        heals: { min: 8, max: 12 },
-        summons: 1,
-        prospecting: { min: 11, max: 15 },
-        fireDamage: { min: 7, max: 10 },
-        airDamage: { min: 7, max: 10 },
-        airResistance: { min: 11, max: 15 },
-        earthResistance: { min: 5, max: 7 },
-        waterResistance: { min: 5, max: 7 },
-        level: 200,
-        set: 'Séculaire'
-    }
-];
-
-
-/***/ }),
-/* 192 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Belts = [
-    {
-        name: 'Coiffe du Compte Harebourg',
-        vitality: { min: 451, max: 500 },
-        strength: { min: 71, max: 100 },
-        wisdom: { min: 41, max: 60 },
-        range: 1,
-        prospecting: { min: 21, max: 30 },
-        neutralDamage: { min: 16, max: 20 },
-        earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
-        apReduction: { min: 6, max: 8 },
-        lock: { min: 16, max: 20 },
-        level: 200,
-        set: 'Harebourg'
-    },
-    {
-        name: 'Coiffe Séculaire',
-        vitality: { min: 251, max: 300 },
-        intelligence: { min: 71, max: 100 },
-        agility: { min: 31, max: 40 },
-        wisdom: { min: 31, max: 40 },
-        heals: { min: 8, max: 12 },
-        summons: 1,
-        prospecting: { min: 11, max: 15 },
-        fireDamage: { min: 7, max: 10 },
-        airDamage: { min: 7, max: 10 },
-        airResistance: { min: 11, max: 15 },
-        earthResistance: { min: 5, max: 7 },
-        waterResistance: { min: 5, max: 7 },
-        level: 200,
-        set: 'Séculaire'
-    },
-    {
-        name: 'Coiffe du Compte Harebourg',
-        vitality: { min: 451, max: 500 },
-        strength: { min: 71, max: 100 },
-        wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
@@ -39763,21 +39752,21 @@ exports.Belts = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Rings = [
+exports.Belts = [
     {
         name: 'Coiffe du Compte Harebourg',
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
         apReduction: { min: 6, max: 8 },
         lock: { min: 16, max: 20 },
         level: 200,
@@ -39790,7 +39779,7 @@ exports.Rings = [
         agility: { min: 31, max: 40 },
         wisdom: { min: 31, max: 40 },
         heals: { min: 8, max: 12 },
-        summons: 1,
+        summons: { min: 0, max: 1 },
         prospecting: { min: 11, max: 15 },
         fireDamage: { min: 7, max: 10 },
         airDamage: { min: 7, max: 10 },
@@ -39805,7 +39794,7 @@ exports.Rings = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
@@ -39846,21 +39835,21 @@ exports.Rings = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Boots = [
+exports.Rings = [
     {
         name: 'Coiffe du Compte Harebourg',
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
         apReduction: { min: 6, max: 8 },
         lock: { min: 16, max: 20 },
         level: 200,
@@ -39873,7 +39862,7 @@ exports.Boots = [
         agility: { min: 31, max: 40 },
         wisdom: { min: 31, max: 40 },
         heals: { min: 8, max: 12 },
-        summons: 1,
+        summons: { min: 0, max: 1 },
         prospecting: { min: 11, max: 15 },
         fireDamage: { min: 7, max: 10 },
         airDamage: { min: 7, max: 10 },
@@ -39888,7 +39877,7 @@ exports.Boots = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
@@ -39929,21 +39918,21 @@ exports.Boots = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cloaks = [
+exports.Boots = [
     {
         name: 'Coiffe du Compte Harebourg',
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
         apReduction: { min: 6, max: 8 },
         lock: { min: 16, max: 20 },
         level: 200,
@@ -39956,7 +39945,7 @@ exports.Cloaks = [
         agility: { min: 31, max: 40 },
         wisdom: { min: 31, max: 40 },
         heals: { min: 8, max: 12 },
-        summons: 1,
+        summons: { min: 0, max: 1 },
         prospecting: { min: 11, max: 15 },
         fireDamage: { min: 7, max: 10 },
         airDamage: { min: 7, max: 10 },
@@ -39971,7 +39960,7 @@ exports.Cloaks = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
@@ -40012,21 +40001,21 @@ exports.Cloaks = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Dofus = [
+exports.Cloaks = [
     {
         name: 'Coiffe du Compte Harebourg',
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
         apReduction: { min: 6, max: 8 },
         lock: { min: 16, max: 20 },
         level: 200,
@@ -40039,7 +40028,7 @@ exports.Dofus = [
         agility: { min: 31, max: 40 },
         wisdom: { min: 31, max: 40 },
         heals: { min: 8, max: 12 },
-        summons: 1,
+        summons: { min: 0, max: 1 },
         prospecting: { min: 11, max: 15 },
         fireDamage: { min: 7, max: 10 },
         airDamage: { min: 7, max: 10 },
@@ -40054,7 +40043,7 @@ exports.Dofus = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
@@ -40095,21 +40084,21 @@ exports.Dofus = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Weapons = [
+exports.Dofus = [
     {
         name: 'Coiffe du Compte Harebourg',
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
         apReduction: { min: 6, max: 8 },
         lock: { min: 16, max: 20 },
         level: 200,
@@ -40122,7 +40111,7 @@ exports.Weapons = [
         agility: { min: 31, max: 40 },
         wisdom: { min: 31, max: 40 },
         heals: { min: 8, max: 12 },
-        summons: 1,
+        summons: { min: 0, max: 1 },
         prospecting: { min: 11, max: 15 },
         fireDamage: { min: 7, max: 10 },
         airDamage: { min: 7, max: 10 },
@@ -40137,7 +40126,7 @@ exports.Weapons = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
@@ -40178,21 +40167,21 @@ exports.Weapons = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Shields = [
+exports.Weapons = [
     {
         name: 'Coiffe du Compte Harebourg',
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
         apReduction: { min: 6, max: 8 },
         lock: { min: 16, max: 20 },
         level: 200,
@@ -40205,7 +40194,7 @@ exports.Shields = [
         agility: { min: 31, max: 40 },
         wisdom: { min: 31, max: 40 },
         heals: { min: 8, max: 12 },
-        summons: 1,
+        summons: { min: 0, max: 1 },
         prospecting: { min: 11, max: 15 },
         fireDamage: { min: 7, max: 10 },
         airDamage: { min: 7, max: 10 },
@@ -40220,7 +40209,7 @@ exports.Shields = [
         vitality: { min: 451, max: 500 },
         strength: { min: 71, max: 100 },
         wisdom: { min: 41, max: 60 },
-        range: 1,
+        range: { min: 0, max: 1 },
         prospecting: { min: 21, max: 30 },
         neutralDamage: { min: 16, max: 20 },
         earthDamage: { min: 16, max: 20 },
@@ -40261,9 +40250,80 @@ exports.Shields = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var reselect_1 = __webpack_require__(30);
-var getBuildState = function (state) { return state.build; };
-exports.getBuild = reselect_1.createSelector([getBuildState], function (s) { return s.build; });
+exports.Shields = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: { min: 0, max: 1 },
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
 
 
 /***/ }),
@@ -40273,16 +40333,28 @@ exports.getBuild = reselect_1.createSelector([getBuildState], function (s) { ret
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var reselect_1 = __webpack_require__(30);
+var getBuildState = function (state) { return state.build; };
+exports.getBuild = reselect_1.createSelector([getBuildState], function (s) { return s.build; });
+
+
+/***/ }),
+/* 201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(28);
-var redux_logger_1 = __webpack_require__(201);
-var redux_thunk_1 = __webpack_require__(202);
-var reducers_1 = __webpack_require__(203);
+var redux_logger_1 = __webpack_require__(202);
+var redux_thunk_1 = __webpack_require__(203);
+var reducers_1 = __webpack_require__(204);
 var store = redux_1.createStore(reducers_1.reducer, reducers_1.initialState, redux_1.applyMiddleware(redux_logger_1.default, redux_thunk_1.default));
 exports.default = store;
 
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.reduxLogger=e.reduxLogger||{})}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
@@ -40290,7 +40362,7 @@ exports.default = store;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40317,16 +40389,16 @@ thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ __webpack_exports__["default"] = (thunk);
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(28);
-var ConnectedUserReducer = __webpack_require__(204);
-var BuildCreationReducer = __webpack_require__(205);
-var MessagesReducer = __webpack_require__(206);
+var ConnectedUserReducer = __webpack_require__(205);
+var BuildCreationReducer = __webpack_require__(206);
+var MessagesReducer = __webpack_require__(207);
 /*
  * initialState of the app
  */
@@ -40347,7 +40419,7 @@ exports.reducer = redux_1.combineReducers({
 
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40394,7 +40466,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40505,7 +40577,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40537,7 +40609,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42890,10 +42962,10 @@ var autoReplace = function autoReplace() {
 
 
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(6), __webpack_require__(208).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(6), __webpack_require__(209).setImmediate))
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -42946,13 +43018,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(209);
+__webpack_require__(210);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -43145,7 +43217,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(0)))
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49712,13 +49784,13 @@ var _iconsCache = {
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(212);
+var content = __webpack_require__(213);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -49743,7 +49815,7 @@ if(false) {
 }
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)(true);

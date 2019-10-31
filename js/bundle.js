@@ -1995,11 +1995,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(243)(ReactIs.isElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(244)(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(245)();
+  module.exports = __webpack_require__(246)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -2013,7 +2013,7 @@ if (process.env.NODE_ENV !== 'production') {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createBootstrapComponent; });
 /* unused harmony export ThemeConsumer */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__restart_context_forwardRef__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__restart_context_forwardRef__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__restart_context_forwardRef___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__restart_context_forwardRef__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
@@ -3023,7 +3023,7 @@ module.exports = _defineProperty;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_defineProperty__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_create_react_context__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_create_react_context__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_create_react_context___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_create_react_context__);
 
 
@@ -5328,6 +5328,7 @@ var Cloaks_1 = __webpack_require__(231);
 var Dofus_1 = __webpack_require__(232);
 var Weapons_1 = __webpack_require__(233);
 var Shields_1 = __webpack_require__(234);
+var Pets_1 = __webpack_require__(235);
 exports.Equipements = {
     hat: Hats_1.Hats,
     amulet: Amulets_1.Amulets,
@@ -5337,7 +5338,8 @@ exports.Equipements = {
     cloak: Cloaks_1.Cloaks,
     dofus: Dofus_1.Dofus,
     weapon: Weapons_1.Weapons,
-    shield: Shields_1.Shields
+    shield: Shields_1.Shields,
+    pet: Pets_1.Pets
 };
 
 
@@ -5349,16 +5351,16 @@ exports.Equipements = {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_extends__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dom_helpers_query_contains__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dom_helpers_query_contains___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_dom_helpers_query_contains__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_warning__ = __webpack_require__(238);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_warning__ = __webpack_require__(239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Overlay__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Overlay__ = __webpack_require__(240);
 
 
 
@@ -5638,9 +5640,9 @@ module.exports = exports["default"];
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(241);
-} else {
   module.exports = __webpack_require__(242);
+} else {
+  module.exports = __webpack_require__(243);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -5716,7 +5718,7 @@ var _react = _interopRequireDefault(__webpack_require__(1));
 
 var _reactDom = _interopRequireDefault(__webpack_require__(4));
 
-var _getContainer = _interopRequireDefault(__webpack_require__(248));
+var _getContainer = _interopRequireDefault(__webpack_require__(249));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5929,11 +5931,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(274)(ReactIs.isElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(275)(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(276)();
+  module.exports = __webpack_require__(277)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -5946,9 +5948,9 @@ if (process.env.NODE_ENV !== 'production') {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(272);
-} else {
   module.exports = __webpack_require__(273);
+} else {
+  module.exports = __webpack_require__(274);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -6063,7 +6065,7 @@ var _interopRequireDefault = __webpack_require__(6);
 exports.__esModule = true;
 exports.default = camelizeStyleName;
 
-var _camelize = _interopRequireDefault(__webpack_require__(282));
+var _camelize = _interopRequireDefault(__webpack_require__(283));
 
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -6114,7 +6116,7 @@ module.exports = exports['default'];
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = persistReducer;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateReconciler_autoMergeLevel1__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateReconciler_autoMergeLevel1__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createPersistoid__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__getStoredState__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__purgeStoredState__ = __webpack_require__(98);
@@ -6562,9 +6564,9 @@ var react_router_dom_1 = __webpack_require__(8);
 __webpack_require__(145);
 var App_1 = __webpack_require__(148);
 var react_redux_1 = __webpack_require__(10);
-var index_1 = __webpack_require__(300);
-var react_1 = __webpack_require__(318);
-__webpack_require__(319);
+var index_1 = __webpack_require__(301);
+var react_1 = __webpack_require__(319);
+__webpack_require__(320);
 ReactDOM.render(React.createElement(react_redux_1.Provider, { store: index_1.default.store },
     React.createElement(react_1.PersistGate, { loading: null, persistor: index_1.default.persistor },
         React.createElement(react_router_dom_1.BrowserRouter, null,
@@ -38824,7 +38826,7 @@ var react_redux_1 = __webpack_require__(10);
 var BuildCreationComponent_1 = __webpack_require__(223);
 var ConnectedUserSelector_1 = __webpack_require__(79);
 var MessagesActions_1 = __webpack_require__(80);
-var BuildSelector_1 = __webpack_require__(299);
+var BuildSelector_1 = __webpack_require__(300);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state),
     build: BuildSelector_1.getBuild(state)
@@ -38856,10 +38858,10 @@ var React = __webpack_require__(1);
 __webpack_require__(224);
 var Enums_1 = __webpack_require__(5);
 var Equipements_1 = __webpack_require__(81);
-var StatsComponent_1 = __webpack_require__(235);
-var BuildEquipementsComponent_1 = __webpack_require__(236);
-var SpellsComponent_1 = __webpack_require__(293);
-var InformationsContainer_1 = __webpack_require__(296);
+var StatsComponent_1 = __webpack_require__(236);
+var BuildEquipementsComponent_1 = __webpack_require__(237);
+var SpellsComponent_1 = __webpack_require__(294);
+var InformationsContainer_1 = __webpack_require__(297);
 var BuildCreationComponent = /** @class */ (function (_super) {
     __extends(BuildCreationComponent, _super);
     function BuildCreationComponent(props) {
@@ -39172,12 +39174,58 @@ exports.Amulets = [
         set: 'Harebourg'
     },
     {
-        name: 'Amulette du granduk',
-        vitality: { min: 301, max: 250 },
-        agility: { min: 71, max: 100 }
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: { min: 0, max: 1 },
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
     },
-    {},
-    {}
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
 ];
 
 
@@ -39768,6 +39816,89 @@ exports.Shields = [
 
 "use strict";
 
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pets = [
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        fixedNeutralResistance: { min: -5, max: -4 },
+        fixedEarthResistance: { min: -5, max: -4 },
+        fixedFireResistance: { min: -5, max: -4 },
+        fixedWaterResistance: { min: -5, max: -4 },
+        fixedAirResistance: { min: -5, max: -4 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: { min: 0, max: 1 },
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    },
+    {
+        name: 'Coiffe du Compte Harebourg',
+        vitality: { min: 451, max: 500 },
+        strength: { min: 71, max: 100 },
+        wisdom: { min: 41, max: 60 },
+        range: { min: 0, max: 1 },
+        prospecting: { min: 21, max: 30 },
+        neutralDamage: { min: 16, max: 20 },
+        earthDamage: { min: 16, max: 20 },
+        neutralResistance: { min: -4, max: -5 },
+        earthResistance: { min: -4, max: -5 },
+        fireResistance: { min: -4, max: -5 },
+        waterResistance: { min: -4, max: -5 },
+        airResistance: { min: -4, max: -5 },
+        apReduction: { min: 6, max: 8 },
+        lock: { min: 16, max: 20 },
+        level: 200,
+        set: 'Harebourg'
+    },
+    {
+        name: 'Coiffe Séculaire',
+        vitality: { min: 251, max: 300 },
+        intelligence: { min: 71, max: 100 },
+        agility: { min: 31, max: 40 },
+        wisdom: { min: 31, max: 40 },
+        heals: { min: 8, max: 12 },
+        summons: 1,
+        prospecting: { min: 11, max: 15 },
+        fireDamage: { min: 7, max: 10 },
+        airDamage: { min: 7, max: 10 },
+        airResistance: { min: 11, max: 15 },
+        earthResistance: { min: 5, max: 7 },
+        waterResistance: { min: 5, max: 7 },
+        level: 200,
+        set: 'Séculaire'
+    }
+];
+
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -40168,7 +40299,7 @@ exports.default = StatsComponent;
 
 
 /***/ }),
-/* 236 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40188,7 +40319,7 @@ var React = __webpack_require__(1);
 var react_router_dom_1 = __webpack_require__(8);
 var Enums_1 = __webpack_require__(5);
 var OverlayTrigger_1 = __webpack_require__(82);
-var Popover_1 = __webpack_require__(289);
+var Popover_1 = __webpack_require__(290);
 var Equipements_1 = __webpack_require__(81);
 var BuildEquipementsComponent = /** @class */ (function (_super) {
     __extends(BuildEquipementsComponent, _super);
@@ -40296,127 +40427,176 @@ var BuildEquipementsComponent = /** @class */ (function (_super) {
     };
     BuildEquipementsComponent.prototype.render = function () {
         var _this = this;
+        console.log(this.props.build.amulet);
         return (React.createElement(React.Fragment, null,
             React.createElement("div", { className: "card text-white bg-dark mb-3 shadow-lg" },
                 React.createElement("div", { className: "card-body" },
                     React.createElement("div", { className: "grid-container" },
-                        React.createElement(OverlayTrigger_1.default, { key: "left-amulet", placement: "left", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.amulet].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.amulet]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/amulets" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.amulet)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "bottom-cloak", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.cloak].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.cloak]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/cloaks" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.cloak)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "bottom-hat", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.hat].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.hat]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/hats" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.hat)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "right-belt", placement: "right", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.belt].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.belt]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/belts" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.belt))))),
+                        Equipements_1.Equipements.amulet[this.props.build.amulet] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "left-amulet", placement: "left", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.amulet].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.amulet]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/amulets" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.amulet)))),
+                        !Equipements_1.Equipements.amulet[this.props.build.amulet] && React.createElement(react_router_dom_1.Link, { to: "/amulets" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.amulet))),
+                        Equipements_1.Equipements.cloak[this.props.build.cloak] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "bottom-cloak", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.cloak[this.props.build.cloak].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.cloak[this.props.build.cloak]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/cloaks" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.cloak)))),
+                        !Equipements_1.Equipements.cloak[this.props.build.cloak] && React.createElement(react_router_dom_1.Link, { to: "/cloaks" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.cloak))),
+                        Equipements_1.Equipements.hat[this.props.build.hat] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "bottom-hat", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.hat[this.props.build.hat].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.hat[this.props.build.hat]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/hats" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.hat)))),
+                        !Equipements_1.Equipements.hat[this.props.build.hat] && React.createElement(react_router_dom_1.Link, { to: "/hats" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.hat))),
+                        Equipements_1.Equipements.belt[this.props.build.belt] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "right-belt", placement: "right", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.belt[this.props.build.belt].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.belt[this.props.build.belt]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/belts" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.belt)))),
+                        !Equipements_1.Equipements.belt[this.props.build.belt] && React.createElement(react_router_dom_1.Link, { to: "/belts" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.belt)))),
                     React.createElement("div", { className: "grid-container-a" },
-                        React.createElement(OverlayTrigger_1.default, { key: "left-shield", placement: "left", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.shield].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.shield]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/shields" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.shield)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "right-weapon", placement: "right", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.weapon].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.weapon]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/weapons" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.weapon)))),
+                        Equipements_1.Equipements.shield[this.props.build.shield] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "left-shield", placement: "left", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.shield[this.props.build.shield].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.shield[this.props.build.shield]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/shields" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.shield)))),
+                        !Equipements_1.Equipements.shield[this.props.build.shield] && React.createElement(react_router_dom_1.Link, { to: "/shields" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.shield))),
+                        Equipements_1.Equipements.weapon[this.props.build.weapon] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "right-weapon", placement: "right", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.weapon[this.props.build.weapon].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.weapon[this.props.build.weapon]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/weapons" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.weapon)))),
+                        !Equipements_1.Equipements.weapon[this.props.build.weapon] && React.createElement(react_router_dom_1.Link, { to: "/weapons" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.weapon))),
                         React.createElement("div", { className: "grid-item item-a" },
                             React.createElement(react_router_dom_1.Link, { to: "/create", onClick: function () { return _this.showClassesModal(true); } },
                                 React.createElement("img", { src: "../assets/dofus/characters/sacrier/character.webp", alt: "Sacrieur" }))),
-                        React.createElement(OverlayTrigger_1.default, { key: "left-ring", placement: "left", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.ringOne].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.ringOne]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/lrings" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.ringOne)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "right-ring", placement: "right", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.weapon].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.weapon]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/rrings" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.ringTwo))))),
+                        Equipements_1.Equipements.ring[this.props.build.ringOne] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "left-ring", placement: "left", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.ring[this.props.build.ringOne].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.ring[this.props.build.ringOne]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/lrings" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.ringOne)))),
+                        !Equipements_1.Equipements.ring[this.props.build.ringOne] && React.createElement(react_router_dom_1.Link, { to: "/lrings" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.ringOne))),
+                        Equipements_1.Equipements.ring[this.props.build.ringTwo] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "right-ring", placement: "right", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.ring[this.props.build.ringTwo].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.ring[this.props.build.weapon]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/rrings" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.ringTwo)))),
+                        !Equipements_1.Equipements.ring[this.props.build.ringTwo] && React.createElement(react_router_dom_1.Link, { to: "/rrings" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.ringTwo)))),
                     React.createElement("div", { className: "grid-container" },
-                        React.createElement(OverlayTrigger_1.default, { key: "top-dofusOne", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.dofusOne].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.dofusOne]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/dofus" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusOne)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "top-dofusTwo", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.dofusTwo].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.dofusTwo]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/dofus2" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusTwo)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "top-dofusThree", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.dofusThree].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.dofusThree]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/dofus3" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusThree)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "top-boots", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.boots].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.boots]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/boots" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.boots)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "bottom-dofusFour", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.dofusFour].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.dofusFour]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/dofus4" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusFour)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "bottom-dofusFive", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.dofusFive].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.dofusFive]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/dofus5" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusFive)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "bottom-dofusSix", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.dofusSix].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.dofusSix]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/dofus6" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusSix)))),
-                        React.createElement(OverlayTrigger_1.default, { key: "bottom-pet", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
-                                React.createElement(Popover_1.default.Content, { className: "item-stats" },
-                                    React.createElement("strong", null, Equipements_1.Equipements.amulet[this.props.build.pet].name),
-                                    React.createElement("br", null),
-                                    this.renderPopoverStats(Equipements_1.Equipements.amulet[this.props.build.pet]))) },
-                            React.createElement(react_router_dom_1.Link, { to: "/pets" },
-                                React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.pet))))))),
+                        Equipements_1.Equipements.dofus[this.props.build.dofusOne] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "top-dofusOne", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.dofus[this.props.build.dofusOne].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.dofus[this.props.build.dofusOne]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/dofus" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusOne)))),
+                        !Equipements_1.Equipements.dofus[this.props.build.dofusOne] && React.createElement(react_router_dom_1.Link, { to: "/dofus" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusOne))),
+                        Equipements_1.Equipements.dofus[this.props.build.dofusTwo] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "top-dofusTwo", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.dofus[this.props.build.dofusTwo].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.dofus[this.props.build.dofusTwo]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/dofus2" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusTwo)))),
+                        !Equipements_1.Equipements.dofus[this.props.build.dofusTwo] && React.createElement(react_router_dom_1.Link, { to: "/dofus2" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusTwo))),
+                        Equipements_1.Equipements.dofus[this.props.build.dofusThree] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "top-dofusThree", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.dofus[this.props.build.dofusThree].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.dofus[this.props.build.dofusThree]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/dofus3" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusThree)))),
+                        !Equipements_1.Equipements.dofus[this.props.build.dofusThree] && React.createElement(react_router_dom_1.Link, { to: "/dofus3" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusThree))),
+                        Equipements_1.Equipements.boots[this.props.build.boots] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "top-boots", placement: "top", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.boots[this.props.build.boots].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.boots[this.props.build.boots]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/boots" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.boots)))),
+                        !Equipements_1.Equipements.boots[this.props.build.boots] && React.createElement(react_router_dom_1.Link, { to: "/boots" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.boots))),
+                        Equipements_1.Equipements.dofus[this.props.build.dofusFour] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "bottom-dofusFour", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.dofus[this.props.build.dofusFour].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.dofus[this.props.build.dofusFour]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/dofus4" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusFour)))),
+                        !Equipements_1.Equipements.dofus[this.props.build.dofusFour] && React.createElement(react_router_dom_1.Link, { to: "/dofus4" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusFour))),
+                        Equipements_1.Equipements.dofus[this.props.build.dofusFive] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "bottom-dofusFive", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.dofus[this.props.build.dofusFive].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.dofus[this.props.build.dofusFive]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/dofus5" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusFive)))),
+                        !Equipements_1.Equipements.dofus[this.props.build.dofusFive] && React.createElement(react_router_dom_1.Link, { to: "/dofus5" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusFive))),
+                        Equipements_1.Equipements.dofus[this.props.build.dofusSix] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "bottom-dofusSix", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.dofus[this.props.build.dofusSix].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.dofus[this.props.build.dofusSix]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/dofus6" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusSix)))),
+                        !Equipements_1.Equipements.dofus[this.props.build.dofusSix] && React.createElement(react_router_dom_1.Link, { to: "/dofus6" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.dofusSix))),
+                        Equipements_1.Equipements.pet[this.props.build.pet] &&
+                            React.createElement(OverlayTrigger_1.default, { key: "bottom-pet", placement: "bottom", trigger: "hover", overlay: React.createElement(Popover_1.default, { id: "popover-basic" },
+                                    React.createElement(Popover_1.default.Content, { className: "item-stats" },
+                                        React.createElement("strong", null, Equipements_1.Equipements.pet[this.props.build.pet].name),
+                                        React.createElement("br", null),
+                                        this.renderPopoverStats(Equipements_1.Equipements.pet[this.props.build.pet]))) },
+                                React.createElement(react_router_dom_1.Link, { to: "/pets" },
+                                    React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.pet)))),
+                        !Equipements_1.Equipements.pet[this.props.build.pet] && React.createElement(react_router_dom_1.Link, { to: "/pets" },
+                            React.createElement("div", { className: "box" }, this.renderItemImage(Enums_1.EquipementTypes.pet)))))),
             React.createElement("div", { className: 'modal fade ' + this.state.openClassesModal, role: "dialog", "aria-hidden": "true" },
                 React.createElement("div", { className: "modal-dialog modal-dialog-centered", role: "document" },
                     React.createElement("div", { className: "modal-content text-white modal-color" },
@@ -40452,7 +40632,7 @@ exports.default = BuildEquipementsComponent;
 
 
 /***/ }),
-/* 237 */
+/* 238 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40464,7 +40644,7 @@ function _inheritsLoose(subClass, superClass) {
 }
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40534,7 +40714,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40546,9 +40726,9 @@ module.exports = warning;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_classnames__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_overlays_Overlay__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_overlays_Overlay__ = __webpack_require__(241);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_overlays_Overlay___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_overlays_Overlay__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Fade__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Fade__ = __webpack_require__(269);
 
 
 
@@ -40607,7 +40787,7 @@ Overlay.defaultProps = defaultProps;
 /* harmony default export */ __webpack_exports__["a"] = (Overlay);
 
 /***/ }),
-/* 240 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40618,7 +40798,7 @@ exports.default = void 0;
 
 var _propTypes = _interopRequireDefault(__webpack_require__(26));
 
-var _elementType = _interopRequireDefault(__webpack_require__(246));
+var _elementType = _interopRequireDefault(__webpack_require__(247));
 
 var _componentOrElement = _interopRequireDefault(__webpack_require__(45));
 
@@ -40626,13 +40806,13 @@ var _react = _interopRequireDefault(__webpack_require__(1));
 
 var _reactDom = _interopRequireDefault(__webpack_require__(4));
 
-var _Portal = _interopRequireDefault(__webpack_require__(247));
+var _Portal = _interopRequireDefault(__webpack_require__(248));
 
-var _RootCloseWrapper = _interopRequireDefault(__webpack_require__(249));
+var _RootCloseWrapper = _interopRequireDefault(__webpack_require__(250));
 
-var _reactPopper = __webpack_require__(254);
+var _reactPopper = __webpack_require__(255);
 
-var _forwardRef = _interopRequireDefault(__webpack_require__(267));
+var _forwardRef = _interopRequireDefault(__webpack_require__(268));
 
 var _WaitForContainer = _interopRequireDefault(__webpack_require__(86));
 
@@ -40960,7 +41140,7 @@ exports.default = _default;
 module.exports = exports.default;
 
 /***/ }),
-/* 241 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40982,7 +41162,7 @@ exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===
 
 
 /***/ }),
-/* 242 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41226,7 +41406,7 @@ exports.isSuspense = isSuspense;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 243 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41243,7 +41423,7 @@ var ReactIs = __webpack_require__(84);
 var assign = __webpack_require__(3);
 
 var ReactPropTypesSecret = __webpack_require__(44);
-var checkPropTypes = __webpack_require__(244);
+var checkPropTypes = __webpack_require__(245);
 
 var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
@@ -41825,7 +42005,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41935,7 +42115,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42006,7 +42186,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42046,7 +42226,7 @@ exports.default = (0, _createChainableTypeChecker2.default)(elementType);
 module.exports = exports['default'];
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42113,7 +42293,7 @@ exports.default = _default;
 module.exports = exports.default;
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42135,7 +42315,7 @@ function getContainer(container, defaultContainer) {
 module.exports = exports.default;
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42146,7 +42326,7 @@ exports.default = void 0;
 
 var _contains = _interopRequireDefault(__webpack_require__(83));
 
-var _listen = _interopRequireDefault(__webpack_require__(250));
+var _listen = _interopRequireDefault(__webpack_require__(251));
 
 var _propTypes = _interopRequireDefault(__webpack_require__(26));
 
@@ -42154,7 +42334,7 @@ var _react = _interopRequireDefault(__webpack_require__(1));
 
 var _reactDom = _interopRequireDefault(__webpack_require__(4));
 
-var _ownerDocument = _interopRequireDefault(__webpack_require__(253));
+var _ownerDocument = _interopRequireDefault(__webpack_require__(254));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42296,7 +42476,7 @@ exports.default = _default;
 module.exports = exports.default;
 
 /***/ }),
-/* 250 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42309,9 +42489,9 @@ exports.default = void 0;
 
 var _inDOM = _interopRequireDefault(__webpack_require__(17));
 
-var _on = _interopRequireDefault(__webpack_require__(251));
+var _on = _interopRequireDefault(__webpack_require__(252));
 
-var _off = _interopRequireDefault(__webpack_require__(252));
+var _off = _interopRequireDefault(__webpack_require__(253));
 
 var listen = function listen() {};
 
@@ -42329,7 +42509,7 @@ exports.default = _default;
 module.exports = exports["default"];
 
 /***/ }),
-/* 251 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42364,7 +42544,7 @@ exports.default = _default;
 module.exports = exports["default"];
 
 /***/ }),
-/* 252 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42394,7 +42574,7 @@ exports.default = _default;
 module.exports = exports["default"];
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42416,14 +42596,14 @@ function _default(componentOrElement) {
 module.exports = exports.default;
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Popper__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Popper__ = __webpack_require__(256);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Manager__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Reference__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Reference__ = __webpack_require__(267);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Popper", function() { return __WEBPACK_IMPORTED_MODULE_0__Popper__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "placements", function() { return __WEBPACK_IMPORTED_MODULE_0__Popper__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Manager", function() { return __WEBPACK_IMPORTED_MODULE_1__Manager__["b"]; });
@@ -42435,14 +42615,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  // Public types
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export InnerPopper */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return placements; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = Popper;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_objectWithoutPropertiesLoose__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_objectWithoutPropertiesLoose__ = __webpack_require__(257);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_objectWithoutPropertiesLoose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_objectWithoutPropertiesLoose__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_extends__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_extends__);
@@ -42454,7 +42634,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__babel_runtime_helpers_defineProperty__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_popper_js__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_popper_js__ = __webpack_require__(258);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Manager__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(89);
 
@@ -42653,7 +42833,7 @@ function Popper(_ref) {
 }
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, exports) {
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -42674,7 +42854,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45286,7 +45466,7 @@ Popper.Defaults = Defaults;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(12)))
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45298,7 +45478,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _implementation = __webpack_require__(259);
+var _implementation = __webpack_require__(260);
 
 var _implementation2 = _interopRequireDefault(_implementation);
 
@@ -45308,7 +45488,7 @@ exports.default = _react2.default.createContext || _implementation2.default;
 module.exports = exports['default'];
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45320,15 +45500,15 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(260);
+var _propTypes = __webpack_require__(261);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _gud = __webpack_require__(264);
+var _gud = __webpack_require__(265);
 
 var _gud2 = _interopRequireDefault(_gud);
 
-var _warning = __webpack_require__(265);
+var _warning = __webpack_require__(266);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -45511,7 +45691,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -45536,17 +45716,17 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(261)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(262)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(263)();
+  module.exports = __webpack_require__(264)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45565,7 +45745,7 @@ var warning = __webpack_require__(88);
 var assign = __webpack_require__(3);
 
 var ReactPropTypesSecret = __webpack_require__(53);
-var checkPropTypes = __webpack_require__(262);
+var checkPropTypes = __webpack_require__(263);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -46096,7 +46276,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46163,7 +46343,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46228,7 +46408,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46244,7 +46424,7 @@ module.exports = function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46314,7 +46494,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46390,7 +46570,7 @@ function Reference(props) {
 }
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46431,7 +46611,7 @@ function forwardRef(renderFn, _ref) {
 }
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46441,10 +46621,10 @@ function forwardRef(renderFn, _ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_transition_group_Transition__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_dom_helpers_transition_end__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_transition_group_Transition__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_dom_helpers_transition_end__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_dom_helpers_transition_end___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_dom_helpers_transition_end__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_triggerBrowserReflow__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_triggerBrowserReflow__ = __webpack_require__(289);
 
 
 
@@ -46488,7 +46668,7 @@ Fade.displayName = 'Fade';
 /* harmony default export */ __webpack_exports__["a"] = (Fade);
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46497,17 +46677,17 @@ Fade.displayName = 'Fade';
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ENTERING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ENTERED; });
 /* unused harmony export EXITING */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_PropTypes__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__TransitionGroupContext__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_PropTypes__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__TransitionGroupContext__ = __webpack_require__(280);
 
 
 
@@ -47096,7 +47276,7 @@ Transition.EXITING = 4;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47117,7 +47297,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47129,7 +47309,7 @@ function _inheritsLoose(subClass, superClass) {
 }
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47151,7 +47331,7 @@ exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===
 
 
 /***/ }),
-/* 273 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47395,7 +47575,7 @@ exports.isSuspense = isSuspense;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 274 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47412,7 +47592,7 @@ var ReactIs = __webpack_require__(91);
 var assign = __webpack_require__(3);
 
 var ReactPropTypesSecret = __webpack_require__(54);
-var checkPropTypes = __webpack_require__(275);
+var checkPropTypes = __webpack_require__(276);
 
 var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
@@ -47994,7 +48174,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 275 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48104,7 +48284,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48175,7 +48355,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48184,7 +48364,7 @@ module.exports = function() {
 });
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48213,7 +48393,7 @@ var classNamesShape = process.env.NODE_ENV !== 'production' ? __WEBPACK_IMPORTED
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48223,7 +48403,7 @@ var classNamesShape = process.env.NODE_ENV !== 'production' ? __WEBPACK_IMPORTED
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext(null));
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48236,7 +48416,7 @@ exports.default = void 0;
 
 var _properties = _interopRequireDefault(__webpack_require__(92));
 
-var _style = _interopRequireDefault(__webpack_require__(281));
+var _style = _interopRequireDefault(__webpack_require__(282));
 
 function onEnd(node, handler, duration) {
   var fakeEvent = {
@@ -48274,7 +48454,7 @@ function parseDuration(node) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48287,15 +48467,15 @@ exports.default = style;
 
 var _camelizeStyle = _interopRequireDefault(__webpack_require__(93));
 
-var _hyphenateStyle = _interopRequireDefault(__webpack_require__(283));
+var _hyphenateStyle = _interopRequireDefault(__webpack_require__(284));
 
-var _getComputedStyle2 = _interopRequireDefault(__webpack_require__(285));
+var _getComputedStyle2 = _interopRequireDefault(__webpack_require__(286));
 
-var _removeStyle = _interopRequireDefault(__webpack_require__(286));
+var _removeStyle = _interopRequireDefault(__webpack_require__(287));
 
 var _properties = __webpack_require__(92);
 
-var _isTransform = _interopRequireDefault(__webpack_require__(287));
+var _isTransform = _interopRequireDefault(__webpack_require__(288));
 
 function style(node, property, value) {
   var css = '';
@@ -48332,7 +48512,7 @@ function style(node, property, value) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48351,7 +48531,7 @@ function camelize(string) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48362,7 +48542,7 @@ var _interopRequireDefault = __webpack_require__(6);
 exports.__esModule = true;
 exports.default = hyphenateStyleName;
 
-var _hyphenate = _interopRequireDefault(__webpack_require__(284));
+var _hyphenate = _interopRequireDefault(__webpack_require__(285));
 
 /**
  * Copyright 2013-2014, Facebook, Inc.
@@ -48378,7 +48558,7 @@ function hyphenateStyleName(string) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48395,7 +48575,7 @@ function hyphenate(string) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48445,7 +48625,7 @@ function _getComputedStyle(node) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48461,7 +48641,7 @@ function removeStyle(node, key) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48478,7 +48658,7 @@ function isTransform(property) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48490,7 +48670,7 @@ function triggerBrowserReflow(node) {
 }
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48504,8 +48684,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types_extra_lib_isRequiredForA11y__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types_extra_lib_isRequiredForA11y___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_prop_types_extra_lib_isRequiredForA11y__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ThemeProvider__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__PopoverTitle__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__PopoverContent__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__PopoverTitle__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__PopoverContent__ = __webpack_require__(293);
 
 
 
@@ -48549,7 +48729,7 @@ DecoratedPopover.Content = __WEBPACK_IMPORTED_MODULE_7__PopoverContent__["a" /* 
 /* harmony default export */ __webpack_exports__["default"] = (DecoratedPopover);
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48585,7 +48765,7 @@ function forwardRef(renderFn, _temp) {
 }
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48619,7 +48799,7 @@ var PopoverTitle = __WEBPACK_IMPORTED_MODULE_3_react___default.a.forwardRef(func
 /* harmony default export */ __webpack_exports__["a"] = (PopoverTitle);
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48653,7 +48833,7 @@ var PopoverContent = __WEBPACK_IMPORTED_MODULE_3_react___default.a.forwardRef(fu
 /* harmony default export */ __webpack_exports__["a"] = (PopoverContent);
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48670,7 +48850,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-var Spells_1 = __webpack_require__(294);
+var Spells_1 = __webpack_require__(295);
 var react_router_dom_1 = __webpack_require__(8);
 var Enums_1 = __webpack_require__(5);
 var SpellsComponent = /** @class */ (function (_super) {
@@ -48844,20 +49024,20 @@ exports.default = SpellsComponent;
 
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Sacrier_1 = __webpack_require__(295);
+var Sacrier_1 = __webpack_require__(296);
 exports.Spells = {
     sacrier: Sacrier_1.SacrierSpells
 };
 
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50529,14 +50709,14 @@ exports.SacrierSpells = [{
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(10);
-var InformationsComponent_1 = __webpack_require__(297);
+var InformationsComponent_1 = __webpack_require__(298);
 var BuildCreationActions_1 = __webpack_require__(43);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {
@@ -50546,7 +50726,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Inf
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50565,7 +50745,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
 var react_router_dom_1 = __webpack_require__(8);
 var OverlayTrigger_1 = __webpack_require__(82);
-var Tooltip_1 = __webpack_require__(298);
+var Tooltip_1 = __webpack_require__(299);
 var InformationsComponent = /** @class */ (function (_super) {
     __extends(InformationsComponent, _super);
     function InformationsComponent(props) {
@@ -50654,7 +50834,7 @@ exports.default = InformationsComponent;
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50706,7 +50886,7 @@ Tooltip.displayName = 'Tooltip';
 /* harmony default export */ __webpack_exports__["default"] = (Tooltip);
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50718,19 +50898,19 @@ exports.getBuild = reselect_1.createSelector([getBuildState], function (s) { ret
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(22);
-var redux_logger_1 = __webpack_require__(301);
-var redux_thunk_1 = __webpack_require__(302);
-var redux_persist_1 = __webpack_require__(303);
-var storage_1 = __webpack_require__(310);
-var reducers_1 = __webpack_require__(313);
-var autoMergeLevel2_1 = __webpack_require__(317);
+var redux_logger_1 = __webpack_require__(302);
+var redux_thunk_1 = __webpack_require__(303);
+var redux_persist_1 = __webpack_require__(304);
+var storage_1 = __webpack_require__(311);
+var reducers_1 = __webpack_require__(314);
+var autoMergeLevel2_1 = __webpack_require__(318);
 // Restore redux store on page refresh
 var persistConfig = {
     key: 'root',
@@ -50744,7 +50924,7 @@ exports.default = { store: store, persistor: persistor };
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.reduxLogger=e.reduxLogger||{})}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
@@ -50752,7 +50932,7 @@ exports.default = { store: store, persistor: persistor };
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50779,20 +50959,20 @@ thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ __webpack_exports__["default"] = (thunk);
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__persistReducer__ = __webpack_require__(95);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistReducer", function() { return __WEBPACK_IMPORTED_MODULE_0__persistReducer__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__ = __webpack_require__(306);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistCombineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__persistStore__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__persistStore__ = __webpack_require__(308);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistStore", function() { return __WEBPACK_IMPORTED_MODULE_2__persistStore__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createMigrate__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createMigrate__ = __webpack_require__(309);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createMigrate", function() { return __WEBPACK_IMPORTED_MODULE_3__createMigrate__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransform__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransform__ = __webpack_require__(310);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createTransform", function() { return __WEBPACK_IMPORTED_MODULE_4__createTransform__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__getStoredState__ = __webpack_require__(97);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "getStoredState", function() { return __WEBPACK_IMPORTED_MODULE_5__getStoredState__["a"]; });
@@ -50820,7 +51000,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50865,14 +51045,14 @@ function autoMergeLevel1(inboundState, originalState, reducedState, _ref) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = persistCombineReducers;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistReducer__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateReconciler_autoMergeLevel2__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateReconciler_autoMergeLevel2__ = __webpack_require__(307);
 
 
 
@@ -50883,7 +51063,7 @@ function persistCombineReducers(config, reducers) {
 }
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50939,7 +51119,7 @@ function isPlainEnoughObject(o) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51076,7 +51256,7 @@ function persistStore(store, options, cb) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51128,7 +51308,7 @@ function createMigrate(migrations, config) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51157,7 +51337,7 @@ outbound) {
 }
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51166,7 +51346,7 @@ outbound) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _createWebStorage = _interopRequireDefault(__webpack_require__(311));
+var _createWebStorage = _interopRequireDefault(__webpack_require__(312));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51175,7 +51355,7 @@ var _default = (0, _createWebStorage.default)('local');
 exports.default = _default;
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51184,7 +51364,7 @@ exports.default = _default;
 exports.__esModule = true;
 exports.default = createWebStorage;
 
-var _getStorage = _interopRequireDefault(__webpack_require__(312));
+var _getStorage = _interopRequireDefault(__webpack_require__(313));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51210,7 +51390,7 @@ function createWebStorage(type) {
 }
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51261,16 +51441,16 @@ function getStorage(type) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(22);
-var ConnectedUserReducer = __webpack_require__(314);
-var BuildCreationReducer = __webpack_require__(315);
-var MessagesReducer = __webpack_require__(316);
+var ConnectedUserReducer = __webpack_require__(315);
+var BuildCreationReducer = __webpack_require__(316);
+var MessagesReducer = __webpack_require__(317);
 /*
  * initialState of the app
  */
@@ -51291,7 +51471,7 @@ exports.rootReducer = redux_1.combineReducers({
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51338,7 +51518,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51449,7 +51629,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51512,7 +51692,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51572,7 +51752,7 @@ function isPlainEnoughObject(o) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51688,13 +51868,13 @@ _defineProperty(PersistGate, "defaultProps", {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(320);
+var content = __webpack_require__(321);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -51719,7 +51899,7 @@ if(false) {
 }
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(20)(true);

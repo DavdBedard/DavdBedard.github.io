@@ -50955,14 +50955,8 @@ var InformationsComponent = /** @class */ (function (_super) {
                             React.createElement("td", null, this.popoverIfNotLoggedIn(React.createElement(react_router_dom_1.Link, { to: "/create" },
                                 React.createElement("img", { className: "img-size", src: "../assets/app/icons/delete-white.png" }))))))),
                 React.createElement("div", { className: "dropdown-divider" }),
-                React.createElement("div", { className: "row" },
-                    React.createElement("div", { className: "col-md-2" },
-                        React.createElement(react_router_dom_1.Link, { to: "/create" },
-                            React.createElement("img", { className: "share-size", src: "../assets/app/icons/share-white.png" }))),
-                    React.createElement("div", { className: "col" },
-                        React.createElement("p", { className: "bg-secondary p-margin p-1 border" },
-                            "dofusbuilds.com/",
-                            this.props.other.id))))));
+                "Partager :",
+                React.createElement("input", { className: "bg-secondary shadow-lg share-input", value: "https://dofusbuilds.com/" + this.props.other.id, placeholder: "Rechercher par nom..." }))));
     };
     return InformationsComponent;
 }(React.Component));

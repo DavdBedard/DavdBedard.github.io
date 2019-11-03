@@ -39222,10 +39222,13 @@ var MessagesComponent = /** @class */ (function (_super) {
                 default:
                     message = "Une erreur s'est produite lors de l'authentification";
             }
-            return (React.createElement("div", { className: "alert bg-danger text-white font-weight-bold text-center ml-2 mr-2 mb-4", role: "alert" }, message));
+            return (React.createElement("div", { className: "p-top" },
+                React.createElement("div", { className: "pt-4" },
+                    React.createElement("div", { className: "alert bg-danger text-white font-weight-bold text-center ml-2 mr-2", role: "alert" }, message))));
         }
         else {
-            return null;
+            return React.createElement("div", { className: "p-top" },
+                React.createElement("div", { className: "pt-4" }));
         }
     };
     return MessagesComponent;
@@ -39521,7 +39524,7 @@ var EquipementsPage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     EquipementsPage.prototype.render = function () {
-        return (React.createElement("div", { className: "container" },
+        return (React.createElement("div", { className: "container-fluid container-fluid-build" },
             React.createElement(EquipementsContainer_1.default, { type: this.props.type })));
     };
     return EquipementsPage;
@@ -40048,22 +40051,21 @@ var BuildCreationComponent = /** @class */ (function (_super) {
         }
     };
     BuildCreationComponent.prototype.render = function () {
-        return (React.createElement("div", { className: "pt-4" },
-            React.createElement("div", { className: "row" },
-                React.createElement("div", { className: "col" },
-                    React.createElement(StatsComponent_1.default, { stats: this.state.stats })),
-                React.createElement("div", { className: "col-md-9" },
-                    React.createElement("div", { className: "row" },
-                        React.createElement("div", { className: "col-lg-8" },
-                            React.createElement(BuildEquipementsComponent_1.default, { build: this.props.build })),
-                        React.createElement("div", { className: "col d-flex" },
-                            React.createElement(InformationsContainer_1.default, { connectedUser: this.props.connectedUser, build: this.props.build, other: this.props.other }))),
-                    React.createElement("div", { className: "row" },
-                        React.createElement("div", { className: "col" },
-                            React.createElement(AverageDamageComponent_1.default, null),
-                            React.createElement("div", { className: "card text-white bg-dark mb-3 shadow-lg" },
-                                React.createElement("div", { className: "card-body" },
-                                    React.createElement(SpellsComponent_1.default, { stats: this.state.stats })))))))));
+        return (React.createElement("div", { className: "row" },
+            React.createElement("div", { className: "col" },
+                React.createElement(StatsComponent_1.default, { stats: this.state.stats })),
+            React.createElement("div", { className: "col-md-9" },
+                React.createElement("div", { className: "row" },
+                    React.createElement("div", { className: "col-lg-8" },
+                        React.createElement(BuildEquipementsComponent_1.default, { build: this.props.build })),
+                    React.createElement("div", { className: "col d-flex" },
+                        React.createElement(InformationsContainer_1.default, { connectedUser: this.props.connectedUser, build: this.props.build, other: this.props.other }))),
+                React.createElement("div", { className: "row" },
+                    React.createElement("div", { className: "col" },
+                        React.createElement(AverageDamageComponent_1.default, null),
+                        React.createElement("div", { className: "card text-white bg-dark mb-3 shadow-lg" },
+                            React.createElement("div", { className: "card-body" },
+                                React.createElement(SpellsComponent_1.default, { stats: this.state.stats }))))))));
     };
     return BuildCreationComponent;
 }(React.Component));
@@ -40110,7 +40112,7 @@ exports = module.exports = __webpack_require__(20)(true);
 
 
 // module
-exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px;\n  padding-top: 50px; }\n\n.bg-black {\n  background-color: #27282E; }\n\n.red {\n  color: red; }\n\n.blue {\n  color: blue; }\n\n.green {\n  color: green; }\n\n.brown {\n  color: brown; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.show {\n  display: block; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.modal-color {\n  background-color: black; }\n\n.spell-text {\n  margin-bottom: 5px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB;EACjB,kBAAiB,EACpB;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,WAAU,EACb;;AAED;EACI,YAAW,EACd;;AAED;EACI,aAAY,EACf;;AAED;EACI,aAAY,EACf;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAChB;;AAEH;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAGD;EAEI,eAAc,EACjB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,mBAAkB,EACrB","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n    padding-top: 50px;\r\n}\r\n\r\n.bg-black {\r\n    background-color: #27282E;//#2d2d2d;//#545454;//#27282E\r\n}\r\n\r\n.red {\r\n    color: red;\r\n}\r\n\r\n.blue {\r\n    color: blue;\r\n}\r\n\r\n.green {\r\n    color: green;\r\n}\r\n\r\n.brown {\r\n    color: brown;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n  }\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n// TODO fix the padding option which glitches the popovers\r\n.show {\r\n    //padding-right: 17px;\r\n    display: block;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.modal-color {\r\n    background-color: black;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.p-top {\n  padding-top: 50px; }\n\n.bg-black {\n  background-color: #27282E; }\n\n.red {\n  color: red; }\n\n.blue {\n  color: blue; }\n\n.green {\n  color: green; }\n\n.brown {\n  color: brown; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.show {\n  display: block; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.modal-color {\n  background-color: black; }\n\n.spell-text {\n  margin-bottom: 5px; }\n\n.share-input {\n  color: white;\n  width: 100%;\n  padding: 12px 4px;\n  margin: 8px 0;\n  border-color: Transparent;\n  outline-color: #ffd800; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EAEpB;;AAED;EACI,kBAAiB,EACpB;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,WAAU,EACb;;AAED;EACI,YAAW,EACd;;AAED;EACI,aAAY,EACf;;AAED;EACI,aAAY,EACf;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAChB;;AAEH;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAGD;EAEI,eAAc,EACjB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,0BAAyB;EACzB,uBAAsB,EACzB","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n    //padding-top: 50px;\r\n}\r\n\r\n.p-top {\r\n    padding-top: 50px;\r\n}\r\n\r\n.bg-black {\r\n    background-color: #27282E;//#2d2d2d;//#545454;//#27282E\r\n}\r\n\r\n.red {\r\n    color: red;\r\n}\r\n\r\n.blue {\r\n    color: blue;\r\n}\r\n\r\n.green {\r\n    color: green;\r\n}\r\n\r\n.brown {\r\n    color: brown;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n  }\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n// TODO fix the padding option which glitches the popovers\r\n.show {\r\n    //padding-right: 17px;\r\n    display: block;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.modal-color {\r\n    background-color: black;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.share-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 4px;\r\n    margin: 8px 0;\r\n    border-color: Transparent;\r\n    outline-color: #ffd800;\r\n}\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -51088,7 +51090,7 @@ var SharedBuildPage = /** @class */ (function (_super) {
         this.props.getBuild(this.props.match.params.id);
     };
     SharedBuildPage.prototype.render = function () {
-        return (React.createElement("div", { className: "container-fluid container-fluid-build pt-5" },
+        return (React.createElement("div", { className: "container-fluid container-fluid-build" },
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col" },
                     React.createElement(StatsComponent_1.default, { stats: this.state.stats })),
@@ -51201,14 +51203,8 @@ var SharedBuildInformationsComponent = /** @class */ (function (_super) {
                                     React.createElement("div", { className: "col" },
                                         React.createElement("p", { className: "p-margin p-1 border text-center text-danger" }, this.props.build.dislikes))))))),
                 React.createElement("div", { className: "dropdown-divider" }),
-                React.createElement("div", { className: "row" },
-                    React.createElement("div", { className: "col-md-2" },
-                        React.createElement(react_router_dom_1.Link, { to: "/create" },
-                            React.createElement("img", { className: "share-size", src: "../assets/app/icons/share-white.png" }))),
-                    React.createElement("div", { className: "col" },
-                        React.createElement("p", { className: "bg-secondary p-margin p-1 border" },
-                            "dofusbuilds.com/",
-                            this.props.build.id))))));
+                "Partager :",
+                React.createElement("input", { className: "bg-secondary shadow-lg share-input", value: "https://dofusbuilds.com/" + this.props.build.id, placeholder: "Rechercher par nom..." }))));
     };
     return SharedBuildInformationsComponent;
 }(React.Component));

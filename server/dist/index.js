@@ -20,5 +20,5 @@ middleware.app(app);
 app.use('/', routes_1.default);
 // setup the error middleware
 middleware.error(app);
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 443; //5000;
 app.listen(port, () => logger.info(`Listening on port ${port}...`));

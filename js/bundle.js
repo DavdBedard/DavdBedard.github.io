@@ -2098,7 +2098,7 @@ module.exports = __webpack_require__(211);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 //let url: string ='http://localhost:5000/';
-var url = 'https://dofusbuilds.com:443/';
+var url = 'https://dofusbuilds.com:2053/';
 /*if (process.env.API_PROD_URL !== undefined) {
     url = process.env.API_PROD_URL;
 }*/
@@ -8545,8 +8545,13 @@ exports.signUp = function (user) {
     };
 };
 exports.login = function (idName, password) {
+    var body = {
+        AccessControlAllowOrigin: "*",
+        idName: idName,
+        password: password
+    };
     return function (dispatch) {
-        axios_1.default.post(apiConstants_1.ApiConstants.API_URL + 'login', { idName: idName, password: password })
+        axios_1.default.post(apiConstants_1.ApiConstants.API_URL + 'login', body)
             .then(function (response) {
             dispatch({
                 type: ActionTypes.LOGIN_USER,
@@ -38912,8 +38917,13 @@ exports.signUp = function (user) {
     };
 };
 exports.login = function (idName, password) {
+    var body = {
+        AccessControlAllowOrigin: "*",
+        idName: idName,
+        password: password
+    };
     return function (dispatch) {
-        axios_1.default.post(apiConstants_1.ApiConstants.API_URL + 'login', { idName: idName, password: password })
+        axios_1.default.post(apiConstants_1.ApiConstants.API_URL + 'login', body)
             .then(function (response) {
             dispatch({
                 type: ActionTypes.LOGIN_USER,
@@ -50434,7 +50444,7 @@ var MessagesComponent = /** @class */ (function (_super) {
             var message = void 0;
             switch (this.props.error.errorType) {
                 case Enums_1.ErrorTypes.login503:
-                    message = "Le serveur n'a pas répondu à temps. Il est possible qu'il soit hors ligne. Veuillez réessayer plus tard.";
+                    message = "Une erreur s'est produite au niveau du serveur";
                     break;
                 case Enums_1.ErrorTypes.login404:
                     message = "Le nom d'utilisateur ou le mot de passe est invalide";

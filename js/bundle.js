@@ -2098,7 +2098,7 @@ module.exports = __webpack_require__(211);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 //let url: string ='http://localhost:5000/';
-var url = 'https://dofusbuilds.com:2052/';
+var url = 'http://dofusbuilds.com:2052/';
 console.log('Server URL: ' + url);
 /*if (process.env.API_PROD_URL !== undefined) {
     url = process.env.API_PROD_URL;

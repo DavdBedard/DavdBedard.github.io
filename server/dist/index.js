@@ -22,5 +22,5 @@ app.use('/', routes_1.default);
 middleware.error(app);
 // 2052 without ssl
 // 2053 with ssl
-const port = process.env.PORT || 2052; //5000;
+const port = process.env.PORT || 2053; //5000;
 app.listen(port, () => logger.info(`Listening on port ${port}...`));

@@ -3846,41 +3846,41 @@ exports.default = formatClassName;
 function formatClassNameProg(className) {
     switch (className) {
         case Enums_1.Classes.ecaflip:
-            return 'Ecaflip';
+            return 'ecaflip';
         case Enums_1.Classes.eniripsa:
-            return 'Eniripsa';
+            return 'eniripsa';
         case Enums_1.Classes.iop:
-            return 'Iop';
+            return 'iop';
         case Enums_1.Classes.cra:
-            return 'Cra';
+            return 'cra';
         case Enums_1.Classes.feca:
-            return 'Feca';
+            return 'feca';
         case Enums_1.Classes.sacrier:
-            return 'Sacrier';
+            return 'sacrier';
         case Enums_1.Classes.sadida:
-            return 'Sadida';
+            return 'sadida';
         case Enums_1.Classes.osamodas:
-            return 'Osamodas';
+            return 'osamodas';
         case Enums_1.Classes.enutrof:
-            return 'Enutrof';
+            return 'enutrof';
         case Enums_1.Classes.sram:
-            return 'Sram';
+            return 'sram';
         case Enums_1.Classes.xelor:
-            return 'Xelor';
+            return 'xelor';
         case Enums_1.Classes.pandawa:
-            return 'Pandawa';
+            return 'pandawa';
         case Enums_1.Classes.rogue:
-            return 'Rogue';
+            return 'rogue';
         case Enums_1.Classes.masqueraider:
-            return 'Masqueraider';
+            return 'masqueraider';
         case Enums_1.Classes.foggernauts:
-            return 'Foggernauts';
+            return 'foggernauts';
         case Enums_1.Classes.eliotrope:
-            return 'Eliotrope';
+            return 'eliotrope';
         case Enums_1.Classes.huppermage:
-            return 'Huppermage';
+            return 'huppermage';
         case Enums_1.Classes.ouginak:
-            return 'Ouginak';
+            return 'ouginak';
     }
 }
 exports.formatClassNameProg = formatClassNameProg;

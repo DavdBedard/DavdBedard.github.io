@@ -1937,6 +1937,7 @@ var ActionTypes;
     ActionTypes["SAVE_BUILD_SUCCESS"] = "SAVE_BUILD_SUCCESS";
     ActionTypes["SAVE_BUILD_FAILURE"] = "SAVE_BUILD_FAILURE";
     ActionTypes["UPDATE_SPELL_OR_VARIANT"] = "UPDATE_SPELL_OR_VARIANT";
+    ActionTypes["DEFAULT_SPELL_OR_VARIANT"] = "DEFAULT_SPELL_OR_VARIANT";
     ActionTypes["CHANGE_CLASS"] = "CHANGE_CLASS";
 })(ActionTypes = exports.ActionTypes || (exports.ActionTypes = {}));
 exports.addItem = function (type, itemId) {
@@ -2020,6 +2021,11 @@ exports.updateSpellOrVariant = function (spellOrVariant) {
     return {
         type: ActionTypes.UPDATE_SPELL_OR_VARIANT,
         payload: spellOrVariant
+    };
+};
+exports.setShosenSpellsToDefault = function () {
+    return {
+        type: ActionTypes.DEFAULT_SPELL_OR_VARIANT
     };
 };
 exports.changeClass = function (chosenClass) {
@@ -8874,7 +8880,8 @@ var BuildEquipementsComponent_1 = __webpack_require__(340);
 var BuildCreationActions_1 = __webpack_require__(26);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {
-    changeClass: BuildCreationActions_1.changeClass
+    changeClass: BuildCreationActions_1.changeClass,
+    setShosenSpellsToDefault: BuildCreationActions_1.setShosenSpellsToDefault
 };
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(BuildEquipementsComponent_1.default);
 
@@ -52069,6 +52076,7 @@ var BuildEquipementsComponent = /** @class */ (function (_super) {
         this.showClassesModal(false);
         // Change class
         this.props.changeClass(chosenClass);
+        this.props.setShosenSpellsToDefault();
         // Tell the parent component of the change
         this.props.updateParent();
     };
@@ -52571,7 +52579,6 @@ var SpellsComponent = /** @class */ (function (_super) {
             case Enums_1.Classes.huppermage:
                 classSpells = Spells_1.Spells.huppermage;
                 break;
-                ;
             case Enums_1.Classes.ouginak:
                 classSpells = Spells_1.Spells.ouginak;
                 break;
@@ -52731,7 +52738,7 @@ exports.Spells = {
     iop: Iop_1.IopSpells,
     masqueraider: Masqueraider_1.MasqueraiderSpells,
     osamodas: Osamodas_1.OsamodasSpells,
-    ouginka: Ouginak_1.OuginakSpells,
+    ouginak: Ouginak_1.OuginakSpells,
     pandawa: Pandawa_1.PandawaSpells,
     rogue: Rogue_1.RogueSpells,
     sacrier: Sacrier_1.SacrierSpells,
@@ -63363,6 +63370,44 @@ exports.FoggernautsSpells = [
         description: "Fait évoluer la tourelle ciblée."
     },
     {
+        name: "Transition",
+        poMin: 4,
+        poMax: 8,
+        pa: 3,
+        element: undefined,
+        upgradeOne: {
+            level: 110,
+            normal: {
+                damageMin: undefined,
+                damageMax: undefined
+            },
+            critical: {
+                damageMin: undefined,
+                damageMax: undefined
+            },
+        },
+        upgradeTwo: {
+            level: 177,
+            normal: {
+                damageMin: undefined,
+                damageMax: undefined
+            },
+            critical: {
+                damageMin: undefined,
+                damageMax: undefined
+            },
+        },
+        cc: undefined,
+        poModifiable: false,
+        line: false,
+        viewLine: false,
+        nbUse: undefined,
+        freeCellule: false,
+        zone: false,
+        zoneDescription: undefined,
+        description: "Fait évoluer la tourelle ciblée. Soigne la tourelle ciblée si elle reçoit une évolution. Augmente la Puissance des alliés ciblés."
+    },
+    {
         name: "Courant",
         poMin: 1,
         poMax: 3,
@@ -65622,7 +65667,7 @@ exports.HuppermageSpells = [
         poModifiable: false,
         line: false,
         viewLine: false,
-        nbUse: undefined,
+        nbUse: 2,
         freeCellule: false,
         zone: true,
         zoneDescription: "Cercle de 2 cases",
@@ -65653,7 +65698,7 @@ exports.HuppermageSpells = [
         freeCellule: false,
         zone: false,
         zoneDescription: undefined,
-        description: "Vole de la vie dans l'élément Eau et fixe l'état Eau. Pose une rune d'Eau à l'emplacement de la cible."
+        description: "Vole de la vie dans l'élément Eau et fixe l'état Eau. Pose une rune d'Eau à l'emplacement de la cible. L'état élémentaire de la cible modifie les effets qu'elle subit : • Air : - 25% dommages (1 tour) • Feu : - 50 Fuite (1 tour) • Terre : - 2 PM (1 tour)"
     },
     {
         name: "Traversée",
@@ -85759,6 +85804,35 @@ function reducer(state, action) {
         }
         case BuildCreationActions_1.ActionTypes.UPDATE_SPELL_OR_VARIANT: {
             return __assign({}, state, { spellOrVariant: action.payload });
+        }
+        case BuildCreationActions_1.ActionTypes.DEFAULT_SPELL_OR_VARIANT: {
+            console.log(exports.initialState.spellOrVariant);
+            return __assign({}, state, { 
+                // TODO find why the initialState variable changes and cannot be used as default values
+                spellOrVariant: [
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true
+                ] });
         }
         case BuildCreationActions_1.ActionTypes.CHANGE_CLASS: {
             buildWithItem.class = action.payload;

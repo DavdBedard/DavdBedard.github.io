@@ -52157,37 +52157,37 @@ var BuildEquipementsComponent = /** @class */ (function (_super) {
     BuildEquipementsComponent.prototype.renderItemImage = function (type) {
         switch (type) {
             case this.props.build.amulet > -1 && Enums_1.EquipementTypes.amulet:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.amulet + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/amulets/' + this.props.build.amulet + '.png' });
             case this.props.build.belt > -1 && Enums_1.EquipementTypes.belt:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.belt + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/belts/' + this.props.build.belt + '.png' });
             case this.props.build.boots > -1 && Enums_1.EquipementTypes.boots:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.boots + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/boots/' + this.props.build.boots + '.png' });
             case this.props.build.hat > -1 && Enums_1.EquipementTypes.hat:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.hat + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.hat + '.png' });
             case this.props.build.ringOne > -1 && Enums_1.EquipementTypes.ringOne:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.ringOne + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png' });
             case this.props.build.ringTwo > -1 && Enums_1.EquipementTypes.ringTwo:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.ringTwo + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringTwo + '.png' });
             case this.props.build.weapon > -1 && Enums_1.EquipementTypes.weapon:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.weapon + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/weapons/' + this.props.build.weapon + '.png' });
             case this.props.build.shield > -1 && Enums_1.EquipementTypes.shield:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.shield + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/shields/' + this.props.build.shield + '.png' });
             case this.props.build.cloak > -1 && Enums_1.EquipementTypes.cloak:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.cloak + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/cloaks/' + this.props.build.cloak + '.png' });
             case this.props.build.pet > -1 && Enums_1.EquipementTypes.pet:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.pet + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/pets/' + this.props.build.pet + '.png' });
             case this.props.build.dofusOne > -1 && Enums_1.EquipementTypes.dofusOne:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.dofusOne + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusOne + '.png' });
             case this.props.build.dofusTwo > -1 && Enums_1.EquipementTypes.dofusTwo:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.dofusTwo + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusTwo + '.png' });
             case this.props.build.dofusThree > -1 && Enums_1.EquipementTypes.dofusThree:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.dofusThree + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusThree + '.png' });
             case this.props.build.dofusFour > -1 && Enums_1.EquipementTypes.dofusFour:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.dofusFour + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFour + '.png' });
             case this.props.build.dofusFive > -1 && Enums_1.EquipementTypes.dofusFive:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.dofusFive + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFive + '.png' });
             case this.props.build.dofusSix > -1 && Enums_1.EquipementTypes.dofusSix:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.dofusSix + '.webp' });
+                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusSix + '.png' });
             default:
                 return React.createElement("img", { className: "item-img-size", src: "../../assets/carre.png" });
         }

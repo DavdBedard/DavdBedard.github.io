@@ -8050,65 +8050,59 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function formatStatName(stat) {
     switch (stat) {
         case 'vitality':
-            return 'Vitalité';
+            return ' Vitalité';
         case 'strength':
-            return 'Force';
+            return ' Force';
         case 'wisdom':
-            return 'Sagesse';
+            return ' Sagesse';
         case 'range':
-            return 'Portée';
+            return ' Portée';
         case 'prospecting':
-            return 'Prospection';
+            return ' Prospection';
         case 'neutralDamage':
-            return 'Dommages Neutre';
+            return ' Dommages Neutre';
         case 'earthDamage':
-            return 'Dommages Terre';
+            return ' Dommages Terre';
         case 'fixedNeutralResistance':
-            return 'Résistance Neutre';
+            return ' Résistance Neutre';
         case 'fixedEarthResistance':
-            return 'Résistance Terre';
+            return ' Résistance Terre';
         case 'fixedFireResistance':
-            return 'Résistance Feu';
+            return ' Résistance Feu';
         case 'fixedWaterResistance':
-            return 'Résistance Eau';
+            return ' Résistance Eau';
         case 'fixedAirResistance':
-            return 'Résistance Air';
+            return ' Résistance Air';
         case 'apReduction':
-            return 'Retrait PA';
+            return ' Retrait PA';
         case 'lock':
-            return 'Tacle';
+            return ' Tacle';
         case 'agility':
-            return 'Agilité';
-        case 'heals':
-            return 'Soins';
+            return ' Agilité';
         case 'fireDamage':
-            return 'Dommages Feu';
+            return ' Dommages Feu';
         case 'airDamage':
-            return 'Dommages Air';
-        case 'earthResistance':
-            return 'Résistance Terre';
-        case 'waterResistance':
-            return 'Résistance Eau';
-        case 'airResistance':
-            return 'Résistance Air';
+            return ' Dommages Air';
+        case 'initiative':
+            return ' Initiative';
         case 'summons':
-            return 'Invocations';
+            return ' Invocations';
         case 'agility':
-            return 'Agilité';
+            return ' Agilité';
         case 'power':
-            return 'Puissance';
+            return ' Puissance';
         case 'waterDamage':
-            return 'Dommages Eau';
+            return ' Dommages Eau';
         case 'mp':
-            return 'PM';
+            return ' PM';
         case 'ap':
-            return 'PA';
+            return ' PA';
         case 'critical':
             return '% Critique';
         case 'summoning':
-            return 'Invocations';
+            return ' Invocations';
         case 'dodge':
-            return 'Fuite';
+            return ' Fuite';
         case 'variableEarthResistance':
             return '% Résistance Terre';
         case 'variableWaterResistance':
@@ -8120,23 +8114,33 @@ function formatStatName(stat) {
         case 'variableFireResistance':
             return '% Résistance Feu';
         case 'criticalDamage':
-            return 'Dommages Critiques';
+            return ' Dommages Critiques';
         case 'mpParry':
-            return 'Esquive PM';
+            return ' Esquive PM';
         case 'heal':
-            return 'Soins';
+            return ' Soins';
         case 'pushbackResistance':
-            return 'Résistance Poussée';
+            return ' Résistance Poussée';
         case 'pushbackDamage':
-            return 'Dommages Poussée';
+            return ' Dommages Poussée';
         case 'apParry':
-            return 'Esquive PA';
+            return ' Esquive PA';
         case 'chance':
-            return 'Chance';
+            return ' Chance';
         case 'intelligence':
-            return 'Intelligence';
+            return ' Intelligence';
         case 'mpReduction':
-            return 'Retrait PA';
+            return ' Retrait PA';
+        case 'rangedDamage':
+            return '% Dommages distance';
+        case 'meleeResistance':
+            return '% Résistance mêlée';
+        case 'meleeDamage':
+            return '% Dommages mêlée';
+        case 'rangedResistance':
+            return '% Résistance distance';
+        case 'weaponDamage':
+            return '% Dommages d\'armes';
         default:
             return stat;
     }
@@ -50813,14 +50817,26 @@ var EquipementsPage = /** @class */ (function (_super) {
     };
     EquipementsPage.prototype.renderItemStats = function (item) {
         var statsHTML = [];
+        var cssColor;
         for (var itemStats in item) {
+            cssColor = ' text-danger';
+            if (item[itemStats].max >= 0) {
+                cssColor = ' text-success';
+            }
             if (itemStats != 'level' && itemStats != 'set' && itemStats != 'name') {
                 statsHTML.push(React.createElement(React.Fragment, { key: itemStats },
-                    React.createElement("small", { className: "text-white" }, item[itemStats].max + ' ' + FormatStats_1.default(itemStats)),
+                    React.createElement("small", { className: cssColor }, item[itemStats].max + FormatStats_1.default(itemStats)),
                     React.createElement("br", null)));
             }
         }
         return statsHTML;
+    };
+    EquipementsPage.prototype.renderStatColor = function (statValue) {
+        if (statValue >= 0) {
+            return;
+        }
+        else {
+        }
     };
     EquipementsPage.prototype.renderItems = function (colNumber) {
         var _this = this;
@@ -50833,15 +50849,15 @@ var EquipementsPage = /** @class */ (function (_super) {
                     React.createElement("div", { className: "card bg-dark mb-3" },
                         React.createElement("div", { className: "row no-gutters" },
                             React.createElement("div", { className: "col-md-4 border-warning" },
+                                React.createElement("p", { className: "text-white text-center p-margin" },
+                                    React.createElement("small", null,
+                                        "Niveau ",
+                                        items[i + colNumber].level)),
                                 React.createElement("img", { src: '../../assets/dofus/items/' + ItemsHelper_1.getUrlNameFromType(this_1.state.type) + '/' + (i + colNumber) + '.png', className: "card-img" })),
                             React.createElement("div", { className: "col-md-8" },
                                 React.createElement("div", { className: "card-body" },
                                     React.createElement("h6", { className: "card-title text-white font-weight-bold" }, items[i + colNumber].name),
-                                    React.createElement("p", { className: "card-text" },
-                                        this_1.renderItemStats(items[i + colNumber]),
-                                        React.createElement("small", { className: "text-white" },
-                                            "Niveau ",
-                                            items[i + colNumber].level)))))))));
+                                    React.createElement("p", { className: "card-text" }, this_1.renderItemStats(items[i + colNumber])))))))));
         };
         var this_1 = this;
         for (var i = 0; i < items.length - 2; i += 3) {
@@ -55669,91 +55685,91 @@ var BuildEquipementsComponent = /** @class */ (function (_super) {
         if (this.props.build.belt > -1 && type === Enums_1.EquipementTypes.belt) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/belts/' + this.props.build.belt + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.belt) {
+        else if (type === Enums_1.EquipementTypes.belt) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/belts/nobelt.png" });
         }
         if (this.props.build.boots > -1 && type === Enums_1.EquipementTypes.boots) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/boots/' + this.props.build.boots + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.boots) {
+        else if (type === Enums_1.EquipementTypes.boots) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/boots/noboots.png" });
         }
         if (this.props.build.hat > -1 && type === Enums_1.EquipementTypes.hat) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.hat + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.hat) {
+        else if (type === Enums_1.EquipementTypes.hat) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/hats/nohat.png" });
         }
         if (this.props.build.ringOne > -1 && type === Enums_1.EquipementTypes.ringOne) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.ringOne) {
+        else if (type === Enums_1.EquipementTypes.ringOne) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/rings/noring.png" });
         }
         if (this.props.build.ringTwo > -1 && type === Enums_1.EquipementTypes.ringTwo) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.ringTwo) {
+        else if (type === Enums_1.EquipementTypes.ringTwo) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/rings/noring.png" });
         }
         if (this.props.build.weapon > -1 && type === Enums_1.EquipementTypes.weapon) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/weapons/' + this.props.build.weapon + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.weapon) {
+        else if (type === Enums_1.EquipementTypes.weapon) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/weapons/noweapon.png" });
         }
         if (this.props.build.shield > -1 && type === Enums_1.EquipementTypes.shield) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/shields/' + this.props.build.shield + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.shield) {
+        else if (type === Enums_1.EquipementTypes.shield) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/shields/noshield.png" });
         }
         if (this.props.build.cloak > -1 && type === Enums_1.EquipementTypes.cloak) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/cloaks/' + this.props.build.cloak + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.cloak) {
+        else if (type === Enums_1.EquipementTypes.cloak) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/cloaks/nocloak.png" });
         }
         if (this.props.build.dofusOne > -1 && type === Enums_1.EquipementTypes.dofusOne) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusOne + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.dofusOne) {
+        else if (type === Enums_1.EquipementTypes.dofusOne) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
         }
         if (this.props.build.dofusTwo > -1 && type === Enums_1.EquipementTypes.dofusTwo) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusTwo + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.dofusTwo) {
+        else if (type === Enums_1.EquipementTypes.dofusTwo) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
         }
         if (this.props.build.dofusThree > -1 && type === Enums_1.EquipementTypes.dofusThree) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusThree + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.dofusThree) {
+        else if (type === Enums_1.EquipementTypes.dofusThree) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
         }
         if (this.props.build.dofusFour > -1 && type === Enums_1.EquipementTypes.dofusFour) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFour + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.dofusFour) {
+        else if (type === Enums_1.EquipementTypes.dofusFour) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
         }
         if (this.props.build.dofusFive > -1 && type === Enums_1.EquipementTypes.dofusFive) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFive + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.dofusFive) {
+        else if (type === Enums_1.EquipementTypes.dofusFive) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
         }
         if (this.props.build.dofusSix > -1 && type === Enums_1.EquipementTypes.dofusSix) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusSix + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.dofusSix) {
+        else if (type === Enums_1.EquipementTypes.dofusSix) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
         }
         if (this.props.build.pet > -1 && type === Enums_1.EquipementTypes.pet) {
             return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/pets/' + this.props.build.pet + '.png' });
         }
-        else if (type == Enums_1.EquipementTypes.pet) {
+        else if (type === Enums_1.EquipementTypes.pet) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/pets/nopet.png" });
         }
     };

@@ -55750,41 +55750,11 @@ var BuildEquipementsComponent = /** @class */ (function (_super) {
         else if (type == Enums_1.EquipementTypes.dofusSix) {
             return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
         }
-        switch (type) {
-            //case this.props.build.amulet > -1 && EquipementTypes.amulet:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/amulets/' + this.props.build.amulet + '.png'} />;
-            //case this.props.build.belt > -1 && EquipementTypes.belt:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/belts/' + this.props.build.belt + '.png'} />;
-            //case this.props.build.boots > -1 && EquipementTypes.boots:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/boots/' + this.props.build.boots + '.png'} />;
-            //case this.props.build.hat > -1 && EquipementTypes.hat:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/hats/' + this.props.build.hat + '.png'} />;
-            //case this.props.build.ringOne > -1 && EquipementTypes.ringOne:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png'} />;
-            //case this.props.build.ringTwo > -1 && EquipementTypes.ringTwo:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/rings/' + this.props.build.ringTwo + '.png'} />;
-            //case this.props.build.weapon > -1 && EquipementTypes.weapon:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/weapons/' + this.props.build.weapon + '.png'} />;
-            //case this.props.build.shield > -1 && EquipementTypes.shield:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/shields/' + this.props.build.shield + '.png'} />;
-            //case this.props.build.cloak > -1 && EquipementTypes.cloak:
-            //    return <img className="item-img-size" src={'../../assets/dofus/items/cloaks/' + this.props.build.cloak + '.png'} />;
-            case this.props.build.pet > -1 && Enums_1.EquipementTypes.pet:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/pets/' + this.props.build.pet + '.png' });
-            /*case this.props.build.dofusOne > -1 && EquipementTypes.dofusOne:
-                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusOne + '.png'} />
-            case this.props.build.dofusTwo > -1 && EquipementTypes.dofusTwo:
-                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusTwo + '.png'} />
-            case this.props.build.dofusThree > -1 && EquipementTypes.dofusThree:
-                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusThree + '.png'} />
-            case this.props.build.dofusFour > -1 && EquipementTypes.dofusFour:
-                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusFour + '.png'} />
-            case this.props.build.dofusFive > -1 && EquipementTypes.dofusFive:
-                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusFive + '.png'} />
-            case this.props.build.dofusSix > -1 && EquipementTypes.dofusSix:
-                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusSix + '.png'} />
-            default:
-                return <React.Fragment><img className="item-img-size" src="../../assets/dofus/items/hats/nohat.png" /></React.Fragment>;*/
+        if (this.props.build.pet > -1 && type === Enums_1.EquipementTypes.pet) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/pets/' + this.props.build.pet + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.pet) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/pets/nopet.png" });
         }
     };
     BuildEquipementsComponent.prototype.showClassesModal = function (show) {

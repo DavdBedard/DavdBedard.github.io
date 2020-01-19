@@ -37604,6 +37604,10 @@ var App = /** @class */ (function (_super) {
     function App(props) {
         return _super.call(this, props) || this;
     }
+    App.prototype.componentDidUpdate = function () {
+        // Reset the scroll position on route change
+        window.scrollTo(0, 0);
+    };
     App.prototype.render = function () {
         return (React.createElement("div", { className: "app" },
             React.createElement(NavigationContainer_1.default, null),
@@ -54950,76 +54954,107 @@ exports.Cloaks = [
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Dofus = [
     {
-        name: 'Coiffe du Compte Harebourg',
-        vitality: { min: 451, max: 500 },
-        strength: { min: 71, max: 100 },
-        wisdom: { min: 41, max: 60 },
-        range: { min: 0, max: 1 },
-        prospecting: { min: 21, max: 30 },
-        neutralDamage: { min: 16, max: 20 },
-        earthDamage: { min: 16, max: 20 },
-        fixedNeutralResistance: { min: -5, max: -4 },
-        fixedEarthResistance: { min: -5, max: -4 },
-        fixedFireResistance: { min: -5, max: -4 },
-        fixedWaterResistance: { min: -5, max: -4 },
-        fixedAirResistance: { min: -5, max: -4 },
-        apReduction: { min: 6, max: 8 },
-        lock: { min: 16, max: 20 },
-        level: 200,
-        set: 'Harebourg'
+        name: "Dofus des Glaces",
+        airDamage: 25,
+        waterDamage: 25,
+        fireDamage: 25,
+        neutralDamage: 25,
+        earthDamage: 25
     },
     {
-        name: 'Coiffe Séculaire',
-        vitality: { min: 251, max: 300 },
-        intelligence: { min: 71, max: 100 },
-        agility: { min: 31, max: 40 },
-        wisdom: { min: 31, max: 40 },
-        heals: { min: 8, max: 12 },
-        summons: { min: 0, max: 1 },
-        prospecting: { min: 11, max: 15 },
-        fireDamage: { min: 7, max: 10 },
-        airDamage: { min: 7, max: 10 },
-        airResistance: { min: 11, max: 15 },
-        earthResistance: { min: 5, max: 7 },
-        waterResistance: { min: 5, max: 7 },
-        level: 200,
-        set: 'Séculaire'
+        name: "Dofus Argenté Scintillant",
+        special: "Cet objet n'est pas encore assez connu des artisans pour que ses caractéristiques puissent être révélées aux éventuels acheteurs."
     },
     {
-        name: 'Coiffe du Compte Harebourg',
-        vitality: { min: 451, max: 500 },
-        strength: { min: 71, max: 100 },
-        wisdom: { min: 41, max: 60 },
-        range: { min: 0, max: 1 },
-        prospecting: { min: 21, max: 30 },
-        neutralDamage: { min: 16, max: 20 },
-        earthDamage: { min: 16, max: 20 },
-        neutralResistance: { min: -4, max: -5 },
-        earthResistance: { min: -4, max: -5 },
-        fireResistance: { min: -4, max: -5 },
-        waterResistance: { min: -4, max: -5 },
-        airResistance: { min: -4, max: -5 },
-        apReduction: { min: 6, max: 8 },
-        lock: { min: 16, max: 20 },
-        level: 200,
-        set: 'Harebourg'
+        name: "Dofus Vulbis",
+        mp: 1,
+        special: "Les dommages occasionnés sont augmentés de 10% pendant 1 tour si aucune attaque occasionnant des dommages n'a été subie depuis le précédent tour de jeu. Le tacle est augmenté de 20 pendant 1 tour si une attaque occasionnant des dommages a été subie depuis le tour précédent de jeu."
     },
     {
-        name: 'Coiffe Séculaire',
-        vitality: { min: 251, max: 300 },
-        intelligence: { min: 71, max: 100 },
-        agility: { min: 31, max: 40 },
-        wisdom: { min: 31, max: 40 },
-        heals: { min: 8, max: 12 },
-        summons: 1,
-        prospecting: { min: 11, max: 15 },
-        fireDamage: { min: 7, max: 10 },
-        airDamage: { min: 7, max: 10 },
-        airResistance: { min: 11, max: 15 },
-        earthResistance: { min: 5, max: 7 },
-        waterResistance: { min: 5, max: 7 },
-        level: 200,
-        set: 'Séculaire'
+        name: "Dofus Abyssal",
+        special: "À chaque début de tour, si aucun ennemi n'est au contact, donne 1 PM. Sinon, donne 1 PA. "
+    },
+    {
+        name: "Dofus Ivoire",
+        special: " Cet objet n'est pas encore assez connu des artisans pour que ses caractéristiques puissent être révélées aux éventuels acheteurs."
+    },
+    {
+        name: "Dofus Forgelave",
+        pushbackResistance: 60,
+        special: "Ajoute 150 points de bouclier si le propriétaire est déplacé via une poussée, une attirance, un échange de position ou porté par un Pandawa. Seuls les ennemis peuvent déclencher cet effet."
+    },
+    {
+        name: "Dofus Ébène",
+        special: "Cet objet n'est pas encore assez connu des artisans pour que ses caractéristiques puissent être révélées aux éventuels acheteurs."
+    },
+    {
+        name: "Dofus Nébuleux",
+        special: "Les tours impairs, augmente de 20% les dommages. Les tours pairs, réduit de 10% les dommages. "
+    },
+    {
+        name: "Dofus Ocre",
+        ap: 1,
+        special: "Donne 1 PA si aucune attaque occasionnant des dommages n'a été subie depuis le précédent tour de jeu. "
+    },
+    {
+        name: "Dofus Turquoise",
+        critical: 10,
+        special: "Pour chaque coup critique occasionné, les dommages finaux sont augmentés de 1% pendant 3 tours. Cumulable 10 fois."
+    },
+    {
+        name: "Dofus Pourpre",
+        power: 80,
+        special: "Pour chaque attaque à distance reçue, les dommages finaux occasionnés sont augmentés de 1% pendant 1 tour. Les effets peuvent se cumuler 10 fois."
+    },
+    {
+        name: "Dotruche",
+        power: 20
+    },
+    {
+        name: "Dofus Émeraude",
+        vitality: 200,
+        special: "À la fin du tour, confère 100% du niveau du propriétaire en points de bouclier pour chaque ennemi au contact. Les invocations ne sont pas comptabilisées."
+    },
+    {
+        name: "Dolmanax",
+        chance: 50,
+        intelligence: 50,
+        force: 50,
+        agility: 50
+    },
+    {
+        name: "Dofus des Veilleurs",
+        special: "En début de tour, rend 7% de points de vie aux alliés alignés. "
+    },
+    {
+        name: "Dofus Kaliptus",
+        prospecting: 30
+    },
+    {
+        name: "Dokille",
+        prospecting: 10
+    },
+    {
+        name: "Dokoko",
+        special: "Tous les 3 tours à partir du tour 4, rend 10% de ses points de vie maximum."
+    },
+    {
+        name: "Dofus Cawotte",
+        wisdom: 60,
+        special: "Donne 25 esquive PA si un malus de PM est subi, ou 25 esquive PM si un malus PA est subi. Les deux effets ne sont pas cumulables et durent 1 tour."
+    },
+    {
+        name: "Dofus Cacao",
+        lock: 10,
+        special: "Chaque attaque à distance subie lorsque vous êtes au corps à corps d'un ennemi confère une marque chocolatée. Ces marques sont consommées à la fin de votre tour et donnent chacune 25% de votre niveau en bouclier pendant 1 tour."
+    },
+    {
+        name: "Dofus Argenté",
+        special: "Au début de son tour, si le lanceur a moins de 20% de sa vie, il est soigné de 20% de sa vie. Cet effet ne peut se jouer qu'une seule fois par combat."
+    },
+    {
+        name: "Dofawa",
+        vitality: 1
     }
 ];
 
@@ -55625,41 +55660,131 @@ var BuildEquipementsComponent = /** @class */ (function (_super) {
         return _this;
     }
     BuildEquipementsComponent.prototype.renderItemImage = function (type) {
+        if (this.props.build.amulet > -1 && type === Enums_1.EquipementTypes.amulet) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/amulets/' + this.props.build.amulet + '.png' });
+        }
+        else if (type === Enums_1.EquipementTypes.amulet) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/amulets/noamulet.png" });
+        }
+        if (this.props.build.belt > -1 && type === Enums_1.EquipementTypes.belt) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/belts/' + this.props.build.belt + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.belt) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/belts/nobelt.png" });
+        }
+        if (this.props.build.boots > -1 && type === Enums_1.EquipementTypes.boots) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/boots/' + this.props.build.boots + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.boots) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/boots/noboots.png" });
+        }
+        if (this.props.build.hat > -1 && type === Enums_1.EquipementTypes.hat) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.hat + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.hat) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/hats/nohat.png" });
+        }
+        if (this.props.build.ringOne > -1 && type === Enums_1.EquipementTypes.ringOne) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.ringOne) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/rings/noring.png" });
+        }
+        if (this.props.build.ringTwo > -1 && type === Enums_1.EquipementTypes.ringTwo) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.ringTwo) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/rings/noring.png" });
+        }
+        if (this.props.build.weapon > -1 && type === Enums_1.EquipementTypes.weapon) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/weapons/' + this.props.build.weapon + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.weapon) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/weapons/noweapon.png" });
+        }
+        if (this.props.build.shield > -1 && type === Enums_1.EquipementTypes.shield) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/shields/' + this.props.build.shield + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.shield) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/shields/noshield.png" });
+        }
+        if (this.props.build.cloak > -1 && type === Enums_1.EquipementTypes.cloak) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/cloaks/' + this.props.build.cloak + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.cloak) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/cloaks/nocloak.png" });
+        }
+        if (this.props.build.dofusOne > -1 && type === Enums_1.EquipementTypes.dofusOne) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusOne + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.dofusOne) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
+        }
+        if (this.props.build.dofusTwo > -1 && type === Enums_1.EquipementTypes.dofusTwo) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusTwo + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.dofusTwo) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
+        }
+        if (this.props.build.dofusThree > -1 && type === Enums_1.EquipementTypes.dofusThree) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusThree + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.dofusThree) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
+        }
+        if (this.props.build.dofusFour > -1 && type === Enums_1.EquipementTypes.dofusFour) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFour + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.dofusFour) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
+        }
+        if (this.props.build.dofusFive > -1 && type === Enums_1.EquipementTypes.dofusFive) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFive + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.dofusFive) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
+        }
+        if (this.props.build.dofusSix > -1 && type === Enums_1.EquipementTypes.dofusSix) {
+            return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusSix + '.png' });
+        }
+        else if (type == Enums_1.EquipementTypes.dofusSix) {
+            return React.createElement("img", { className: "item-img-size", src: "../../assets/dofus/items/dofus/nodofus.png" });
+        }
         switch (type) {
-            case this.props.build.amulet > -1 && Enums_1.EquipementTypes.amulet:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/amulets/' + this.props.build.amulet + '.png' });
-            case this.props.build.belt > -1 && Enums_1.EquipementTypes.belt:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/belts/' + this.props.build.belt + '.png' });
-            case this.props.build.boots > -1 && Enums_1.EquipementTypes.boots:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/boots/' + this.props.build.boots + '.png' });
-            case this.props.build.hat > -1 && Enums_1.EquipementTypes.hat:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/hats/' + this.props.build.hat + '.png' });
-            case this.props.build.ringOne > -1 && Enums_1.EquipementTypes.ringOne:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png' });
-            case this.props.build.ringTwo > -1 && Enums_1.EquipementTypes.ringTwo:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/rings/' + this.props.build.ringTwo + '.png' });
-            case this.props.build.weapon > -1 && Enums_1.EquipementTypes.weapon:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/weapons/' + this.props.build.weapon + '.png' });
-            case this.props.build.shield > -1 && Enums_1.EquipementTypes.shield:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/shields/' + this.props.build.shield + '.png' });
-            case this.props.build.cloak > -1 && Enums_1.EquipementTypes.cloak:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/cloaks/' + this.props.build.cloak + '.png' });
+            //case this.props.build.amulet > -1 && EquipementTypes.amulet:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/amulets/' + this.props.build.amulet + '.png'} />;
+            //case this.props.build.belt > -1 && EquipementTypes.belt:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/belts/' + this.props.build.belt + '.png'} />;
+            //case this.props.build.boots > -1 && EquipementTypes.boots:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/boots/' + this.props.build.boots + '.png'} />;
+            //case this.props.build.hat > -1 && EquipementTypes.hat:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/hats/' + this.props.build.hat + '.png'} />;
+            //case this.props.build.ringOne > -1 && EquipementTypes.ringOne:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/rings/' + this.props.build.ringOne + '.png'} />;
+            //case this.props.build.ringTwo > -1 && EquipementTypes.ringTwo:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/rings/' + this.props.build.ringTwo + '.png'} />;
+            //case this.props.build.weapon > -1 && EquipementTypes.weapon:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/weapons/' + this.props.build.weapon + '.png'} />;
+            //case this.props.build.shield > -1 && EquipementTypes.shield:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/shields/' + this.props.build.shield + '.png'} />;
+            //case this.props.build.cloak > -1 && EquipementTypes.cloak:
+            //    return <img className="item-img-size" src={'../../assets/dofus/items/cloaks/' + this.props.build.cloak + '.png'} />;
             case this.props.build.pet > -1 && Enums_1.EquipementTypes.pet:
                 return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/pets/' + this.props.build.pet + '.png' });
-            case this.props.build.dofusOne > -1 && Enums_1.EquipementTypes.dofusOne:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusOne + '.png' });
-            case this.props.build.dofusTwo > -1 && Enums_1.EquipementTypes.dofusTwo:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusTwo + '.png' });
-            case this.props.build.dofusThree > -1 && Enums_1.EquipementTypes.dofusThree:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusThree + '.png' });
-            case this.props.build.dofusFour > -1 && Enums_1.EquipementTypes.dofusFour:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFour + '.png' });
-            case this.props.build.dofusFive > -1 && Enums_1.EquipementTypes.dofusFive:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusFive + '.png' });
-            case this.props.build.dofusSix > -1 && Enums_1.EquipementTypes.dofusSix:
-                return React.createElement("img", { className: "item-img-size", src: '../../assets/dofus/items/dofus/' + this.props.build.dofusSix + '.png' });
+            /*case this.props.build.dofusOne > -1 && EquipementTypes.dofusOne:
+                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusOne + '.png'} />
+            case this.props.build.dofusTwo > -1 && EquipementTypes.dofusTwo:
+                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusTwo + '.png'} />
+            case this.props.build.dofusThree > -1 && EquipementTypes.dofusThree:
+                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusThree + '.png'} />
+            case this.props.build.dofusFour > -1 && EquipementTypes.dofusFour:
+                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusFour + '.png'} />
+            case this.props.build.dofusFive > -1 && EquipementTypes.dofusFive:
+                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusFive + '.png'} />
+            case this.props.build.dofusSix > -1 && EquipementTypes.dofusSix:
+                return <img className="item-img-size" src={'../../assets/dofus/items/dofus/' + this.props.build.dofusSix + '.png'} />
             default:
-                return React.createElement("img", { className: "item-img-size", src: "../../assets/carre.png" });
+                return <React.Fragment><img className="item-img-size" src="../../assets/dofus/items/hats/nohat.png" /></React.Fragment>;*/
         }
     };
     BuildEquipementsComponent.prototype.showClassesModal = function (show) {

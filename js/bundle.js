@@ -3914,7 +3914,7 @@ module.exports = defaults;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var url = 'http://localhost:2052/';
+var url = 'https://dofusbuilds.com:2052/';
 /*if (process.env.API_PROD_URL !== undefined) {
     url = process.env.API_PROD_URL;
 }*/
@@ -88215,7 +88215,7 @@ exports.getSharedBuild = reselect_1.createSelector([getSharedBuildState], functi
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var url = 'http://localhost:2052/';
+var url = 'https://dofusbuilds.com:2052/';
 /*if (process.env.API_PROD_URL !== undefined) {
     url = process.env.API_PROD_URL;
 }*/
@@ -88452,6 +88452,7 @@ var LoadingComponent = /** @class */ (function (_super) {
             });
         }
     };
+    // TODO https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
     LoadingComponent.prototype.shouldComponentUpdate = function (nextProps, nextState) {
         if (this.state.loading && this.state.firstTime) {
             return true;
@@ -88487,7 +88488,7 @@ var LoadingComponent = /** @class */ (function (_super) {
             return (React.createElement("div", { onClick: function () { return _this.buttonClick(); } }, this.props.jsx));
         }
         else {
-            return (React.createElement("button", { type: "submit", className: "btn btn-secondary" },
+            return (React.createElement("button", { type: "submit", className: "btn btn-secondary", disabled: true },
                 React.createElement(Spinner_1.default, { animation: "border", variant: "warning", size: "sm" })));
         }
     };
@@ -88554,7 +88555,9 @@ var SigninPage = /** @class */ (function (_super) {
         };
         _this.state = {
             user: _this.initialUserState,
-            signupSubmited: false
+            passwordRepeat: _this.initialUserState.password,
+            signupSubmited: false,
+            disabled: false
         };
         return _this;
     }
@@ -88566,7 +88569,12 @@ var SigninPage = /** @class */ (function (_super) {
                 signupSubmited: true
             };
         });
-        if (this.state.user.idName && this.state.user.password && this.state.user.email && this.state.user.username.length < 20) {
+        if (this.state.user.idName && this.state.user.password && this.state.user.email && this.state.user.username.length < 20 && this.state.user.password === this.state.passwordRepeat) {
+            this.setState(function () {
+                return {
+                    disabled: true
+                };
+            });
             this.props.signUp(this.state.user);
             return true;
         }
@@ -88585,6 +88593,14 @@ var SigninPage = /** @class */ (function (_super) {
         this.setState(function () {
             return {
                 user: user
+            };
+        });
+    };
+    SigninPage.prototype.updatePasswordRepeatState = function (event) {
+        var passwordRepeat = event.target.value;
+        this.setState(function () {
+            return {
+                passwordRepeat: passwordRepeat
             };
         });
     };
@@ -88609,16 +88625,20 @@ var SigninPage = /** @class */ (function (_super) {
                     React.createElement("form", null,
                         React.createElement("div", { className: "form-group" },
                             React.createElement("h5", null, "Nom d'utilisateur"),
-                            React.createElement("input", { onChange: function (event) { return _this.updateUserState(event); }, className: "bg-secondary shadow-lg search-input", name: "idName", id: "idName" }),
+                            React.createElement("input", { onChange: function (event) { return _this.updateUserState(event); }, className: "bg-secondary shadow-lg search-input", name: "idName", id: "idName", disabled: this.state.disabled }),
                             !this.state.user.idName && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide")),
                             this.state.user.idName && this.state.user.idName.length > 20 && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas avoir plus de 20 characteres"))),
                         React.createElement("div", { className: "form-group" },
                             React.createElement("h5", null, "Mot de passe"),
-                            React.createElement("input", { onChange: function (event) { return _this.updateUserState(event); }, className: "bg-secondary shadow-lg search-input", name: "password", id: "password", type: "password" }),
+                            React.createElement("input", { onChange: function (event) { return _this.updateUserState(event); }, className: "bg-secondary shadow-lg search-input", name: "password", id: "password", type: "password", disabled: this.state.disabled }),
                             !this.state.user.password && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide"))),
                         React.createElement("div", { className: "form-group" },
+                            React.createElement("h5", null, "R\u00E9p\u00E9ter le mot de passe"),
+                            React.createElement("input", { onChange: function (event) { return _this.updatePasswordRepeatState(event); }, className: "bg-secondary shadow-lg search-input", name: "passwordRepeat", id: "passwordRepeat", type: "password", disabled: this.state.disabled }),
+                            this.state.user.password && this.state.user.password !== this.state.passwordRepeat && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Le mot de passe n'est pas identique"))),
+                        React.createElement("div", { className: "form-group" },
                             React.createElement("h5", null, "Courriel"),
-                            React.createElement("input", { onChange: function (event) { return _this.updateUserState(event); }, className: "bg-secondary shadow-lg search-input", name: "email", type: "email", id: "email" }),
+                            React.createElement("input", { onChange: function (event) { return _this.updateUserState(event); }, className: "bg-secondary shadow-lg search-input", name: "email", type: "email", id: "email", disabled: this.state.disabled }),
                             !this.state.user.email && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas etre vide")),
                             this.state.user.email && this.state.user.email.length > 20 && this.state.signupSubmited && (React.createElement("div", { className: "text-danger" }, "Ce champs ne peut pas avoir plus de 20 characteres"))),
                         React.createElement(LoadingContainer_1.default, { jsx: React.createElement("button", { type: "submit", className: "btn btn-secondary" },

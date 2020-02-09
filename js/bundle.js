@@ -358,6 +358,10 @@ exports.ErrorTypes = {
     sharedBuild404: 6,
     sharedBuild503: 7
 };
+exports.Page = {
+    previous: 0,
+    next: 1
+};
 
 
 /***/ }),
@@ -3317,7 +3321,7 @@ function style(node, property) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dom_helpers_camelize__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dom_helpers_camelize__ = __webpack_require__(256);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ThemeProvider__ = __webpack_require__(9);
@@ -10435,7 +10439,7 @@ exports.default = StatsComponent;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var BuildEquipementsComponent_1 = __webpack_require__(240);
+var BuildEquipementsComponent_1 = __webpack_require__(241);
 var BuildCreationActions_1 = __webpack_require__(25);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {
@@ -10450,12 +10454,12 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Bui
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_helpers_addClass__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom_helpers_removeClass__ = __webpack_require__(246);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_helpers_addClass__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom_helpers_removeClass__ = __webpack_require__(247);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_dom_helpers_css__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dom_helpers_scrollbarSize__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_isOverflowing__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_manageAriaHidden__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_isOverflowing__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_manageAriaHidden__ = __webpack_require__(251);
 
 
 
@@ -10718,7 +10722,7 @@ Tooltip.displayName = 'Tooltip';
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var SpellsComponent_1 = __webpack_require__(263);
+var SpellsComponent_1 = __webpack_require__(264);
 var BuildCreationActions_1 = __webpack_require__(25);
 var BuildSelector_1 = __webpack_require__(93);
 var mapStateToProps = function (state) { return ({
@@ -10867,7 +10871,7 @@ Spinner.displayName = 'Spinner';
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = __webpack_require__(28);
-var apiConstants_1 = __webpack_require__(301);
+var apiConstants_1 = __webpack_require__(302);
 var ActionTypes;
 (function (ActionTypes) {
     ActionTypes["GET_BUILD_SUCCESS"] = "GET_BUILD_SUCCESS";
@@ -10900,7 +10904,7 @@ exports.getBuild = function (buildId) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var LoadingComponent_1 = __webpack_require__(306);
+var LoadingComponent_1 = __webpack_require__(307);
 var MessagesSelector_1 = __webpack_require__(81);
 var mapStateToProps = function (state) { return ({
     error: MessagesSelector_1.getError(state)
@@ -10916,7 +10920,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Loa
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = persistReducer;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateReconciler_autoMergeLevel1__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateReconciler_autoMergeLevel1__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createPersistoid__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__getStoredState__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__purgeStoredState__ = __webpack_require__(100);
@@ -11368,9 +11372,9 @@ var react_router_dom_1 = __webpack_require__(10);
 __webpack_require__(139);
 var App_1 = __webpack_require__(142);
 var react_redux_1 = __webpack_require__(7);
-var index_1 = __webpack_require__(309);
-var react_1 = __webpack_require__(328);
-__webpack_require__(329);
+var index_1 = __webpack_require__(310);
+var react_1 = __webpack_require__(329);
+__webpack_require__(330);
 ReactDOM.render(React.createElement(react_redux_1.Provider, { store: index_1.default.store },
     React.createElement(react_1.PersistGate, { loading: null, persistor: index_1.default.persistor },
         React.createElement(react_router_dom_1.BrowserRouter, null,
@@ -45518,7 +45522,7 @@ var App = /** @class */ (function (_super) {
         window.removeEventListener('scroll', this.handleScroll);
     };
     App.prototype.handleScroll = function (event) {
-        if (window.scrollY >= 56) {
+        if (this.state.hidden !== 'hidden' && window.scrollY >= 56) {
             this.setState(function () {
                 return {
                     hidden: 'hidden',
@@ -47819,7 +47823,7 @@ exports = module.exports = __webpack_require__(15)(true);
 
 
 // module
-exports.push([module.i, ".popover-header {\n  border-bottom: none; }\n\nnav.navigation {\n  background-color: #09090F;\n  margin-bottom: 30px;\n  position: fixed;\n  width: 100%;\n  /* Full width */\n  z-index: 1; }\n  nav.navigation .height-not-hidden {\n    height: 4.5rem; }\n  nav.navigation .height-hidden {\n    height: 3.5rem; }\n  nav.navigation .container-fluid {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    /* Dropdown Button */\n    /* The container <div> - needed to position the dropdown content */\n    /* Dropdown Content (Hidden by Default) */\n    /* Links inside the dropdown */\n    /* Change color of dropdown links on hover */\n    /* Show the dropdown menu on hover */\n    /* Change the background color of the dropdown button when the dropdown content is shown */\n    /*.close:hover,\n        .close:focus {\n            color: black;\n            text-decoration: none;\n            cursor: pointer;\n        }*/\n    /*.show {\n            padding-right: 17px;\n            display: block;\n        }*/ }\n    nav.navigation .container-fluid :-moz-placeholder {\n      /* Firefox 18- */\n      color: pink; }\n    nav.navigation .container-fluid .border-yellow {\n      border-color: #ffd800 !important; }\n    nav.navigation .container-fluid .dropbtn {\n      background-color: #09090F;\n      color: white;\n      padding: 16px;\n      font-size: 16px;\n      border: none; }\n    nav.navigation .container-fluid .dropdown {\n      position: relative;\n      display: inline-block; }\n    nav.navigation .container-fluid .dropdown-content {\n      right: 0;\n      display: none;\n      position: absolute;\n      background-color: black;\n      min-width: 160px;\n      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n      z-index: 1;\n      color: white; }\n    nav.navigation .container-fluid .dropdown-content a {\n      color: white;\n      padding: 12px 16px;\n      text-decoration: none;\n      display: block; }\n    nav.navigation .container-fluid .dropdown-content a:hover {\n      background-color: #ffd800; }\n    nav.navigation .container-fluid .dropdown:hover .dropdown-content {\n      display: block; }\n    nav.navigation .container-fluid .dropdown:hover .dropbtn {\n      background-color: black; }\n    nav.navigation .container-fluid h1 {\n      padding: 8px;\n      margin-top: 8px;\n      color: #ffd800;\n      font-family: Arial, Helvetica, sans-serif;\n      font-weight: 900;\n      font-size: 22pt; }\n    nav.navigation .container-fluid h1:before {\n      color: white;\n      content: \"dofus\"; }\n    nav.navigation .container-fluid .search-input-global {\n      position: relative;\n      color: white;\n      background-color: #343a40;\n      padding: 6px 20px;\n      margin: 8px 10px;\n      border-color: Transparent;\n      outline-color: #ffd800; }\n    nav.navigation .container-fluid .img-size-countrys {\n      width: 32px;\n      height: 32px; }\n    nav.navigation .container-fluid ::placeholder {\n      /* Chrome, Firefox, Opera, Safari 10.1+ */\n      color: white;\n      opacity: 1;\n      /* Firefox */ }\n    nav.navigation .container-fluid ::-ms-input-placeholder {\n      /* Internet Explorer 10-11 */\n      color: white; }\n    nav.navigation .container-fluid ::-ms-input-placeholder {\n      /* Microsoft Edge */\n      color: white; }\n    nav.navigation .container-fluid span {\n      color: #ffd800; }\n    nav.navigation .container-fluid .link-title {\n      text-decoration: none; }\n    nav.navigation .container-fluid ul {\n      list-style: none;\n      display: flex;\n      margin: 0; }\n      nav.navigation .container-fluid ul li a {\n        padding: 10px 20px;\n        min-height: 30px;\n        display: block;\n        color: rgba(255, 255, 255, 0.5); }\n        nav.navigation .container-fluid ul li a.active {\n          color: #fff; }\n          nav.navigation .container-fluid ul li a.active:hover {\n            color: #fff; }\n        nav.navigation .container-fluid ul li a:hover {\n          color: rgba(255, 255, 255, 0.75);\n          text-decoration: none; }\n        nav.navigation .container-fluid ul li a svg {\n          margin-left: 5px; }\n      nav.navigation .container-fluid ul li .pad-nav-link {\n        padding-top: 20px;\n        padding-right: 10px;\n        margin-right: 10px;\n        padding-left: 10px;\n        padding-bottom: 12px; }\n      nav.navigation .container-fluid ul li .pad-border-link {\n        padding-top: 14px;\n        padding-right: 10px;\n        padding-left: 10px;\n        padding-bottom: 8px; }\n      nav.navigation .container-fluid ul li .p-adj {\n        padding-bottom: 6px !important; }\n      nav.navigation .container-fluid ul li .text-padding {\n        padding-top: 19px;\n        padding: 4px; }\n      nav.navigation .container-fluid ul li .pad-nav-link:hover {\n        background-color: black; }\n      nav.navigation .container-fluid ul li .pad-border-link:hover {\n        background-color: black; }\n    nav.navigation .container-fluid .img-size {\n      height: 20px;\n      width: 20px; }\n\nnav.navigation-second {\n  background-color: #12131e;\n  margin-top: 3.5rem;\n  position: absolute;\n  z-index: 0; }\n  nav.navigation-second .container-fluid {\n    height: 4.5rem; }\n\n/*@include media-breakpoint-only(xs) {\n    .nav-text {\n        display: none;\n    }\n    .link-title {\n        margin-left: 1rem;\n    }\n}\n*/\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/Navigation.scss"],"names":[],"mappings":"AAYA;EACI,oBAAmB,EACtB;;AAED;EACI,0BAbgB;EAchB,oBAAmB;EACnB,gBAAe;EACf,YAAW;EAAE,gBAAgB;EAC7B,WAAU,EAwMb;EA7MD;IAQQ,eAAc,EACjB;EATL;IAYQ,eAAc,EACjB;EAbL;IAgBQ,cAAa;IACb,oBAAmB;IACnB,+BAA8B;IAY9B,qBAAqB;IAQrB,mEAAmE;IAKnE,0CAA0C;IAW1C,+BAA+B;IAO/B,6CAA6C;IAI7C,qCAAqC;IAIrC,2FAA2F;IAK3F;;;;;WAKG;IAWH;;;WAGG,EA+GN;IA5ML;MAsB4B,iBAAiB;MACjC,YAAW,EACd;IAxBT;MA2BY,iCAA+B,EAClC;IA5BT;MAgCY,0BA5CQ;MA6CR,aAAY;MACZ,cAAa;MACb,gBAAe;MACf,aAAY,EACf;IArCT;MAwCY,mBAAkB;MAClB,sBAAqB,EACxB;IA1CT;MA6CY,SAAQ;MACR,cAAa;MACb,mBAAkB;MAClB,wBAAuB;MACvB,iBAAgB;MAChB,gDAA4C;MAC5C,WAAU;MACV,aA3DA,EA4DH;IArDT;MAwDY,aA/DA;MAgEA,mBAAkB;MAClB,sBAAqB;MACrB,eAAc,EACjB;IA5DT;MA+DY,0BAvEG,EAwEN;IAhET;MAmEY,eAAc,EACjB;IApET;MAuEY,wBA7EC,EA8EJ;IAxET;MAkFY,aAAY;MACZ,gBAAe;MACf,eA5FG;MA6FH,0CAAyC;MACzC,iBAAgB;MAChB,gBAAe,EAClB;IAxFT;MAgGY,aAAY;MACZ,iBAAgB,EACnB;IAlGT;MAqGY,mBAAkB;MAClB,aAAY;MACZ,0BAAyB;MACzB,kBAAiB;MACjB,iBAAgB;MAChB,0BAAyB;MACzB,uBAAsB,EACzB;IA5GT;MA+GY,YAAW;MACX,aAAY,EACf;IAjHT;MAmHwB,0CAA0C;MACtD,aAAY;MACZ,WAAU;MAAE,aAAa,EAC1B;IAtHX;MAwHkC,6BAA6B;MACnD,aAAY,EACf;IA1HT;MA4HkC,oBAAoB;MAC1C,aAAY,EACf;IA9HT;MAiIY,eAzIG,EA0IN;IAlIT;MAqIY,sBAAqB,EACxB;IAtIT;MAyIY,iBAAgB;MAChB,cAAa;MACb,UAAS,EA2DZ;MAtMT;QA+IoB,mBAAkB;QAClB,iBAAgB;QAChB,eAAc;QACd,gCA7JW,EA+Kd;QApKjB;UAqJwB,YA/JN,EAoKG;UA1JrB;YAwJ4B,YAlKV,EAmKO;QAzJzB;UA6JwB,iCAtKc;UAuKd,sBAAqB,EACxB;QA/JrB;UAkKwB,iBAAgB,EACnB;MAnKrB;QAuKoB,kBAAiB;QACjB,oBAAmB;QACnB,mBAAkB;QAClB,mBAAkB;QAClB,qBAAoB,EACvB;MA5KjB;QA+KoB,kBAAiB;QACjB,oBAAmB;QACnB,mBAAkB;QAClB,oBAAmB,EACtB;MAnLjB;QAsLoB,+BAA8B,EACjC;MAvLjB;QA0LoB,kBAAiB;QACjB,aAAY,EACf;MA5LjB;QA+LoB,wBAAuB,EAC1B;MAhMjB;QAmMoB,wBAAuB,EAC1B;IApMjB;MAyMY,aAAY;MACZ,YAAW,EACd;;AAMT;EACI,0BAH4B;EAK5B,mBAAkB;EAClB,mBAAkB;EAClB,WAAU,EAKb;EAVD;IAQQ,eAAc,EACjB;;AAGL;;;;;;;;EAQE","file":"Navigation.scss","sourcesContent":["//@import '~bootstrap/scss/_functions.scss';\n//@import '~bootstrap/scss/_variables.scss';\n//@import '~bootstrap/scss/mixins/_breakpoints.scss';\n\n$bg-nav-bar: #09090F;\n$link: rgba(255, 255, 255, 0.5);\n$link-active: #fff;\n$link-hover: rgba(255, 255, 255, 0.75);\n$title: #ffd800;\n$text: white;\n$hover: black;\n\n.popover-header {\n    border-bottom: none;\n}\n\nnav.navigation {\n    background-color: $bg-nav-bar;\n    margin-bottom: 30px;\n    position: fixed;\n    width: 100%; /* Full width */\n    z-index: 1;\n\n    .height-not-hidden {\n        height: 4.5rem;\n    }\n\n    .height-hidden {\n        height: 3.5rem;\n    }\n\n    .container-fluid {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        \n        //height: 4.5rem;//3.5rem;\n\n        :-moz-placeholder { /* Firefox 18- */\n            color: pink;\n        }\n\n        .border-yellow {\n            border-color: $title !important;\n        }\n        \n        /* Dropdown Button */\n        .dropbtn {\n            background-color: $bg-nav-bar;\n            color: white;//$title;\n            padding: 16px;\n            font-size: 16px;\n            border: none;\n        }\n        /* The container <div> - needed to position the dropdown content */\n        .dropdown {\n            position: relative;\n            display: inline-block;\n        }\n        /* Dropdown Content (Hidden by Default) */\n        .dropdown-content {\n            right: 0;\n            display: none;\n            position: absolute;\n            background-color: black;\n            min-width: 160px;\n            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n            z-index: 1;\n            color: $text;\n        }\n        /* Links inside the dropdown */\n        .dropdown-content a {\n            color: $text;\n            padding: 12px 16px;\n            text-decoration: none;\n            display: block;\n        }\n        /* Change color of dropdown links on hover */\n        .dropdown-content a:hover {\n            background-color: $title;\n        }\n        /* Show the dropdown menu on hover */\n        .dropdown:hover .dropdown-content {\n            display: block;\n        }\n        /* Change the background color of the dropdown button when the dropdown content is shown */\n        .dropdown:hover .dropbtn {\n            background-color: $hover;\n        }\n        \n        /*.close:hover,\n        .close:focus {\n            color: black;\n            text-decoration: none;\n            cursor: pointer;\n        }*/   \n\n        h1 {\n            padding: 8px;\n            margin-top: 8px;\n            color: $title;\n            font-family: Arial, Helvetica, sans-serif;\n            font-weight: 900;\n            font-size: 22pt;\n        }\n\n        /*.show {\n            padding-right: 17px;\n            display: block;\n        }*/\n\n        h1:before {\n            color: white;\n            content: \"dofus\";\n        }\n\n        .search-input-global {\n            position: relative;\n            color: white;\n            background-color: #343a40;\n            padding: 6px 20px;\n            margin: 8px 10px;\n            border-color: Transparent;\n            outline-color: #ffd800;\n        }\n\n        .img-size-countrys {\n            width: 32px;\n            height: 32px;\n        }\n\n        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n            color: white;\n            opacity: 1; /* Firefox */\n          }\n          \n        ::-ms-input-placeholder { /* Internet Explorer 10-11 */\n            color: white;\n        }\n        \n        ::-ms-input-placeholder { /* Microsoft Edge */\n            color: white;\n        }\n\n        span {\n            color: $title;\n        }\n\n        .link-title {\n            text-decoration: none;\n        }\n\n        ul {\n            list-style: none;\n            display: flex;\n            margin: 0;\n\n            li {\n                a {\n                    padding: 10px 20px;\n                    min-height: 30px;\n                    display: block;\n                    color: $link;\n\n                    &.active {\n                        color: $link-active;\n\n                        &:hover {\n                            color: $link-active;\n                        }\n                    }\n\n                    &:hover {\n                        color: $link-hover;\n                        text-decoration: none;\n                    }\n\n                    svg {\n                        margin-left: 5px;\n                    }\n                }\n\n                .pad-nav-link {\n                    padding-top: 20px;\n                    padding-right: 10px;\n                    margin-right: 10px;\n                    padding-left: 10px;\n                    padding-bottom: 12px;\n                }\n\n                .pad-border-link {\n                    padding-top: 14px;\n                    padding-right: 10px;\n                    padding-left: 10px;\n                    padding-bottom: 8px;\n                }\n\n                .p-adj {\n                    padding-bottom: 6px !important;\n                }\n\n                .text-padding {\n                    padding-top: 19px;\n                    padding: 4px;\n                }\n\n                .pad-nav-link:hover {\n                    background-color: black;\n                }\n\n                .pad-border-link:hover {\n                    background-color: black;\n                }\n            }\n        }\n\n        .img-size {\n            height: 20px;\n            width: 20px;\n        }\n    }\n}\n\n$bg-sec-nav-bar: rgb(18, 19, 30);\n\nnav.navigation-second {\n    background-color: $bg-sec-nav-bar;\n    // TODO add a filler navbar instead of a bigger second navbar\n    margin-top: 3.5rem;//4.5rem;\n    position: absolute;\n    z-index: 0;\n\n    .container-fluid {\n        height: 4.5rem;//3.5rem;\n    }\n}\n\n/*@include media-breakpoint-only(xs) {\n    .nav-text {\n        display: none;\n    }\n    .link-title {\n        margin-left: 1rem;\n    }\n}\n*/"],"sourceRoot":""}]);
+exports.push([module.i, ".popover-header {\n  border-bottom: none; }\n\nnav.navigation {\n  background-color: #09090F;\n  margin-bottom: 30px;\n  position: fixed;\n  width: 100%;\n  /* Full width */\n  z-index: 1; }\n  nav.navigation .height-not-hidden {\n    height: 4.5rem; }\n  nav.navigation .height-hidden {\n    height: 3.5rem; }\n  nav.navigation .container-fluid {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    /* Dropdown Button */\n    /* The container <div> - needed to position the dropdown content */\n    /* Dropdown Content (Hidden by Default) */\n    /* Links inside the dropdown */\n    /* Change color of dropdown links on hover */\n    /* Show the dropdown menu on hover */\n    /* Change the background color of the dropdown button when the dropdown content is shown */\n    /*.close:hover,\n        .close:focus {\n            color: black;\n            text-decoration: none;\n            cursor: pointer;\n        }*/\n    /*.show {\n            padding-right: 17px;\n            display: block;\n        }*/ }\n    nav.navigation .container-fluid :-moz-placeholder {\n      /* Firefox 18- */\n      color: pink; }\n    nav.navigation .container-fluid .border-yellow {\n      border-color: #ffd800 !important; }\n    nav.navigation .container-fluid .dropbtn {\n      background-color: #09090F;\n      color: white;\n      padding: 16px;\n      font-size: 16px;\n      border: none; }\n    nav.navigation .container-fluid .dropdown {\n      position: relative;\n      display: inline-block; }\n    nav.navigation .container-fluid .dropdown-content {\n      right: 0;\n      display: none;\n      position: absolute;\n      background-color: black;\n      min-width: 160px;\n      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n      z-index: 1;\n      color: white; }\n    nav.navigation .container-fluid .dropdown-content a {\n      color: white;\n      padding: 12px 16px;\n      text-decoration: none;\n      display: block; }\n    nav.navigation .container-fluid .dropdown-content a:hover {\n      background-color: #ffd800; }\n    nav.navigation .container-fluid .dropdown:hover .dropdown-content {\n      display: block; }\n    nav.navigation .container-fluid .dropdown:hover .dropbtn {\n      background-color: black; }\n    nav.navigation .container-fluid h1 {\n      padding: 8px;\n      margin-top: 8px;\n      color: #ffd800;\n      font-family: Arial, Helvetica, sans-serif;\n      font-weight: 900;\n      font-size: 22pt; }\n    nav.navigation .container-fluid h1:before {\n      color: white;\n      content: \"dofus\"; }\n    nav.navigation .container-fluid .search-input-global {\n      position: relative;\n      color: white;\n      background-color: #343a40;\n      padding: 6px 20px;\n      margin: 8px 10px;\n      border-color: Transparent;\n      outline-color: #ffd800; }\n    nav.navigation .container-fluid .img-size-countrys {\n      width: 32px;\n      height: 32px; }\n    nav.navigation .container-fluid ::placeholder {\n      /* Chrome, Firefox, Opera, Safari 10.1+ */\n      color: white;\n      opacity: 1;\n      /* Firefox */ }\n    nav.navigation .container-fluid ::-ms-input-placeholder {\n      /* Internet Explorer 10-11 */\n      color: white; }\n    nav.navigation .container-fluid ::-ms-input-placeholder {\n      /* Microsoft Edge */\n      color: white; }\n    nav.navigation .container-fluid span {\n      color: #ffd800; }\n    nav.navigation .container-fluid .link-title {\n      text-decoration: none; }\n    nav.navigation .container-fluid ul {\n      list-style: none;\n      display: flex;\n      margin: 0; }\n      nav.navigation .container-fluid ul li a {\n        padding: 10px 20px;\n        min-height: 30px;\n        display: block;\n        color: rgba(255, 255, 255, 0.5); }\n        nav.navigation .container-fluid ul li a.active {\n          color: #fff; }\n          nav.navigation .container-fluid ul li a.active:hover {\n            color: #fff; }\n        nav.navigation .container-fluid ul li a:hover {\n          color: rgba(255, 255, 255, 0.75);\n          text-decoration: none; }\n        nav.navigation .container-fluid ul li a svg {\n          margin-left: 5px; }\n      nav.navigation .container-fluid ul li .pad-nav-link {\n        padding-top: 20px;\n        padding-right: 10px;\n        margin-right: 10px;\n        padding-left: 10px;\n        padding-bottom: 12px; }\n      nav.navigation .container-fluid ul li .pad-border-link {\n        padding-top: 14px;\n        padding-right: 10px;\n        padding-left: 10px;\n        padding-bottom: 8px; }\n      nav.navigation .container-fluid ul li .p-adj {\n        padding-bottom: 6px !important; }\n      nav.navigation .container-fluid ul li .text-padding {\n        padding-top: 19px;\n        padding: 4px; }\n      nav.navigation .container-fluid ul li .pad-nav-link:hover {\n        background-color: black; }\n      nav.navigation .container-fluid ul li .pad-border-link:hover {\n        background-color: black; }\n    nav.navigation .container-fluid .img-size {\n      height: 20px;\n      width: 20px; }\n\nnav.navigation-second {\n  background-color: #12131e;\n  margin-top: 3.5rem;\n  position: absolute;\n  z-index: 0; }\n  nav.navigation-second .container-fluid {\n    height: 4.5rem; }\n\n/*@include media-breakpoint-only(xs) {\n    .nav-text {\n        display: none;\n    }\n    .link-title {\n        margin-left: 1rem;\n    }\n}\n*/\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/Navigation.scss"],"names":[],"mappings":"AAYA;EACI,oBAAmB,EACtB;;AAED;EACI,0BAbgB;EAchB,oBAAmB;EACnB,gBAAe;EACf,YAAW;EAAE,gBAAgB;EAC7B,WAAU,EAwMb;EA7MD;IAQQ,eAAc,EACjB;EATL;IAYQ,eAAc,EACjB;EAbL;IAgBQ,cAAa;IACb,oBAAmB;IACnB,+BAA8B;IAY9B,qBAAqB;IAQrB,mEAAmE;IAKnE,0CAA0C;IAW1C,+BAA+B;IAO/B,6CAA6C;IAI7C,qCAAqC;IAIrC,2FAA2F;IAK3F;;;;;WAKG;IAWH;;;WAGG,EA+GN;IA5ML;MAsB4B,iBAAiB;MACjC,YAAW,EACd;IAxBT;MA2BY,iCAA+B,EAClC;IA5BT;MAgCY,0BA5CQ;MA6CR,aAAY;MACZ,cAAa;MACb,gBAAe;MACf,aAAY,EACf;IArCT;MAwCY,mBAAkB;MAClB,sBAAqB,EACxB;IA1CT;MA6CY,SAAQ;MACR,cAAa;MACb,mBAAkB;MAClB,wBAAuB;MACvB,iBAAgB;MAChB,gDAA4C;MAC5C,WAAU;MACV,aA3DA,EA4DH;IArDT;MAwDY,aA/DA;MAgEA,mBAAkB;MAClB,sBAAqB;MACrB,eAAc,EACjB;IA5DT;MA+DY,0BAvEG,EAwEN;IAhET;MAmEY,eAAc,EACjB;IApET;MAuEY,wBA7EC,EA8EJ;IAxET;MAkFY,aAAY;MACZ,gBAAe;MACf,eA5FG;MA6FH,0CAAyC;MACzC,iBAAgB;MAChB,gBAAe,EAClB;IAxFT;MAgGY,aAAY;MACZ,iBAAgB,EACnB;IAlGT;MAqGY,mBAAkB;MAClB,aAAY;MACZ,0BAAyB;MACzB,kBAAiB;MACjB,iBAAgB;MAChB,0BAAyB;MACzB,uBAAsB,EACzB;IA5GT;MA+GY,YAAW;MACX,aAAY,EACf;IAjHT;MAmHwB,0CAA0C;MACtD,aAAY;MACZ,WAAU;MAAE,aAAa,EAC1B;IAtHX;MAwHkC,6BAA6B;MACnD,aAAY,EACf;IA1HT;MA4HkC,oBAAoB;MAC1C,aAAY,EACf;IA9HT;MAiIY,eAzIG,EA0IN;IAlIT;MAqIY,sBAAqB,EACxB;IAtIT;MAyIY,iBAAgB;MAChB,cAAa;MACb,UAAS,EA2DZ;MAtMT;QA+IoB,mBAAkB;QAClB,iBAAgB;QAChB,eAAc;QACd,gCA7JW,EA+Kd;QApKjB;UAqJwB,YA/JN,EAoKG;UA1JrB;YAwJ4B,YAlKV,EAmKO;QAzJzB;UA6JwB,iCAtKc;UAuKd,sBAAqB,EACxB;QA/JrB;UAkKwB,iBAAgB,EACnB;MAnKrB;QAuKoB,kBAAiB;QACjB,oBAAmB;QACnB,mBAAkB;QAClB,mBAAkB;QAClB,qBAAoB,EACvB;MA5KjB;QA+KoB,kBAAiB;QACjB,oBAAmB;QACnB,mBAAkB;QAClB,oBAAmB,EACtB;MAnLjB;QAsLoB,+BAA8B,EACjC;MAvLjB;QA0LoB,kBAAiB;QACjB,aAAY,EACf;MA5LjB;QA+LoB,wBAAuB,EAC1B;MAhMjB;QAmMoB,wBAAuB,EAC1B;IApMjB;MAyMY,aAAY;MACZ,YAAW,EACd;;AAMT;EACI,0BAH4B;EAI5B,mBAAkB;EAClB,mBAAkB;EAClB,WAAU,EAKb;EATD;IAOQ,eAAc,EACjB;;AAGL;;;;;;;;EAQE","file":"Navigation.scss","sourcesContent":["//@import '~bootstrap/scss/_functions.scss';\n//@import '~bootstrap/scss/_variables.scss';\n//@import '~bootstrap/scss/mixins/_breakpoints.scss';\n\n$bg-nav-bar: #09090F;\n$link: rgba(255, 255, 255, 0.5);\n$link-active: #fff;\n$link-hover: rgba(255, 255, 255, 0.75);\n$title: #ffd800;\n$text: white;\n$hover: black;\n\n.popover-header {\n    border-bottom: none;\n}\n\nnav.navigation {\n    background-color: $bg-nav-bar;\n    margin-bottom: 30px;\n    position: fixed;\n    width: 100%; /* Full width */\n    z-index: 1;\n\n    .height-not-hidden {\n        height: 4.5rem;\n    }\n\n    .height-hidden {\n        height: 3.5rem;\n    }\n\n    .container-fluid {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        \n        //height: 4.5rem;//3.5rem;\n\n        :-moz-placeholder { /* Firefox 18- */\n            color: pink;\n        }\n\n        .border-yellow {\n            border-color: $title !important;\n        }\n        \n        /* Dropdown Button */\n        .dropbtn {\n            background-color: $bg-nav-bar;\n            color: white;//$title;\n            padding: 16px;\n            font-size: 16px;\n            border: none;\n        }\n        /* The container <div> - needed to position the dropdown content */\n        .dropdown {\n            position: relative;\n            display: inline-block;\n        }\n        /* Dropdown Content (Hidden by Default) */\n        .dropdown-content {\n            right: 0;\n            display: none;\n            position: absolute;\n            background-color: black;\n            min-width: 160px;\n            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n            z-index: 1;\n            color: $text;\n        }\n        /* Links inside the dropdown */\n        .dropdown-content a {\n            color: $text;\n            padding: 12px 16px;\n            text-decoration: none;\n            display: block;\n        }\n        /* Change color of dropdown links on hover */\n        .dropdown-content a:hover {\n            background-color: $title;\n        }\n        /* Show the dropdown menu on hover */\n        .dropdown:hover .dropdown-content {\n            display: block;\n        }\n        /* Change the background color of the dropdown button when the dropdown content is shown */\n        .dropdown:hover .dropbtn {\n            background-color: $hover;\n        }\n        \n        /*.close:hover,\n        .close:focus {\n            color: black;\n            text-decoration: none;\n            cursor: pointer;\n        }*/   \n\n        h1 {\n            padding: 8px;\n            margin-top: 8px;\n            color: $title;\n            font-family: Arial, Helvetica, sans-serif;\n            font-weight: 900;\n            font-size: 22pt;\n        }\n\n        /*.show {\n            padding-right: 17px;\n            display: block;\n        }*/\n\n        h1:before {\n            color: white;\n            content: \"dofus\";\n        }\n\n        .search-input-global {\n            position: relative;\n            color: white;\n            background-color: #343a40;\n            padding: 6px 20px;\n            margin: 8px 10px;\n            border-color: Transparent;\n            outline-color: #ffd800;\n        }\n\n        .img-size-countrys {\n            width: 32px;\n            height: 32px;\n        }\n\n        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n            color: white;\n            opacity: 1; /* Firefox */\n          }\n          \n        ::-ms-input-placeholder { /* Internet Explorer 10-11 */\n            color: white;\n        }\n        \n        ::-ms-input-placeholder { /* Microsoft Edge */\n            color: white;\n        }\n\n        span {\n            color: $title;\n        }\n\n        .link-title {\n            text-decoration: none;\n        }\n\n        ul {\n            list-style: none;\n            display: flex;\n            margin: 0;\n\n            li {\n                a {\n                    padding: 10px 20px;\n                    min-height: 30px;\n                    display: block;\n                    color: $link;\n\n                    &.active {\n                        color: $link-active;\n\n                        &:hover {\n                            color: $link-active;\n                        }\n                    }\n\n                    &:hover {\n                        color: $link-hover;\n                        text-decoration: none;\n                    }\n\n                    svg {\n                        margin-left: 5px;\n                    }\n                }\n\n                .pad-nav-link {\n                    padding-top: 20px;\n                    padding-right: 10px;\n                    margin-right: 10px;\n                    padding-left: 10px;\n                    padding-bottom: 12px;\n                }\n\n                .pad-border-link {\n                    padding-top: 14px;\n                    padding-right: 10px;\n                    padding-left: 10px;\n                    padding-bottom: 8px;\n                }\n\n                .p-adj {\n                    padding-bottom: 6px !important;\n                }\n\n                .text-padding {\n                    padding-top: 19px;\n                    padding: 4px;\n                }\n\n                .pad-nav-link:hover {\n                    background-color: black;\n                }\n\n                .pad-border-link:hover {\n                    background-color: black;\n                }\n            }\n        }\n\n        .img-size {\n            height: 20px;\n            width: 20px;\n        }\n    }\n}\n\n$bg-sec-nav-bar: rgb(18, 19, 30);\n\nnav.navigation-second {\n    background-color: $bg-sec-nav-bar;\n    margin-top: 3.5rem;//4.5rem;\n    position: absolute;\n    z-index: 0;\n\n    .container-fluid {\n        height: 4.5rem;//3.5rem;\n    }\n}\n\n/*@include media-breakpoint-only(xs) {\n    .nav-text {\n        display: none;\n    }\n    .link-title {\n        margin-left: 1rem;\n    }\n}\n*/"],"sourceRoot":""}]);
 
 // exports
 
@@ -49113,12 +49117,12 @@ var react_router_dom_1 = __webpack_require__(10);
 var HomePage_1 = __webpack_require__(215);
 var SettingsPage_1 = __webpack_require__(216);
 var EquipementsContainer_1 = __webpack_require__(219);
-var BuildCreationContainer_1 = __webpack_require__(234);
+var BuildCreationContainer_1 = __webpack_require__(235);
 var Enums_1 = __webpack_require__(3);
-var SharedBuildContainer_1 = __webpack_require__(295);
-var ProfileContainer_1 = __webpack_require__(302);
-var SigninContainer_1 = __webpack_require__(304);
-var SignupContainer_1 = __webpack_require__(307);
+var SharedBuildContainer_1 = __webpack_require__(296);
+var ProfileContainer_1 = __webpack_require__(303);
+var SigninContainer_1 = __webpack_require__(305);
+var SignupContainer_1 = __webpack_require__(308);
 var Router = /** @class */ (function (_super) {
     __extends(Router, _super);
     function Router() {
@@ -49319,17 +49323,61 @@ __webpack_require__(221);
 var react_router_dom_1 = __webpack_require__(10);
 var FormatStats_1 = __webpack_require__(82);
 var ItemsHelper_1 = __webpack_require__(223);
+var consts_1 = __webpack_require__(234);
+var Enums_1 = __webpack_require__(3);
 var EquipementsPage = /** @class */ (function (_super) {
     __extends(EquipementsPage, _super);
     function EquipementsPage(props) {
         var _this = _super.call(this, props) || this;
+        console.log("new component");
         _this.state = {
             type: _this.props.type,
             page: 1
         };
         return _this;
     }
+    EquipementsPage.prototype.changePage = function (action) {
+        var _this = this;
+        //console.log("hhahahahaha " + action)
+        switch (action) {
+            case Enums_1.Page.next:
+                if (this.state.page * consts_1.itemsPerPage < ItemsHelper_1.getItemsFromType(this.state.type).length) {
+                    this.setState(function () {
+                        return {
+                            page: 2
+                        };
+                    });
+                    console.log(this.state.page);
+                }
+                break;
+            case Enums_1.Page.previous:
+                if (this.state.page > 1) {
+                    this.setState(function () {
+                        return {
+                            page: _this.state.page - 1
+                        };
+                    });
+                    console.log(this.state.page);
+                }
+                break;
+        }
+    };
+    /*shouldComponentUpdate(nextProps, nextState): boolean {
+        if (this.state.page !== nextState.page) {
+            return false;
+        } else {
+            return true;
+        }
+        if (this.state.loading && this.state.firstTime) {
+            return true;
+        } else if (this.state.firstTime != nextState.firstTime) {
+            return false;
+        } else {
+            return true;
+        }
+    }*/
     EquipementsPage.prototype.render = function () {
+        var _this = this;
         return (React.createElement("div", { className: "container-fluid container-fluid-build" },
             React.createElement("div", { className: "row mb-3" },
                 React.createElement(react_router_dom_1.Link, { to: "/create", className: "w-100" },
@@ -49343,7 +49391,21 @@ var EquipementsPage = /** @class */ (function (_super) {
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col" }, this.renderItems(0)),
                 React.createElement("div", { className: "col" }, this.renderItems(1)),
-                React.createElement("div", { className: "col" }, this.renderItems(2)))));
+                React.createElement("div", { className: "col" }, this.renderItems(2))),
+            React.createElement("div", { className: "row justify-content-center" },
+                React.createElement("nav", null,
+                    React.createElement("ul", { className: "pagination" },
+                        React.createElement("li", { className: "page-item" },
+                            React.createElement("div", { className: "page-link clickable bg-dark text-white", onClick: function () { return _this.changePage(Enums_1.Page.previous); } },
+                                React.createElement("span", null, "\u00AB"))),
+                        React.createElement("li", { className: "page-item" },
+                            React.createElement("a", { className: "page-link bg-dark text-white", href: "#" }, "1")),
+                        React.createElement("li", { className: "page-item" },
+                            React.createElement("a", { className: "page-link clickable bg-dark text-white", href: "#" }, "2")),
+                        React.createElement("li", { className: "page-item" },
+                            React.createElement("a", { className: "page-link clickable bg-dark text-white", href: "#" }, "3")),
+                        React.createElement("li", { className: "page-item" },
+                            React.createElement("div", { className: "page-link clickable bg-dark text-white", onClick: function () { return _this.changePage(Enums_1.Page.next); } }, "\u00BB")))))));
     };
     EquipementsPage.prototype.renderItemStats = function (item) {
         var statsHTML = [];
@@ -49353,6 +49415,7 @@ var EquipementsPage = /** @class */ (function (_super) {
             if (item[itemStats].max >= 0) {
                 cssColor = ' text-success';
             }
+            //statsHTML.push(<React.Fragment key={itemStats}><small className={cssColor}>{item[itemStats].max + formatStatName(itemStats)}</small><br /></React.Fragment>);
             if (itemStats != 'level' && itemStats != 'set' && itemStats != 'name') {
                 statsHTML.push(React.createElement(React.Fragment, { key: itemStats },
                     React.createElement("small", { className: cssColor }, item[itemStats].max + FormatStats_1.default(itemStats)),
@@ -49366,25 +49429,62 @@ var EquipementsPage = /** @class */ (function (_super) {
         var EquipementsHTML = [];
         // Equipements information
         var items = ItemsHelper_1.getItemsFromType(this.state.type);
+        /*for (let i: number = 0; i < items.length - 2; i += 3) {
+            //console.log("colNumber: " + colNumber + " - " + i + " && " + (items.length - 2));
+        //for (let i: number = ((this.state.page - 1) * (itemsPerPage) + colNumber); i <= ((this.state.page - 1) + (itemsPerPage - 3)); i += 3) {
+            EquipementsHTML.push(
+                <div className="row-sm" key={i + colNumber}>
+                    <Link to="/create" onClick={() => this.props.addItem(this.state.type, i + colNumber)}>
+                        <div className="card bg-dark mb-3">
+                            <div className="row no-gutters">
+                                <div className="col-md-4 border-warning">
+                                    <p className="text-white text-center p-margin"><small>Niveau {items[i + colNumber].level}</small></p>
+                                    <img src={'../../assets/dofus/items/' + getUrlNameFromType(this.state.type) + '/' + (i + colNumber) + '.png'} className="card-img" />
+                                </div>
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <h6 className="card-title text-white font-weight-bold">{items[i + colNumber].name}</h6>
+                                        <p className="card-text">
+                                            {this.renderItemStats(items[i + colNumber])}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            );
+        }*/
+        //console.log(((this.state.page - 1) * (3 * rowPerPage) + colNumber) + " && " + (((3 * rowPerPage)) * this.state.page + colNumber));
+        console.log("eeee " + this.state.page);
+        var start = (this.state.page - 1) * (3 * consts_1.rowPerPage) + colNumber;
+        var end = ((3 * consts_1.rowPerPage)) * this.state.page + colNumber;
+        console.log("---- " + this.state.page);
+        if (end > items.length) {
+            end = items.length;
+        }
         var _loop_1 = function (i) {
-            EquipementsHTML.push(React.createElement("div", { className: "row-sm", key: i + colNumber },
-                React.createElement(react_router_dom_1.Link, { to: "/create", onClick: function () { return _this.props.addItem(_this.state.type, i + colNumber); } },
+            EquipementsHTML.push(React.createElement("div", { className: "row-sm", key: i },
+                React.createElement(react_router_dom_1.Link, { to: "/create", onClick: function () { return _this.props.addItem(_this.state.type, i); } },
                     React.createElement("div", { className: "card bg-dark mb-3" },
                         React.createElement("div", { className: "row no-gutters" },
                             React.createElement("div", { className: "col-md-4 border-warning" },
                                 React.createElement("p", { className: "text-white text-center p-margin" },
                                     React.createElement("small", null,
                                         "Niveau ",
-                                        items[i + colNumber].level)),
-                                React.createElement("img", { src: '../../assets/dofus/items/' + ItemsHelper_1.getUrlNameFromType(this_1.state.type) + '/' + (i + colNumber) + '.png', className: "card-img" })),
+                                        items[i].level)),
+                                React.createElement("img", { src: '../../assets/dofus/items/' + ItemsHelper_1.getUrlNameFromType(this_1.state.type) + '/' + (i) + '.png', className: "card-img" })),
                             React.createElement("div", { className: "col-md-8" },
                                 React.createElement("div", { className: "card-body" },
-                                    React.createElement("h6", { className: "card-title text-white font-weight-bold" }, items[i + colNumber].name),
-                                    React.createElement("p", { className: "card-text" }, this_1.renderItemStats(items[i + colNumber])))))))));
+                                    React.createElement("h6", { className: "card-title text-white font-weight-bold" }, items[i].name),
+                                    React.createElement("p", { className: "card-text" }, this_1.renderItemStats(items[i])))))))));
         };
         var this_1 = this;
-        for (var i = 0; i < items.length - 2; i += 3) {
+        for (var i = start; i < end; i += 3) {
             _loop_1(i);
+        }
+        if (colNumber === 2) {
+            console.log("-------------------------------------------------------------------");
         }
         return EquipementsHTML;
     };
@@ -55035,8 +55135,20 @@ exports.Pets = [
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.rowPerPage = 8;
+exports.colPerPage = 3;
+exports.itemsPerPage = exports.rowPerPage * exports.colPerPage;
+
+
+/***/ }),
+/* 235 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var BuildCreationPage_1 = __webpack_require__(235);
+var BuildCreationPage_1 = __webpack_require__(236);
 var ConnectedUserSelector_1 = __webpack_require__(19);
 var MessagesActions_1 = __webpack_require__(24);
 var BuildSelector_1 = __webpack_require__(93);
@@ -55052,7 +55164,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Bui
 
 
 /***/ }),
-/* 235 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55072,11 +55184,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-__webpack_require__(236);
+__webpack_require__(237);
 var ComputeStats_1 = __webpack_require__(83);
 var StatsComponent_1 = __webpack_require__(84);
 var BuildEquipementsContainer_1 = __webpack_require__(85);
-var InformationsContainer_1 = __webpack_require__(261);
+var InformationsContainer_1 = __webpack_require__(262);
 var SpellsContainer_1 = __webpack_require__(90);
 var BuildCreationPage = /** @class */ (function (_super) {
     __extends(BuildCreationPage, _super);
@@ -55178,13 +55290,13 @@ exports.default = BuildCreationPage;
 
 
 /***/ }),
-/* 236 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(237);
+var content = __webpack_require__(238);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -55209,7 +55321,7 @@ if(false) {
 }
 
 /***/ }),
-/* 237 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)(true);
@@ -55217,25 +55329,25 @@ exports = module.exports = __webpack_require__(15)(true);
 
 
 // module
-exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.modal-header {\n  border-bottom: none; }\n\n.modal-content {\n  color: white;\n  background-color: #27282E;\n  margin: auto auto;\n  padding: 20px;\n  width: 80%; }\n\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\n.bg-black {\n  background-color: #27282E; }\n\n.red {\n  color: #FF4136; }\n\n.blue {\n  color: #7FDBFF; }\n\n.green {\n  color: #2ECC40; }\n\n.brown {\n  color: Peru; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.spell-text {\n  margin-bottom: 5px; }\n\n.share-input {\n  color: white;\n  width: 100%;\n  padding: 12px 4px;\n  margin: 8px 0;\n  border-color: Transparent;\n  outline-color: #ffd800; }\n\n.card-header {\n  padding: 0;\n  border-bottom: none; }\n\n.spell-more {\n  flex-grow: 100; }\n\n.card-header-class {\n  padding: .75rem 1.25rem;\n  margin-bottom: 0;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }\n\n.clickable {\n  cursor: pointer; }\n\n.td-w {\n  width: 22px; }\n\n.character-img:hover {\n  background-color: black; }\n\n.stats-img {\n  background-image: url(" + __webpack_require__(238) + ");\n  background-position-x: -97px;\n  width: 22px;\n  height: 22px; }\n\n.vitality {\n  background-position-y: -319px; }\n\n.ap {\n  background-position-y: -243px; }\n\n.mp {\n  background-position-y: -52px; }\n\n.range {\n  background-position-y: -128px; }\n\n.initiative {\n  background-position-y: -205px; }\n\n.summon {\n  background-position-y: -507px; }\n\n.critical {\n  background-position-y: -589px; }\n\n.heal {\n  background-position-y: -966px; }\n\n.lock {\n  background-position-y: -545px; }\n\n.dodge {\n  background-position-y: -468px; }\n\n.prospecting {\n  background-position-y: -279px; }\n\n.wisdom {\n  background-position-y: -358px; }\n\n.strength {\n  background-position-y: -432px; }\n\n.intelligence {\n  background-position-y: -394px; }\n\n.chance {\n  background-position-y: -89px; }\n\n.agility {\n  background-position-y: -167px; }\n\n.ap-parry {\n  background-position-y: -1064px; }\n\n.mp-parry {\n  background-position-y: -1016px; }\n\n.ap-reduction {\n  background-position-y: -1297px; }\n\n.mp-reduction {\n  background-position-y: -1340px; }\n\n.power {\n  background-position-y: -1108px; }\n\n.damage {\n  background-position-y: -1156px; }\n\n.power-trap {\n  background-position-y: -673px; }\n\n.critical-damage {\n  background-position-y: -1248px; }\n\n.neutral-damage {\n  background-position-y: -15px; }\n\n.trap-damage {\n  background-position-y: -712px; }\n\n.pushback-damage {\n  background-position-y: -872px; }\n\n.pushback-resistance {\n  background-position-y: -832px; }\n\n.critical-resistance {\n  background-position-y: -1200px; }\n\n.reflect {\n  background-position-y: -791px; }\n\n.classes {\n  background-image: url(" + __webpack_require__(239) + ");\n  width: 54px;\n  height: 54px; }\n\n.classes:hover {\n  background-position-x: 0px; }\n\n.ecaflip {\n  background-position-x: -56px;\n  background-position-y: -623px; }\n\n.eniripsa {\n  background-position-x: -56px;\n  background-position-y: -680px; }\n\n.iop {\n  background-position-x: -56px;\n  background-position-y: -737px; }\n\n.cra {\n  background-position-x: -56px;\n  background-position-y: -793px; }\n\n.feca {\n  background-position-x: -56px;\n  background-position-y: 0px; }\n\n.sacrier {\n  background-position-x: -56px;\n  background-position-y: -114px; }\n\n.sadida {\n  background-position-x: -56px;\n  background-position-y: -57px; }\n\n.osamodas {\n  background-position-x: -56px;\n  background-position-y: -397px; }\n\n.enutrof {\n  background-position-x: -56px;\n  background-position-y: -453px; }\n\n.sram {\n  background-position-x: -56px;\n  background-position-y: -510px; }\n\n.xelor {\n  background-position-x: -56px;\n  background-position-y: -567px; }\n\n.pandawa {\n  background-position-x: -56px;\n  background-position-y: -169px; }\n\n.rogue {\n  background-position-x: -56px;\n  background-position-y: -227px; }\n\n.masqueraider {\n  background-position-x: -56px;\n  background-position-y: -284px; }\n\n.foggernauts {\n  background-position-x: -56px;\n  background-position-y: -340px; }\n\n.eliotrope {\n  background-position-x: -56px;\n  background-position-y: -850px; }\n\n.huppermage {\n  background-position-x: -56px;\n  background-position-y: -910px; }\n\n.ouginak {\n  background-position-x: -56px;\n  background-position-y: -965px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EAEpB;;AAED;EACI,oBAAmB,EACtB;;AAED;EACI,aAAY;EACZ,0BAAyB;EACzB,kBAAiB;EACjB,cAAa;EAGb,WAAU,EACb;;AAED;;GAEG;AAEH;EACI,0BAAyB,EAC5B;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAChB;;AAEH;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,0BAAyB;EACzB,uBAAsB,EACzB;;AAED;EACI,WAAU;EACV,oBAAmB,EACtB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,wBAAuB;EACvB,iBAAgB;EAChB,8CAA6C,EAChD;;AAED;EACI,gBAAe,EAClB;;AAED;EACI,YAAW,EACd;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,gDAA+D;EAC/D,6BAA4B;EAC5B,YAAW;EACX,aAAY,EACf;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,gDAAsE;EACtE,YAAW;EACX,aAAY,EACf;;AAED;EACI,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,6BAA4B,EAC/B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n    //padding-top: 50px;\r\n}\r\n\r\n.modal-header {\r\n    border-bottom: none;\r\n}\r\n\r\n.modal-content {\r\n    color: white;\r\n    background-color: #27282E;\r\n    margin: auto auto;\r\n    padding: 20px;\r\n    \r\n    //border: 1px solid #888;\r\n    width: 80%;\r\n}\r\n\r\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\r\n\r\n.bg-black {\r\n    background-color: #27282E;//#2d2d2d;//#545454;//#27282E\r\n}\r\n\r\n.red {\r\n    color: #FF4136;\r\n}\r\n\r\n.blue {\r\n    color: #7FDBFF;\r\n}\r\n\r\n.green {\r\n    color: #2ECC40;\r\n}\r\n\r\n.brown {\r\n    color: Peru;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n  }\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.share-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 4px;\r\n    margin: 8px 0;\r\n    border-color: Transparent;\r\n    outline-color: #ffd800;\r\n}\r\n\r\n.card-header {\r\n    padding: 0;\r\n    border-bottom: none;\r\n}\r\n\r\n.spell-more {\r\n    flex-grow: 100;\r\n}\r\n\r\n.card-header-class {\r\n    padding: .75rem 1.25rem;\r\n    margin-bottom: 0;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.125);\r\n}\r\n\r\n.clickable {\r\n    cursor: pointer;\r\n}\r\n\r\n.td-w {\r\n    width: 22px;\r\n}\r\n\r\n.character-img:hover {\r\n    background-color: black;\r\n}\r\n\r\n.stats-img {\r\n    background-image: url('../../assets/dofus/elements/sprite.png');\r\n    background-position-x: -97px;\r\n    width: 22px;\r\n    height: 22px;\r\n}\r\n\r\n.vitality {\r\n    background-position-y: -319px;\r\n}\r\n\r\n.ap {\r\n    background-position-y: -243px;\r\n}\r\n\r\n.mp {\r\n    background-position-y: -52px;\r\n}\r\n\r\n.range {\r\n    background-position-y: -128px;\r\n}\r\n\r\n.initiative {\r\n    background-position-y: -205px;\r\n}\r\n\r\n.summon {\r\n    background-position-y: -507px;\r\n}\r\n\r\n.critical {\r\n    background-position-y: -589px;\r\n}\r\n\r\n.heal {\r\n    background-position-y: -966px;\r\n}\r\n\r\n.lock {\r\n    background-position-y: -545px;\r\n}\r\n\r\n.dodge {\r\n    background-position-y: -468px;\r\n}\r\n\r\n.prospecting {\r\n    background-position-y: -279px;\r\n}\r\n\r\n.wisdom {\r\n    background-position-y: -358px;\r\n}\r\n\r\n.strength {\r\n    background-position-y: -432px;\r\n}\r\n\r\n.intelligence {\r\n    background-position-y: -394px;\r\n}\r\n\r\n.chance {\r\n    background-position-y: -89px;\r\n}\r\n\r\n.agility {\r\n    background-position-y: -167px;\r\n}\r\n\r\n.ap-parry {\r\n    background-position-y: -1064px;\r\n}\r\n\r\n.mp-parry {\r\n    background-position-y: -1016px;\r\n}\r\n\r\n.ap-reduction {\r\n    background-position-y: -1297px;\r\n}\r\n\r\n.mp-reduction {\r\n    background-position-y: -1340px;\r\n}\r\n\r\n.power {\r\n    background-position-y: -1108px;\r\n}\r\n\r\n.damage {\r\n    background-position-y: -1156px;\r\n}\r\n\r\n.power-trap {\r\n    background-position-y: -673px;\r\n}\r\n\r\n.critical-damage {\r\n    background-position-y: -1248px;\r\n}\r\n\r\n.neutral-damage {\r\n    background-position-y: -15px;\r\n}\r\n\r\n.trap-damage {\r\n    background-position-y: -712px;\r\n}\r\n\r\n.pushback-damage {\r\n    background-position-y: -872px;\r\n}\r\n\r\n.pushback-resistance {\r\n    background-position-y: -832px;\r\n}\r\n\r\n.critical-resistance {\r\n    background-position-y: -1200px;\r\n}\r\n\r\n.reflect {\r\n    background-position-y: -791px;\r\n}\r\n\r\n.classes { \r\n    background-image: url('../../assets/dofus/characters/all/classes.png');\r\n    width: 54px;\r\n    height: 54px;\r\n}\r\n\r\n.classes:hover {\r\n    background-position-x: 0px;\r\n}\r\n\r\n.ecaflip { \r\n    background-position-x: -56px;\r\n    background-position-y: -623px;\r\n}\r\n\r\n.eniripsa {\r\n    background-position-x: -56px;\r\n    background-position-y: -680px;\r\n}\r\n\r\n.iop {\r\n    background-position-x: -56px;\r\n    background-position-y: -737px;\r\n}\r\n\r\n.cra {\r\n    background-position-x: -56px;\r\n    background-position-y: -793px;\r\n}\r\n\r\n.feca {\r\n    background-position-x: -56px;\r\n    background-position-y: 0px;\r\n}\r\n\r\n.sacrier {\r\n    background-position-x: -56px;\r\n    background-position-y: -114px;\r\n}\r\n\r\n.sadida {\r\n    background-position-x: -56px;\r\n    background-position-y: -57px;\r\n}\r\n\r\n.osamodas {\r\n    background-position-x: -56px;\r\n    background-position-y: -397px;\r\n}\r\n\r\n.enutrof {\r\n    background-position-x: -56px;\r\n    background-position-y: -453px;\r\n}\r\n\r\n.sram {\r\n    background-position-x: -56px;\r\n    background-position-y: -510px;\r\n}\r\n\r\n.xelor {\r\n    background-position-x: -56px;\r\n    background-position-y: -567px;\r\n}\r\n\r\n.pandawa {\r\n    background-position-x: -56px;\r\n    background-position-y: -169px;\r\n}\r\n\r\n.rogue {\r\n    background-position-x: -56px;\r\n    background-position-y: -227px;\r\n}\r\n\r\n.masqueraider {\r\n    background-position-x: -56px;\r\n    background-position-y: -284px;\r\n}\r\n\r\n.foggernauts {\r\n    background-position-x: -56px;\r\n    background-position-y: -340px;\r\n}\r\n\r\n.eliotrope {\r\n    background-position-x: -56px;\r\n    background-position-y: -850px;\r\n}\r\n\r\n.huppermage {\r\n    background-position-x: -56px;\r\n    background-position-y: -910px;\r\n}\r\n\r\n.ouginak {\r\n    background-position-x: -56px;\r\n    background-position-y: -965px;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.modal-header {\n  border-bottom: none; }\n\n.modal-content {\n  color: white;\n  background-color: #27282E;\n  margin: auto auto;\n  padding: 20px;\n  width: 80%; }\n\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\n.bg-black {\n  background-color: #27282E; }\n\n.red {\n  color: #FF4136; }\n\n.blue {\n  color: #7FDBFF; }\n\n.green {\n  color: #2ECC40; }\n\n.brown {\n  color: Peru; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.spell-text {\n  margin-bottom: 5px; }\n\n.share-input {\n  color: white;\n  width: 100%;\n  padding: 12px 4px;\n  margin: 8px 0;\n  border-color: Transparent;\n  outline-color: #ffd800; }\n\n.card-header {\n  padding: 0;\n  border-bottom: none; }\n\n.spell-more {\n  flex-grow: 100; }\n\n.card-header-class {\n  padding: .75rem 1.25rem;\n  margin-bottom: 0;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }\n\n.clickable {\n  cursor: pointer; }\n\n.td-w {\n  width: 22px; }\n\n.character-img:hover {\n  background-color: black; }\n\n.stats-img {\n  background-image: url(" + __webpack_require__(239) + ");\n  background-position-x: -97px;\n  width: 22px;\n  height: 22px; }\n\n.vitality {\n  background-position-y: -319px; }\n\n.ap {\n  background-position-y: -243px; }\n\n.mp {\n  background-position-y: -52px; }\n\n.range {\n  background-position-y: -128px; }\n\n.initiative {\n  background-position-y: -205px; }\n\n.summon {\n  background-position-y: -507px; }\n\n.critical {\n  background-position-y: -589px; }\n\n.heal {\n  background-position-y: -966px; }\n\n.lock {\n  background-position-y: -545px; }\n\n.dodge {\n  background-position-y: -468px; }\n\n.prospecting {\n  background-position-y: -279px; }\n\n.wisdom {\n  background-position-y: -358px; }\n\n.strength {\n  background-position-y: -432px; }\n\n.intelligence {\n  background-position-y: -394px; }\n\n.chance {\n  background-position-y: -89px; }\n\n.agility {\n  background-position-y: -167px; }\n\n.ap-parry {\n  background-position-y: -1064px; }\n\n.mp-parry {\n  background-position-y: -1016px; }\n\n.ap-reduction {\n  background-position-y: -1297px; }\n\n.mp-reduction {\n  background-position-y: -1340px; }\n\n.power {\n  background-position-y: -1108px; }\n\n.damage {\n  background-position-y: -1156px; }\n\n.power-trap {\n  background-position-y: -673px; }\n\n.critical-damage {\n  background-position-y: -1248px; }\n\n.neutral-damage {\n  background-position-y: -15px; }\n\n.trap-damage {\n  background-position-y: -712px; }\n\n.pushback-damage {\n  background-position-y: -872px; }\n\n.pushback-resistance {\n  background-position-y: -832px; }\n\n.critical-resistance {\n  background-position-y: -1200px; }\n\n.reflect {\n  background-position-y: -791px; }\n\n.classes {\n  background-image: url(" + __webpack_require__(240) + ");\n  width: 54px;\n  height: 54px; }\n\n.classes:hover {\n  background-position-x: 0px; }\n\n.ecaflip {\n  background-position-x: -56px;\n  background-position-y: -623px; }\n\n.eniripsa {\n  background-position-x: -56px;\n  background-position-y: -680px; }\n\n.iop {\n  background-position-x: -56px;\n  background-position-y: -737px; }\n\n.cra {\n  background-position-x: -56px;\n  background-position-y: -793px; }\n\n.feca {\n  background-position-x: -56px;\n  background-position-y: 0px; }\n\n.sacrier {\n  background-position-x: -56px;\n  background-position-y: -114px; }\n\n.sadida {\n  background-position-x: -56px;\n  background-position-y: -57px; }\n\n.osamodas {\n  background-position-x: -56px;\n  background-position-y: -397px; }\n\n.enutrof {\n  background-position-x: -56px;\n  background-position-y: -453px; }\n\n.sram {\n  background-position-x: -56px;\n  background-position-y: -510px; }\n\n.xelor {\n  background-position-x: -56px;\n  background-position-y: -567px; }\n\n.pandawa {\n  background-position-x: -56px;\n  background-position-y: -169px; }\n\n.rogue {\n  background-position-x: -56px;\n  background-position-y: -227px; }\n\n.masqueraider {\n  background-position-x: -56px;\n  background-position-y: -284px; }\n\n.foggernauts {\n  background-position-x: -56px;\n  background-position-y: -340px; }\n\n.eliotrope {\n  background-position-x: -56px;\n  background-position-y: -850px; }\n\n.huppermage {\n  background-position-x: -56px;\n  background-position-y: -910px; }\n\n.ouginak {\n  background-position-x: -56px;\n  background-position-y: -965px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EAEpB;;AAED;EACI,oBAAmB,EACtB;;AAED;EACI,aAAY;EACZ,0BAAyB;EACzB,kBAAiB;EACjB,cAAa;EAGb,WAAU,EACb;;AAED;;GAEG;AAEH;EACI,0BAAyB,EAC5B;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAChB;;AAEH;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,0BAAyB;EACzB,uBAAsB,EACzB;;AAED;EACI,WAAU;EACV,oBAAmB,EACtB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,wBAAuB;EACvB,iBAAgB;EAChB,8CAA6C,EAChD;;AAED;EACI,gBAAe,EAClB;;AAED;EACI,YAAW,EACd;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,gDAA+D;EAC/D,6BAA4B;EAC5B,YAAW;EACX,aAAY,EACf;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,gDAAsE;EACtE,YAAW;EACX,aAAY,EACf;;AAED;EACI,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,6BAA4B,EAC/B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n    //padding-top: 50px;\r\n}\r\n\r\n.modal-header {\r\n    border-bottom: none;\r\n}\r\n\r\n.modal-content {\r\n    color: white;\r\n    background-color: #27282E;\r\n    margin: auto auto;\r\n    padding: 20px;\r\n    \r\n    //border: 1px solid #888;\r\n    width: 80%;\r\n}\r\n\r\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\r\n\r\n.bg-black {\r\n    background-color: #27282E;//#2d2d2d;//#545454;//#27282E\r\n}\r\n\r\n.red {\r\n    color: #FF4136;\r\n}\r\n\r\n.blue {\r\n    color: #7FDBFF;\r\n}\r\n\r\n.green {\r\n    color: #2ECC40;\r\n}\r\n\r\n.brown {\r\n    color: Peru;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n  }\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.share-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 4px;\r\n    margin: 8px 0;\r\n    border-color: Transparent;\r\n    outline-color: #ffd800;\r\n}\r\n\r\n.card-header {\r\n    padding: 0;\r\n    border-bottom: none;\r\n}\r\n\r\n.spell-more {\r\n    flex-grow: 100;\r\n}\r\n\r\n.card-header-class {\r\n    padding: .75rem 1.25rem;\r\n    margin-bottom: 0;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.125);\r\n}\r\n\r\n.clickable {\r\n    cursor: pointer;\r\n}\r\n\r\n.td-w {\r\n    width: 22px;\r\n}\r\n\r\n.character-img:hover {\r\n    background-color: black;\r\n}\r\n\r\n.stats-img {\r\n    background-image: url('../../assets/dofus/elements/sprite.png');\r\n    background-position-x: -97px;\r\n    width: 22px;\r\n    height: 22px;\r\n}\r\n\r\n.vitality {\r\n    background-position-y: -319px;\r\n}\r\n\r\n.ap {\r\n    background-position-y: -243px;\r\n}\r\n\r\n.mp {\r\n    background-position-y: -52px;\r\n}\r\n\r\n.range {\r\n    background-position-y: -128px;\r\n}\r\n\r\n.initiative {\r\n    background-position-y: -205px;\r\n}\r\n\r\n.summon {\r\n    background-position-y: -507px;\r\n}\r\n\r\n.critical {\r\n    background-position-y: -589px;\r\n}\r\n\r\n.heal {\r\n    background-position-y: -966px;\r\n}\r\n\r\n.lock {\r\n    background-position-y: -545px;\r\n}\r\n\r\n.dodge {\r\n    background-position-y: -468px;\r\n}\r\n\r\n.prospecting {\r\n    background-position-y: -279px;\r\n}\r\n\r\n.wisdom {\r\n    background-position-y: -358px;\r\n}\r\n\r\n.strength {\r\n    background-position-y: -432px;\r\n}\r\n\r\n.intelligence {\r\n    background-position-y: -394px;\r\n}\r\n\r\n.chance {\r\n    background-position-y: -89px;\r\n}\r\n\r\n.agility {\r\n    background-position-y: -167px;\r\n}\r\n\r\n.ap-parry {\r\n    background-position-y: -1064px;\r\n}\r\n\r\n.mp-parry {\r\n    background-position-y: -1016px;\r\n}\r\n\r\n.ap-reduction {\r\n    background-position-y: -1297px;\r\n}\r\n\r\n.mp-reduction {\r\n    background-position-y: -1340px;\r\n}\r\n\r\n.power {\r\n    background-position-y: -1108px;\r\n}\r\n\r\n.damage {\r\n    background-position-y: -1156px;\r\n}\r\n\r\n.power-trap {\r\n    background-position-y: -673px;\r\n}\r\n\r\n.critical-damage {\r\n    background-position-y: -1248px;\r\n}\r\n\r\n.neutral-damage {\r\n    background-position-y: -15px;\r\n}\r\n\r\n.trap-damage {\r\n    background-position-y: -712px;\r\n}\r\n\r\n.pushback-damage {\r\n    background-position-y: -872px;\r\n}\r\n\r\n.pushback-resistance {\r\n    background-position-y: -832px;\r\n}\r\n\r\n.critical-resistance {\r\n    background-position-y: -1200px;\r\n}\r\n\r\n.reflect {\r\n    background-position-y: -791px;\r\n}\r\n\r\n.classes { \r\n    background-image: url('../../assets/dofus/characters/all/classes.png');\r\n    width: 54px;\r\n    height: 54px;\r\n}\r\n\r\n.classes:hover {\r\n    background-position-x: 0px;\r\n}\r\n\r\n.ecaflip { \r\n    background-position-x: -56px;\r\n    background-position-y: -623px;\r\n}\r\n\r\n.eniripsa {\r\n    background-position-x: -56px;\r\n    background-position-y: -680px;\r\n}\r\n\r\n.iop {\r\n    background-position-x: -56px;\r\n    background-position-y: -737px;\r\n}\r\n\r\n.cra {\r\n    background-position-x: -56px;\r\n    background-position-y: -793px;\r\n}\r\n\r\n.feca {\r\n    background-position-x: -56px;\r\n    background-position-y: 0px;\r\n}\r\n\r\n.sacrier {\r\n    background-position-x: -56px;\r\n    background-position-y: -114px;\r\n}\r\n\r\n.sadida {\r\n    background-position-x: -56px;\r\n    background-position-y: -57px;\r\n}\r\n\r\n.osamodas {\r\n    background-position-x: -56px;\r\n    background-position-y: -397px;\r\n}\r\n\r\n.enutrof {\r\n    background-position-x: -56px;\r\n    background-position-y: -453px;\r\n}\r\n\r\n.sram {\r\n    background-position-x: -56px;\r\n    background-position-y: -510px;\r\n}\r\n\r\n.xelor {\r\n    background-position-x: -56px;\r\n    background-position-y: -567px;\r\n}\r\n\r\n.pandawa {\r\n    background-position-x: -56px;\r\n    background-position-y: -169px;\r\n}\r\n\r\n.rogue {\r\n    background-position-x: -56px;\r\n    background-position-y: -227px;\r\n}\r\n\r\n.masqueraider {\r\n    background-position-x: -56px;\r\n    background-position-y: -284px;\r\n}\r\n\r\n.foggernauts {\r\n    background-position-x: -56px;\r\n    background-position-y: -340px;\r\n}\r\n\r\n.eliotrope {\r\n    background-position-x: -56px;\r\n    background-position-y: -850px;\r\n}\r\n\r\n.huppermage {\r\n    background-position-x: -56px;\r\n    background-position-y: -910px;\r\n}\r\n\r\n.ouginak {\r\n    background-position-x: -56px;\r\n    background-position-y: -965px;\r\n}"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "1a7c3e08aa8a6bde4b61778144cd1f90.png";
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "e106c36ca7a795ca2b84b9f34c9c5cff.png";
 
 /***/ }),
-/* 240 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55262,7 +55374,7 @@ var Popover_1 = __webpack_require__(79);
 var Equipements_1 = __webpack_require__(44);
 var FormatStats_1 = __webpack_require__(82);
 var FormatClassName_1 = __webpack_require__(45);
-var Modal_1 = __webpack_require__(241);
+var Modal_1 = __webpack_require__(242);
 var BuildEquipementsComponent = /** @class */ (function (_super) {
     __extends(BuildEquipementsComponent, _super);
     function BuildEquipementsComponent(props) {
@@ -55685,7 +55797,7 @@ exports.default = BuildEquipementsComponent;
 
 
 /***/ }),
-/* 241 */
+/* 242 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55702,15 +55814,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_dom_helpers_scrollbarSize__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_overlays_Modal__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__BootstrapModalManager__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_overlays_Modal__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__BootstrapModalManager__ = __webpack_require__(253);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Fade__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ModalBody__ = __webpack_require__(254);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ModalBody__ = __webpack_require__(255);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ModalContext__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ModalDialog__ = __webpack_require__(256);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ModalFooter__ = __webpack_require__(257);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ModalHeader__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ModalTitle__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ModalDialog__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ModalFooter__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ModalHeader__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ModalTitle__ = __webpack_require__(261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ThemeProvider__ = __webpack_require__(9);
 
 
@@ -55967,7 +56079,7 @@ DecoratedModal.BACKDROP_TRANSITION_DURATION = 150;
 /* harmony default export */ __webpack_exports__["default"] = (DecoratedModal);
 
 /***/ }),
-/* 242 */
+/* 243 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55975,7 +56087,7 @@ DecoratedModal.BACKDROP_TRANSITION_DURATION = 150;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_assertThisInitialized__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_dom_helpers_activeElement__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_dom_helpers_activeElement__ = __webpack_require__(244);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_dom_helpers_contains__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_dom_helpers_canUseDOM__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_dom_helpers_listen__ = __webpack_require__(43);
@@ -55986,7 +56098,7 @@ DecoratedModal.BACKDROP_TRANSITION_DURATION = 150;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_dom__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ModalManager__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_ownerDocument__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_ownerDocument__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_useWaitForDOMRef__ = __webpack_require__(74);
 
 
@@ -56496,7 +56608,7 @@ ModalWithContainer.Manager = __WEBPACK_IMPORTED_MODULE_11__ModalManager__["a" /*
 /* harmony default export */ __webpack_exports__["a"] = (ModalWithContainer);
 
 /***/ }),
-/* 243 */
+/* 244 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56529,19 +56641,19 @@ function activeElement(doc) {
 }
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = addClass;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hasClass__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hasClass__ = __webpack_require__(246);
 
 function addClass(element, className) {
   if (element.classList) element.classList.add(className);else if (!Object(__WEBPACK_IMPORTED_MODULE_0__hasClass__["a" /* default */])(element, className)) if (typeof element.className === 'string') element.className = element.className + " " + className;else element.setAttribute('class', (element.className && element.className.baseVal || '') + " " + className);
 }
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56552,7 +56664,7 @@ function hasClass(element, className) {
 }
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56573,12 +56685,12 @@ function removeClass(element, className) {
 }
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = isOverflowing;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_helpers_isWindow__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_helpers_isWindow__ = __webpack_require__(249);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom_helpers_ownerDocument__ = __webpack_require__(20);
 
 
@@ -56599,12 +56711,12 @@ function isOverflowing(container) {
 }
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = isWindow;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isDocument__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__isDocument__ = __webpack_require__(250);
 
 function isWindow(node) {
   if ('window' in node && node.window === node) return node;
@@ -56613,7 +56725,7 @@ function isWindow(node) {
 }
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56623,7 +56735,7 @@ function isDocument(element) {
 }
 
 /***/ }),
-/* 250 */
+/* 251 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56672,7 +56784,7 @@ function showSiblings(container, _ref3) {
 }
 
 /***/ }),
-/* 251 */
+/* 252 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56686,14 +56798,14 @@ function showSiblings(container, _ref3) {
 });
 
 /***/ }),
-/* 252 */
+/* 253 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BootstrapModalManager; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom_helpers_css__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_dom_helpers_querySelectorAll__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_dom_helpers_querySelectorAll__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dom_helpers_scrollbarSize__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_overlays_ModalManager__ = __webpack_require__(86);
 
@@ -56785,7 +56897,7 @@ function (_ModalManager) {
 
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56796,7 +56908,7 @@ function qsa(element, selector) {
 }
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56805,7 +56917,7 @@ function qsa(element, selector) {
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_0__createWithBsPrefix__["a" /* default */])('modal-body'));
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56818,7 +56930,7 @@ function camelize(string) {
 }
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56856,7 +56968,7 @@ ModalDialog.displayName = 'ModalDialog';
 /* harmony default export */ __webpack_exports__["a"] = (ModalDialog);
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56865,7 +56977,7 @@ ModalDialog.displayName = 'ModalDialog';
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_0__createWithBsPrefix__["a" /* default */])('modal-footer'));
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56877,7 +56989,7 @@ ModalDialog.displayName = 'ModalDialog';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__restart_hooks_useEventCallback__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ThemeProvider__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__CloseButton__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__CloseButton__ = __webpack_require__(260);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ModalContext__ = __webpack_require__(87);
 
 
@@ -56920,7 +57032,7 @@ ModalHeader.defaultProps = defaultProps;
 /* harmony default export */ __webpack_exports__["a"] = (ModalHeader);
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56967,7 +57079,7 @@ CloseButton.defaultProps = defaultProps;
 /* harmony default export */ __webpack_exports__["a"] = (CloseButton);
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56981,14 +57093,14 @@ var DivStyledAsH4 = Object(__WEBPACK_IMPORTED_MODULE_1__divWithClassName__["a" /
 }));
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var InformationsComponent_1 = __webpack_require__(262);
+var InformationsComponent_1 = __webpack_require__(263);
 var BuildCreationActions_1 = __webpack_require__(25);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {
@@ -56998,7 +57110,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Inf
 
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57123,7 +57235,7 @@ exports.default = InformationsComponent;
 
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57143,10 +57255,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var Spells_1 = __webpack_require__(264);
+var Spells_1 = __webpack_require__(265);
 var Enums_1 = __webpack_require__(3);
-var Accordion_1 = __webpack_require__(283);
-var Card_1 = __webpack_require__(292);
+var Accordion_1 = __webpack_require__(284);
+var Card_1 = __webpack_require__(293);
 var FormatClassName_1 = __webpack_require__(45);
 var SpellsComponent = /** @class */ (function (_super) {
     __extends(SpellsComponent, _super);
@@ -57454,30 +57566,30 @@ exports.default = SpellsComponent;
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Cra_1 = __webpack_require__(265);
-var Ecaflip_1 = __webpack_require__(266);
-var Eliotrope_1 = __webpack_require__(267);
-var Eniripsa_1 = __webpack_require__(268);
-var Enutrof_1 = __webpack_require__(269);
-var Feca_1 = __webpack_require__(270);
-var Foggernauts_1 = __webpack_require__(271);
-var Huppermage_1 = __webpack_require__(272);
-var Iop_1 = __webpack_require__(273);
-var Masqueraider_1 = __webpack_require__(274);
-var Osamodas_1 = __webpack_require__(275);
-var Ouginak_1 = __webpack_require__(276);
-var Pandawa_1 = __webpack_require__(277);
-var Rogue_1 = __webpack_require__(278);
-var Sacrier_1 = __webpack_require__(279);
-var Sadida_1 = __webpack_require__(280);
-var Sram_1 = __webpack_require__(281);
-var Xelor_1 = __webpack_require__(282);
+var Cra_1 = __webpack_require__(266);
+var Ecaflip_1 = __webpack_require__(267);
+var Eliotrope_1 = __webpack_require__(268);
+var Eniripsa_1 = __webpack_require__(269);
+var Enutrof_1 = __webpack_require__(270);
+var Feca_1 = __webpack_require__(271);
+var Foggernauts_1 = __webpack_require__(272);
+var Huppermage_1 = __webpack_require__(273);
+var Iop_1 = __webpack_require__(274);
+var Masqueraider_1 = __webpack_require__(275);
+var Osamodas_1 = __webpack_require__(276);
+var Ouginak_1 = __webpack_require__(277);
+var Pandawa_1 = __webpack_require__(278);
+var Rogue_1 = __webpack_require__(279);
+var Sacrier_1 = __webpack_require__(280);
+var Sadida_1 = __webpack_require__(281);
+var Sram_1 = __webpack_require__(282);
+var Xelor_1 = __webpack_require__(283);
 exports.Spells = {
     cra: Cra_1.CraSpells,
     ecaflip: Ecaflip_1.EcaflipSpells,
@@ -57501,7 +57613,7 @@ exports.Spells = {
 
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59218,7 +59330,7 @@ exports.CraSpells = [
 
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60935,7 +61047,7 @@ exports.EcaflipSpells = [
 
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62652,7 +62764,7 @@ exports.EliotropeSpells = [
 
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64369,7 +64481,7 @@ exports.EniripsaSpells = [
 
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66086,7 +66198,7 @@ exports.EnutrofSpells = [
 
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67803,7 +67915,7 @@ exports.FecaSpells = [
 
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69520,7 +69632,7 @@ exports.FoggernautsSpells = [
 
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71237,7 +71349,7 @@ exports.HuppermageSpells = [
 
 
 /***/ }),
-/* 273 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72932,7 +73044,7 @@ exports.IopSpells = [
 
 
 /***/ }),
-/* 274 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74649,7 +74761,7 @@ exports.MasqueraiderSpells = [
 
 
 /***/ }),
-/* 275 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76366,7 +76478,7 @@ exports.OsamodasSpells = [
 
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78083,7 +78195,7 @@ exports.OuginakSpells = [
 
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -79800,7 +79912,7 @@ exports.PandawaSpells = [
 
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -81517,7 +81629,7 @@ exports.RogueSpells = [
 
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83234,7 +83346,7 @@ exports.SacrierSpells = [
 
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84951,7 +85063,7 @@ exports.SadidaSpells = [
 
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86668,7 +86780,7 @@ exports.SramSpells = [
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -88385,7 +88497,7 @@ exports.XelorSpells = [
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88396,11 +88508,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_uncontrollable__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_uncontrollable__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ThemeProvider__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__AccordionToggle__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__AccordionToggle__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__SelectableContext__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__AccordionCollapse__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__AccordionCollapse__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__AccordionContext__ = __webpack_require__(47);
 
 
@@ -88441,20 +88553,20 @@ Accordion.Collapse = __WEBPACK_IMPORTED_MODULE_8__AccordionCollapse__["a" /* def
 /* harmony default export */ __webpack_exports__["default"] = (Accordion);
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hook__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hook__ = __webpack_require__(286);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__hook__["a"]; });
 /* unused harmony reexport useUncontrolledProp */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uncontrollable__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uncontrollable__ = __webpack_require__(287);
 /* unused harmony reexport uncontrollable */
 
 
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88525,7 +88637,7 @@ function useUncontrolled(props, config) {
 }
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88535,7 +88647,7 @@ function useUncontrolled(props, config) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__babel_runtime_helpers_esm_inheritsLoose__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_lifecycles_compat__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_lifecycles_compat__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_invariant__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils__ = __webpack_require__(91);
@@ -88712,7 +88824,7 @@ function uncontrollable(Component, controlledValues, methods) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88878,7 +88990,7 @@ function polyfill(Component) {
 
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88924,7 +89036,7 @@ var AccordionToggle = __WEBPACK_IMPORTED_MODULE_2_react___default.a.forwardRef(f
 /* harmony default export */ __webpack_exports__["a"] = (AccordionToggle);
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88932,7 +89044,7 @@ var AccordionToggle = __WEBPACK_IMPORTED_MODULE_2_react___default.a.forwardRef(f
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__babel_runtime_helpers_esm_objectWithoutPropertiesLoose__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Collapse__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Collapse__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__AccordionContext__ = __webpack_require__(47);
 
 
@@ -88954,7 +89066,7 @@ AccordionCollapse.displayName = 'AccordionCollapse';
 /* harmony default export */ __webpack_exports__["a"] = (AccordionCollapse);
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88968,7 +89080,7 @@ AccordionCollapse.displayName = 'AccordionCollapse';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_transition_group_Transition__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__createChainedFunction__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__createChainedFunction__ = __webpack_require__(292);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__triggerBrowserReflow__ = __webpack_require__(78);
 
 
@@ -89105,7 +89217,7 @@ Collapse.defaultProps = defaultProps;
 /* harmony default export */ __webpack_exports__["a"] = (Collapse);
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89145,7 +89257,7 @@ function createChainedFunction() {
 /* harmony default export */ __webpack_exports__["a"] = (createChainedFunction);
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89159,8 +89271,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ThemeProvider__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__createWithBsPrefix__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__divWithClassName__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__CardContext__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__CardImg__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__CardContext__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__CardImg__ = __webpack_require__(295);
 
 
 
@@ -89224,7 +89336,7 @@ Card.ImgOverlay = Object(__WEBPACK_IMPORTED_MODULE_5__createWithBsPrefix__["a" /
 /* harmony default export */ __webpack_exports__["default"] = (Card);
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89234,7 +89346,7 @@ Card.ImgOverlay = Object(__WEBPACK_IMPORTED_MODULE_5__createWithBsPrefix__["a" /
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext(null));
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89273,16 +89385,16 @@ CardImg.defaultProps = defaultProps;
 /* harmony default export */ __webpack_exports__["a"] = (CardImg);
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var SharedBuildPage_1 = __webpack_require__(296);
+var SharedBuildPage_1 = __webpack_require__(297);
 var ConnectedUserSelector_1 = __webpack_require__(19);
-var SharedBuildSelector_1 = __webpack_require__(300);
+var SharedBuildSelector_1 = __webpack_require__(301);
 var MessagesActions_1 = __webpack_require__(24);
 var SharedBuildActions_1 = __webpack_require__(95);
 var mapStateToProps = function (state) { return ({
@@ -89297,7 +89409,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Sha
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89320,8 +89432,8 @@ var React = __webpack_require__(0);
 var StatsComponent_1 = __webpack_require__(84);
 var SpellsContainer_1 = __webpack_require__(90);
 var BuildEquipementsContainer_1 = __webpack_require__(85);
-var AverageDamageComponent_1 = __webpack_require__(297);
-var SharedBuildInformationsContainer_1 = __webpack_require__(298);
+var AverageDamageComponent_1 = __webpack_require__(298);
+var SharedBuildInformationsContainer_1 = __webpack_require__(299);
 var ComputeStats_1 = __webpack_require__(83);
 var Spinner_1 = __webpack_require__(94);
 var SharedBuildPage = /** @class */ (function (_super) {
@@ -89449,7 +89561,7 @@ exports.default = SharedBuildPage;
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89497,21 +89609,21 @@ exports.default = SettingsComponent;
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var SharedBuildInformationsComponent_1 = __webpack_require__(299);
+var SharedBuildInformationsComponent_1 = __webpack_require__(300);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {};
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(SharedBuildInformationsComponent_1.default);
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89599,7 +89711,7 @@ exports.default = SharedBuildInformationsComponent;
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89611,7 +89723,7 @@ exports.getSharedBuild = reselect_1.createSelector([getSharedBuildState], functi
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89627,14 +89739,14 @@ exports.ApiConstants = {
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var ProfilePage_1 = __webpack_require__(303);
+var ProfilePage_1 = __webpack_require__(304);
 var ConnectedUserSelector_1 = __webpack_require__(19);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state)
@@ -89644,7 +89756,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Pro
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89691,7 +89803,7 @@ exports.default = ProfilePage;
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89701,7 +89813,7 @@ var react_redux_1 = __webpack_require__(7);
 var ConnectedUserSelector_1 = __webpack_require__(19);
 var userConnectionActions_1 = __webpack_require__(39);
 var MessagesActions_1 = __webpack_require__(24);
-var SigninPage_1 = __webpack_require__(305);
+var SigninPage_1 = __webpack_require__(306);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state)
 }); };
@@ -89713,7 +89825,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Sig
 
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89813,7 +89925,7 @@ exports.default = SigninPage;
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89900,7 +90012,7 @@ exports.default = LoadingComponent;
 
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89910,7 +90022,7 @@ var react_redux_1 = __webpack_require__(7);
 var ConnectedUserSelector_1 = __webpack_require__(19);
 var userConnectionActions_1 = __webpack_require__(39);
 var MessagesActions_1 = __webpack_require__(24);
-var SignupPage_1 = __webpack_require__(308);
+var SignupPage_1 = __webpack_require__(309);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state)
 }); };
@@ -89922,7 +90034,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Sig
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90052,19 +90164,19 @@ exports.default = SigninPage;
 
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(22);
-var redux_logger_1 = __webpack_require__(310);
-var redux_thunk_1 = __webpack_require__(311);
-var redux_persist_1 = __webpack_require__(312);
-var storage_1 = __webpack_require__(319);
-var reducers_1 = __webpack_require__(322);
-var autoMergeLevel2_1 = __webpack_require__(327);
+var redux_logger_1 = __webpack_require__(311);
+var redux_thunk_1 = __webpack_require__(312);
+var redux_persist_1 = __webpack_require__(313);
+var storage_1 = __webpack_require__(320);
+var reducers_1 = __webpack_require__(323);
+var autoMergeLevel2_1 = __webpack_require__(328);
 // Restore redux store on page refresh
 var persistConfig = {
     key: 'root',
@@ -90078,7 +90190,7 @@ exports.default = { store: store, persistor: persistor };
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.reduxLogger=e.reduxLogger||{})}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
@@ -90086,7 +90198,7 @@ exports.default = { store: store, persistor: persistor };
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)))
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90113,20 +90225,20 @@ thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ __webpack_exports__["default"] = (thunk);
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__persistReducer__ = __webpack_require__(97);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistReducer", function() { return __WEBPACK_IMPORTED_MODULE_0__persistReducer__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__ = __webpack_require__(315);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistCombineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__persistStore__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__persistStore__ = __webpack_require__(317);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistStore", function() { return __WEBPACK_IMPORTED_MODULE_2__persistStore__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createMigrate__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createMigrate__ = __webpack_require__(318);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createMigrate", function() { return __WEBPACK_IMPORTED_MODULE_3__createMigrate__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransform__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransform__ = __webpack_require__(319);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createTransform", function() { return __WEBPACK_IMPORTED_MODULE_4__createTransform__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__getStoredState__ = __webpack_require__(99);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "getStoredState", function() { return __WEBPACK_IMPORTED_MODULE_5__getStoredState__["a"]; });
@@ -90154,7 +90266,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90199,14 +90311,14 @@ function autoMergeLevel1(inboundState, originalState, reducedState, _ref) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = persistCombineReducers;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistReducer__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateReconciler_autoMergeLevel2__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateReconciler_autoMergeLevel2__ = __webpack_require__(316);
 
 
 
@@ -90217,7 +90329,7 @@ function persistCombineReducers(config, reducers) {
 }
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90273,7 +90385,7 @@ function isPlainEnoughObject(o) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90410,7 +90522,7 @@ function persistStore(store, options, cb) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90462,7 +90574,7 @@ function createMigrate(migrations, config) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90491,7 +90603,7 @@ outbound) {
 }
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90500,7 +90612,7 @@ outbound) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _createWebStorage = _interopRequireDefault(__webpack_require__(320));
+var _createWebStorage = _interopRequireDefault(__webpack_require__(321));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -90509,7 +90621,7 @@ var _default = (0, _createWebStorage.default)('local');
 exports.default = _default;
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90518,7 +90630,7 @@ exports.default = _default;
 exports.__esModule = true;
 exports.default = createWebStorage;
 
-var _getStorage = _interopRequireDefault(__webpack_require__(321));
+var _getStorage = _interopRequireDefault(__webpack_require__(322));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -90544,7 +90656,7 @@ function createWebStorage(type) {
 }
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90595,17 +90707,17 @@ function getStorage(type) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(22);
-var ConnectedUserReducer = __webpack_require__(323);
-var BuildCreationReducer = __webpack_require__(324);
-var SharedBuildReducer = __webpack_require__(325);
-var MessagesReducer = __webpack_require__(326);
+var ConnectedUserReducer = __webpack_require__(324);
+var BuildCreationReducer = __webpack_require__(325);
+var SharedBuildReducer = __webpack_require__(326);
+var MessagesReducer = __webpack_require__(327);
 /*
  * initialState of the app
  */
@@ -90628,7 +90740,7 @@ exports.rootReducer = redux_1.combineReducers({
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90678,7 +90790,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90861,7 +90973,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90922,7 +91034,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91004,7 +91116,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91064,7 +91176,7 @@ function isPlainEnoughObject(o) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 328 */
+/* 329 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91180,13 +91292,13 @@ _defineProperty(PersistGate, "defaultProps", {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 329 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(330);
+var content = __webpack_require__(331);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -91211,7 +91323,7 @@ if(false) {
 }
 
 /***/ }),
-/* 330 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)(true);

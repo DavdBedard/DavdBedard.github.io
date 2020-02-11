@@ -49265,7 +49265,9 @@ var EquipementsPage = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.state = {
             type: _this.props.type,
-            page: 1
+            page: 1,
+            items: ItemsHelper_1.getItemsFromType(_this.props.type),
+            itemsWithSearchConstraint: ItemsHelper_1.getItemsFromType(_this.props.type)
         };
         _this.changePage = _this.changePage.bind(_this);
         return _this;
@@ -49301,20 +49303,30 @@ var EquipementsPage = /** @class */ (function (_super) {
         }
         window.scrollTo(0, 0);
     };
+    EquipementsPage.prototype.changeSearchConstraint = function (event) {
+        var _this = this;
+        var constraint = event.target.value;
+        this.setState(function () {
+            return {
+                itemsWithSearchConstraint: _this.state.items.filter(function (item) { return item.name.toLowerCase().includes(constraint); })
+            };
+        });
+    };
     EquipementsPage.prototype.render = function () {
+        var _this = this;
         return (React.createElement("div", { className: "container-fluid container-fluid-build" },
             React.createElement(react_router_dom_1.Link, { to: "/create" },
                 React.createElement("h5", { className: "text-white link mb-2" }, "< Retour")),
             React.createElement("h1", { className: "text-center text-white bg-black rounded shadow-lg mb-4 p-2" }, ItemsHelper_1.getNameFromType(this.state.type)),
             React.createElement("div", { className: "mt-3 mb-1" },
-                React.createElement(PagesComponent_1.default, { changePage: this.changePage, numberOfElements: ItemsHelper_1.getItemsFromType(this.state.type).length, currentPage: this.state.page })),
-            React.createElement("input", { className: "bg-dark shadow search-input rounded", placeholder: "Rechercher par nom..." }),
+                React.createElement(PagesComponent_1.default, { changePage: this.changePage, numberOfElements: this.state.itemsWithSearchConstraint.length, currentPage: this.state.page })),
+            React.createElement("input", { onChange: function (event) { return _this.changeSearchConstraint(event); }, className: "bg-dark shadow search-input rounded", placeholder: "Rechercher par nom..." }),
             React.createElement("div", { className: "row" },
                 React.createElement("div", { className: "col" }, this.renderItems(0)),
                 React.createElement("div", { className: "col" }, this.renderItems(1)),
                 React.createElement("div", { className: "col" }, this.renderItems(2))),
             React.createElement("div", { className: "mt-3" },
-                React.createElement(PagesComponent_1.default, { changePage: this.changePage, numberOfElements: ItemsHelper_1.getItemsFromType(this.state.type).length, currentPage: this.state.page }))));
+                React.createElement(PagesComponent_1.default, { changePage: this.changePage, numberOfElements: this.state.itemsWithSearchConstraint.length, currentPage: this.state.page }))));
     };
     EquipementsPage.prototype.renderItemStats = function (item) {
         var StatsHTML = [];
@@ -49339,8 +49351,8 @@ var EquipementsPage = /** @class */ (function (_super) {
         var Items = ItemsHelper_1.getItemsFromType(this.state.type);
         var start = (this.state.page - 1) * (3 * Consts_1.RowPerPage) + colNumber;
         var end = ((3 * Consts_1.RowPerPage)) * this.state.page + colNumber;
-        if (end > Items.length) {
-            end = Items.length;
+        if (end > this.state.itemsWithSearchConstraint.length) {
+            end = this.state.itemsWithSearchConstraint.length;
         }
         var _loop_1 = function (i) {
             EquipementsHTML.push(React.createElement("div", { className: "row-sm", key: i },
@@ -49351,12 +49363,12 @@ var EquipementsPage = /** @class */ (function (_super) {
                                 React.createElement("p", { className: "text-white text-center p-margin" },
                                     React.createElement("small", null,
                                         "Niveau ",
-                                        Items[i].level)),
+                                        this_1.state.itemsWithSearchConstraint[i].level)),
                                 React.createElement("img", { src: '../../assets/dofus/items/' + ItemsHelper_1.getUrlNameFromType(this_1.state.type) + '/' + i + '.png', className: "card-img" })),
                             React.createElement("div", { className: "col-md-8" },
                                 React.createElement("div", { className: "card-body" },
-                                    React.createElement("h6", { className: "card-title text-white font-weight-bold" }, Items[i].name),
-                                    React.createElement("p", { className: "card-text" }, this_1.renderItemStats(Items[i])))))))));
+                                    React.createElement("h6", { className: "card-title text-white font-weight-bold" }, this_1.state.itemsWithSearchConstraint[i].name),
+                                    React.createElement("p", { className: "card-text" }, this_1.renderItemStats(this_1.state.itemsWithSearchConstraint[i])))))))));
         };
         var this_1 = this;
         for (var i = start; i < end; i += 3) {

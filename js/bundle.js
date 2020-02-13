@@ -10916,7 +10916,7 @@ exports.getBuild = function (buildId) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var LoadingComponent_1 = __webpack_require__(306);
+var LoadingComponent_1 = __webpack_require__(307);
 var MessagesSelector_1 = __webpack_require__(81);
 var mapStateToProps = function (state) { return ({
     error: MessagesSelector_1.getError(state)
@@ -10932,7 +10932,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Loa
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = persistReducer;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateReconciler_autoMergeLevel1__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateReconciler_autoMergeLevel1__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createPersistoid__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__getStoredState__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__purgeStoredState__ = __webpack_require__(101);
@@ -11310,9 +11310,9 @@ var react_router_dom_1 = __webpack_require__(10);
 __webpack_require__(139);
 var App_1 = __webpack_require__(142);
 var react_redux_1 = __webpack_require__(7);
-var index_1 = __webpack_require__(309);
-var react_1 = __webpack_require__(328);
-__webpack_require__(329);
+var index_1 = __webpack_require__(310);
+var react_1 = __webpack_require__(329);
+__webpack_require__(330);
 ReactDOM.render(React.createElement(react_redux_1.Provider, { store: index_1.default.store },
     React.createElement(react_1.PersistGate, { loading: null, persistor: index_1.default.persistor },
         React.createElement(react_router_dom_1.BrowserRouter, null,
@@ -49052,10 +49052,10 @@ var SettingsPage_1 = __webpack_require__(216);
 var EquipementsContainer_1 = __webpack_require__(219);
 var BuildCreationContainer_1 = __webpack_require__(235);
 var Enums_1 = __webpack_require__(2);
-var SharedBuildContainer_1 = __webpack_require__(296);
-var ProfileContainer_1 = __webpack_require__(302);
-var SigninContainer_1 = __webpack_require__(304);
-var SignupContainer_1 = __webpack_require__(307);
+var SharedBuildContainer_1 = __webpack_require__(297);
+var ProfileContainer_1 = __webpack_require__(303);
+var SigninContainer_1 = __webpack_require__(305);
+var SignupContainer_1 = __webpack_require__(308);
 var Router = /** @class */ (function (_super) {
     __extends(Router, _super);
     function Router() {
@@ -55689,7 +55689,7 @@ exports = module.exports = __webpack_require__(15)(true);
 
 
 // module
-exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.modal-header {\n  border-bottom: none; }\n\n.modal-content {\n  color: white;\n  background-color: #27282E;\n  margin: auto auto;\n  padding: 20px;\n  width: 80%; }\n\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\n.bg-black {\n  background-color: #27282E; }\n\n.red {\n  color: #FF4136; }\n\n.blue {\n  color: #7FDBFF; }\n\n.green {\n  color: #2ECC40; }\n\n.brown {\n  color: Peru; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.spell-text {\n  margin-bottom: 5px; }\n\n.share-input {\n  color: white;\n  width: 100%;\n  padding: 12px 4px;\n  margin: 8px 0;\n  border-color: Transparent;\n  outline-color: #ffd800; }\n\n.card-header {\n  padding: 0;\n  border-bottom: none; }\n\n.spell-more {\n  flex-grow: 100; }\n\n.card-header-class {\n  padding: .75rem 1.25rem;\n  margin-bottom: 0;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }\n\n.clickable {\n  cursor: pointer; }\n\n.td-w {\n  width: 22px; }\n\n.character-img:hover {\n  background-color: black; }\n\n.stats-img {\n  background-image: url(" + __webpack_require__(239) + ");\n  background-position-x: -97px;\n  width: 22px;\n  height: 22px; }\n\n.vitality {\n  background-position-y: -319px; }\n\n.ap {\n  background-position-y: -243px; }\n\n.mp {\n  background-position-y: -52px; }\n\n.range {\n  background-position-y: -128px; }\n\n.initiative {\n  background-position-y: -205px; }\n\n.summon {\n  background-position-y: -507px; }\n\n.critical {\n  background-position-y: -589px; }\n\n.heal {\n  background-position-y: -966px; }\n\n.lock {\n  background-position-y: -545px; }\n\n.dodge {\n  background-position-y: -468px; }\n\n.prospecting {\n  background-position-y: -279px; }\n\n.wisdom {\n  background-position-y: -358px; }\n\n.strength {\n  background-position-y: -432px; }\n\n.intelligence {\n  background-position-y: -394px; }\n\n.chance {\n  background-position-y: -89px; }\n\n.agility {\n  background-position-y: -167px; }\n\n.ap-parry {\n  background-position-y: -1064px; }\n\n.mp-parry {\n  background-position-y: -1016px; }\n\n.ap-reduction {\n  background-position-y: -1297px; }\n\n.mp-reduction {\n  background-position-y: -1340px; }\n\n.power {\n  background-position-y: -1108px; }\n\n.damage {\n  background-position-y: -1156px; }\n\n.power-trap {\n  background-position-y: -673px; }\n\n.critical-damage {\n  background-position-y: -1248px; }\n\n.neutral-damage {\n  background-position-y: -15px; }\n\n.trap-damage {\n  background-position-y: -712px; }\n\n.pushback-damage {\n  background-position-y: -872px; }\n\n.pushback-resistance {\n  background-position-y: -832px; }\n\n.critical-resistance {\n  background-position-y: -1200px; }\n\n.reflect {\n  background-position-y: -791px; }\n\n.classes {\n  background-image: url(" + __webpack_require__(240) + ");\n  width: 54px;\n  height: 54px; }\n\n.classes:hover {\n  background-position-x: 0px; }\n\n.ecaflip {\n  background-position-x: -56px;\n  background-position-y: -623px; }\n\n.eniripsa {\n  background-position-x: -56px;\n  background-position-y: -680px; }\n\n.iop {\n  background-position-x: -56px;\n  background-position-y: -737px; }\n\n.cra {\n  background-position-x: -56px;\n  background-position-y: -793px; }\n\n.feca {\n  background-position-x: -56px;\n  background-position-y: 0px; }\n\n.sacrier {\n  background-position-x: -56px;\n  background-position-y: -114px; }\n\n.sadida {\n  background-position-x: -56px;\n  background-position-y: -57px; }\n\n.osamodas {\n  background-position-x: -56px;\n  background-position-y: -397px; }\n\n.enutrof {\n  background-position-x: -56px;\n  background-position-y: -453px; }\n\n.sram {\n  background-position-x: -56px;\n  background-position-y: -510px; }\n\n.xelor {\n  background-position-x: -56px;\n  background-position-y: -567px; }\n\n.pandawa {\n  background-position-x: -56px;\n  background-position-y: -169px; }\n\n.rogue {\n  background-position-x: -56px;\n  background-position-y: -227px; }\n\n.masqueraider {\n  background-position-x: -56px;\n  background-position-y: -284px; }\n\n.foggernauts {\n  background-position-x: -56px;\n  background-position-y: -340px; }\n\n.eliotrope {\n  background-position-x: -56px;\n  background-position-y: -850px; }\n\n.huppermage {\n  background-position-x: -56px;\n  background-position-y: -910px; }\n\n.ouginak {\n  background-position-x: -56px;\n  background-position-y: -965px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EAEpB;;AAED;EACI,oBAAmB,EACtB;;AAED;EACI,aAAY;EACZ,0BAAyB;EACzB,kBAAiB;EACjB,cAAa;EAGb,WAAU,EACb;;AAED;;GAEG;AAEH;EACI,0BAAyB,EAC5B;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAChB;;AAEH;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,0BAAyB;EACzB,uBAAsB,EACzB;;AAED;EACI,WAAU;EACV,oBAAmB,EACtB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,wBAAuB;EACvB,iBAAgB;EAChB,8CAA6C,EAChD;;AAED;EACI,gBAAe,EAClB;;AAED;EACI,YAAW,EACd;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,gDAA+D;EAC/D,6BAA4B;EAC5B,YAAW;EACX,aAAY,EACf;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,gDAAsE;EACtE,YAAW;EACX,aAAY,EACf;;AAED;EACI,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,6BAA4B,EAC/B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n    //padding-top: 50px;\r\n}\r\n\r\n.modal-header {\r\n    border-bottom: none;\r\n}\r\n\r\n.modal-content {\r\n    color: white;\r\n    background-color: #27282E;\r\n    margin: auto auto;\r\n    padding: 20px;\r\n    \r\n    //border: 1px solid #888;\r\n    width: 80%;\r\n}\r\n\r\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\r\n\r\n.bg-black {\r\n    background-color: #27282E;//#2d2d2d;//#545454;//#27282E\r\n}\r\n\r\n.red {\r\n    color: #FF4136;\r\n}\r\n\r\n.blue {\r\n    color: #7FDBFF;\r\n}\r\n\r\n.green {\r\n    color: #2ECC40;\r\n}\r\n\r\n.brown {\r\n    color: Peru;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n  }\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.share-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 4px;\r\n    margin: 8px 0;\r\n    border-color: Transparent;\r\n    outline-color: #ffd800;\r\n}\r\n\r\n.card-header {\r\n    padding: 0;\r\n    border-bottom: none;\r\n}\r\n\r\n.spell-more {\r\n    flex-grow: 100;\r\n}\r\n\r\n.card-header-class {\r\n    padding: .75rem 1.25rem;\r\n    margin-bottom: 0;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.125);\r\n}\r\n\r\n.clickable {\r\n    cursor: pointer;\r\n}\r\n\r\n.td-w {\r\n    width: 22px;\r\n}\r\n\r\n.character-img:hover {\r\n    background-color: black;\r\n}\r\n\r\n.stats-img {\r\n    background-image: url('../../assets/dofus/elements/sprite.png');\r\n    background-position-x: -97px;\r\n    width: 22px;\r\n    height: 22px;\r\n}\r\n\r\n.vitality {\r\n    background-position-y: -319px;\r\n}\r\n\r\n.ap {\r\n    background-position-y: -243px;\r\n}\r\n\r\n.mp {\r\n    background-position-y: -52px;\r\n}\r\n\r\n.range {\r\n    background-position-y: -128px;\r\n}\r\n\r\n.initiative {\r\n    background-position-y: -205px;\r\n}\r\n\r\n.summon {\r\n    background-position-y: -507px;\r\n}\r\n\r\n.critical {\r\n    background-position-y: -589px;\r\n}\r\n\r\n.heal {\r\n    background-position-y: -966px;\r\n}\r\n\r\n.lock {\r\n    background-position-y: -545px;\r\n}\r\n\r\n.dodge {\r\n    background-position-y: -468px;\r\n}\r\n\r\n.prospecting {\r\n    background-position-y: -279px;\r\n}\r\n\r\n.wisdom {\r\n    background-position-y: -358px;\r\n}\r\n\r\n.strength {\r\n    background-position-y: -432px;\r\n}\r\n\r\n.intelligence {\r\n    background-position-y: -394px;\r\n}\r\n\r\n.chance {\r\n    background-position-y: -89px;\r\n}\r\n\r\n.agility {\r\n    background-position-y: -167px;\r\n}\r\n\r\n.ap-parry {\r\n    background-position-y: -1064px;\r\n}\r\n\r\n.mp-parry {\r\n    background-position-y: -1016px;\r\n}\r\n\r\n.ap-reduction {\r\n    background-position-y: -1297px;\r\n}\r\n\r\n.mp-reduction {\r\n    background-position-y: -1340px;\r\n}\r\n\r\n.power {\r\n    background-position-y: -1108px;\r\n}\r\n\r\n.damage {\r\n    background-position-y: -1156px;\r\n}\r\n\r\n.power-trap {\r\n    background-position-y: -673px;\r\n}\r\n\r\n.critical-damage {\r\n    background-position-y: -1248px;\r\n}\r\n\r\n.neutral-damage {\r\n    background-position-y: -15px;\r\n}\r\n\r\n.trap-damage {\r\n    background-position-y: -712px;\r\n}\r\n\r\n.pushback-damage {\r\n    background-position-y: -872px;\r\n}\r\n\r\n.pushback-resistance {\r\n    background-position-y: -832px;\r\n}\r\n\r\n.critical-resistance {\r\n    background-position-y: -1200px;\r\n}\r\n\r\n.reflect {\r\n    background-position-y: -791px;\r\n}\r\n\r\n.classes { \r\n    background-image: url('../../assets/dofus/characters/all/classes.png');\r\n    width: 54px;\r\n    height: 54px;\r\n}\r\n\r\n.classes:hover {\r\n    background-position-x: 0px;\r\n}\r\n\r\n.ecaflip { \r\n    background-position-x: -56px;\r\n    background-position-y: -623px;\r\n}\r\n\r\n.eniripsa {\r\n    background-position-x: -56px;\r\n    background-position-y: -680px;\r\n}\r\n\r\n.iop {\r\n    background-position-x: -56px;\r\n    background-position-y: -737px;\r\n}\r\n\r\n.cra {\r\n    background-position-x: -56px;\r\n    background-position-y: -793px;\r\n}\r\n\r\n.feca {\r\n    background-position-x: -56px;\r\n    background-position-y: 0px;\r\n}\r\n\r\n.sacrier {\r\n    background-position-x: -56px;\r\n    background-position-y: -114px;\r\n}\r\n\r\n.sadida {\r\n    background-position-x: -56px;\r\n    background-position-y: -57px;\r\n}\r\n\r\n.osamodas {\r\n    background-position-x: -56px;\r\n    background-position-y: -397px;\r\n}\r\n\r\n.enutrof {\r\n    background-position-x: -56px;\r\n    background-position-y: -453px;\r\n}\r\n\r\n.sram {\r\n    background-position-x: -56px;\r\n    background-position-y: -510px;\r\n}\r\n\r\n.xelor {\r\n    background-position-x: -56px;\r\n    background-position-y: -567px;\r\n}\r\n\r\n.pandawa {\r\n    background-position-x: -56px;\r\n    background-position-y: -169px;\r\n}\r\n\r\n.rogue {\r\n    background-position-x: -56px;\r\n    background-position-y: -227px;\r\n}\r\n\r\n.masqueraider {\r\n    background-position-x: -56px;\r\n    background-position-y: -284px;\r\n}\r\n\r\n.foggernauts {\r\n    background-position-x: -56px;\r\n    background-position-y: -340px;\r\n}\r\n\r\n.eliotrope {\r\n    background-position-x: -56px;\r\n    background-position-y: -850px;\r\n}\r\n\r\n.huppermage {\r\n    background-position-x: -56px;\r\n    background-position-y: -910px;\r\n}\r\n\r\n.ouginak {\r\n    background-position-x: -56px;\r\n    background-position-y: -965px;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.modal-header {\n  border-bottom: none; }\n\n.modal-content {\n  color: white;\n  background-color: #27282E;\n  margin: auto auto;\n  padding: 20px;\n  width: 80%; }\n\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\n.bg-black {\n  background-color: #27282E; }\n\n.red {\n  color: #FF4136; }\n\n.blue {\n  color: #7FDBFF; }\n\n.green {\n  color: #2ECC40; }\n\n.brown {\n  color: Peru; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.spell-text {\n  margin-bottom: 5px; }\n\n.share-input {\n  color: white;\n  width: 100%;\n  padding: 12px 4px;\n  margin: 8px 0;\n  border-color: Transparent;\n  outline-color: #ffd800; }\n\n.card-header {\n  padding: 0;\n  border-bottom: none; }\n\n.spell-more {\n  flex-grow: 100; }\n\n.card-header-class {\n  padding: .75rem 1.25rem;\n  margin-bottom: 0;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }\n\n.clickable {\n  cursor: pointer; }\n\n.td-w {\n  width: 22px; }\n\n.character-img:hover {\n  background-color: black; }\n\n.stats-img {\n  background-image: url(" + __webpack_require__(239) + ");\n  background-position-x: -97px;\n  width: 22px;\n  height: 22px; }\n\n.spell-description {\n  display: block;\n  font-size: 80%;\n  font-style: italic; }\n\n.border-gray {\n  border-color: #6c757d !important; }\n\n.legend {\n  width: auto;\n  padding: 0 10px;\n  border-bottom: none;\n  font-size: 1rem; }\n\n#spell:hover {\n  filter: brightness(75%); }\n\n.bg-black-darker {\n  background-color: #12131e; }\n\n.vitality {\n  background-position-y: -319px; }\n\n.ap {\n  background-position-y: -243px; }\n\n.mp {\n  background-position-y: -52px; }\n\n.range {\n  background-position-y: -128px; }\n\n.initiative {\n  background-position-y: -205px; }\n\n.summon {\n  background-position-y: -507px; }\n\n.critical {\n  background-position-y: -589px; }\n\n.heal {\n  background-position-y: -966px; }\n\n.lock {\n  background-position-y: -545px; }\n\n.dodge {\n  background-position-y: -468px; }\n\n.prospecting {\n  background-position-y: -279px; }\n\n.wisdom {\n  background-position-y: -358px; }\n\n.strength {\n  background-position-y: -432px; }\n\n.intelligence {\n  background-position-y: -394px; }\n\n.chance {\n  background-position-y: -89px; }\n\n.agility {\n  background-position-y: -167px; }\n\n.ap-parry {\n  background-position-y: -1064px; }\n\n.mp-parry {\n  background-position-y: -1016px; }\n\n.ap-reduction {\n  background-position-y: -1297px; }\n\n.mp-reduction {\n  background-position-y: -1340px; }\n\n.power {\n  background-position-y: -1108px; }\n\n.damage {\n  background-position-y: -1156px; }\n\n.power-trap {\n  background-position-y: -673px; }\n\n.critical-damage {\n  background-position-y: -1248px; }\n\n.neutral-damage {\n  background-position-y: -15px; }\n\n.trap-damage {\n  background-position-y: -712px; }\n\n.pushback-damage {\n  background-position-y: -872px; }\n\n.pushback-resistance {\n  background-position-y: -832px; }\n\n.critical-resistance {\n  background-position-y: -1200px; }\n\n.reflect {\n  background-position-y: -791px; }\n\n.classes {\n  background-image: url(" + __webpack_require__(240) + ");\n  width: 54px;\n  height: 54px; }\n\n.classes:hover {\n  background-position-x: 0px; }\n\n.ecaflip {\n  background-position-x: -56px;\n  background-position-y: -623px; }\n\n.eniripsa {\n  background-position-x: -56px;\n  background-position-y: -680px; }\n\n.iop {\n  background-position-x: -56px;\n  background-position-y: -737px; }\n\n.cra {\n  background-position-x: -56px;\n  background-position-y: -793px; }\n\n.feca {\n  background-position-x: -56px;\n  background-position-y: 0px; }\n\n.sacrier {\n  background-position-x: -56px;\n  background-position-y: -114px; }\n\n.sadida {\n  background-position-x: -56px;\n  background-position-y: -57px; }\n\n.osamodas {\n  background-position-x: -56px;\n  background-position-y: -397px; }\n\n.enutrof {\n  background-position-x: -56px;\n  background-position-y: -453px; }\n\n.sram {\n  background-position-x: -56px;\n  background-position-y: -510px; }\n\n.xelor {\n  background-position-x: -56px;\n  background-position-y: -567px; }\n\n.pandawa {\n  background-position-x: -56px;\n  background-position-y: -169px; }\n\n.rogue {\n  background-position-x: -56px;\n  background-position-y: -227px; }\n\n.masqueraider {\n  background-position-x: -56px;\n  background-position-y: -284px; }\n\n.foggernauts {\n  background-position-x: -56px;\n  background-position-y: -340px; }\n\n.eliotrope {\n  background-position-x: -56px;\n  background-position-y: -850px; }\n\n.huppermage {\n  background-position-x: -56px;\n  background-position-y: -910px; }\n\n.ouginak {\n  background-position-x: -56px;\n  background-position-y: -965px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAAA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EAEpB;;AAED;EACI,oBAAmB,EACtB;;AAED;EACI,aAAY;EACZ,0BAAyB;EACzB,kBAAiB;EACjB,cAAa;EAGb,WAAU,EACb;;AAED;;GAEG;AAEH;EACI,0BAAyB,EAC5B;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAClB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,0BAAyB;EACzB,uBAAsB,EACzB;;AAED;EACI,WAAU;EACV,oBAAmB,EACtB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,wBAAuB;EACvB,iBAAgB;EAChB,8CAA6C,EAChD;;AAED;EACI,gBAAe,EAClB;;AAED;EACI,YAAW,EACd;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,gDAA+D;EAC/D,6BAA4B;EAC5B,YAAW;EACX,aAAY,EACf;;AAED;EACI,eAAc;EACd,eAAc;EACd,mBAAkB,EACrB;;AAED;EACI,iCAAgC,EACnC;;AAED;EACI,YAAW;EACX,gBAAc;EACd,oBAAmB;EACnB,gBAAe,EAClB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,0BAAiC,EACpC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,gDAAsE;EACtE,YAAW;EACX,aAAY,EACf;;AAED;EACI,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,6BAA4B,EAC/B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC","file":"BuildCreation.scss","sourcesContent":[".main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n    //padding-top: 50px;\r\n}\r\n\r\n.modal-header {\r\n    border-bottom: none;\r\n}\r\n\r\n.modal-content {\r\n    color: white;\r\n    background-color: #27282E;\r\n    margin: auto auto;\r\n    padding: 20px;\r\n    \r\n    //border: 1px solid #888;\r\n    width: 80%;\r\n}\r\n\r\n/*.p-top {\r\n    padding-top: 50px;\r\n}*/\r\n\r\n.bg-black {\r\n    background-color: #27282E;//#2d2d2d;//#545454;//#27282E\r\n}\r\n\r\n.red {\r\n    color: #FF4136;\r\n}\r\n\r\n.blue {\r\n    color: #7FDBFF;\r\n}\r\n\r\n.green {\r\n    color: #2ECC40;\r\n}\r\n\r\n.brown {\r\n    color: Peru;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n}\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.share-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 4px;\r\n    margin: 8px 0;\r\n    border-color: Transparent;\r\n    outline-color: #ffd800;\r\n}\r\n\r\n.card-header {\r\n    padding: 0;\r\n    border-bottom: none;\r\n}\r\n\r\n.spell-more {\r\n    flex-grow: 100;\r\n}\r\n\r\n.card-header-class {\r\n    padding: .75rem 1.25rem;\r\n    margin-bottom: 0;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.125);\r\n}\r\n\r\n.clickable {\r\n    cursor: pointer;\r\n}\r\n\r\n.td-w {\r\n    width: 22px;\r\n}\r\n\r\n.character-img:hover {\r\n    background-color: black;\r\n}\r\n\r\n.stats-img {\r\n    background-image: url('../../assets/dofus/elements/sprite.png');\r\n    background-position-x: -97px;\r\n    width: 22px;\r\n    height: 22px;\r\n}\r\n\r\n.spell-description {\r\n    display: block;\r\n    font-size: 80%;\r\n    font-style: italic;\r\n}\r\n\r\n.border-gray {\r\n    border-color: #6c757d !important;\r\n}\r\n\r\n.legend {\r\n    width: auto;\r\n    padding:0 10px;\r\n    border-bottom: none;\r\n    font-size: 1rem;\r\n}\r\n\r\n#spell:hover {\r\n    filter: brightness(75%);\r\n}\r\n\r\n.bg-black-darker {\r\n    background-color: rgb(18, 19, 30);\r\n}\r\n\r\n.vitality {\r\n    background-position-y: -319px;\r\n}\r\n\r\n.ap {\r\n    background-position-y: -243px;\r\n}\r\n\r\n.mp {\r\n    background-position-y: -52px;\r\n}\r\n\r\n.range {\r\n    background-position-y: -128px;\r\n}\r\n\r\n.initiative {\r\n    background-position-y: -205px;\r\n}\r\n\r\n.summon {\r\n    background-position-y: -507px;\r\n}\r\n\r\n.critical {\r\n    background-position-y: -589px;\r\n}\r\n\r\n.heal {\r\n    background-position-y: -966px;\r\n}\r\n\r\n.lock {\r\n    background-position-y: -545px;\r\n}\r\n\r\n.dodge {\r\n    background-position-y: -468px;\r\n}\r\n\r\n.prospecting {\r\n    background-position-y: -279px;\r\n}\r\n\r\n.wisdom {\r\n    background-position-y: -358px;\r\n}\r\n\r\n.strength {\r\n    background-position-y: -432px;\r\n}\r\n\r\n.intelligence {\r\n    background-position-y: -394px;\r\n}\r\n\r\n.chance {\r\n    background-position-y: -89px;\r\n}\r\n\r\n.agility {\r\n    background-position-y: -167px;\r\n}\r\n\r\n.ap-parry {\r\n    background-position-y: -1064px;\r\n}\r\n\r\n.mp-parry {\r\n    background-position-y: -1016px;\r\n}\r\n\r\n.ap-reduction {\r\n    background-position-y: -1297px;\r\n}\r\n\r\n.mp-reduction {\r\n    background-position-y: -1340px;\r\n}\r\n\r\n.power {\r\n    background-position-y: -1108px;\r\n}\r\n\r\n.damage {\r\n    background-position-y: -1156px;\r\n}\r\n\r\n.power-trap {\r\n    background-position-y: -673px;\r\n}\r\n\r\n.critical-damage {\r\n    background-position-y: -1248px;\r\n}\r\n\r\n.neutral-damage {\r\n    background-position-y: -15px;\r\n}\r\n\r\n.trap-damage {\r\n    background-position-y: -712px;\r\n}\r\n\r\n.pushback-damage {\r\n    background-position-y: -872px;\r\n}\r\n\r\n.pushback-resistance {\r\n    background-position-y: -832px;\r\n}\r\n\r\n.critical-resistance {\r\n    background-position-y: -1200px;\r\n}\r\n\r\n.reflect {\r\n    background-position-y: -791px;\r\n}\r\n\r\n.classes { \r\n    background-image: url('../../assets/dofus/characters/all/classes.png');\r\n    width: 54px;\r\n    height: 54px;\r\n}\r\n\r\n.classes:hover {\r\n    background-position-x: 0px;\r\n}\r\n\r\n.ecaflip { \r\n    background-position-x: -56px;\r\n    background-position-y: -623px;\r\n}\r\n\r\n.eniripsa {\r\n    background-position-x: -56px;\r\n    background-position-y: -680px;\r\n}\r\n\r\n.iop {\r\n    background-position-x: -56px;\r\n    background-position-y: -737px;\r\n}\r\n\r\n.cra {\r\n    background-position-x: -56px;\r\n    background-position-y: -793px;\r\n}\r\n\r\n.feca {\r\n    background-position-x: -56px;\r\n    background-position-y: 0px;\r\n}\r\n\r\n.sacrier {\r\n    background-position-x: -56px;\r\n    background-position-y: -114px;\r\n}\r\n\r\n.sadida {\r\n    background-position-x: -56px;\r\n    background-position-y: -57px;\r\n}\r\n\r\n.osamodas {\r\n    background-position-x: -56px;\r\n    background-position-y: -397px;\r\n}\r\n\r\n.enutrof {\r\n    background-position-x: -56px;\r\n    background-position-y: -453px;\r\n}\r\n\r\n.sram {\r\n    background-position-x: -56px;\r\n    background-position-y: -510px;\r\n}\r\n\r\n.xelor {\r\n    background-position-x: -56px;\r\n    background-position-y: -567px;\r\n}\r\n\r\n.pandawa {\r\n    background-position-x: -56px;\r\n    background-position-y: -169px;\r\n}\r\n\r\n.rogue {\r\n    background-position-x: -56px;\r\n    background-position-y: -227px;\r\n}\r\n\r\n.masqueraider {\r\n    background-position-x: -56px;\r\n    background-position-y: -284px;\r\n}\r\n\r\n.foggernauts {\r\n    background-position-x: -56px;\r\n    background-position-y: -340px;\r\n}\r\n\r\n.eliotrope {\r\n    background-position-x: -56px;\r\n    background-position-y: -850px;\r\n}\r\n\r\n.huppermage {\r\n    background-position-x: -56px;\r\n    background-position-y: -910px;\r\n}\r\n\r\n.ouginak {\r\n    background-position-x: -56px;\r\n    background-position-y: -965px;\r\n}"],"sourceRoot":""}]);
 
 // exports
 
@@ -57621,6 +57621,7 @@ var Enums_1 = __webpack_require__(2);
 var Accordion_1 = __webpack_require__(284);
 var Card_1 = __webpack_require__(293);
 var FormatClassName_1 = __webpack_require__(45);
+var SpellInformationsComponent_1 = __webpack_require__(296);
 var SpellsComponent = /** @class */ (function (_super) {
     __extends(SpellsComponent, _super);
     function SpellsComponent(props) {
@@ -57826,11 +57827,11 @@ var SpellsComponent = /** @class */ (function (_super) {
                                     React.createElement("td", null,
                                         React.createElement("div", { className: "row" },
                                             React.createElement("div", { className: "col-md-2" },
-                                                React.createElement("img", { onClick: function () { return _this.changeShownSpell((i - 1) / 2, true); }, className: "clickable " + (this_1.props.spellOrVariant[(i - 1) / 2] ? "bg-light rounded p-1" : ""), src: '../assets/dofus/characters/' + FormatClassName_1.formatClassNameProg(this_1.props.class) + '/spell' + i + '.png', role: "button" })),
+                                                React.createElement("img", { onClick: function () { return _this.changeShownSpell((i - 1) / 2, true); }, className: "clickable " + (this_1.props.spellOrVariant[(i - 1) / 2] ? "bg-light rounded p-1" : ""), src: '../assets/dofus/characters/' + FormatClassName_1.formatClassNameProg(this_1.props.class) + '/spell' + i + '.png', id: this_1.props.spellOrVariant[(i - 1) / 2] ? '' : 'spell', role: "button" })),
                                             React.createElement("div", { className: "col-md-2" },
-                                                React.createElement("img", { onClick: function () { return _this.changeShownSpell((i - 1) / 2, false); }, className: "clickable " + (this_1.props.spellOrVariant[(i - 1) / 2] ? "" : "bg-light rounded p-1"), src: '../assets/dofus/characters/' + FormatClassName_1.formatClassNameProg(this_1.props.class) + '/spell' + (i + 1) + '.png', role: "button" })),
+                                                React.createElement("img", { onClick: function () { return _this.changeShownSpell((i - 1) / 2, false); }, className: "clickable " + (this_1.props.spellOrVariant[(i - 1) / 2] ? "" : "bg-light rounded p-1"), src: '../assets/dofus/characters/' + FormatClassName_1.formatClassNameProg(this_1.props.class) + '/spell' + (i + 1) + '.png', id: this_1.props.spellOrVariant[(i - 1) / 2] ? 'spell' : '', role: "button" })),
                                             React.createElement("div", { className: "col" },
-                                                React.createElement(Accordion_1.default.Toggle, { as: Card_1.default.Header, className: "spell-more", eventKey: "0" },
+                                                React.createElement(Accordion_1.default.Toggle, { as: Card_1.default.Header, className: "spell-more", id: "spell", eventKey: "0" },
                                                     React.createElement("table", null,
                                                         React.createElement("tbody", { className: "clickable" },
                                                             React.createElement("tr", null,
@@ -57845,30 +57846,7 @@ var SpellsComponent = /** @class */ (function (_super) {
                                                                 React.createElement("td", null, this_1.computeAndRenderNormalDamages(this_1.props.spellOrVariant[(i - 1) / 2] ? [classSpells[i - 1].upgradeOne.normal.damageMin, classSpells[i - 1].upgradeOne.normal.damageMax] : [classSpells[i].upgradeOne.normal.damageMin, classSpells[i].upgradeOne.normal.damageMax], this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i - 1].element : classSpells[i].element)),
                                                                 React.createElement("td", null, this_1.computeAndRenderCriticalDamages(this_1.props.spellOrVariant[(i - 1) / 2] ? [classSpells[i - 1].upgradeOne.critical.damageMin, classSpells[i - 1].upgradeOne.critical.damageMax] : [classSpells[i].upgradeOne.critical.damageMin, classSpells[i].upgradeOne.critical.damageMax], this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i - 1].element : classSpells[i].element)))))))))))),
                         React.createElement(Accordion_1.default.Collapse, { className: "mb-2 " + this_1.state.collapseShowAll, eventKey: "0" },
-                            React.createElement("div", { className: "card border-info bg-secondary mb-3" },
-                                React.createElement("div", { className: "card-header-class border-info text-center" },
-                                    React.createElement("b", null, "Informations sur le sort")),
-                                React.createElement("div", { className: "card-body" },
-                                    React.createElement("table", null,
-                                        React.createElement("tbody", null,
-                                            React.createElement("tr", null,
-                                                React.createElement("td", null,
-                                                    React.createElement("p", { className: "p-margin" }, "D\u00E9gats de base normaux : ")),
-                                                React.createElement("td", null,
-                                                    React.createElement("p", { className: "float-right p-margin" },
-                                                        this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i - 1].upgradeOne.normal.damageMin : classSpells[i].upgradeOne.normal.damageMin,
-                                                        " \u00E0 ",
-                                                        this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i - 1].upgradeOne.normal.damageMax : classSpells[i].upgradeOne.normal.damageMax))),
-                                            React.createElement("tr", null,
-                                                React.createElement("td", null,
-                                                    React.createElement("p", { className: "p-margin" }, "Dommages de base critiques : ")),
-                                                React.createElement("td", null,
-                                                    React.createElement("p", { className: "float-right p-margin" },
-                                                        this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i - 1].upgradeOne.critical.damageMin : classSpells[i].upgradeOne.critical.damageMin,
-                                                        " \u00E0 ",
-                                                        this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i - 1].upgradeOne.critical.damageMax : classSpells[i].upgradeOne.critical.damageMax)))))),
-                                React.createElement("div", { className: "card-footer border-info" },
-                                    React.createElement("small", null, this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i - 1].description : classSpells[i].description)))))),
+                            React.createElement(SpellInformationsComponent_1.default, { spell: (this_1.props.spellOrVariant[(i + 1) / 2] ? classSpells[i - 1] : classSpells[i]) })))),
                 React.createElement("div", { className: "col" },
                     React.createElement(Accordion_1.default, { defaultActiveKey: "1" },
                         React.createElement("table", null,
@@ -57881,7 +57859,7 @@ var SpellsComponent = /** @class */ (function (_super) {
                                             React.createElement("div", { className: "col-md-2" },
                                                 React.createElement("img", { onClick: function () { return _this.changeShownSpell((i + 1) / 2, false); }, className: "clickable " + (this_1.props.spellOrVariant[(i + 1) / 2] ? "" : "bg-light rounded p-1"), src: '../assets/dofus/characters/' + FormatClassName_1.formatClassNameProg(this_1.props.class) + '/spell' + (i + 3) + '.png', role: "button" })),
                                             React.createElement("div", { className: "col" },
-                                                React.createElement(Accordion_1.default.Toggle, { as: Card_1.default.Header, className: "spell-more", eventKey: "0" },
+                                                React.createElement(Accordion_1.default.Toggle, { as: Card_1.default.Header, className: "spell-more", id: "spell", eventKey: "0" },
                                                     React.createElement("table", null,
                                                         React.createElement("tbody", { className: "clickable" },
                                                             React.createElement("tr", null,
@@ -57896,24 +57874,7 @@ var SpellsComponent = /** @class */ (function (_super) {
                                                                 React.createElement("td", null, this_1.computeAndRenderNormalDamages(this_1.props.spellOrVariant[(i + 1) / 2] ? [classSpells[i + 1].upgradeOne.normal.damageMin, classSpells[i + 1].upgradeOne.normal.damageMax] : [classSpells[i + 2].upgradeOne.normal.damageMin, classSpells[i + 2].upgradeOne.normal.damageMax], this_1.props.spellOrVariant[(i + 1) / 2] ? classSpells[i + 1].element : classSpells[i + 2].element)),
                                                                 React.createElement("td", null, this_1.computeAndRenderCriticalDamages(this_1.props.spellOrVariant[(i + 1) / 2] ? [classSpells[i + 1].upgradeOne.critical.damageMin, classSpells[i + 1].upgradeOne.critical.damageMax] : [classSpells[i + 2].upgradeOne.critical.damageMin, classSpells[i + 2].upgradeOne.critical.damageMax], this_1.props.spellOrVariant[(i + 1) / 2] ? classSpells[i + 1].element : classSpells[i + 2].element)))))))))))),
                         React.createElement(Accordion_1.default.Collapse, { className: "bg-secondary rounded mb-2 " + this_1.state.collapseShowAll, eventKey: "0" },
-                            React.createElement("table", null,
-                                React.createElement("tbody", null,
-                                    React.createElement("tr", null,
-                                        React.createElement("td", null,
-                                            React.createElement("p", { className: "pl-2 p-margin" }, "D\u00E9gats de base normaux : ")),
-                                        React.createElement("td", null,
-                                            React.createElement("p", { className: "float-right pr-2 p-margin" },
-                                                this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i + 1].upgradeOne.normal.damageMin : classSpells[i + 2].upgradeOne.normal.damageMin,
-                                                " \u00E0 ",
-                                                this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i + 1].upgradeOne.normal.damageMax : classSpells[i + 2].upgradeOne.normal.damageMax))),
-                                    React.createElement("tr", null,
-                                        React.createElement("td", null,
-                                            React.createElement("p", { className: "pl-2 p-margin" }, "Dommages de base critiques : ")),
-                                        React.createElement("td", null,
-                                            React.createElement("p", { className: "float-right pr-2 p-margin" },
-                                                this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i + 1].upgradeOne.critical.damageMin : classSpells[i + 2].upgradeOne.critical.damageMin,
-                                                " \u00E0 ",
-                                                this_1.props.spellOrVariant[(i - 1) / 2] ? classSpells[i + 1].upgradeOne.critical.damageMax : classSpells[i + 2].upgradeOne.critical.damageMax))))))))));
+                            React.createElement(SpellInformationsComponent_1.default, { spell: (this_1.props.spellOrVariant[(i + 1) / 2] ? classSpells[i + 1] : classSpells[i + 2]) }))))));
         };
         var this_1 = this;
         for (var i = 1; i <= classSpells.length; i += 4) {
@@ -89751,11 +89712,102 @@ CardImg.defaultProps = defaultProps;
 
 "use strict";
 
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var SpellInformationsComponent = /** @class */ (function (_super) {
+    __extends(SpellInformationsComponent, _super);
+    function SpellInformationsComponent(props) {
+        return _super.call(this, props) || this;
+    }
+    SpellInformationsComponent.prototype.render = function () {
+        return (React.createElement("div", { className: "card bg-dark" },
+            React.createElement("div", { className: "card-body p-1" },
+                React.createElement("fieldset", { className: "border border-gray rounded p-2" },
+                    React.createElement("legend", { className: "legend font-weight-bold" }, "Informations sur le sort"),
+                    React.createElement("blockquote", { className: "mb-0" },
+                        React.createElement("table", { className: "mb-1" },
+                            React.createElement("tbody", null,
+                                React.createElement("tr", null,
+                                    React.createElement("th", null, "Effets normaux"),
+                                    React.createElement("th", null, "Effets critiques")),
+                                React.createElement("tr", null,
+                                    React.createElement("td", { className: "pl-1" }, this.props.spell.upgradeOne.normal.damageMin === undefined ? React.createElement("small", null, "Aucun effet") : React.createElement("small", null,
+                                        this.props.spell.upgradeOne.normal.damageMin,
+                                        " \u00E0 ",
+                                        this.props.spell.upgradeOne.normal.damageMax,
+                                        " (dommages Air)")),
+                                    React.createElement("td", { className: "pl-1" }, this.props.spell.upgradeOne.critical.damageMin === undefined ? React.createElement("small", null, "Aucun effet") : React.createElement("small", null,
+                                        this.props.spell.upgradeOne.critical.damageMin,
+                                        " \u00E0 ",
+                                        this.props.spell.upgradeOne.critical.damageMax,
+                                        " (dommages Air)"))),
+                                React.createElement("tr", null,
+                                    React.createElement("th", null, "Autres caract\u00E9ristiques"),
+                                    React.createElement("th", null)),
+                                React.createElement("tr", { className: "bg-secondary" },
+                                    React.createElement("td", { className: "rounded-left pl-1" },
+                                        React.createElement("small", null, "Probabilit\u00E9 de coup critique")),
+                                    React.createElement("td", { className: "pr-1 float-right" },
+                                        React.createElement("small", null,
+                                            this.props.spell.cc === undefined ? '0' : this.props.spell.cc,
+                                            "%"))),
+                                React.createElement("tr", null,
+                                    React.createElement("td", { className: "pl-1" },
+                                        React.createElement("small", null, "Port\u00E9e modifiable")),
+                                    React.createElement("td", { className: "pr-1 float-right" },
+                                        React.createElement("small", null, this.props.spell.poModifiable === true ? 'Oui' : 'Non'))),
+                                React.createElement("tr", { className: "bg-secondary" },
+                                    React.createElement("td", { className: "rounded-left pl-1" },
+                                        React.createElement("small", null, "Ligne de vue")),
+                                    React.createElement("td", { className: "pr-1 float-right" },
+                                        React.createElement("small", null, this.props.spell.viewLine === true ? 'Oui' : 'Non'))),
+                                React.createElement("tr", null,
+                                    React.createElement("td", { className: "pl-1" },
+                                        React.createElement("small", null, "Nb. de lancers par tour")),
+                                    React.createElement("td", { className: "pr-1 float-right" },
+                                        React.createElement("small", null, this.props.spell.nbUse === undefined ? 'Illimité' : this.props.spell.nbUse))),
+                                React.createElement("tr", { className: "bg-secondary" },
+                                    React.createElement("td", { className: "rounded-left pl-1" },
+                                        React.createElement("small", null, "Cellules libres")),
+                                    React.createElement("td", { className: "pr-1 float-right" },
+                                        React.createElement("small", null, this.props.spell.freeCellule === true ? 'Oui' : 'Non'))),
+                                React.createElement("tr", null,
+                                    React.createElement("td", { className: "rounded pl-1" },
+                                        React.createElement("small", null, "Zone d'effet")),
+                                    React.createElement("td", { className: "pr-1 float-right" },
+                                        React.createElement("small", null, this.props.spell.zone !== true ? 'Aucune' : this.props.spell.zoneDescription))))),
+                        React.createElement("div", { className: "font-weight-bold" }, "Description"),
+                        React.createElement("footer", { className: "spell-description pl-1" }, this.props.spell.description))))));
+    };
+    return SpellInformationsComponent;
+}(React.Component));
+exports.default = SpellInformationsComponent;
+
+
+/***/ }),
+/* 297 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var SharedBuildPage_1 = __webpack_require__(297);
+var SharedBuildPage_1 = __webpack_require__(298);
 var ConnectedUserSelector_1 = __webpack_require__(19);
-var SharedBuildSelector_1 = __webpack_require__(301);
+var SharedBuildSelector_1 = __webpack_require__(302);
 var MessagesActions_1 = __webpack_require__(25);
 var SharedBuildActions_1 = __webpack_require__(96);
 var mapStateToProps = function (state) { return ({
@@ -89770,7 +89822,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Sha
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89793,8 +89845,8 @@ var React = __webpack_require__(0);
 var StatsComponent_1 = __webpack_require__(85);
 var SpellsContainer_1 = __webpack_require__(91);
 var BuildEquipementsContainer_1 = __webpack_require__(86);
-var AverageDamageComponent_1 = __webpack_require__(298);
-var SharedBuildInformationsContainer_1 = __webpack_require__(299);
+var AverageDamageComponent_1 = __webpack_require__(299);
+var SharedBuildInformationsContainer_1 = __webpack_require__(300);
 var ComputeStats_1 = __webpack_require__(84);
 var Spinner_1 = __webpack_require__(95);
 var SharedBuildPage = /** @class */ (function (_super) {
@@ -89922,7 +89974,7 @@ exports.default = SharedBuildPage;
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89969,21 +90021,21 @@ exports.default = SettingsComponent;
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var SharedBuildInformationsComponent_1 = __webpack_require__(300);
+var SharedBuildInformationsComponent_1 = __webpack_require__(301);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {};
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(SharedBuildInformationsComponent_1.default);
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90071,7 +90123,7 @@ exports.default = SharedBuildInformationsComponent;
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90083,14 +90135,14 @@ exports.getSharedBuild = reselect_1.createSelector([getSharedBuildState], functi
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = __webpack_require__(7);
-var ProfilePage_1 = __webpack_require__(303);
+var ProfilePage_1 = __webpack_require__(304);
 var ConnectedUserSelector_1 = __webpack_require__(19);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state)
@@ -90100,7 +90152,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Pro
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90147,7 +90199,7 @@ exports.default = ProfilePage;
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90157,7 +90209,7 @@ var react_redux_1 = __webpack_require__(7);
 var ConnectedUserSelector_1 = __webpack_require__(19);
 var UserConnectionActions_1 = __webpack_require__(23);
 var MessagesActions_1 = __webpack_require__(25);
-var SigninPage_1 = __webpack_require__(305);
+var SigninPage_1 = __webpack_require__(306);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state)
 }); };
@@ -90169,7 +90221,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Sig
 
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90269,7 +90321,7 @@ exports.default = SigninPage;
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90356,7 +90408,7 @@ exports.default = LoadingComponent;
 
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90366,7 +90418,7 @@ var react_redux_1 = __webpack_require__(7);
 var ConnectedUserSelector_1 = __webpack_require__(19);
 var UserConnectionActions_1 = __webpack_require__(23);
 var MessagesActions_1 = __webpack_require__(25);
-var SignupPage_1 = __webpack_require__(308);
+var SignupPage_1 = __webpack_require__(309);
 var mapStateToProps = function (state) { return ({
     connectedUser: ConnectedUserSelector_1.getConnectedUser(state)
 }); };
@@ -90378,7 +90430,7 @@ exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Sig
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90508,19 +90560,19 @@ exports.default = SigninPage;
 
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(22);
-var redux_logger_1 = __webpack_require__(310);
-var redux_thunk_1 = __webpack_require__(311);
-var redux_persist_1 = __webpack_require__(312);
-var storage_1 = __webpack_require__(319);
-var reducers_1 = __webpack_require__(322);
-var autoMergeLevel2_1 = __webpack_require__(327);
+var redux_logger_1 = __webpack_require__(311);
+var redux_thunk_1 = __webpack_require__(312);
+var redux_persist_1 = __webpack_require__(313);
+var storage_1 = __webpack_require__(320);
+var reducers_1 = __webpack_require__(323);
+var autoMergeLevel2_1 = __webpack_require__(328);
 // Restore redux store on page refresh
 var persistConfig = {
     key: 'root',
@@ -90534,7 +90586,7 @@ exports.default = { store: store, persistor: persistor };
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.reduxLogger=e.reduxLogger||{})}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
@@ -90542,7 +90594,7 @@ exports.default = { store: store, persistor: persistor };
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)))
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90569,20 +90621,20 @@ thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ __webpack_exports__["default"] = (thunk);
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__persistReducer__ = __webpack_require__(98);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistReducer", function() { return __WEBPACK_IMPORTED_MODULE_0__persistReducer__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__ = __webpack_require__(315);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistCombineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__persistCombineReducers__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__persistStore__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__persistStore__ = __webpack_require__(317);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "persistStore", function() { return __WEBPACK_IMPORTED_MODULE_2__persistStore__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createMigrate__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createMigrate__ = __webpack_require__(318);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createMigrate", function() { return __WEBPACK_IMPORTED_MODULE_3__createMigrate__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransform__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransform__ = __webpack_require__(319);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createTransform", function() { return __WEBPACK_IMPORTED_MODULE_4__createTransform__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__getStoredState__ = __webpack_require__(100);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "getStoredState", function() { return __WEBPACK_IMPORTED_MODULE_5__getStoredState__["a"]; });
@@ -90610,7 +90662,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90655,14 +90707,14 @@ function autoMergeLevel1(inboundState, originalState, reducedState, _ref) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = persistCombineReducers;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__persistReducer__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateReconciler_autoMergeLevel2__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateReconciler_autoMergeLevel2__ = __webpack_require__(316);
 
 
 
@@ -90673,7 +90725,7 @@ function persistCombineReducers(config, reducers) {
 }
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90729,7 +90781,7 @@ function isPlainEnoughObject(o) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90866,7 +90918,7 @@ function persistStore(store, options, cb) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90918,7 +90970,7 @@ function createMigrate(migrations, config) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90947,7 +90999,7 @@ outbound) {
 }
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90956,7 +91008,7 @@ outbound) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _createWebStorage = _interopRequireDefault(__webpack_require__(320));
+var _createWebStorage = _interopRequireDefault(__webpack_require__(321));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -90965,7 +91017,7 @@ var _default = (0, _createWebStorage.default)('local');
 exports.default = _default;
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -90974,7 +91026,7 @@ exports.default = _default;
 exports.__esModule = true;
 exports.default = createWebStorage;
 
-var _getStorage = _interopRequireDefault(__webpack_require__(321));
+var _getStorage = _interopRequireDefault(__webpack_require__(322));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -91000,7 +91052,7 @@ function createWebStorage(type) {
 }
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91051,17 +91103,17 @@ function getStorage(type) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = __webpack_require__(22);
-var ConnectedUserReducer = __webpack_require__(323);
-var BuildCreationReducer = __webpack_require__(324);
-var SharedBuildReducer = __webpack_require__(325);
-var MessagesReducer = __webpack_require__(326);
+var ConnectedUserReducer = __webpack_require__(324);
+var BuildCreationReducer = __webpack_require__(325);
+var SharedBuildReducer = __webpack_require__(326);
+var MessagesReducer = __webpack_require__(327);
 /*
  * initialState of the app
  */
@@ -91084,7 +91136,7 @@ exports.rootReducer = redux_1.combineReducers({
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91134,7 +91186,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91317,7 +91369,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91378,7 +91430,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91460,7 +91512,7 @@ exports.reducer = reducer;
 
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91520,7 +91572,7 @@ function isPlainEnoughObject(o) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 328 */
+/* 329 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91636,13 +91688,13 @@ _defineProperty(PersistGate, "defaultProps", {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 329 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(330);
+var content = __webpack_require__(331);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -91667,7 +91719,7 @@ if(false) {
 }
 
 /***/ }),
-/* 330 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(15)(true);

@@ -9645,106 +9645,162 @@ exports.getError = reselect_1.createSelector([getMessagesState], function (s) { 
 
 Object.defineProperty(exports, "__esModule", { value: true });
 function formatStatName(stat) {
-    switch (stat) {
-        case 'vitality':
-            return ' Vitalité';
-        case 'strength':
-            return ' Force';
-        case 'wisdom':
-            return ' Sagesse';
-        case 'range':
-            return ' Portée';
-        case 'prospecting':
-            return ' Prospection';
-        case 'neutralDamage':
-            return ' Dommages Neutre';
-        case 'earthDamage':
-            return ' Dommages Terre';
-        case 'fixedNeutralResistance':
-            return ' Résistance Neutre';
-        case 'fixedEarthResistance':
-            return ' Résistance Terre';
-        case 'fixedFireResistance':
-            return ' Résistance Feu';
-        case 'fixedWaterResistance':
-            return ' Résistance Eau';
-        case 'fixedAirResistance':
-            return ' Résistance Air';
-        case 'apReduction':
-            return ' Retrait PA';
-        case 'lock':
-            return ' Tacle';
-        case 'agility':
-            return ' Agilité';
-        case 'fireDamage':
-            return ' Dommages Feu';
-        case 'airDamage':
-            return ' Dommages Air';
-        case 'initiative':
-            return ' Initiative';
-        case 'summons':
-            return ' Invocations';
-        case 'agility':
-            return ' Agilité';
-        case 'power':
-            return ' Puissance';
-        case 'waterDamage':
-            return ' Dommages Eau';
-        case 'mp':
-            return ' PM';
-        case 'ap':
-            return ' PA';
-        case 'critical':
-            return '% Critique';
-        case 'summoning':
-            return ' Invocations';
-        case 'dodge':
-            return ' Fuite';
-        case 'variableEarthResistance':
-            return '% Résistance Terre';
-        case 'variableWaterResistance':
-            return '% Résistance Eau';
-        case 'variableNeutralResistance':
-            return '% Résistance Neutre';
-        case 'variableAirResistance':
-            return '% Résistance Air';
-        case 'variableFireResistance':
-            return '% Résistance Feu';
-        case 'criticalDamage':
-            return ' Dommages Critiques';
-        case 'mpParry':
-            return ' Esquive PM';
-        case 'heal':
-            return ' Soins';
-        case 'pushbackResistance':
-            return ' Résistance Poussée';
-        case 'pushbackDamage':
-            return ' Dommages Poussée';
-        case 'apParry':
-            return ' Esquive PA';
-        case 'luck':
-            return ' Chance';
-        case 'intelligence':
-            return ' Intelligence';
-        case 'mpReduction':
-            return ' Retrait PA';
-        case 'rangedDamage':
-            return '% Dommages distance';
-        case 'meleeResistance':
-            return '% Résistance mêlée';
-        case 'meleeDamage':
-            return '% Dommages mêlée';
-        case 'rangedResistance':
-            return '% Résistance distance';
-        case 'weaponDamage':
-            return '% Dommages d\'armes';
-        case 'criticalResistance':
-            return ' Résistance Critiques';
-        default:
-            return stat;
-    }
+    if (stat === 'vitality')
+        return ' Vitalité';
+    else if (stat === 'strength')
+        return ' Force';
+    else if (stat === 'wisdom')
+        return ' Sagesse';
+    else if (stat === 'range')
+        return ' Portée';
+    else if (stat === 'prospecting')
+        return ' Prospection';
+    else if (stat === 'neutralDamage')
+        return ' Dommages Neutre';
+    else if (stat === 'earthDamage')
+        return ' Dommages Terre';
+    else if (stat === 'fixedNeutralResistance')
+        return ' Résistance Neutre';
+    else if (stat === 'fixedEarthResistance')
+        return ' Résistance Terre';
+    else if (stat === 'fixedFireResistance')
+        return ' Résistance Feu';
+    else if (stat === 'fixedWaterResistance')
+        return ' Résistance Eau';
+    else if (stat === 'fixedAirResistance')
+        return ' Résistance Air';
+    else if (stat === 'apReduction')
+        return ' Retrait PA';
+    else if (stat === 'lock')
+        return ' Tacle';
+    else if (stat === 'agility')
+        return ' Agilité';
+    else if (stat === 'fireDamage')
+        return ' Dommages Feu';
+    else if (stat === 'airDamage')
+        return ' Dommages Air';
+    else if (stat === 'initiative')
+        return ' Initiative';
+    else if (stat === 'summons')
+        return ' Invocations';
+    else if (stat === 'agility')
+        return ' Agilité';
+    else if (stat === 'power')
+        return ' Puissance';
+    else if (stat === 'waterDamage')
+        return ' Dommages Eau';
+    else if (stat === 'mp')
+        return ' PM';
+    else if (stat === 'ap')
+        return ' PA';
+    else if (stat === 'critical')
+        return '% Critique';
+    else if (stat === 'summoning')
+        return ' Invocations';
+    else if (stat === 'dodge')
+        return ' Fuite';
+    else if (stat === 'variableEarthResistance')
+        return '% Résistance Terre';
+    else if (stat === 'variableWaterResistance')
+        return '% Résistance Eau';
+    else if (stat === 'variableNeutralResistance')
+        return '% Résistance Neutre';
+    else if (stat === 'variableAirResistance')
+        return '% Résistance Air';
+    else if (stat === 'variableFireResistance')
+        return '% Résistance Feu';
+    else if (stat === 'criticalDamage')
+        return ' Dommages Critiques';
+    else if (stat === 'mpParry')
+        return ' Esquive PM';
+    else if (stat === 'heal')
+        return ' Soins';
+    else if (stat === 'pushbackResistance')
+        return ' Résistance Poussée';
+    else if (stat === 'pushbackDamage')
+        return ' Dommages Poussée';
+    else if (stat === 'apParry')
+        return ' Esquive PA';
+    else if (stat === 'luck')
+        return ' Chance';
+    else if (stat === 'intelligence')
+        return ' Intelligence';
+    else if (stat === 'mpReduction')
+        return ' Retrait PA';
+    else if (stat === 'rangedDamage')
+        return '% Dommages distance';
+    else if (stat === 'meleeResistance')
+        return '% Résistance mêlée';
+    else if (stat === 'meleeDamage')
+        return '% Dommages mêlée';
+    else if (stat === 'rangedResistance')
+        return '% Résistance distance';
+    else if (stat === 'weaponDamage')
+        return '% Dommages d\'armes';
+    else if (stat === 'criticalResistance')
+        return ' Résistance Critiques';
+    else if (stat.includes('weaponNeutralDamage'))
+        return ' (dommages Neutre)';
+    else if (stat.includes('weaponAirDamage'))
+        return ' (dommages Air)';
+    else if (stat.includes('weaponEarthSteal'))
+        return ' (vol Terre)';
+    else if (stat.includes('weaponEarthDamage'))
+        return ' (dommages Terre)';
+    else if (stat.includes('weaponAirSteal'))
+        return ' (vol Air)';
+    else if (stat.includes('weaponWaterDamage'))
+        return ' (dommages Eau)';
+    else if (stat.includes('weaponWaterSteal'))
+        return ' (vol Eau)';
+    else if (stat.includes('weaponFireDamage'))
+        return ' (dommages Feu)';
+    else if (stat.includes('weaponFireSteal'))
+        return ' (vol Feu)';
+    else if (stat.includes('weaponNeutralSteal'))
+        return ' (vol Neutre)';
+    else
+        return stat;
 }
 exports.default = formatStatName;
+function formatCondition(condition) {
+    if (condition === 'strengthMoreThan')
+        return 'Force > ';
+    else if (condition === 'agilityMoreThan')
+        return 'Agilité > ';
+    else if (condition === 'luckMoreThan')
+        return 'Chance > ';
+    else if (condition === 'intelligenceMoreThan')
+        return 'Intelligence > ';
+    else if (condition === 'apCondition')
+        return 'PA < ';
+    else
+        return condition;
+}
+exports.formatCondition = formatCondition;
+function formatType(type) {
+    if (type === 'axe')
+        return 'Hache';
+    else if (type === 'sword')
+        return 'Épée';
+    else if (type === 'staff')
+        return 'Baton';
+    else if (type === 'bow')
+        return 'Arc';
+    else if (type === 'dagger')
+        return 'Dagues';
+    else if (type === 'shovel')
+        return 'Pelle';
+    else if (type === 'wand')
+        return 'Baguette';
+    else if (type === 'hammer')
+        return 'Marteau';
+    else if (type === 'scythe')
+        return 'Faux';
+    else
+        return type;
+}
+exports.formatType = formatType;
 
 
 /***/ }),
@@ -49377,6 +49433,7 @@ var EquipementsPage = /** @class */ (function (_super) {
                             page: _this.state.page + 1
                         };
                     });
+                    window.scrollTo(0, 0);
                 }
                 break;
             case Enums_1.Page.previous:
@@ -49386,6 +49443,7 @@ var EquipementsPage = /** @class */ (function (_super) {
                             page: _this.state.page - 1
                         };
                     });
+                    window.scrollTo(0, 0);
                 }
                 break;
             default:
@@ -49394,9 +49452,9 @@ var EquipementsPage = /** @class */ (function (_super) {
                         page: action
                     };
                 });
+                window.scrollTo(0, 0);
                 break;
         }
-        window.scrollTo(0, 0);
     };
     EquipementsPage.prototype.changeSearchConstraint = function (event) {
         var _this = this;
@@ -49431,13 +49489,34 @@ var EquipementsPage = /** @class */ (function (_super) {
             if (item[itemStats].max >= 0) {
                 cssColor = ' text-success';
             }
-            if (itemStats !== 'level' && itemStats !== 'set' && itemStats !== 'name' && itemStats !== 'key' && itemStats !== 'special') {
+            if (this.state.type === Enums_1.EquipementTypes.weapon && (itemStats.includes('weaponNeutralDamage') || itemStats.includes('weaponAirDamage') || itemStats.includes('weaponEarthSteal') ||
+                itemStats.includes('weaponEarthDamage') || itemStats.includes('weaponAirSteal') || itemStats.includes('weaponWaterDamage') || itemStats.includes('weaponFireDamage') ||
+                itemStats.includes('weaponWaterSteal') || itemStats.includes('weaponFireSteal') || itemStats.includes('weaponNeutralSteal'))) {
+                StatsHTML.push(React.createElement(React.Fragment, { key: itemStats },
+                    React.createElement("small", { className: "text-info" },
+                        item[itemStats].min,
+                        " \u00E0 ",
+                        item[itemStats].max,
+                        " ",
+                        FormatStats_1.default(itemStats)),
+                    React.createElement("br", null)));
+            }
+            else if (itemStats === 'strengthMoreThan' || itemStats === 'agilityMoreThan' || itemStats == 'waterMoreThan' || itemStats === 'intelligenceMoreThan' || itemStats === 'luckMoreThan' ||
+                itemStats === 'apCondition') {
+                StatsHTML.push(React.createElement(React.Fragment, { key: itemStats },
+                    React.createElement("small", { className: "text-warning" },
+                        FormatStats_1.formatCondition(itemStats),
+                        " ",
+                        item[itemStats]),
+                    React.createElement("br", null)));
+            }
+            else if (itemStats !== 'level' && itemStats !== 'set' && itemStats !== 'name' && itemStats !== 'key' && !itemStats.includes('special') && itemStats !== 'apCost' && itemStats !== 'weaponRange' &&
+                itemStats !== 'cc' && itemStats !== 'ccBonus' && itemStats !== 'type') {
                 StatsHTML.push(React.createElement(React.Fragment, { key: itemStats },
                     React.createElement("small", { className: cssColor }, (item[itemStats].max === undefined ? '' : item[itemStats].max) + FormatStats_1.default(itemStats)),
                     React.createElement("br", null)));
             }
         }
-        // TODO bad code, fix it
         for (var i = 1; i <= 4; i++) {
             if (item['special' + (i === 1 ? '' : i)]) {
                 StatsHTML.push(React.createElement(React.Fragment, { key: item['special' + (i === 1 ? '' : i)] },
@@ -49459,15 +49538,37 @@ var EquipementsPage = /** @class */ (function (_super) {
         }
         var _loop_1 = function (i) {
             EquipementsHTML.push(React.createElement("div", { className: "row-sm", key: i },
-                React.createElement(react_router_dom_1.Link, { to: "/create", onClick: function () { return _this.props.addItem(_this.state.type, i); } },
+                React.createElement(react_router_dom_1.Link, { to: "/create", onClick: function () { return _this.props.addItem(_this.state.type, _this.state.itemsWithSearchConstraint[i].key); } },
                     React.createElement("div", { className: "card bg-dark shadow mb-3" },
                         React.createElement("div", { className: "row no-gutters" },
                             React.createElement("div", { className: "col-md-4 border-warning" },
-                                React.createElement("p", { className: "text-white text-center p-margin" },
+                                React.createElement("p", { className: "text-white text-center mb-0" },
                                     React.createElement("small", null,
                                         "Niveau ",
                                         this_1.state.itemsWithSearchConstraint[i].level)),
-                                React.createElement("img", { src: '../../assets/dofus/items/' + ItemsHelper_1.getUrlNameFromType(this_1.state.type) + '/' + this_1.state.itemsWithSearchConstraint[i].key + '.png', className: "card-img" })),
+                                React.createElement("img", { src: '../../assets/dofus/items/' + ItemsHelper_1.getUrlNameFromType(this_1.state.type) + '/' + this_1.state.itemsWithSearchConstraint[i].key + '.png', className: "card-img" }),
+                                this_1.state.type === Enums_1.EquipementTypes.weapon ?
+                                    React.createElement(React.Fragment, null,
+                                        React.createElement("p", { className: "text-white ml-3 mb-0" },
+                                            React.createElement("small", null,
+                                                "Type : ",
+                                                FormatStats_1.formatType(this_1.state.itemsWithSearchConstraint[i].type))),
+                                        React.createElement("p", { className: "text-white ml-3 mb-0" },
+                                            React.createElement("small", null,
+                                                "PA : ",
+                                                this_1.state.itemsWithSearchConstraint[i].apCost)),
+                                        React.createElement("p", { className: "text-white ml-3 mb-0" },
+                                            React.createElement("small", null,
+                                                "Port\u00E9e : ",
+                                                this_1.state.itemsWithSearchConstraint[i].weaponRange)),
+                                        React.createElement("p", { className: "text-white ml-3 mb-0" },
+                                            React.createElement("small", null,
+                                                "CC : ",
+                                                this_1.state.itemsWithSearchConstraint[i].cc,
+                                                " (+",
+                                                this_1.state.itemsWithSearchConstraint[i].ccBonus,
+                                                ")")))
+                                    : ''),
                             React.createElement("div", { className: "col-md-8" },
                                 React.createElement("div", { className: "card-body" },
                                     React.createElement("h6", { className: "card-title text-white font-weight-bold" }, this_1.state.itemsWithSearchConstraint[i].name),

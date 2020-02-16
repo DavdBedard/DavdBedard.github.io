@@ -339,6 +339,20 @@ exports.Page = {
     previous: -1,
     next: 0
 };
+exports.Stats = {
+    vitalityEntered: 0,
+    wisdomEntered: 1,
+    intelligenceEntered: 2,
+    strengthEntered: 3,
+    luckEntered: 4,
+    agilityEntered: 5,
+    vitalityScroll: 6,
+    wisdomScroll: 7,
+    intelligenceScroll: 8,
+    strengthScroll: 9,
+    luckScroll: 10,
+    agilityScroll: 11
+};
 
 
 /***/ }),
@@ -2813,8 +2827,21 @@ var ActionTypes;
     ActionTypes["ADD_DOFUS_FOUR"] = "ADD_DOFUS_FOUR";
     ActionTypes["ADD_DOFUS_FIVE"] = "ADD_DOFUS_FIVE";
     ActionTypes["ADD_DOFUS_SIX"] = "ADD_DOFUS_SIX";
+    ActionTypes["ADD_VITALITY_SCROLL"] = "ADD_VITALITY_SCROLL";
+    ActionTypes["ADD_VITALITY_ENTERED"] = "ADD_VITALITY_ENTERED";
+    ActionTypes["ADD_WISDOM_SCROLL"] = "ADD_WISDOM_SCROLL";
+    ActionTypes["ADD_WISDOM_ENTERED"] = "ADD_WISDOM_ENTERED";
+    ActionTypes["ADD_INTELLIGENCE_SCROLL"] = "ADD_INTELLIGENCE_SCROLL";
+    ActionTypes["ADD_INTELLIGENCE_ENTERED"] = "ADD_INTELLIGENCE_ENTERED";
+    ActionTypes["ADD_STRENGTH_SCROLL"] = "ADD_STRENGTH_SCROLL";
+    ActionTypes["ADD_STRENGTH_ENTERED"] = "ADD_STRENGTH_ENTERED";
+    ActionTypes["ADD_LUCK_SCROLL"] = "ADD_LUCK_SCROLL";
+    ActionTypes["ADD_LUCK_ENTERED"] = "ADD_LUCK_ENTERED";
+    ActionTypes["ADD_AGILITY_SCROLL"] = "ADD_AGILITY_SCROLL";
+    ActionTypes["ADD_AGILITY_ENTERED"] = "ADD_AGILITY_ENTERED";
     ActionTypes["SAVE_BUILD_SUCCESS"] = "SAVE_BUILD_SUCCESS";
     ActionTypes["SAVE_BUILD_FAILURE"] = "SAVE_BUILD_FAILURE";
+    ActionTypes["DELETE_BUILD_SUCCESS"] = "DELETE_BUILD_SUCCESS";
     ActionTypes["UPDATE_SPELL_OR_VARIANT"] = "UPDATE_SPELL_OR_VARIANT";
     ActionTypes["DEFAULT_SPELL_OR_VARIANT"] = "DEFAULT_SPELL_OR_VARIANT";
     ActionTypes["CHANGE_CLASS"] = "CHANGE_CLASS";
@@ -2876,6 +2903,51 @@ exports.addItem = function (type, itemId) {
         payload: itemId
     };
 };
+exports.addStat = function (statType, value) {
+    var actionType;
+    switch (statType) {
+        case Enums_1.Stats.vitalityEntered:
+            actionType = ActionTypes.ADD_VITALITY_ENTERED;
+            break;
+        case Enums_1.Stats.wisdomEntered:
+            actionType = ActionTypes.ADD_WISDOM_ENTERED;
+            break;
+        case Enums_1.Stats.intelligenceEntered:
+            actionType = ActionTypes.ADD_INTELLIGENCE_ENTERED;
+            break;
+        case Enums_1.Stats.strengthEntered:
+            actionType = ActionTypes.ADD_STRENGTH_ENTERED;
+            break;
+        case Enums_1.Stats.luckEntered:
+            actionType = ActionTypes.ADD_LUCK_ENTERED;
+            break;
+        case Enums_1.Stats.agilityEntered:
+            actionType = ActionTypes.ADD_AGILITY_ENTERED;
+            break;
+        case Enums_1.Stats.vitalityScroll:
+            actionType = ActionTypes.ADD_VITALITY_SCROLL;
+            break;
+        case Enums_1.Stats.wisdomScroll:
+            actionType = ActionTypes.ADD_WISDOM_SCROLL;
+            break;
+        case Enums_1.Stats.intelligenceScroll:
+            actionType = ActionTypes.ADD_INTELLIGENCE_SCROLL;
+            break;
+        case Enums_1.Stats.strengthScroll:
+            actionType = ActionTypes.ADD_STRENGTH_SCROLL;
+            break;
+        case Enums_1.Stats.luckScroll:
+            actionType = ActionTypes.ADD_LUCK_SCROLL;
+            break;
+        case Enums_1.Stats.agilityScroll:
+            actionType = ActionTypes.ADD_AGILITY_SCROLL;
+            break;
+    }
+    return {
+        type: actionType,
+        payload: value
+    };
+};
 exports.saveBuild = function (build) {
     return function (dispatch) {
         axios_1.default.post(ApiConstants_1.ApiConstants.API_URL + 'builds/', build)
@@ -2894,6 +2966,12 @@ exports.saveBuild = function (build) {
                 payload: ((error.response && error.response.status) || '503')
             });
         });
+    };
+};
+exports.deleteBuildUserNotConnected = function () {
+    return {
+        type: ActionTypes.DELETE_BUILD_SUCCESS,
+        payload: null
     };
 };
 exports.updateSpellOrVariant = function (spellOrVariant) {
@@ -3919,7 +3997,7 @@ module.exports = defaults;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var url = 'http://localhost:2052/'; //https://dofusbuilds.com:2052/';
+var url = 'https://dofusbuilds.com:2052/';
 /*if (process.env.API_PROD_URL !== undefined) {
     url = process.env.API_PROD_URL;
 }*/
@@ -9871,6 +9949,7 @@ function computeStats(build, stats) {
     }
 }
 exports.default = computeStats;
+//export function addManualStats()
 function formatItemsType(type) {
     switch (type) {
         case 'dofusOne':
@@ -9947,7 +10026,7 @@ var StatsComponent = /** @class */ (function (_super) {
                                                 React.createElement("td", null,
                                                     React.createElement("p", { className: "card-text" }, "Vitalit\u00E9")))))),
                                 React.createElement("td", null,
-                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.vitality))),
+                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.vitality + this.props.stats.vitalityScroll + this.props.stats.vitalityEntered))),
                             React.createElement("tr", null,
                                 React.createElement("td", null,
                                     React.createElement("table", null,
@@ -10071,7 +10150,7 @@ var StatsComponent = /** @class */ (function (_super) {
                                                 React.createElement("td", null,
                                                     React.createElement("p", { className: "card-text" }, "Sagesse")))))),
                                 React.createElement("td", null,
-                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.wisdom))),
+                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.wisdom + this.props.stats.wisdomScroll + this.props.stats.wisdomEntered))),
                             React.createElement("tr", null,
                                 React.createElement("td", null,
                                     React.createElement("table", null,
@@ -10082,7 +10161,7 @@ var StatsComponent = /** @class */ (function (_super) {
                                                 React.createElement("td", null,
                                                     React.createElement("p", { className: "card-text" }, "Force")))))),
                                 React.createElement("td", null,
-                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.strength))),
+                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.strength + this.props.stats.strengthScroll + this.props.stats.strengthEntered))),
                             React.createElement("tr", null,
                                 React.createElement("td", null,
                                     React.createElement("table", null,
@@ -10093,18 +10172,18 @@ var StatsComponent = /** @class */ (function (_super) {
                                                 React.createElement("td", null,
                                                     React.createElement("p", { className: "card-text" }, "Intelligence")))))),
                                 React.createElement("td", null,
-                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.intelligence))),
+                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.intelligence + this.props.stats.intelligenceScroll + this.props.stats.intelligenceEntered))),
                             React.createElement("tr", null,
                                 React.createElement("td", null,
                                     React.createElement("table", null,
                                         React.createElement("tbody", null,
                                             React.createElement("tr", null,
                                                 React.createElement("td", { className: "td-w" },
-                                                    React.createElement("div", { className: "stats-img chance" })),
+                                                    React.createElement("div", { className: "stats-img luck" })),
                                                 React.createElement("td", null,
                                                     React.createElement("p", { className: "card-text" }, "Chance")))))),
                                 React.createElement("td", null,
-                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.chance))),
+                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.luck + this.props.stats.luckScroll + this.props.stats.luckEntered))),
                             React.createElement("tr", null,
                                 React.createElement("td", null,
                                     React.createElement("table", null,
@@ -10115,7 +10194,7 @@ var StatsComponent = /** @class */ (function (_super) {
                                                 React.createElement("td", null,
                                                     React.createElement("p", { className: "card-text" }, "Agilit\u00E9")))))),
                                 React.createElement("td", null,
-                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.agility))))),
+                                    React.createElement("p", { className: "card-text float-right" }, this.props.stats.agility + this.props.stats.agilityScroll + this.props.stats.agilityEntered))))),
                     React.createElement("h5", { className: "card-title mt-2 mb-1" }, "Esquives"),
                     React.createElement("table", null,
                         React.createElement("tbody", null,
@@ -55766,6 +55845,7 @@ var StatsComponent_1 = __webpack_require__(86);
 var BuildEquipementsContainer_1 = __webpack_require__(87);
 var InformationsContainer_1 = __webpack_require__(263);
 var SpellsComponent_1 = __webpack_require__(93);
+var Enums_1 = __webpack_require__(2);
 var BuildCreationPage = /** @class */ (function (_super) {
     __extends(BuildCreationPage, _super);
     function BuildCreationPage(props) {
@@ -55786,7 +55866,7 @@ var BuildCreationPage = /** @class */ (function (_super) {
                 wisdom: 0,
                 strength: 0,
                 intelligence: 0,
-                chance: 0,
+                luck: 0,
                 agility: 0,
                 apParry: 0,
                 mpParry: 0,
@@ -55822,13 +55902,33 @@ var BuildCreationPage = /** @class */ (function (_super) {
                 criticalResistance: 0,
                 rangedResistance: 0,
                 meleeResistance: 0,
-                reflectDamage: 0
+                reflectDamage: 0,
+                vitalityEntered: 0,
+                wisdomEntered: 0,
+                intelligenceEntered: 0,
+                strengthEntered: 0,
+                luckEntered: 0,
+                agilityEntered: 0,
+                vitalityScroll: 100,
+                wisdomScroll: 100,
+                intelligenceScroll: 100,
+                strengthScroll: 100,
+                luckScroll: 100,
+                agilityScroll: 100
             },
             update: false
         };
         _this.updateOnClassChange = _this.updateOnClassChange.bind(_this);
+        _this.updateStatsCallBack = _this.updateStatsCallBack.bind(_this);
         ComputeStats_1.default(_this.props.build, _this.state.stats);
+        var newStatsState = _this.state.stats;
+        newStatsState['vitalityScroll'] += _this.props.build.vitalityScroll;
         return _this;
+        /*this.setState(() => {
+            return {
+                stats: newStatsState
+            };
+        });*/
     }
     BuildCreationPage.prototype.componentWillUnmount = function () {
         this.props.readStatus(true);
@@ -55841,6 +55941,119 @@ var BuildCreationPage = /** @class */ (function (_super) {
             };
         });
     };
+    BuildCreationPage.prototype.updateStatsCallBack = function (statType) {
+        var newStatsState;
+        switch (statType) {
+            case Enums_1.Stats.vitalityEntered:
+                newStatsState = this.state.stats;
+                newStatsState['vitalityEntered'] = this.props.build.vitalityEntered;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.wisdomEntered:
+                newStatsState = this.state.stats;
+                newStatsState['wisdomEntered'] = this.props.build.wisdomEntered;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.intelligenceEntered:
+                newStatsState = this.state.stats;
+                newStatsState['intelligenceEntered'] = this.props.build.intelligenceEntered;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.strengthEntered:
+                newStatsState = this.state.stats;
+                newStatsState['strengthEntered'] = this.props.build.strengthEntered;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.luckEntered:
+                newStatsState = this.state.stats;
+                newStatsState['luckEntered'] = this.props.build.luckEntered;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.agilityEntered:
+                newStatsState = this.state.stats;
+                newStatsState['agilityEntered'] = this.props.build.agilityEntered;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.vitalityScroll:
+                newStatsState = this.state.stats;
+                newStatsState['vitalityScroll'] = this.props.build.vitalityScroll;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.wisdomScroll:
+                newStatsState = this.state.stats;
+                newStatsState['wisdomScroll'] = this.props.build.wisdomScroll;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.intelligenceScroll:
+                newStatsState = this.state.stats;
+                newStatsState['intelligenceScroll'] = this.props.build.intelligenceScroll;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.strengthScroll:
+                newStatsState = this.state.stats;
+                newStatsState['strengthScroll'] = this.props.build.strengthScroll;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.luckScroll:
+                newStatsState = this.state.stats;
+                newStatsState['luckScroll'] = this.props.build.luckScroll;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+            case Enums_1.Stats.agilityScroll:
+                newStatsState = this.state.stats;
+                newStatsState['agilityScroll'] = this.props.build.agilityScroll;
+                this.setState(function () {
+                    return {
+                        stats: newStatsState
+                    };
+                });
+                break;
+        }
+    };
     BuildCreationPage.prototype.render = function () {
         return (React.createElement("div", { className: "container-fluid container-fluid-build" },
             React.createElement("div", { className: "row" },
@@ -55851,7 +56064,7 @@ var BuildCreationPage = /** @class */ (function (_super) {
                         React.createElement("div", { className: "col-lg-8" },
                             React.createElement(BuildEquipementsContainer_1.default, { build: this.props.build, updateParent: this.updateOnClassChange })),
                         React.createElement("div", { className: "col d-flex" },
-                            React.createElement(InformationsContainer_1.default, { connectedUser: this.props.connectedUser, build: this.props.build, other: this.props.other }))),
+                            React.createElement(InformationsContainer_1.default, { connectedUser: this.props.connectedUser, build: this.props.build, other: this.props.other, updateStatsCallBack: this.updateStatsCallBack }))),
                     React.createElement("div", { className: "row" },
                         React.createElement("div", { className: "col" },
                             React.createElement("div", { className: "card text-white bg-black-gray shadow-lg" },
@@ -55903,7 +56116,7 @@ exports = module.exports = __webpack_require__(15)(true);
 
 
 // module
-exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.modal-header {\n  border-bottom: none; }\n\n.modal-content {\n  color: white;\n  background-color: #27282E;\n  margin: auto auto;\n  padding: 20px;\n  width: 80%; }\n\n.bg-black {\n  background-color: #010102; }\n\n.bg-black-gray {\n  background-color: #1F1F1F; }\n\n.bg-black-gray-darker {\n  background-color: #121212; }\n\n.bg-blue-dark {\n  background-color: #09090F; }\n\n.red {\n  color: #FF4136; }\n\n.blue {\n  color: #7FDBFF; }\n\n.green {\n  color: #2ECC40; }\n\n.brown {\n  color: Peru; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.box:hover {\n  filter: brightness(75%); }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.spell-text {\n  margin-bottom: 5px; }\n\n.share-input {\n  color: white;\n  width: 100%;\n  padding: 12px 4px;\n  margin: 8px 0;\n  border-color: transparent;\n  outline-color: transparent; }\n\n.card-header {\n  padding: 0;\n  border-bottom: none; }\n\n.spell-more {\n  flex-grow: 100; }\n\n.card-header-class {\n  padding: .75rem 1.25rem;\n  margin-bottom: 0;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }\n\n.clickable {\n  cursor: pointer; }\n\n.td-w {\n  width: 22px; }\n\n.spell-description {\n  display: block;\n  font-size: 80%;\n  font-style: italic; }\n\n.border-gray {\n  border-color: #6c757d !important; }\n\n.legend {\n  width: auto;\n  padding: 0 10px;\n  border-bottom: none;\n  font-size: 1rem; }\n\n#hover-filter:hover {\n  filter: brightness(75%); }\n\n.stats-img {\n  background-image: url(" + __webpack_require__(240) + ");\n  background-position-x: -97px;\n  width: 22px;\n  height: 22px; }\n\n.vitality {\n  background-position-y: -319px; }\n\n.ap {\n  background-position-y: -243px; }\n\n.mp {\n  background-position-y: -52px; }\n\n.range {\n  background-position-y: -128px; }\n\n.initiative {\n  background-position-y: -205px; }\n\n.summon {\n  background-position-y: -507px; }\n\n.critical {\n  background-position-y: -589px; }\n\n.heal {\n  background-position-y: -966px; }\n\n.lock {\n  background-position-y: -545px; }\n\n.dodge {\n  background-position-y: -468px; }\n\n.prospecting {\n  background-position-y: -279px; }\n\n.wisdom {\n  background-position-y: -358px; }\n\n.strength {\n  background-position-y: -432px; }\n\n.intelligence {\n  background-position-y: -394px; }\n\n.chance {\n  background-position-y: -89px; }\n\n.agility {\n  background-position-y: -167px; }\n\n.ap-parry {\n  background-position-y: -1064px; }\n\n.mp-parry {\n  background-position-y: -1016px; }\n\n.ap-reduction {\n  background-position-y: -1297px; }\n\n.mp-reduction {\n  background-position-y: -1340px; }\n\n.power {\n  background-position-y: -1108px; }\n\n.damage {\n  background-position-y: -1156px; }\n\n.power-trap {\n  background-position-y: -673px; }\n\n.critical-damage {\n  background-position-y: -1248px; }\n\n.neutral-damage {\n  background-position-y: -15px; }\n\n.trap-damage {\n  background-position-y: -712px; }\n\n.pushback-damage {\n  background-position-y: -872px; }\n\n.pushback-resistance {\n  background-position-y: -832px; }\n\n.critical-resistance {\n  background-position-y: -1200px; }\n\n.reflect {\n  background-position-y: -791px; }\n\n.classes {\n  background-image: url(" + __webpack_require__(241) + ");\n  width: 54px;\n  height: 54px; }\n\n.classes:hover {\n  background-position-x: 0px; }\n\n.ecaflip {\n  background-position-x: -56px;\n  background-position-y: -623px; }\n\n.eniripsa {\n  background-position-x: -56px;\n  background-position-y: -680px; }\n\n.iop {\n  background-position-x: -56px;\n  background-position-y: -737px; }\n\n.cra {\n  background-position-x: -56px;\n  background-position-y: -793px; }\n\n.feca {\n  background-position-x: -56px;\n  background-position-y: 0px; }\n\n.sacrier {\n  background-position-x: -56px;\n  background-position-y: -114px; }\n\n.sadida {\n  background-position-x: -56px;\n  background-position-y: -57px; }\n\n.osamodas {\n  background-position-x: -56px;\n  background-position-y: -397px; }\n\n.enutrof {\n  background-position-x: -56px;\n  background-position-y: -453px; }\n\n.sram {\n  background-position-x: -56px;\n  background-position-y: -510px; }\n\n.xelor {\n  background-position-x: -56px;\n  background-position-y: -567px; }\n\n.pandawa {\n  background-position-x: -56px;\n  background-position-y: -169px; }\n\n.rogue {\n  background-position-x: -56px;\n  background-position-y: -227px; }\n\n.masqueraider {\n  background-position-x: -56px;\n  background-position-y: -284px; }\n\n.foggernauts {\n  background-position-x: -56px;\n  background-position-y: -340px; }\n\n.eliotrope {\n  background-position-x: -56px;\n  background-position-y: -850px; }\n\n.huppermage {\n  background-position-x: -56px;\n  background-position-y: -910px; }\n\n.ouginak {\n  background-position-x: -56px;\n  background-position-y: -965px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAMA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EACpB;;AAED;EACI,oBAAmB,EACtB;;AAED;EACI,aAAY;EACZ,0BAAyB;EACzB,kBAAiB;EACjB,cAAa;EACb,WAAU,EACb;;AAED;EACI,0BAvCW,EAwCd;;AAED;EACI,0BAzCe,EA0ClB;;AAED;EACI,0BA5CqB,EA6CxB;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAClB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,0BAAyB;EACzB,2BAA0B,EAC7B;;AAED;EACI,WAAU;EACV,oBAAmB,EACtB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,wBAAuB;EACvB,iBAAgB;EAChB,8CAA6C,EAChD;;AAED;EACI,gBAAe,EAClB;;AAED;EACI,YAAW,EACd;;AAED;EACI,eAAc;EACd,eAAc;EACd,mBAAkB,EACrB;;AAED;EACI,iCAAgC,EACnC;;AAED;EACI,YAAW;EACX,gBAAc;EACd,oBAAmB;EACnB,gBAAe,EAClB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,gDAA+D;EAC/D,6BAA4B;EAC5B,YAAW;EACX,aAAY,EACf;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,gDAAsE;EACtE,YAAW;EACX,aAAY,EACf;;AAED;EACI,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,6BAA4B,EAC/B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC","file":"BuildCreation.scss","sourcesContent":["$black: #010102;\r\n$blueDark: #09090F;\r\n$blackGray: #1F1F1F;\r\n$blackGrayDarker: #121212;\r\n$bgDark: #343a40; \r\n\r\n.main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n}\r\n\r\n.modal-header {\r\n    border-bottom: none;\r\n}\r\n\r\n.modal-content {\r\n    color: white;\r\n    background-color: #27282E;\r\n    margin: auto auto;\r\n    padding: 20px;\r\n    width: 80%;\r\n}\r\n\r\n.bg-black {\r\n    background-color: $black;\r\n}\r\n\r\n.bg-black-gray {\r\n    background-color: $blackGray;\r\n}\r\n\r\n.bg-black-gray-darker {\r\n    background-color: $blackGrayDarker;\r\n}\r\n\r\n.bg-blue-dark {\r\n    background-color: #09090F;\r\n}\r\n\r\n.red {\r\n    color: #FF4136;\r\n}\r\n\r\n.blue {\r\n    color: #7FDBFF;\r\n}\r\n\r\n.green {\r\n    color: #2ECC40;\r\n}\r\n\r\n.brown {\r\n    color: Peru;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n}\r\n\r\n.box:hover {\r\n    filter: brightness(75%);\r\n}\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.share-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 4px;\r\n    margin: 8px 0;\r\n    border-color: transparent;\r\n    outline-color: transparent;\r\n}\r\n\r\n.card-header {\r\n    padding: 0;\r\n    border-bottom: none;\r\n}\r\n\r\n.spell-more {\r\n    flex-grow: 100;\r\n}\r\n\r\n.card-header-class {\r\n    padding: .75rem 1.25rem;\r\n    margin-bottom: 0;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.125);\r\n}\r\n\r\n.clickable {\r\n    cursor: pointer;\r\n}\r\n\r\n.td-w {\r\n    width: 22px;\r\n}\r\n\r\n.spell-description {\r\n    display: block;\r\n    font-size: 80%;\r\n    font-style: italic;\r\n}\r\n\r\n.border-gray {\r\n    border-color: #6c757d !important;\r\n}\r\n\r\n.legend {\r\n    width: auto;\r\n    padding:0 10px;\r\n    border-bottom: none;\r\n    font-size: 1rem;\r\n}\r\n\r\n#hover-filter:hover {\r\n    filter: brightness(75%);\r\n}\r\n\r\n.stats-img {\r\n    background-image: url('../../assets/dofus/elements/sprite.png');\r\n    background-position-x: -97px;\r\n    width: 22px;\r\n    height: 22px;\r\n}\r\n\r\n.vitality {\r\n    background-position-y: -319px;\r\n}\r\n\r\n.ap {\r\n    background-position-y: -243px;\r\n}\r\n\r\n.mp {\r\n    background-position-y: -52px;\r\n}\r\n\r\n.range {\r\n    background-position-y: -128px;\r\n}\r\n\r\n.initiative {\r\n    background-position-y: -205px;\r\n}\r\n\r\n.summon {\r\n    background-position-y: -507px;\r\n}\r\n\r\n.critical {\r\n    background-position-y: -589px;\r\n}\r\n\r\n.heal {\r\n    background-position-y: -966px;\r\n}\r\n\r\n.lock {\r\n    background-position-y: -545px;\r\n}\r\n\r\n.dodge {\r\n    background-position-y: -468px;\r\n}\r\n\r\n.prospecting {\r\n    background-position-y: -279px;\r\n}\r\n\r\n.wisdom {\r\n    background-position-y: -358px;\r\n}\r\n\r\n.strength {\r\n    background-position-y: -432px;\r\n}\r\n\r\n.intelligence {\r\n    background-position-y: -394px;\r\n}\r\n\r\n.chance {\r\n    background-position-y: -89px;\r\n}\r\n\r\n.agility {\r\n    background-position-y: -167px;\r\n}\r\n\r\n.ap-parry {\r\n    background-position-y: -1064px;\r\n}\r\n\r\n.mp-parry {\r\n    background-position-y: -1016px;\r\n}\r\n\r\n.ap-reduction {\r\n    background-position-y: -1297px;\r\n}\r\n\r\n.mp-reduction {\r\n    background-position-y: -1340px;\r\n}\r\n\r\n.power {\r\n    background-position-y: -1108px;\r\n}\r\n\r\n.damage {\r\n    background-position-y: -1156px;\r\n}\r\n\r\n.power-trap {\r\n    background-position-y: -673px;\r\n}\r\n\r\n.critical-damage {\r\n    background-position-y: -1248px;\r\n}\r\n\r\n.neutral-damage {\r\n    background-position-y: -15px;\r\n}\r\n\r\n.trap-damage {\r\n    background-position-y: -712px;\r\n}\r\n\r\n.pushback-damage {\r\n    background-position-y: -872px;\r\n}\r\n\r\n.pushback-resistance {\r\n    background-position-y: -832px;\r\n}\r\n\r\n.critical-resistance {\r\n    background-position-y: -1200px;\r\n}\r\n\r\n.reflect {\r\n    background-position-y: -791px;\r\n}\r\n\r\n.classes { \r\n    background-image: url('../../assets/dofus/characters/all/classes.png');\r\n    width: 54px;\r\n    height: 54px;\r\n}\r\n\r\n.classes:hover {\r\n    background-position-x: 0px;\r\n}\r\n\r\n.ecaflip { \r\n    background-position-x: -56px;\r\n    background-position-y: -623px;\r\n}\r\n\r\n.eniripsa {\r\n    background-position-x: -56px;\r\n    background-position-y: -680px;\r\n}\r\n\r\n.iop {\r\n    background-position-x: -56px;\r\n    background-position-y: -737px;\r\n}\r\n\r\n.cra {\r\n    background-position-x: -56px;\r\n    background-position-y: -793px;\r\n}\r\n\r\n.feca {\r\n    background-position-x: -56px;\r\n    background-position-y: 0px;\r\n}\r\n\r\n.sacrier {\r\n    background-position-x: -56px;\r\n    background-position-y: -114px;\r\n}\r\n\r\n.sadida {\r\n    background-position-x: -56px;\r\n    background-position-y: -57px;\r\n}\r\n\r\n.osamodas {\r\n    background-position-x: -56px;\r\n    background-position-y: -397px;\r\n}\r\n\r\n.enutrof {\r\n    background-position-x: -56px;\r\n    background-position-y: -453px;\r\n}\r\n\r\n.sram {\r\n    background-position-x: -56px;\r\n    background-position-y: -510px;\r\n}\r\n\r\n.xelor {\r\n    background-position-x: -56px;\r\n    background-position-y: -567px;\r\n}\r\n\r\n.pandawa {\r\n    background-position-x: -56px;\r\n    background-position-y: -169px;\r\n}\r\n\r\n.rogue {\r\n    background-position-x: -56px;\r\n    background-position-y: -227px;\r\n}\r\n\r\n.masqueraider {\r\n    background-position-x: -56px;\r\n    background-position-y: -284px;\r\n}\r\n\r\n.foggernauts {\r\n    background-position-x: -56px;\r\n    background-position-y: -340px;\r\n}\r\n\r\n.eliotrope {\r\n    background-position-x: -56px;\r\n    background-position-y: -850px;\r\n}\r\n\r\n.huppermage {\r\n    background-position-x: -56px;\r\n    background-position-y: -910px;\r\n}\r\n\r\n.ouginak {\r\n    background-position-x: -56px;\r\n    background-position-y: -965px;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".main-color {\n  color: #ffd800; }\n\ntable {\n  width: 100%; }\n\ntextarea {\n  outline: none;\n  resize: none;\n  overflow: hidden;\n  border-color: Transparent;\n  color: white; }\n\n.container-fluid-build {\n  max-width: 1200px; }\n\n.modal-header {\n  border-bottom: none; }\n\n.modal-content {\n  color: white;\n  background-color: #27282E;\n  margin: auto auto;\n  padding: 20px;\n  width: 80%; }\n\n.bg-black {\n  background-color: #010102; }\n\n.bg-black-gray {\n  background-color: #1F1F1F; }\n\n.bg-black-gray-darker {\n  background-color: #121212; }\n\n.bg-blue-dark {\n  background-color: #09090F; }\n\n.red {\n  color: #FF4136; }\n\n.blue {\n  color: #7FDBFF; }\n\n.green {\n  color: #2ECC40; }\n\n.brown {\n  color: Peru; }\n\na:hover, a:visited, a:link, a:active {\n  text-decoration: none; }\n\n.wrapper {\n  display: grid;\n  grid-template-columns: 100px 100px 100px;\n  grid-gap: 10px;\n  color: #444; }\n\n.box {\n  background-color: #444;\n  color: #fff;\n  border-radius: 5px;\n  font-size: 150%; }\n\n.box:hover {\n  filter: brightness(75%); }\n\n.grid-container {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.grid-item {\n  font-size: 30px;\n  color: white;\n  text-align: center; }\n\n.grid-container-a {\n  display: grid;\n  grid-gap: 10px 10px;\n  grid-template-columns: auto 50% auto;\n  grid-template-rows: auto auto auto;\n  padding: 10px; }\n\n.item-a {\n  grid-column-start: 2;\n  grid-column-end: 3;\n  grid-row-start: row1-start;\n  grid-row-end: 1; }\n\n.img-size {\n  height: 36px;\n  width: 36px; }\n\n.share-size {\n  height: 34px;\n  width: 34px; }\n\n.p-margin {\n  margin-bottom: 0px; }\n\n.col-padding {\n  padding-left: 0px;\n  padding-top: 2px; }\n\n.fill-width {\n  width: 100%; }\n\n.max-width {\n  max-width: 300px; }\n\n.link {\n  color: #FFF; }\n\n.link:hover {\n  color: #ffd800 !important; }\n\n.item-img-size {\n  height: 84px;\n  width: 84px;\n  margin-left: 17px; }\n\n.popover {\n  background-color: black; }\n\n.popover > .arrow::after {\n  border-color: black;\n  opacity: 0; }\n\n.item-stats {\n  color: white; }\n\n.spell-text {\n  margin-bottom: 5px; }\n\n.share-input {\n  color: white;\n  width: 100%;\n  padding: 12px 4px;\n  margin: 8px 0;\n  border-color: transparent;\n  outline-color: transparent; }\n\n.stats-input {\n  color: white;\n  width: 80%;\n  float: right;\n  border-color: transparent;\n  outline-color: transparent; }\n\n.card-header {\n  padding: 0;\n  border-bottom: none; }\n\n.spell-more {\n  flex-grow: 100; }\n\n.card-header-class {\n  padding: .75rem 1.25rem;\n  margin-bottom: 0;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }\n\n.clickable {\n  cursor: pointer; }\n\n.td-w {\n  width: 22px; }\n\n.td-w-1 {\n  width: 1%; }\n\n.spell-description {\n  display: block;\n  font-size: 80%;\n  font-style: italic; }\n\n.border-gray {\n  border-color: #6c757d !important; }\n\n.legend {\n  width: auto;\n  padding: 0 10px;\n  border-bottom: none;\n  font-size: 1rem; }\n\n#hover-filter:hover {\n  filter: brightness(75%); }\n\n.stats-img {\n  background-image: url(" + __webpack_require__(240) + ");\n  background-position-x: -97px;\n  width: 22px;\n  height: 22px; }\n\n.vitality {\n  background-position-y: -319px; }\n\n.ap {\n  background-position-y: -243px; }\n\n.mp {\n  background-position-y: -52px; }\n\n.range {\n  background-position-y: -128px; }\n\n.initiative {\n  background-position-y: -205px; }\n\n.summon {\n  background-position-y: -507px; }\n\n.critical {\n  background-position-y: -589px; }\n\n.heal {\n  background-position-y: -966px; }\n\n.lock {\n  background-position-y: -545px; }\n\n.dodge {\n  background-position-y: -468px; }\n\n.prospecting {\n  background-position-y: -279px; }\n\n.wisdom {\n  background-position-y: -358px; }\n\n.strength {\n  background-position-y: -432px; }\n\n.intelligence {\n  background-position-y: -394px; }\n\n.luck {\n  background-position-y: -89px; }\n\n.agility {\n  background-position-y: -167px; }\n\n.ap-parry {\n  background-position-y: -1064px; }\n\n.mp-parry {\n  background-position-y: -1016px; }\n\n.ap-reduction {\n  background-position-y: -1297px; }\n\n.mp-reduction {\n  background-position-y: -1340px; }\n\n.power {\n  background-position-y: -1108px; }\n\n.damage {\n  background-position-y: -1156px; }\n\n.power-trap {\n  background-position-y: -673px; }\n\n.critical-damage {\n  background-position-y: -1248px; }\n\n.neutral-damage {\n  background-position-y: -15px; }\n\n.trap-damage {\n  background-position-y: -712px; }\n\n.pushback-damage {\n  background-position-y: -872px; }\n\n.pushback-resistance {\n  background-position-y: -832px; }\n\n.critical-resistance {\n  background-position-y: -1200px; }\n\n.reflect {\n  background-position-y: -791px; }\n\n.classes {\n  background-image: url(" + __webpack_require__(241) + ");\n  width: 54px;\n  height: 54px; }\n\n.classes:hover {\n  background-position-x: 0px; }\n\n.ecaflip {\n  background-position-x: -56px;\n  background-position-y: -623px; }\n\n.eniripsa {\n  background-position-x: -56px;\n  background-position-y: -680px; }\n\n.iop {\n  background-position-x: -56px;\n  background-position-y: -737px; }\n\n.cra {\n  background-position-x: -56px;\n  background-position-y: -793px; }\n\n.feca {\n  background-position-x: -56px;\n  background-position-y: 0px; }\n\n.sacrier {\n  background-position-x: -56px;\n  background-position-y: -114px; }\n\n.sadida {\n  background-position-x: -56px;\n  background-position-y: -57px; }\n\n.osamodas {\n  background-position-x: -56px;\n  background-position-y: -397px; }\n\n.enutrof {\n  background-position-x: -56px;\n  background-position-y: -453px; }\n\n.sram {\n  background-position-x: -56px;\n  background-position-y: -510px; }\n\n.xelor {\n  background-position-x: -56px;\n  background-position-y: -567px; }\n\n.pandawa {\n  background-position-x: -56px;\n  background-position-y: -169px; }\n\n.rogue {\n  background-position-x: -56px;\n  background-position-y: -227px; }\n\n.masqueraider {\n  background-position-x: -56px;\n  background-position-y: -284px; }\n\n.foggernauts {\n  background-position-x: -56px;\n  background-position-y: -340px; }\n\n.eliotrope {\n  background-position-x: -56px;\n  background-position-y: -850px; }\n\n.huppermage {\n  background-position-x: -56px;\n  background-position-y: -910px; }\n\n.ouginak {\n  background-position-x: -56px;\n  background-position-y: -965px; }\n", "", {"version":3,"sources":["E:/Dropbox/dofusbuilds/Front/src/style/src/style/BuildCreation.scss"],"names":[],"mappings":"AAMA;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,cAAa;EACb,aAAY;EACZ,iBAAgB;EAChB,0BAAyB;EACzB,aAAY,EACf;;AAED;EACI,kBAAiB,EACpB;;AAED;EACI,oBAAmB,EACtB;;AAED;EACI,aAAY;EACZ,0BAAyB;EACzB,kBAAiB;EACjB,cAAa;EACb,WAAU,EACb;;AAED;EACI,0BAvCW,EAwCd;;AAED;EACI,0BAzCe,EA0ClB;;AAED;EACI,0BA5CqB,EA6CxB;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,YAAW,EACd;;AAED;EACI,sBAAqB,EACxB;;AAED;EACI,cAAa;EACb,yCAAwC;EACxC,eAAc;EACd,YAAW,EACd;;AAED;EACI,uBAAsB;EACtB,YAAW;EACX,mBAAkB;EAClB,gBAAe,EAClB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,2CAA0C;EAC1C,cAAa,EAChB;;AAED;EACI,gBAAe;EACf,aAAY;EACZ,mBAAkB,EACrB;;AAED;EACI,cAAa;EACb,oBAAmB;EACnB,qCAAoC;EACpC,mCAAkC;EAClC,cAAa,EAChB;;AAED;EACI,qBAAoB;EACpB,mBAAkB;EAClB,2BAA0B;EAC1B,gBAAe,EAClB;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,aAAY;EACZ,YAAW,EACd;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,kBAAiB;EACjB,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,iBAAgB,EACnB;;AAED;EACI,YAAW,EACd;;AAED;EACI,0BAAyB,EAC5B;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB,EACpB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,oBAAmB;EACnB,WAAU,EACb;;AAED;EACI,aAAY,EACf;;AAED;EACI,mBAAkB,EACrB;;AAED;EACI,aAAY;EACZ,YAAW;EACX,kBAAiB;EACjB,cAAa;EACb,0BAAyB;EACzB,2BAA0B,EAC7B;;AAED;EACI,aAAY;EACZ,WAAU;EACV,aAAY;EACZ,0BAAyB;EACzB,2BAA0B,EAC7B;;AAED;EACI,WAAU;EACV,oBAAmB,EACtB;;AAED;EACI,eAAc,EACjB;;AAED;EACI,wBAAuB;EACvB,iBAAgB;EAChB,8CAA6C,EAChD;;AAED;EACI,gBAAe,EAClB;;AAED;EACI,YAAW,EACd;;AAED;EACI,UAAS,EACZ;;AAED;EACI,eAAc;EACd,eAAc;EACd,mBAAkB,EACrB;;AAED;EACI,iCAAgC,EACnC;;AAED;EACI,YAAW;EACX,gBAAc;EACd,oBAAmB;EACnB,gBAAe,EAClB;;AAED;EACI,wBAAuB,EAC1B;;AAED;EACI,gDAA+D;EAC/D,6BAA4B;EAC5B,YAAW;EACX,aAAY,EACf;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,6BAA4B,EAC/B;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,+BAA8B,EACjC;;AAED;EACI,8BAA6B,EAChC;;AAED;EACI,gDAAsE;EACtE,YAAW;EACX,aAAY,EACf;;AAED;EACI,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,2BAA0B,EAC7B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,6BAA4B,EAC/B;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC;;AAED;EACI,6BAA4B;EAC5B,8BAA6B,EAChC","file":"BuildCreation.scss","sourcesContent":["$black: #010102;\r\n$blueDark: #09090F;\r\n$blackGray: #1F1F1F;\r\n$blackGrayDarker: #121212;\r\n$bgDark: #343a40; \r\n\r\n.main-color {\r\n    color: #ffd800;\r\n}\r\n\r\ntable {\r\n    width: 100%;\r\n}\r\n\r\ntextarea {\r\n    outline: none;\r\n    resize: none;\r\n    overflow: hidden;\r\n    border-color: Transparent;\r\n    color: white;\r\n}\r\n\r\n.container-fluid-build {\r\n    max-width: 1200px;\r\n}\r\n\r\n.modal-header {\r\n    border-bottom: none;\r\n}\r\n\r\n.modal-content {\r\n    color: white;\r\n    background-color: #27282E;\r\n    margin: auto auto;\r\n    padding: 20px;\r\n    width: 80%;\r\n}\r\n\r\n.bg-black {\r\n    background-color: $black;\r\n}\r\n\r\n.bg-black-gray {\r\n    background-color: $blackGray;\r\n}\r\n\r\n.bg-black-gray-darker {\r\n    background-color: $blackGrayDarker;\r\n}\r\n\r\n.bg-blue-dark {\r\n    background-color: #09090F;\r\n}\r\n\r\n.red {\r\n    color: #FF4136;\r\n}\r\n\r\n.blue {\r\n    color: #7FDBFF;\r\n}\r\n\r\n.green {\r\n    color: #2ECC40;\r\n}\r\n\r\n.brown {\r\n    color: Peru;\r\n}\r\n\r\na:hover, a:visited, a:link, a:active {\r\n    text-decoration: none;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: 100px 100px 100px;\r\n    grid-gap: 10px;\r\n    color: #444;\r\n}\r\n  \r\n.box {\r\n    background-color: #444;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n    font-size: 150%;\r\n}\r\n\r\n.box:hover {\r\n    filter: brightness(75%);\r\n}\r\n\r\n.grid-container {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.grid-item {\r\n    font-size: 30px;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.grid-container-a {\r\n    display: grid;\r\n    grid-gap: 10px 10px;\r\n    grid-template-columns: auto 50% auto;\r\n    grid-template-rows: auto auto auto;\r\n    padding: 10px;\r\n}\r\n\r\n.item-a {\r\n    grid-column-start: 2;\r\n    grid-column-end: 3;\r\n    grid-row-start: row1-start;\r\n    grid-row-end: 1;\r\n}\r\n\r\n.img-size {\r\n    height: 36px;\r\n    width: 36px;\r\n}\r\n\r\n.share-size {\r\n    height: 34px;\r\n    width: 34px;\r\n}\r\n\r\n.p-margin {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.col-padding {\r\n    padding-left: 0px;\r\n    padding-top: 2px;\r\n}\r\n\r\n.fill-width {\r\n    width: 100%;\r\n}\r\n\r\n.max-width {\r\n    max-width: 300px;\r\n}\r\n\r\n.link {\r\n    color: #FFF;\r\n}\r\n\r\n.link:hover {\r\n    color: #ffd800 !important;\r\n}\r\n\r\n.item-img-size {\r\n    height: 84px;\r\n    width: 84px;\r\n    margin-left: 17px;\r\n}\r\n\r\n.popover {\r\n    background-color: black;\r\n}\r\n\r\n.popover > .arrow::after {\r\n    border-color: black;\r\n    opacity: 0;\r\n}\r\n\r\n.item-stats {\r\n    color: white;\r\n}\r\n\r\n.spell-text {\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.share-input {\r\n    color: white;\r\n    width: 100%;\r\n    padding: 12px 4px;\r\n    margin: 8px 0;\r\n    border-color: transparent;\r\n    outline-color: transparent;\r\n}\r\n\r\n.stats-input {\r\n    color: white;\r\n    width: 80%;\r\n    float: right;\r\n    border-color: transparent;\r\n    outline-color: transparent;\r\n}\r\n\r\n.card-header {\r\n    padding: 0;\r\n    border-bottom: none;\r\n}\r\n\r\n.spell-more {\r\n    flex-grow: 100;\r\n}\r\n\r\n.card-header-class {\r\n    padding: .75rem 1.25rem;\r\n    margin-bottom: 0;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.125);\r\n}\r\n\r\n.clickable {\r\n    cursor: pointer;\r\n}\r\n\r\n.td-w {\r\n    width: 22px;\r\n}\r\n\r\n.td-w-1 {\r\n    width: 1%;\r\n}\r\n\r\n.spell-description {\r\n    display: block;\r\n    font-size: 80%;\r\n    font-style: italic;\r\n}\r\n\r\n.border-gray {\r\n    border-color: #6c757d !important;\r\n}\r\n\r\n.legend {\r\n    width: auto;\r\n    padding:0 10px;\r\n    border-bottom: none;\r\n    font-size: 1rem;\r\n}\r\n\r\n#hover-filter:hover {\r\n    filter: brightness(75%);\r\n}\r\n\r\n.stats-img {\r\n    background-image: url('../../assets/dofus/elements/sprite.png');\r\n    background-position-x: -97px;\r\n    width: 22px;\r\n    height: 22px;\r\n}\r\n\r\n.vitality {\r\n    background-position-y: -319px;\r\n}\r\n\r\n.ap {\r\n    background-position-y: -243px;\r\n}\r\n\r\n.mp {\r\n    background-position-y: -52px;\r\n}\r\n\r\n.range {\r\n    background-position-y: -128px;\r\n}\r\n\r\n.initiative {\r\n    background-position-y: -205px;\r\n}\r\n\r\n.summon {\r\n    background-position-y: -507px;\r\n}\r\n\r\n.critical {\r\n    background-position-y: -589px;\r\n}\r\n\r\n.heal {\r\n    background-position-y: -966px;\r\n}\r\n\r\n.lock {\r\n    background-position-y: -545px;\r\n}\r\n\r\n.dodge {\r\n    background-position-y: -468px;\r\n}\r\n\r\n.prospecting {\r\n    background-position-y: -279px;\r\n}\r\n\r\n.wisdom {\r\n    background-position-y: -358px;\r\n}\r\n\r\n.strength {\r\n    background-position-y: -432px;\r\n}\r\n\r\n.intelligence {\r\n    background-position-y: -394px;\r\n}\r\n\r\n.luck {\r\n    background-position-y: -89px;\r\n}\r\n\r\n.agility {\r\n    background-position-y: -167px;\r\n}\r\n\r\n.ap-parry {\r\n    background-position-y: -1064px;\r\n}\r\n\r\n.mp-parry {\r\n    background-position-y: -1016px;\r\n}\r\n\r\n.ap-reduction {\r\n    background-position-y: -1297px;\r\n}\r\n\r\n.mp-reduction {\r\n    background-position-y: -1340px;\r\n}\r\n\r\n.power {\r\n    background-position-y: -1108px;\r\n}\r\n\r\n.damage {\r\n    background-position-y: -1156px;\r\n}\r\n\r\n.power-trap {\r\n    background-position-y: -673px;\r\n}\r\n\r\n.critical-damage {\r\n    background-position-y: -1248px;\r\n}\r\n\r\n.neutral-damage {\r\n    background-position-y: -15px;\r\n}\r\n\r\n.trap-damage {\r\n    background-position-y: -712px;\r\n}\r\n\r\n.pushback-damage {\r\n    background-position-y: -872px;\r\n}\r\n\r\n.pushback-resistance {\r\n    background-position-y: -832px;\r\n}\r\n\r\n.critical-resistance {\r\n    background-position-y: -1200px;\r\n}\r\n\r\n.reflect {\r\n    background-position-y: -791px;\r\n}\r\n\r\n.classes { \r\n    background-image: url('../../assets/dofus/characters/all/classes.png');\r\n    width: 54px;\r\n    height: 54px;\r\n}\r\n\r\n.classes:hover {\r\n    background-position-x: 0px;\r\n}\r\n\r\n.ecaflip { \r\n    background-position-x: -56px;\r\n    background-position-y: -623px;\r\n}\r\n\r\n.eniripsa {\r\n    background-position-x: -56px;\r\n    background-position-y: -680px;\r\n}\r\n\r\n.iop {\r\n    background-position-x: -56px;\r\n    background-position-y: -737px;\r\n}\r\n\r\n.cra {\r\n    background-position-x: -56px;\r\n    background-position-y: -793px;\r\n}\r\n\r\n.feca {\r\n    background-position-x: -56px;\r\n    background-position-y: 0px;\r\n}\r\n\r\n.sacrier {\r\n    background-position-x: -56px;\r\n    background-position-y: -114px;\r\n}\r\n\r\n.sadida {\r\n    background-position-x: -56px;\r\n    background-position-y: -57px;\r\n}\r\n\r\n.osamodas {\r\n    background-position-x: -56px;\r\n    background-position-y: -397px;\r\n}\r\n\r\n.enutrof {\r\n    background-position-x: -56px;\r\n    background-position-y: -453px;\r\n}\r\n\r\n.sram {\r\n    background-position-x: -56px;\r\n    background-position-y: -510px;\r\n}\r\n\r\n.xelor {\r\n    background-position-x: -56px;\r\n    background-position-y: -567px;\r\n}\r\n\r\n.pandawa {\r\n    background-position-x: -56px;\r\n    background-position-y: -169px;\r\n}\r\n\r\n.rogue {\r\n    background-position-x: -56px;\r\n    background-position-y: -227px;\r\n}\r\n\r\n.masqueraider {\r\n    background-position-x: -56px;\r\n    background-position-y: -284px;\r\n}\r\n\r\n.foggernauts {\r\n    background-position-x: -56px;\r\n    background-position-y: -340px;\r\n}\r\n\r\n.eliotrope {\r\n    background-position-x: -56px;\r\n    background-position-y: -850px;\r\n}\r\n\r\n.huppermage {\r\n    background-position-x: -56px;\r\n    background-position-y: -910px;\r\n}\r\n\r\n.ouginak {\r\n    background-position-x: -56px;\r\n    background-position-y: -965px;\r\n}"],"sourceRoot":""}]);
 
 // exports
 
@@ -57679,7 +57892,9 @@ var InformationsComponent_1 = __webpack_require__(264);
 var BuildCreationActions_1 = __webpack_require__(26);
 var mapStateToProps = function (state) { return ({}); };
 var mapDispatchToProps = {
-    saveBuild: BuildCreationActions_1.saveBuild
+    saveBuild: BuildCreationActions_1.saveBuild,
+    deleteBuildUserNotConnected: BuildCreationActions_1.deleteBuildUserNotConnected,
+    addStat: BuildCreationActions_1.addStat
 };
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(InformationsComponent_1.default);
 
@@ -57708,10 +57923,28 @@ var React = __webpack_require__(0);
 var OverlayTrigger_1 = __webpack_require__(30);
 var Tooltip_1 = __webpack_require__(91);
 var LoadingContainer_1 = __webpack_require__(47);
+var Enums_1 = __webpack_require__(2);
 var InformationsComponent = /** @class */ (function (_super) {
     __extends(InformationsComponent, _super);
     function InformationsComponent(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            stats: {
+                vitalityEntered: 0,
+                wisdomEntered: 0,
+                intelligenceEntered: 0,
+                strengthEntered: 0,
+                luckEntered: 0,
+                agilityEntered: 0,
+                vitalityScroll: 100,
+                wisdomScroll: 100,
+                intelligenceScroll: 100,
+                strengthScroll: 100,
+                luckScroll: 100,
+                agilityScroll: 100
+            }
+        };
+        return _this;
     }
     InformationsComponent.prototype.saveBuild = function () {
         event.preventDefault();
@@ -57740,19 +57973,50 @@ var InformationsComponent = /** @class */ (function (_super) {
         }
         return false;
     };
+    InformationsComponent.prototype.deleteBuild = function () {
+        event.preventDefault();
+        if (this.props.connectedUser.user.idName !== '') {
+        }
+        else {
+            this.props.deleteBuildUserNotConnected();
+            return true;
+        }
+        return false;
+    };
+    InformationsComponent.prototype.onEnterPressed = function (event, statType) {
+        var value = parseInt(event.target.value);
+        if (event.key === 'Enter' && (((statType === Enums_1.Stats.vitalityScroll || statType === Enums_1.Stats.wisdomScroll || statType === Enums_1.Stats.intelligenceScroll ||
+            statType === Enums_1.Stats.strengthScroll || statType === Enums_1.Stats.luckScroll || statType === Enums_1.Stats.agilityScroll) && (value <= 100 && value >= 0)) ||
+            (statType === Enums_1.Stats.vitalityEntered || statType === Enums_1.Stats.wisdomEntered || statType === Enums_1.Stats.intelligenceEntered ||
+                statType === Enums_1.Stats.strengthEntered || statType === Enums_1.Stats.luckEntered || statType === Enums_1.Stats.agilityEntered) && value >= 0)) {
+            this.props.addStat(statType, value);
+            this.props.updateStatsCallBack(statType);
+        }
+    };
+    InformationsComponent.prototype.updateState = function (event) {
+        // Get the input's name and change its value
+        var field = event.target.name;
+        var stats = this.state.stats;
+        stats[field] = event.target.value;
+        this.setState(function () {
+            return {
+                stats: stats
+            };
+        });
+    };
     InformationsComponent.prototype.renderBuildSaved = function () {
         if (this.props.other.saved) {
             return React.createElement("p", { className: "w-100 rounded-bottom m-0 text-center text-success bg-secondary" },
                 React.createElement("small", null, "Sauvegard\u00E9"));
         }
         else {
-            return React.createElement("p", { className: "w-100 rounded-bottom m-0 text-center text-warning bg-secondary" },
+            return React.createElement("p", { className: "w-100 rounded-bottom m-0 text-center text-warning bg-info" },
                 React.createElement("small", null, "Modifications non sauvegard\u00E9es"));
         }
     };
     InformationsComponent.prototype.popoverIfNotLoggedIn = function (html) {
         if (this.props.connectedUser.user.idName === '') {
-            return (React.createElement(OverlayTrigger_1.default, { key: "nctp", placement: "top", trigger: "hover", overlay: React.createElement(Tooltip_1.default, { id: "not-connected-tooltip" }, "Il faut \u00EAtre connect\u00E9 pour utiliser cette option") }, html));
+            return (React.createElement(OverlayTrigger_1.default, { key: "nctp", placement: "top", trigger: "hover", overlay: React.createElement(Tooltip_1.default, { id: "not-connected-tooltip" }, "Veuillez vous connecter pour utiliser cette option") }, html));
         }
         else {
             return html;
@@ -57786,21 +58050,108 @@ var InformationsComponent = /** @class */ (function (_super) {
                                         React.createElement("p", { className: "text-center float-left mb-0 p-1" }, "Nouveau"))))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
-                                React.createElement("div", { className: "row bg-danger rounded p-2 clickable mt-2", onClick: function () { return _this.saveBuild(); }, id: "hover-filter" },
+                                React.createElement("div", { className: "row bg-danger rounded p-2 clickable mt-2", onClick: function () { return _this.deleteBuild(); }, id: "hover-filter" },
                                     React.createElement("div", { className: "col-md-3" }, this.popoverIfNotLoggedIn(React.createElement("img", { className: "img-size clickable", src: "../assets/app/icons/delete-white.png" }))),
                                     React.createElement("div", { className: "col col-padding" },
                                         React.createElement("p", { className: "text-center float-left mb-0 p-1" }, "Supprimer"))))),
                         React.createElement("tr", null,
                             React.createElement("td", null,
                                 React.createElement(LoadingContainer_1.default, { jsx: React.createElement("div", null,
-                                        React.createElement("div", { className: "row bg-dark rounded-top p-2 clickable mt-2", id: "hover-filter" },
-                                            React.createElement("div", { className: "col-md-3" }, this.popoverIfNotLoggedIn(React.createElement("img", { className: "img-size clickable", src: "../assets/app/icons/save-white.png" }))),
+                                        this.popoverIfNotLoggedIn(React.createElement("div", { className: "row bg-primary rounded-top p-2 clickable mt-2", id: "hover-filter" },
+                                            React.createElement("div", { className: "col-md-3" },
+                                                React.createElement("img", { className: "img-size clickable", src: "../assets/app/icons/save-white.png" })),
                                             React.createElement("div", { className: "col col-padding" },
-                                                React.createElement("p", { className: "text-center float-left mb-0 p-1" }, "Sauvegarder"))),
+                                                React.createElement("p", { className: "text-center float-left mb-0 p-1" }, "Sauvegarder")))),
                                         React.createElement("div", { className: "row" }, this.renderBuildSaved())), onClick: function () { return _this.saveBuild(); }, type: "saveButton" }))))),
                 React.createElement("div", { className: "dropdown-divider" }),
                 this.renderShareLink(),
-                React.createElement("div", { className: "dropdown-divider" }))));
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement("table", null,
+                    React.createElement("tbody", null,
+                        React.createElement("tr", null,
+                            React.createElement("th", null, "Caract\u00E9ristiques")),
+                        React.createElement("tr", null,
+                            React.createElement("th", null),
+                            React.createElement("td", { className: "text-center" },
+                                React.createElement("small", null, "Parcho")),
+                            React.createElement("td", { className: "text-center" },
+                                React.createElement("small", null, "Base"))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null,
+                                React.createElement("table", null,
+                                    React.createElement("tbody", null,
+                                        React.createElement("tr", null,
+                                            React.createElement("td", { className: "td-w" },
+                                                React.createElement("div", { className: "stats-img vitality" })),
+                                            React.createElement("td", null, "Vitalit\u00E9"))))),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.vitalityScroll > 100 || this.state.stats.vitalityScroll < 0 ? ' border border-danger' : ''), name: "vitalityScroll", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.vitalityScroll); }, value: this.state.stats.vitalityScroll })),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.vitalityEntered < 0 ? ' border border-danger' : ''), name: "vitalityEntered", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.vitalityEntered); }, value: this.state.stats.vitalityEntered }))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null,
+                                React.createElement("table", null,
+                                    React.createElement("tbody", null,
+                                        React.createElement("tr", null,
+                                            React.createElement("td", { className: "td-w" },
+                                                React.createElement("div", { className: "stats-img wisdom" })),
+                                            React.createElement("td", null, "Sagesse"))))),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.wisdomScroll > 100 || this.state.stats.wisdomScroll < 0 ? ' border border-danger' : ''), name: "wisdomScroll", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.wisdomScroll); }, value: this.state.stats.wisdomScroll })),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.wisdomEntered < 0 ? ' border border-danger' : ''), name: "wisdomEntered", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.wisdomEntered); }, value: this.state.stats.wisdomEntered }))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null,
+                                React.createElement("table", null,
+                                    React.createElement("tbody", null,
+                                        React.createElement("tr", null,
+                                            React.createElement("td", { className: "td-w" },
+                                                React.createElement("div", { className: "stats-img intelligence" })),
+                                            React.createElement("td", null, "Intelligence"))))),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.intelligenceScroll > 100 || this.state.stats.intelligenceScroll < 0 ? ' border border-danger' : ''), name: "intelligenceScroll", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.intelligenceScroll); }, value: this.state.stats.intelligenceScroll })),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.intelligenceEntered < 0 ? ' border border-danger' : ''), name: "intelligenceEntered", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.intelligenceEntered); }, value: this.state.stats.intelligenceEntered }))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null,
+                                React.createElement("table", null,
+                                    React.createElement("tbody", null,
+                                        React.createElement("tr", null,
+                                            React.createElement("td", { className: "td-w" },
+                                                React.createElement("div", { className: "stats-img strength" })),
+                                            React.createElement("td", null, "Force"))))),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.strengthScroll > 100 || this.state.stats.strengthScroll < 0 ? ' border border-danger' : ''), name: "strengthScroll", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.strengthScroll); }, value: this.state.stats.strengthScroll })),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.strengthEntered < 0 ? ' border border-danger' : ''), name: "strengthEntered", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.strengthEntered); }, value: this.state.stats.strengthEntered }))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null,
+                                React.createElement("table", null,
+                                    React.createElement("tbody", null,
+                                        React.createElement("tr", null,
+                                            React.createElement("td", { className: "td-w" },
+                                                React.createElement("div", { className: "stats-img luck" })),
+                                            React.createElement("td", null, "Chance"))))),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.luckScroll > 100 || this.state.stats.luckScroll < 0 ? ' border border-danger' : ''), name: "luckScroll", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.luckScroll); }, value: this.state.stats.luckScroll })),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.luckEntered < 0 ? ' border border-danger' : ''), name: "luckEntered", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.luckEntered); }, value: this.state.stats.luckEntered }))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null,
+                                React.createElement("table", null,
+                                    React.createElement("tbody", null,
+                                        React.createElement("tr", null,
+                                            React.createElement("td", { className: "td-w" },
+                                                React.createElement("div", { className: "stats-img agility" })),
+                                            React.createElement("td", null, "Agilit\u00E9"))))),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.agilityScroll > 100 || this.state.stats.agilityScroll < 0 ? ' border border-danger' : ''), name: "agilityScroll", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.agilityScroll); }, value: this.state.stats.agilityScroll })),
+                            React.createElement("td", null,
+                                React.createElement("input", { className: 'bg-secondary stats-input rounded mb-0 mt-0' + (this.state.stats.agilityEntered < 0 ? ' border border-danger' : ''), name: "agilityEntered", onChange: function (event) { return _this.updateState(event); }, onKeyPress: function (event) { return _this.onEnterPressed(event, Enums_1.Stats.agilityEntered); }, value: this.state.stats.agilityEntered }))),
+                        React.createElement("tr", null,
+                            React.createElement("td", null, "Capital restant"),
+                            React.createElement("td", null,
+                                React.createElement("p", { className: "mb-0 text-center" }, "995"))))))));
     };
     return InformationsComponent;
 }(React.Component));
@@ -88863,7 +89214,7 @@ var SpellSummaryComponent = /** @class */ (function (_super) {
                     color = "red";
                     break;
                 case Enums_1.SpellTypes.water:
-                    characteristic = this.props.stats.chance;
+                    characteristic = this.props.stats.luck;
                     fixedDamages = this.props.stats.waterDamage;
                     color = "blue";
                     break;
@@ -88905,7 +89256,7 @@ var SpellSummaryComponent = /** @class */ (function (_super) {
                     color = "red";
                     break;
                 case Enums_1.SpellTypes.water:
-                    characteristic = this.props.stats.chance;
+                    characteristic = this.props.stats.luck;
                     fixedDamages = this.props.stats.waterDamage;
                     color = "blue";
                     break;
@@ -90092,7 +90443,7 @@ var SharedBuildPage = /** @class */ (function (_super) {
                 wisdom: 0,
                 strength: 0,
                 intelligence: 0,
-                chance: 0,
+                luck: 0,
                 agility: 0,
                 apParry: 0,
                 mpParry: 0,
@@ -90128,7 +90479,19 @@ var SharedBuildPage = /** @class */ (function (_super) {
                 criticalResistance: 0,
                 rangedResistance: 0,
                 meleeResistance: 0,
-                reflectDamage: 0
+                reflectDamage: 0,
+                vitalityEntered: 0,
+                wisdomEntered: 0,
+                intelligenceEntered: 0,
+                strengthEntered: 0,
+                luckEntered: 0,
+                agilityEntered: 0,
+                vitalityScroll: 0,
+                wisdomScroll: 0,
+                intelligenceScroll: 0,
+                strengthScroll: 0,
+                luckScroll: 0,
+                agilityScroll: 0
             },
             loading: true
         };
@@ -91357,7 +91720,19 @@ exports.initialState = {
         dofusThree: -1,
         dofusFour: -1,
         dofusFive: -1,
-        dofusSix: -1
+        dofusSix: -1,
+        vitalityEntered: 0,
+        wisdomEntered: 0,
+        intelligenceEntered: 0,
+        strengthEntered: 0,
+        luckEntered: 0,
+        agilityEntered: 0,
+        vitalityScroll: 100,
+        wisdomScroll: 100,
+        intelligenceScroll: 100,
+        strengthScroll: 100,
+        luckScroll: 100,
+        agilityScroll: 100
     },
     other: {
         saved: false,
@@ -91456,39 +91831,65 @@ function reducer(state, action) {
             buildWithItem.dofusSix = action.payload;
             return __assign(__assign({}, state), { build: buildWithItem });
         }
+        case BuildCreationActions_1.ActionTypes.ADD_VITALITY_SCROLL: {
+            buildWithItem.vitalityScroll = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_VITALITY_ENTERED: {
+            buildWithItem.vitalityEntered = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_WISDOM_SCROLL: {
+            buildWithItem.wisdomScroll = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_WISDOM_ENTERED: {
+            buildWithItem.wisdomEntered = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_INTELLIGENCE_SCROLL: {
+            buildWithItem.intelligenceScroll = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_INTELLIGENCE_ENTERED: {
+            buildWithItem.intelligenceEntered = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_STRENGTH_SCROLL: {
+            buildWithItem.strengthScroll = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_STRENGTH_ENTERED: {
+            buildWithItem.strengthEntered = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_LUCK_SCROLL: {
+            buildWithItem.luckScroll = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_LUCK_ENTERED: {
+            buildWithItem.luckEntered = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_AGILITY_SCROLL: {
+            buildWithItem.agilityScroll = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
+        case BuildCreationActions_1.ActionTypes.ADD_AGILITY_ENTERED: {
+            buildWithItem.agilityEntered = action.payload;
+            return __assign(__assign({}, state), { build: buildWithItem });
+        }
         case BuildCreationActions_1.ActionTypes.SAVE_BUILD_SUCCESS: {
             return __assign(__assign({}, state), { other: action.payload });
+        }
+        case BuildCreationActions_1.ActionTypes.DELETE_BUILD_SUCCESS: {
+            return __assign(__assign({}, state), { build: JSON.parse(JSON.stringify(exports.initialState.build)) });
         }
         case BuildCreationActions_1.ActionTypes.UPDATE_SPELL_OR_VARIANT: {
             return __assign(__assign({}, state), { spellOrVariant: action.payload });
         }
         case BuildCreationActions_1.ActionTypes.DEFAULT_SPELL_OR_VARIANT: {
-            return __assign(__assign({}, state), { 
-                // TODO find out why the initialState variable changes and cannot be used as default values
-                spellOrVariant: [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ] });
+            return __assign(__assign({}, state), { spellOrVariant: JSON.parse(JSON.stringify(exports.initialState.spellOrVariant)) });
         }
         case BuildCreationActions_1.ActionTypes.CHANGE_CLASS: {
             buildWithItem.class = action.payload;
@@ -91543,7 +91944,19 @@ exports.initialState = {
         dofusThree: -1,
         dofusFour: -1,
         dofusFive: -1,
-        dofusSix: -1
+        dofusSix: -1,
+        vitalityEntered: 0,
+        wisdomEntered: 0,
+        intelligenceEntered: 0,
+        strengthEntered: 0,
+        luckEntered: 0,
+        agilityEntered: 0,
+        vitalityScroll: 0,
+        wisdomScroll: 0,
+        intelligenceScroll: 0,
+        strengthScroll: 0,
+        luckScroll: 0,
+        agilityScroll: 0
     }
 };
 function reducer(state, action) {
